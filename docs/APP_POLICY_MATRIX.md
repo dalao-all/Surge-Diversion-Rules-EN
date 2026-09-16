@@ -12,7 +12,7 @@
 | 视频：爱奇艺 / 腾讯视频 | DIRECT | （主配置已有部分） | domestic / reject | 弱：review |
 | 社交：小红书 / 酷安 | DIRECT | direct-patch | domestic / reject | 是（已有精确域兴趣） |
 | 社交：抖音（国内） | DIRECT | — | domestic / reject | 弱；**勿**当 TikTok 放行 |
-| 购物：淘宝 / 京东 / 拼多多 | DIRECT | direct-patch（amdc 等） | domestic / reject | 弱～中：review |
+| 购物：淘宝 / 京东 / 拼多多 | DIRECT | 主配置 amdc + direct-patch（精确例外） | domestic / reject | 弱～中：review |
 | 外卖：美团 / 点评 / 盒马 | DIRECT | — | domestic | 否（默认 ignore 无关联） |
 | 财务软件：招行 / 云闪付 / 工行等 | DIRECT | — | domestic / reject | 弱：review；不臆造域 |
 | 财务：支付宝 | DIRECT | — | domestic / reject | 弱：review |

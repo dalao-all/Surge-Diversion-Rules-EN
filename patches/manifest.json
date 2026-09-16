@@ -552,18 +552,6 @@
       "last_verified": "2026-09-16",
       "expires": "2027-03-16",
       "notes": "酷安头像；勿误杀"
-    },
-    {
-      "id": "dir-amdc-taobao",
-      "file": "direct-patch.list",
-      "rule": "DOMAIN,amdc.m.taobao.com",
-      "policy": "DIRECT",
-      "source": "v5.2-section-1.1",
-      "evidence_type": "har",
-      "first_seen": "2026-09-13",
-      "last_verified": "2026-09-16",
-      "expires": "2027-03-16",
-      "notes": "HAR：amdc 被拒 6 次；调度兼容"
     }
   ]
 }

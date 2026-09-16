@@ -27,7 +27,7 @@ I therefore use four layers: the main conf keeps order and policy bindings; list
 | `finance-bybit-eu.list` | 🇩🇪 Bybit 欧洲 | Bybit EU (separate list: one policy per RULE-SET file) |
 | `finance-bybit-global.list` | 💳 Bybit 全球 | Bybit Global |
 | `ads-patch.list` | REJECT | Ad-interest increments (e.g. pangle) |
-| `direct-patch.list` | DIRECT | Domestic app compatibility (biliapi, XHS, Coolapk, amdc, …) |
+| `direct-patch.list` | DIRECT | Domestic app compatibility (biliapi, XHS, Coolapk, …; amdc extended-matching lives in main profile) |
 
 These RULE-SET lines must appear **before** remote SKK `reject*`. The interest bot only absorbs upstream adds related to `interest_seed` / selectors.
 

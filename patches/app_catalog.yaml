@@ -736,7 +736,7 @@ cn_apps:
     surge_interest: true
     policy_hint: DIRECT
     vendors: [taobao, alibaba]
-    notes: "amdc 等已在 direct-patch"
+    notes: "amdc extended-matching 在主配置，不在 direct-patch"
   - name: 拼多多
     region: cn
     folder: 购物软件

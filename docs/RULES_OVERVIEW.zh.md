@@ -27,7 +27,7 @@ Surge 规则**自上而下**命中即停。若把「关键业务例外」写在�
 | `finance-bybit-eu.list` | 🇩🇪 Bybit 欧洲 | Bybit EU（独立 list：RULE-SET 整文件单策略） |
 | `finance-bybit-global.list` | 💳 Bybit 全球 | Bybit Global |
 | `ads-patch.list` | REJECT | 广告兴趣增量（如 pangle） |
-| `direct-patch.list` | DIRECT | 国内 App 兼容例外（biliapi、小红书、酷安、amdc 等） |
+| `direct-patch.list` | DIRECT | 国内 App 兼容例外（biliapi、小红书、酷安等；amdc extended-matching 写在主配置） |
 
 这些 RULE-SET 必须出现在远程 SKK `reject*` **之前**。兴趣机器人只吸收与 `interest_seed` / selectors 相关的上游新增，避免海量无关 reject 灌库。
 
@@ -49,7 +49,7 @@ AdBlock 模块曾引用的 fmz200 / kokoryh 等脚本，镜像到本仓库后由
 适合留在 conf 里的包括：
 
 - DoH/DoT / STUN 等协议与泄漏防护
-- 订阅域名 DIRECT（分享版用 `your-subscribe-host.example` 占位）
+- 订阅 API 域名 DIRECT（`em.mesl.cloud`）；站点 `meslcloud.com` 走国际网络
 - Apple 稳定性例外、死域名快速失败
 - TikTok / Google / PayPal 等大块业务规则（部分曾从 blackmatrix7 远程改为内联）
 - FINAL 与 GEOIP / LAN
@@ -102,7 +102,7 @@ AdBlock 模块曾引用的 fmz200 / kokoryh 等脚本，镜像到本仓库后由
 ## 6. 安全边界
 
 - 公开仓禁止出现真实订阅令牌参数、私有订阅主机名、以及订阅拉取路径  
-- 分享 conf 只用 `subscription.example.invalid` 与 `your-subscribe-host.example`  
+- 分享 conf 的 policy-path 用 `subscription.example.invalid`；订阅/站点匹配域保留真实主机名（非 token）  
 - 私用带订阅配置不进本仓库  
 
 英文说明见姊妹仓：https://github.com/dalao-all/Surge-Diversion-Rules-EN （`docs/RULES_OVERVIEW.md`）
