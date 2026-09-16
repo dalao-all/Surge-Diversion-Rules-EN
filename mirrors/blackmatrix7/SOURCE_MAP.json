@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-16T19:57:31+08:00",
+  "fetched_at": "2026-09-16T23:06:28+08:00",
   "note": "Historical remotes from Surge-Xiaomai V5.1; V6.0 inlined these instead of RULE-SET. Mirrored for ownership completeness.",
   "entries": [
     {
@@ -8,7 +8,9 @@
       "repo_path": "mirrors/blackmatrix7/OKX.list",
       "sha256": "eee1945a601da063462eb0cb2784601513a180bf5ab78377904e4689573bfc65",
       "bytes": 222,
-      "fetched_at": "2026-09-16T19:57:31+08:00"
+      "fetched_at": "2026-09-16T23:06:28+08:00",
+      "http_status": 200,
+      "ok": true
     },
     {
       "name": "Binance",
@@ -16,7 +18,9 @@
       "repo_path": "mirrors/blackmatrix7/Binance.list",
       "sha256": "034b1730ac0adb39a8a88685d6f6864a7070a14d722acbf8f3859806b28b92a4",
       "bytes": 482,
-      "fetched_at": "2026-09-16T19:57:31+08:00"
+      "fetched_at": "2026-09-16T23:06:28+08:00",
+      "http_status": 200,
+      "ok": true
     },
     {
       "name": "PayPal",
@@ -24,7 +28,9 @@
       "repo_path": "mirrors/blackmatrix7/PayPal.list",
       "sha256": "4ffb6f94d2f1eff835c24b533c3d1d6e0c5a4cfbc32740fa9c32315ae218fd18",
       "bytes": 7859,
-      "fetched_at": "2026-09-16T19:57:31+08:00"
+      "fetched_at": "2026-09-16T23:06:28+08:00",
+      "http_status": 200,
+      "ok": true
     },
     {
       "name": "YouTube",
@@ -32,7 +38,9 @@
       "repo_path": "mirrors/blackmatrix7/YouTube.list",
       "sha256": "42274e143447066e26e1ebbf21ae03ce6efb40827f41e2775a84fb16d390713d",
       "bytes": 5451,
-      "fetched_at": "2026-09-16T19:57:31+08:00"
+      "fetched_at": "2026-09-16T23:06:28+08:00",
+      "http_status": 200,
+      "ok": true
     },
     {
       "name": "YouTubeMusic",
@@ -40,7 +48,9 @@
       "repo_path": "mirrors/blackmatrix7/YouTubeMusic.list",
       "sha256": "cb3ec1cb88951e9ef6da69a26662d1350c803d4f4628d0147ee95aa87e83b153",
       "bytes": 327,
-      "fetched_at": "2026-09-16T19:57:31+08:00"
+      "fetched_at": "2026-09-16T23:06:28+08:00",
+      "http_status": 200,
+      "ok": true
     }
   ]
 }

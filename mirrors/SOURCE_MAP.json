@@ -3,7 +3,7 @@
   "source_base": "https://ruleset.skk.moe/",
   "mirror_prefix": "mirrors/skk/",
   "count": 43,
-  "fetched_at": "2026-09-16T19:52:21+08:00",
+  "fetched_at": "2026-09-16T23:06:22+08:00",
   "entries": [
     {
       "upstream_url": "https://ruleset.skk.moe/List/domainset/apple_cdn.conf",
@@ -11,7 +11,7 @@
       "sha256": "0c81cbe6af3a1c3befbe973441bb5667caf817a9447fca55022182d015669180",
       "bytes": 4628,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -20,7 +20,7 @@
       "sha256": "191d021505459977767b8e96d2be6d98a9b390412adfe114a00bbb102546d147",
       "bytes": 89329,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -29,7 +29,7 @@
       "sha256": "327848bd437a9bcb48a655cbe4de26eb83351ad813f195a9449c1f960ffc5ef3",
       "bytes": 45703,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -38,7 +38,7 @@
       "sha256": "1169e5df5d2a554968e74ef1de7830aba4d973301746d5e7a473baa24957f19f",
       "bytes": 3021243,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -47,7 +47,7 @@
       "sha256": "cc8bcb7aad48fac35fba07948e43c98a1bd6ceb23084c0800c9f124e4f0c19b3",
       "bytes": 1520945,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -56,7 +56,7 @@
       "sha256": "c59ebf0cf445a4160e3a02ce37dea376ea360ef12cd9a25018940d8fb15276eb",
       "bytes": 3156646,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -65,7 +65,7 @@
       "sha256": "d2ab24c3306cf912cd1b425b1e1322245cbe0d8beee8badaab7d1bdaf332ea95",
       "bytes": 1435,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -74,7 +74,7 @@
       "sha256": "aefc4fe67a8f3f5a94295cdc005b34d07ed97f98c93be5bca3bdb499dd9ed1b2",
       "bytes": 92417,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -83,7 +83,7 @@
       "sha256": "99fd01e3b16bb3715dc2a07f5e3c4fde213c2031469256282c55aa7e1ed46494",
       "bytes": 566,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -92,7 +92,7 @@
       "sha256": "49783e54766c86852c17299e2aa0182e53fa31435e33f5b66a40c4e32705f29c",
       "bytes": 1094,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -101,7 +101,7 @@
       "sha256": "21a86ae6174d6298e4bbdf548dbcf8d2e240fca65ea7653fee0b4119323c0ee9",
       "bytes": 22292,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -110,7 +110,7 @@
       "sha256": "e99e1e589e7bb2c92f9f68dbfed59e3e1182adfb78eeedb8d74d62b5156dc348",
       "bytes": 1869,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -119,7 +119,7 @@
       "sha256": "a68eb796f1b1044f78b15c8782782dfd88bb33454e2cc89c2ce00c56e8b39f88",
       "bytes": 454,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -128,7 +128,7 @@
       "sha256": "63137a000c89bb5ae5679ff91c14808ca41d6da5c09064f4e29079b8c3bb60a7",
       "bytes": 516,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -137,7 +137,7 @@
       "sha256": "69b1b205209c2694fcea0eeaa37560999406943aa7e21302d816acbfea55dd13",
       "bytes": 515,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -146,7 +146,7 @@
       "sha256": "4af571f5c42708cecbb7fcd2e5a699731b376c4cbf7d01eb726d896fdcb76810",
       "bytes": 451,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -155,7 +155,7 @@
       "sha256": "875e3fe79abca6702bbe96d7859cf7a163c6328fcc21928f30627dc3cf16ea0d",
       "bytes": 529,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -164,7 +164,7 @@
       "sha256": "8362f4a41e9c0e9f3f03305de97ef3c3f5a66a663703cd4a49f858f7c8ca5846",
       "bytes": 605,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -173,7 +173,7 @@
       "sha256": "27f6bab896e98ec9631fd187ff5147fb101260fc7a322c0dc994bbd27ed0a81f",
       "bytes": 1116,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -182,7 +182,7 @@
       "sha256": "92c818f6dc242420d27fa0fd9c07df75013af5645cdf9e3df964fef6d34837d9",
       "bytes": 2010,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -191,7 +191,7 @@
       "sha256": "a31f9e98c5a4fdd585a7c78b6f3a1994015ab54a57a3d82057bd17f278f6a76f",
       "bytes": 826,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -200,7 +200,7 @@
       "sha256": "9c32e8eb6e1d334a85b972791a0afc4b0fc81f57d3a80902a50c9168269f7602",
       "bytes": 1157,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -209,7 +209,7 @@
       "sha256": "110f955569b55bb09ca837c77dc8c43c99c75c3bee139d9049f3a6a25931b5c6",
       "bytes": 3447,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -218,7 +218,7 @@
       "sha256": "46c65d1a59289d07f52f7652f9d1695d2996f65c125a14593b3eb7322086f8ec",
       "bytes": 6317,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -227,7 +227,7 @@
       "sha256": "56809cd8399666433acb1229c3a472667a32c86fc2a0b9861a5dca54020564aa",
       "bytes": 22632,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -236,7 +236,7 @@
       "sha256": "741c1e7dda34bae2dd7611262c15431a66a50f6bdac24b96f070e1529479a594",
       "bytes": 874,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -245,7 +245,7 @@
       "sha256": "d43baf4354759c0baa342bb63d08f74f52d578ffc95648577221fc869522af17",
       "bytes": 521,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -254,7 +254,7 @@
       "sha256": "270bb9779f34df58825dab7ed591c51cd949411a6e54c8e2a06741da7a639eaa",
       "bytes": 33265,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -263,7 +263,7 @@
       "sha256": "1cc7293548c9f251adf9e373a57bfef3501f6e6756d8234aed5415a5ead4e439",
       "bytes": 2714,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -272,7 +272,7 @@
       "sha256": "c2efcfedd34fdedfeb16460dc7fd6a1842cd5230d31cd57a702194d1c8eeb6bd",
       "bytes": 3113,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -281,7 +281,7 @@
       "sha256": "8e3017a526f50ed80deddf4b26339f25cc0f60ad1c4ef0667ec7080f3ee1215e",
       "bytes": 608,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -290,7 +290,7 @@
       "sha256": "f5f3606947fdcb055fc1c937fc8e89b6692d5f63afc58f8a1bc45438853fcd11",
       "bytes": 1360,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -299,7 +299,7 @@
       "sha256": "e0d48603980bd4c5862b0727e93ab0446d2c22a2a814cf4e2cbb5da28b2b8254",
       "bytes": 1908,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -308,7 +308,7 @@
       "sha256": "0620fd54346f03eb1a17cb18aeff45423cb801845aaa7a0eb7486277a1bff91a",
       "bytes": 13524,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -317,7 +317,7 @@
       "sha256": "46884691525c0fb7058ff6dd06fb2d78174c8ab2759114ccbaa65de8b4554ccc",
       "bytes": 879,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -326,7 +326,7 @@
       "sha256": "e35f4e37b3e1a39c6c2a1c09750299c4318feb72b65a6e79a18b4a2b39f44ce6",
       "bytes": 10487,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -335,7 +335,7 @@
       "sha256": "722e0d571b44a13a06f3d17a7d74206d9023d5f34a4702e6298e37c98566180d",
       "bytes": 704,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -344,7 +344,7 @@
       "sha256": "7893cb28a7e5f5cea8a122445e3331c98227c18cd2e7ca8282ddbde2705176e4",
       "bytes": 1558,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -353,7 +353,7 @@
       "sha256": "ad79821bb7d7c381e28f8b6972d487218a6176b87f60671901d9e2473f5c3645",
       "bytes": 1221,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -362,7 +362,7 @@
       "sha256": "40aa62a2122605612a5db88d51bb447d0d34cb95f8ab4b20cee4993f2aec33af",
       "bytes": 527,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -371,7 +371,7 @@
       "sha256": "c3abeaed7b3783c55de5f7e8a718112f8fa477e919b3d7beaef6174433306025",
       "bytes": 1612,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -380,7 +380,7 @@
       "sha256": "54887849393eb274da450ac0479c6e054a2227811be810f99dc39a0c1072ee83",
       "bytes": 1959,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     },
     {
@@ -389,7 +389,7 @@
       "sha256": "bccbd162554d2cb56b16cdd59fbc2d1abec645bd53c9db18460137ffccbbc2a2",
       "bytes": 834,
       "http_status": 200,
-      "fetched_at": "2026-09-16T19:52:21+08:00",
+      "fetched_at": "2026-09-16T23:06:22+08:00",
       "ok": true
     }
   ]
