@@ -1,6 +1,6 @@
-#!name=Your Subscription 日常去广告 V6.0
+#!name=你的订阅 日常去广告 V6.0
 #!desc=HAR/Surge 存档实测精简版：保留 B站与酷安开屏、淘宝、京东、小红书、高德精确去广告；重复域名拒绝交由主配置与 SKK 索引处理。
-#!author=Your Subscription；上游：fmz200/wool_scripts、kokoryh/Sparkle（仅 HTTP 直播接口）、VenenoSix24/Ivy-Script、kokoryh/Script（高德）
+#!author=你的订阅；上游：fmz200/wool_scripts、kokoryh/Sparkle（仅 HTTP 直播接口）、VenenoSix24/Ivy-Script、kokoryh/Script（高德）
 #!category=广告拦截
 #!system=ios
 #!homepage=https://github.com/fmz200/wool_scripts
@@ -79,24 +79,24 @@ http-response-jq ^https:\/\/api\.coolapk\.com\/v6\/main\/init(?:\?|$) '.data |= 
 
 [Script]
 # ---- Taobao：奶思上游脚本 ----
-淘宝 = type=http-response, pattern=^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/myBlockAds.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
-淘宝-02 = type=http-response, pattern=^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/myBlockAds.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+淘宝 = type=http-response, pattern=^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/mirrors/scripts/fmz200/myBlockAds.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+淘宝-02 = type=http-response, pattern=^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/mirrors/scripts/fmz200/myBlockAds.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
 
 # ---- JD：奶思上游脚本 ----
-京东 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/jingdong.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+京东 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/mirrors/scripts/fmz200/jingdong.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
 
 # ---- Xiaohongshu：仅搜索与开屏脚本 ----
-小红书搜索页 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(banner|hot)_list, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
-小红书搜索页-02 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(hint|trending)\?, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
-小红书搜索页-03 = type=http-response, pattern=^https?:\/\/(so|edith)\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\?, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
-小红书开屏广告 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/config\?, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
-小红书开屏广告-02 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/splash_config, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+小红书搜索页 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(banner|hot)_list, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+小红书搜索页-02 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(hint|trending)\?, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+小红书搜索页-03 = type=http-response, pattern=^https?:\/\/(so|edith)\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\?, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+小红书开屏广告 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/config\?, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+小红书开屏广告-02 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/splash_config, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
 
 # ---- Amap：kokoryh 明文脚本。只挂开屏/首页/打车推广/「我的」广告卡；不挂 frogserver、附近页、热词、天气 ----
-高德 = type=http-response, pattern=^https:\/\/(m5|m5-zb)\.amap\.com\/ws\/valueadded\/alimama\/splash_screen, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/kokoryh/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
-高德-02 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/kokoryh/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
-高德-03 = type=http-response, pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/kokoryh/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
-高德-04 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/kokoryh/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+高德 = type=http-response, pattern=^https:\/\/(m5|m5-zb)\.amap\.com\/ws\/valueadded\/alimama\/splash_screen, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/mirrors/scripts/kokoryh/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+高德-02 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/mirrors/scripts/kokoryh/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+高德-03 = type=http-response, pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/mirrors/scripts/kokoryh/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+高德-04 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/mirrors/scripts/kokoryh/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
 
 [MITM]
 # 不使用 *；B站仅保留 app.bilibili.com 开屏接口；酷安仅对 api.coolapk.com 的 main/init 执行正文改写。
