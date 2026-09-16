@@ -1,0 +1,12 @@
+# MESL V6.0 finance-critical.list
+# 用途：数字资产组关键前置例外（toblog/tobapplog、okex、部分 AppsFlyer 前缀）。
+# 策略由主配置 RULE-SET 行指定 → 「🪙 数字资产」
+# 同属 finance-critical 家族：Bybit EU/Global 因 Surge RULE-SET 整文件共用策略，
+# 必须使用伴生文件 finance-bybit-eu.list / finance-bybit-global.list，不是第二套大底座。
+
+DOMAIN,toblog.tobsnssdk.com
+DOMAIN,tobapplog.tobsnssdk.com
+DOMAIN-SUFFIX,okex.com
+DOMAIN-WILDCARD,ipyp0a-*.appsflyersdk.com
+DOMAIN-WILDCARD,m3ond3-*.appsflyersdk.com
+DOMAIN-WILDCARD,jekkyy-*.appsflyersdk.com

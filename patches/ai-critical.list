@@ -1,0 +1,34 @@
+# MESL V6.0 ai-critical.list
+# 用途：Claude / OpenAI 等与 SKK 广告集冲突的精确前置例外。
+# 策略由主配置 RULE-SET 行指定 → 「🤖 AI住宅」
+# 不含策略名；勿把整段 AI 大底座搬入本文件。
+
+# --- Sift 风控（HAR/存档核实）---
+DOMAIN,api3.siftscience.com
+DOMAIN-SUFFIX,siftscience.com
+
+# --- Claude / Anthropic 官方与核实端点 ---
+DOMAIN,api.anthropic.com
+DOMAIN,a-api.anthropic.com
+DOMAIN,a-cdn.anthropic.com
+DOMAIN,platform.claude.com
+DOMAIN,mcp-proxy.anthropic.com
+DOMAIN,downloads.claude.ai
+DOMAIN,assets.claude.ai
+DOMAIN,code.claude.com
+DOMAIN,assets-proxy.anthropic.com
+DOMAIN,bridge.claudeusercontent.com
+DOMAIN-SUFFIX,frame.claudeusercontent.com
+DOMAIN,o1158394.ingest.us.sentry.io
+DOMAIN,statsig.anthropic.com
+
+# --- Datadog / Statsig / featuregates（部分已核实；a-api/a-cdn 等见 manifest evidence）---
+DOMAIN,http-intake.logs.us5.datadoghq.com
+DOMAIN,browser-intake-us5-datadoghq.com
+DOMAIN,browser-intake-datadoghq.com
+DOMAIN,events.statsigapi.net
+DOMAIN,api.statsigcdn.com
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,assetsconfigcdn.org
+DOMAIN-SUFFIX,beyondwickedmapping.org
+DOMAIN-SUFFIX,prodregistryv2.org

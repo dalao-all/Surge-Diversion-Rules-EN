@@ -1,0 +1,19 @@
+# MESL V6.0 direct-patch.list
+# 用途：防广告集误杀的 DIRECT 兼容例外（仅 SKK 前真正需要的精确项）。
+# 策略由主配置 RULE-SET 行指定 → DIRECT
+# 不要把整个国内直连大段搬入本文件。
+# 说明：RULE-SET 无法按条携带 extended-matching；若 amdc HTTPDNS 仍异常，
+# 可在主配置对该域另加内联 DOMAIN,...,DIRECT,extended-matching。
+
+DOMAIN,grpc.biliapi.net
+DOMAIN,app.biliapi.net
+DOMAIN,app.biliapi.com
+DOMAIN,api.biliapi.net
+DOMAIN,api.biliapi.com
+DOMAIN,t2.xiaohongshu.com
+DOMAIN,edith.xiaohongshu.com
+DOMAIN,www.xiaohongshu.com
+DOMAIN,api.coolapk.com
+DOMAIN,image.coolapk.com
+DOMAIN,avatar.coolapk.com
+DOMAIN,amdc.m.taobao.com

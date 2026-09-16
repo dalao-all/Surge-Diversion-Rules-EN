@@ -1,0 +1,8 @@
+# MESL V6.0 ads-patch.list
+# 用途：长期自建、覆盖 SKK 缺口的本地广告域补丁。
+# 策略由主配置 RULE-SET 行指定 → REJECT
+# 不要把 pre-matching 的 STUN / iCloud Private Relay 等塞进本文件（那些留主配置）。
+# V6.0：修订 2 几乎无独立 ads 缺口；以下为占位示例，manifest 标 status/evidence=placeholder。
+
+DOMAIN,ads-patch-placeholder-1.example.invalid
+DOMAIN-SUFFIX,ads-patch-placeholder-2.example.invalid

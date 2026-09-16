@@ -1,0 +1,1185 @@
+# MESL V5.3 — iPhone App 分类清单结构化（兴趣源）
+# 来源：2026-09-16 截图识别清单（国内 131 + 国外 22）
+# 字段：name, region(cn|intl|system), folder, surge_interest, policy_hint, vendors[], notes
+# 系统自带 App：surge_interest=false，不进种子
+# 加密金融若主屏幕未出现但 conf 已有：见 from_config_not_on_homescreen
+version: "6.0"
+updated: "2026-09-16"
+timezone: Asia/Shanghai
+source: "iPhone App 截图识别清单；非 Surge 请求日志"
+log_zip_status: "PacketTunnelProvider/SGLog 应用日志 — 不可作域名种子"
+
+meta:
+  finance_folder_missing_page: false
+  finance_folder_note: "V6.0：财务软件第 2 页已写入（OKX/Bybit/Bybit EU/UU Wallet/Plasma One/Bitget Wallet/PayPal/Authenticator/Wise）；用户拼写 plamma one→Plasma One；Authenticator 按 Google Authenticator 假设"
+  dual_version_note: "微信/QQ/抖音 与 TikTok/Instagram/X 等国内国际版并存，映射勿混淆"
+
+# ---------------------------------------------------------------------------
+# 系统自带 / Apple 工具：默认忽略
+# ---------------------------------------------------------------------------
+system_apps:
+  - name: 查找
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: "系统自带，不进种子"
+  - name: 日历
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: Watch
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 邮件
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 备忘录
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 提醒事项
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: App Store
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: DIRECT
+    vendors: [apple]
+    notes: "走 SKK apple_*；不进自有种子扩写"
+  - name: 健康
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 钱包
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 文件
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 设置
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: Safari浏览器
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: "浏览器本身无独立兴趣；站点按域名判定"
+  - name: 照片
+    region: system
+    folder: 主屏幕
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 电话
+    region: system
+    folder: Dock
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 信息
+    region: system
+    folder: Dock
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 相机
+    region: system
+    folder: Dock
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 语音备忘录
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 指南针
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 测距仪
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 放大器
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 计算器
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 密码
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 图书
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 地图
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: DIRECT
+    vendors: [apple]
+    notes: "Apple Maps；与 Google Maps 区分"
+  - name: 快捷指令
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 播客
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 股市
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: FaceTime通话
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 视频
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: "Apple TV"
+  - name: Numbers表格
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 天气
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 支持
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 反馈
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: Apple Store
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: DIRECT
+    vendors: [apple]
+    notes: ""
+  - name: 提示
+    region: system
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 无边记
+    region: system
+    folder: 教育
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 手记
+    region: system
+    folder: 教育
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: iTunes Store
+    region: system
+    folder: 教育
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 预览
+    region: system
+    folder: 教育
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 健身
+    region: system
+    folder: 教育
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 家庭
+    region: system
+    folder: 教育
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+  - name: 音乐
+    region: system
+    folder: 教育
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: "Apple Music"
+  - name: 翻译
+    region: system
+    folder: 教育
+    surge_interest: false
+    policy_hint: null
+    vendors: [apple]
+    notes: ""
+
+# ---------------------------------------------------------------------------
+# 国内 App（surge_interest=true 为主）
+# ---------------------------------------------------------------------------
+cn_apps:
+  - name: Grow
+    region: cn
+    folder: 主屏幕
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: "小众；保守 DIRECT"
+  - name: 爱思全能版
+    region: cn
+    folder: 主屏幕
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [i4]
+    notes: ""
+  - name: 微信
+    region: cn
+    folder: Dock
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [wechat, tencent]
+    notes: "高频回归；与海外社交区分"
+  - name: GestaltEdit
+    region: cn
+    folder: 实用工具
+    surge_interest: false
+    policy_hint: null
+    vendors: []
+    notes: "工具向；默认不扩种子"
+  - name: 网易有道词典
+    region: cn
+    folder: 教育
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [youdao, netease]
+    notes: ""
+  - name: BOSS直聘
+    region: cn
+    folder: 商业
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [zhipin]
+    notes: ""
+  - name: 智联招聘
+    region: cn
+    folder: 商业
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [zhaopin]
+    notes: ""
+  - name: 猎聘
+    region: cn
+    folder: 商业
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [liepin]
+    notes: ""
+  - name: 企查查
+    region: cn
+    folder: 商业
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [qichacha]
+    notes: ""
+  - name: 贝壳找房
+    region: cn
+    folder: 商业
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [ke, beike]
+    notes: ""
+  - name: 国家网络身份认证
+    region: cn
+    folder: 商业
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: "政务；DIRECT"
+  - name: 爱奇艺
+    region: cn
+    folder: 视频软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [iqiyi]
+    notes: "主配置已有部分 iqiyi DIRECT 例外"
+  - name: 哔哩哔哩
+    region: cn
+    folder: 视频软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [bilibili, biliapi]
+    notes: "高频回归；direct-patch 已有 biliapi"
+  - name: 腾讯视频
+    region: cn
+    folder: 视频软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [tencentvideo, tencent]
+    notes: ""
+  - name: 中国工商银行
+    region: cn
+    folder: 财务软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [icbc]
+    notes: "银行类回归代表"
+  - name: 中国建设银行
+    region: cn
+    folder: 财务软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [ccb]
+    notes: ""
+  - name: 个人手机银行
+    region: cn
+    folder: 财务软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [scrcu]
+    notes: "四川农信"
+  - name: 动卡空间
+    region: cn
+    folder: 财务软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [bankcomm]
+    notes: ""
+  - name: 京东金融
+    region: cn
+    folder: 财务软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [jd, jr]
+    notes: ""
+  - name: 兴业银行
+    region: cn
+    folder: 财务软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [cib]
+    notes: ""
+  - name: 招商银行
+    region: cn
+    folder: 财务软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [cmb]
+    notes: "银行类高频回归"
+  - name: 掌上生活
+    region: cn
+    folder: 财务软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [cmb]
+    notes: "招行信用卡"
+  - name: 云闪付
+    region: cn
+    folder: 财务软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [unionpay]
+    notes: "支付类回归"
+  - name: MONO记账
+    region: cn
+    folder: 财务软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: "第 3 页；保守"
+  - name: Cookie
+    region: cn
+    folder: 财务软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: "记账类小众；第 3 页"
+  - name: 大众点评
+    region: cn
+    folder: 外卖软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [dianping, meituan]
+    notes: ""
+  - name: 淘宝闪购
+    region: cn
+    folder: 外卖软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [taobao, alibaba]
+    notes: ""
+  - name: 盒马
+    region: cn
+    folder: 外卖软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [hema, alibaba]
+    notes: ""
+  - name: 美团
+    region: cn
+    folder: 外卖软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [meituan]
+    notes: ""
+  - name: 小红书
+    region: cn
+    folder: 社交网络
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [xiaohongshu]
+    notes: "direct-patch 已有关键域"
+  - name: 剪映
+    region: cn
+    folder: 社交网络
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [capcut, bytedance]
+    notes: "字节系；勿与 TikTok 国际混映射"
+  - name: 酷安
+    region: cn
+    folder: 社交网络
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [coolapk]
+    notes: "高频回归"
+  - name: 微博
+    region: cn
+    folder: 社交网络
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [weibo]
+    notes: ""
+  - name: 快手
+    region: cn
+    folder: 社交网络
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [kuaishou]
+    notes: ""
+  - name: 快手极速版
+    region: cn
+    folder: 社交网络
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [kuaishou]
+    notes: ""
+  - name: 懂车帝
+    region: cn
+    folder: 社交网络
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [dongchedi, bytedance]
+    notes: ""
+  - name: 汽车之家
+    region: cn
+    folder: 社交网络
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [autohome]
+    notes: ""
+  - name: 悦通行
+    region: cn
+    folder: 社交网络
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: ""
+  - name: 去上网
+    region: cn
+    folder: 社交网络
+    surge_interest: false
+    policy_hint: null
+    vendors: []
+    notes: "去哒类工具；默认不扩种子"
+  - name: 铁路12306
+    region: cn
+    folder: 旅行
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [12306]
+    notes: ""
+  - name: 携程旅行
+    region: cn
+    folder: 旅行
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [ctrip]
+    notes: ""
+  - name: 航旅纵横
+    region: cn
+    folder: 旅行
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [umetrip]
+    notes: ""
+  - name: 哈啰
+    region: cn
+    folder: 旅行
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [hello]
+    notes: ""
+  - name: 高德地图
+    region: cn
+    folder: 旅行
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [amap, alibaba]
+    notes: ""
+  - name: 全球网测
+    region: cn
+    folder: 旅行
+    surge_interest: false
+    policy_hint: null
+    vendors: []
+    notes: "测速工具；不进业务种子"
+  - name: Speedtest
+    region: intl
+    folder: 旅行
+    surge_interest: false
+    policy_hint: "🌍 国际网络"
+    vendors: [ookla]
+    notes: "测速；可选国际；默认不强制吸增量"
+  - name: 天府通
+    region: cn
+    folder: 旅行
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: ""
+  - name: DeepSeek
+    region: cn
+    folder: 国内AI
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [deepseek]
+    notes: "国内 AI → DIRECT；勿并入 ai-critical"
+  - name: 千问
+    region: cn
+    folder: 国内AI
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [qwen, alibaba]
+    notes: ""
+  - name: 豆包
+    region: cn
+    folder: 国内AI
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [doubao, bytedance]
+    notes: ""
+  - name: Marvis
+    region: cn
+    folder: 国内AI
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: "小众；保守"
+  - name: TRAE
+    region: cn
+    folder: 国内AI
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [trae]
+    notes: "若实际走海外版再人工改 AI住宅"
+  - name: ima
+    region: cn
+    folder: 国内AI
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: ""
+  - name: 得物
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [dewu, poizon]
+    notes: ""
+  - name: 京东
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [jd]
+    notes: "高频"
+  - name: 京东AI购
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [jd]
+    notes: ""
+  - name: 转转
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [zhuanzhuan]
+    notes: ""
+  - name: 闲鱼
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [xianyu, alibaba]
+    notes: ""
+  - name: 淘宝
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [taobao, alibaba]
+    notes: "amdc 等已在 direct-patch"
+  - name: 拼多多
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [pinduoduo]
+    notes: ""
+  - name: 黑猫投诉
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: ""
+  - name: 山姆会员商店
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [sam]
+    notes: ""
+  - name: 王者荣耀
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [tencent, smoba]
+    notes: "主配置已有 gcloud/smoba DIRECT"
+  - name: 掌上英雄联盟
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [tencent]
+    notes: ""
+  - name: 飞智游戏厅
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [flydigi]
+    notes: ""
+  - name: 京粉
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [jd]
+    notes: ""
+  - name: 省钱快报
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: ""
+  - name: 一淘
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [etao, alibaba]
+    notes: ""
+  - name: 猫眼
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [maoyan]
+    notes: ""
+  - name: 淘票票
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [taopiaopiao, alibaba]
+    notes: ""
+  - name: 阿里巴巴
+    region: cn
+    folder: 购物软件
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [alibaba, 1688]
+    notes: "1688"
+  - name: 吉利汽车
+    region: cn
+    folder: 家庭控制
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [geely]
+    notes: ""
+  - name: 九号出行
+    region: cn
+    folder: 家庭控制
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [ninebot]
+    notes: ""
+  - name: 米家
+    region: cn
+    folder: 家庭控制
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [mi, xiaomi]
+    notes: ""
+  - name: 华为智慧生活
+    region: cn
+    folder: 家庭控制
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [huawei]
+    notes: ""
+  - name: 交管12123
+    region: cn
+    folder: 家庭控制
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: "政务"
+  - name: 中国移动
+    region: cn
+    folder: 家庭控制
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [cmcc]
+    notes: ""
+  - name: 个人所得税
+    region: cn
+    folder: 家庭控制
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: "政务"
+  - name: 无忧行
+    region: cn
+    folder: 家庭控制
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [chinaunicom]
+    notes: ""
+  - name: 上岛记
+    region: cn
+    folder: 财务
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: "小众"
+  - name: iCost
+    region: cn
+    folder: 财务
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: []
+    notes: ""
+  - name: UU远程
+    region: cn
+    folder: 财务
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [uu]
+    notes: "远程控制；保守 DIRECT"
+  - name: 网易云音乐
+    region: cn
+    folder: 财务
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [netease, music]
+    notes: "SKK neteasemusic frozen"
+  - name: 支付宝
+    region: cn
+    folder: 财务
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [alipay, alibaba]
+    notes: "高频回归"
+  - name: 扫描全能王
+    region: cn
+    folder: 财务
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [camscanner]
+    notes: ""
+  - name: QQ
+    region: cn
+    folder: 财务
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [qq, tencent]
+    notes: "国内社交；勿与国际混淆"
+  - name: 抖音
+    region: cn
+    folder: 财务
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [douyin, bytedance]
+    notes: "国内版；与 TikTok 国际分流"
+  - name: 钉钉
+    region: cn
+    folder: 财务
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [dingtalk, alibaba]
+    notes: ""
+
+# ---------------------------------------------------------------------------
+# 国外 App
+# ---------------------------------------------------------------------------
+intl_apps:
+  - name: Chrome
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [google, chrome]
+    notes: "浏览器；站点按域；Google 更新兴趣"
+  - name: Gmail
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [google, gmail]
+    notes: "Google 系"
+  - name: Google
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [google]
+    notes: "搜索/账号；与 Gemini/YouTube 规则顺序相关"
+  - name: YouTube
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🎬 流媒体"
+    vendors: [youtube, google]
+    notes: "流媒体；须在宽泛 Google 规则之前（主配置约束）"
+  - name: Instagram
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [instagram, meta]
+    notes: ""
+  - name: Google Maps
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [google, maps]
+    notes: ""
+  - name: X
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [x, twitter]
+    notes: ""
+  - name: TikTok
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🎵 TikTok"
+    vendors: [tiktok, bytedance]
+    notes: "国际版；pangle 广告 → reject_interest"
+  - name: Facebook
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [facebook, meta]
+    notes: ""
+  - name: Sanas
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [sanas]
+    notes: "小众；弱兴趣"
+  - name: Netflix
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🎬 流媒体"
+    vendors: [netflix]
+    notes: "watch stream_us/stream"
+  - name: Viki
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🎬 流媒体"
+    vendors: [viki, rakuten]
+    notes: ""
+  - name: Gemini
+    region: intl
+    folder: 国外AI
+    surge_interest: true
+    policy_hint: "🤖 AI住宅"
+    vendors: [gemini, google]
+    notes: "国外 AI"
+  - name: ChatGPT
+    region: intl
+    folder: 国外AI
+    surge_interest: true
+    policy_hint: "🤖 AI住宅"
+    vendors: [openai, chatgpt]
+    notes: "高频回归"
+  - name: Grok
+    region: intl
+    folder: 国外AI
+    surge_interest: true
+    policy_hint: "🤖 AI住宅"
+    vendors: [grok, xai]
+    notes: ""
+  - name: Cursor
+    region: intl
+    folder: 国外AI
+    surge_interest: true
+    policy_hint: "🤖 AI住宅"
+    vendors: [cursor]
+    notes: ""
+  - name: Claude
+    region: intl
+    folder: 国外AI
+    surge_interest: true
+    policy_hint: "🤖 AI住宅"
+    vendors: [anthropic, claude, siftscience, statsig]
+    notes: "高频回归；ai-critical 核心"
+  - name: Grok Bot
+    region: intl
+    folder: 国外AI
+    surge_interest: true
+    policy_hint: "🤖 AI住宅"
+    vendors: [grok, xai]
+    notes: "与 Grok 同兴趣"
+  - name: 云端硬盘
+    region: intl
+    folder: 国外AI
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [google, drive]
+    notes: "Google Drive"
+  - name: Obsidian
+    region: intl
+    folder: 国外AI
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [obsidian]
+    notes: "同步可选国际"
+  - name: DejaVocab
+    region: intl
+    folder: 国外AI
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: []
+    notes: "小众"
+  - name: Tableau
+    region: intl
+    folder: 国外AI
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [tableau, salesforce]
+    notes: ""
+
+# ---------------------------------------------------------------------------
+# 财务软件第 2 页（V6.0 补全；用户清单）
+# Authenticator 按 Google Authenticator 假设；不编造未核实域名
+# Plasma One：用户拼写 plamma one → 规范名 Plasma One
+# ---------------------------------------------------------------------------
+finance_page2_apps:
+  - name: 欧易 OKX
+    region: intl
+    folder: 财务软件
+    page: 2
+    surge_interest: true
+    policy_hint: "🪙 数字资产"
+    vendors: [okx, okex, tobsnssdk]
+    notes: "财务第2页；主配置 OKX 全链路 + finance-critical（toblog/tobapplog/okex/AF）"
+  - name: Bybit
+    region: intl
+    folder: 财务软件
+    page: 2
+    surge_interest: true
+    policy_hint: "💳 Bybit 全球"
+    vendors: [bybit]
+    notes: "财务第2页；Bybit Global；finance-bybit-global.list"
+  - name: Bybit EU
+    region: intl
+    folder: 财务软件
+    page: 2
+    surge_interest: true
+    policy_hint: "🇩🇪 Bybit 欧洲"
+    vendors: [bybit]
+    notes: "财务第2页；Bybit 欧洲；finance-bybit-eu.list"
+  - name: UU Wallet
+    region: intl
+    folder: 财务软件
+    page: 2
+    surge_interest: true
+    policy_hint: "🪙 数字资产"
+    vendors: [uuwallet, uu]
+    notes: "财务第2页；主配置 uuwallet.com"
+  - name: Plasma One
+    region: intl
+    folder: 财务软件
+    page: 2
+    surge_interest: true
+    policy_hint: "🪙 数字资产"
+    vendors: [plasma]
+    notes: "财务第2页；用户拼写 plamma one→Plasma One；主配置 plasma.one / plasma.to / plasma.org"
+  - name: Bitget Wallet
+    region: intl
+    folder: 财务软件
+    page: 2
+    surge_interest: true
+    policy_hint: "🪙 数字资产"
+    vendors: [bitget, bitkeep]
+    notes: "财务第2页；主配置 bitget/bitkeep 域"
+  - name: PayPal
+    region: intl
+    folder: 财务软件
+    page: 2
+    surge_interest: true
+    policy_hint: "💰 PayPal"
+    vendors: [paypal, braintree, venmo]
+    notes: "财务第2页；主配置 PayPal 段"
+  - name: Authenticator
+    region: intl
+    folder: 财务软件
+    page: 2
+    surge_interest: true
+    policy_hint: "🤖 AI住宅"
+    vendors: [google, authenticator]
+    notes: "财务第2页；按 Google Authenticator 假设。与 Google/AI 登录亲和（accounts.google.com 等走主配置既有 Google/AI 规则）。不编造未核实的独立 Authenticator 域名；无 HAR 前不新增自有 list 条目。"
+  - name: Wise
+    region: intl
+    folder: 财务软件
+    page: 2
+    surge_interest: true
+    policy_hint: "🪙 数字资产"
+    vendors: [wise, transferwise]
+    notes: "财务第2页；主配置 wise.com / transferwise.com"
+
+# ---------------------------------------------------------------------------
+# conf 已启用且不在上述第2页清单中的补充兴趣（若有）
+# ---------------------------------------------------------------------------
+from_config_not_on_homescreen: []

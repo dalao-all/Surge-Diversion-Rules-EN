@@ -1,0 +1,97 @@
+# MESL V6.0 相关性选择器 + 负担控制 + 目标 list 映射
+# 详见 docs/INTEREST_MODEL.md
+# 注：keywords 使用流式列表；daily_patch_bot 标准库 YAML 子集可解析
+
+version: "6.0"
+auto_merge_high_confidence: false  # true 时仅无冲突的 auto_pr_high 可配置直接 push；默认 PR
+
+enabled_categories:
+  - ai
+  - reject
+  - stream_us
+  - stream
+  - stream_jp
+  - stream_tw
+  - telegram
+  - direct
+  - domestic
+  - apple
+  # global 默认不启用弱关联自动吸收；仅 P1–P3 命中才考虑
+  # - global
+
+budgets:
+  max_auto_per_file: 15
+  max_auto_per_day: 40
+  max_review_per_file: 50
+  reject_default_ignore: true  # 无关联 reject 新增一律 ignore
+
+# 优先级：exact_suffix > etld1 > vendor_keywords > category_weak > default_ignore
+vendor_keywords:
+  - keywords: [anthropic, claude, siftscience, statsig, featuregates, openai, datadoghq]
+    target_list: ai-critical.list
+    action: auto_pr_high
+    confidence: high
+  - keywords: [okx, okex, tobsnssdk, bybit, uuwallet, plasma, bitget, bitkeep, wise, transferwise]
+    target_list: finance-critical.list
+    action: auto_pr_high
+    confidence: high
+  - keywords: [appsflyersdk, appsflyer]
+    target_list: finance-critical.list
+    action: review  # 金融/TikTok 分流需人工；勿自动进 TikTok 放行
+    confidence: medium
+  - keywords: [paypal, braintree, venmo]
+    target_list: finance-critical.list
+    action: review  # PayPal 主配置内联为主；上游命中仅审阅
+    confidence: medium
+  - keywords: [tiktokpangle, pangle.io, pglstatp, pangolin]
+    target_list: ads-patch.list
+    action: auto_pr_high
+    confidence: high
+    note: "广告兴趣；禁止写入 TikTok 放行 list"
+  - keywords: [biliapi, bilibili, coolapk, xiaohongshu, taobao]
+    target_list: direct-patch.list
+    action: review
+    confidence: medium
+
+# 上游 category → 默认目标自有 list（强相关时）
+category_target:
+  ai: ai-critical.list
+  reject: ads-patch.list
+  direct: direct-patch.list
+  domestic: direct-patch.list
+  apple: direct-patch.list
+  stream_us: null  # 流媒体一般继续用 SKK；仅兴趣命中时 review，不默认自建大 list
+  stream: null
+  global: null
+
+# reject 来源的同 eTLD+1 命中：降级为 review，避免广告集误吸收业务域
+reject_etld1_downgrade_to_review: true
+
+stop_labels:
+  - com
+  - net
+  - org
+  - edu
+  - gov
+  - co
+  - io
+  - cn
+  - us
+  - uk
+  - cdn
+  - api
+  - www
+  - app
+  - imgs
+  - static
+  - example
+  - invalid
+  - placeholder
+
+multi_part_tlds:
+  - com.cn
+  - net.cn
+  - org.cn
+  - co.uk
+  - com.hk
+  - com.tw

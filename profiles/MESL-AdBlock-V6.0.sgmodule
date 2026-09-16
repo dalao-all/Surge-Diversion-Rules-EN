@@ -1,0 +1,104 @@
+#!name=MESL 日常去广告 V6.0
+#!desc=HAR/Surge 存档实测精简版：保留 B站与酷安开屏、淘宝、京东、小红书、高德精确去广告；重复域名拒绝交由主配置与 SKK 索引处理。
+#!author=MESL；上游：fmz200/wool_scripts、kokoryh/Sparkle（仅 HTTP 直播接口）、VenenoSix24/Ivy-Script、kokoryh/Script（高德）
+#!category=广告拦截
+#!system=ios
+#!homepage=https://github.com/fmz200/wool_scripts
+
+# V6.0：自 V5.3 复制；脚本、正文改写和 MITM 名单不变，不扩大范围（仅版本升 V6.0）。
+# 仅版本注释更新；重复域名拒绝仍交由主配置与 SKK 索引处理。
+# 官方 scripting 写明 requires-body 很贵，且 iOS NE 内存有限。
+# 因此日常模块不解密 B 站 gRPC，也不跑 Sparkle protobuf / 弹幕二进制脚本。
+# B站只处理开屏 JSON，不再解析每次刷新的 100-200KB 推荐流正文。
+# 不 MITM 全部主机；不拦 amdc.m.taobao.com；不 force-http-engine。
+# 不 MITM m.ctrip.com / pages.ctrip.com / mobile.12306.cn。
+
+[Rule]
+# ---- Bilibili：保留 Naisi 的聊天跟踪专用拒绝；不拒绝 app/api.biliapi 全站 ----
+AND,((DOMAIN-SUFFIX,chat.bilibili.com),(OR,((DOMAIN-KEYWORD,stun),(DOMAIN-KEYWORD,tracker)))),REJECT
+
+# ---- Taobao：只保留当前 SKK 域名索引未覆盖的精确补丁 ----
+DOMAIN-SUFFIX,ai.taobao.com,REJECT
+DOMAIN-SUFFIX,temai.taobao.com,REJECT
+DOMAIN-SUFFIX,unitacs.m.taobao.com,REJECT
+DOMAIN-SUFFIX,click.simba.taobao.com,REJECT
+
+# ---- JD：只保留当前 SKK 域名索引未覆盖的明确广告域 ----
+DOMAIN-SUFFIX,du.jd.com,REJECT
+DOMAIN-SUFFIX,cm.jd.com,REJECT
+DOMAIN-SUFFIX,keplerapi.jd.com,REJECT
+DOMAIN-SUFFIX,ad.3.cn,REJECT
+DOMAIN-SUFFIX,jd.c-ptsp.com.cn,REJECT
+
+# ---- Xiaohongshu：素材域由主配置通配符 / SKK 处理，仅补充入口 ----
+DOMAIN,t-ads.xiaohongshu.com,REJECT
+# 不全局阻断小红书 QUIC；MITM 域名由 Surge 的 auto-quic-block 精确处理。
+
+[Body Rewrite]
+# ---- Bilibili：仅开屏；推荐流实测中位约 786ms，不改写推荐正文（自 V5.2 起） ----
+http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(list|show|event\/list2)\? '.data |= with_entries(if .key | IN("show", "event_list") then .value = [] else . end)'
+
+# ---- 酷安：只改 main/init 开屏配置；不再解析 indexV8/replyList/detail/page 等大响应 ----
+# 945 是上游脚本标注的开屏实体；sponsorCard 作为结构化广告兜底。保留热门搜索、首页 Tab 与其他配置。
+http-response-jq ^https:\/\/api\.coolapk\.com\/v6\/main\/init(?:\?|$) '.data |= (if type == "array" then map(select((.entityId != 945) and (.entityTemplate != "sponsorCard"))) else . end)'
+
+[URL Rewrite]
+# ---- JD：奶思原规则，禁止直播小窗 ----
+# 禁京东直播小窗
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 - reject
+
+# ---- Amap：归因请求；备用开屏域已在上方 DOMAIN REJECT，无需再 MITM ----
+^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution - reject
+
+[Map Local]
+# ---- Taobao：奶思原生开屏/营销接口 Mock ----
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# ---- Xiaohongshu：仅惊喜弹窗/营销弹窗，未合并下载/水印等扩展功能 ----
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# ---- Amap：启动广告 init；开屏正文用脚本改 JSON，避免空 {} 导致 SDK 空等 ----
+^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+# ---- Taobao：奶思上游脚本 ----
+淘宝 = type=http-response, pattern=^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/myBlockAds.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+淘宝-02 = type=http-response, pattern=^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/myBlockAds.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+
+# ---- JD：奶思上游脚本 ----
+京东 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/jingdong.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+
+# ---- Xiaohongshu：仅搜索与开屏脚本 ----
+小红书搜索页 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(banner|hot)_list, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+小红书搜索页-02 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(hint|trending)\?, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+小红书搜索页-03 = type=http-response, pattern=^https?:\/\/(so|edith)\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\?, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+小红书开屏广告 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/config\?, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+小红书开屏广告-02 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/splash_config, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/fmz200/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+
+# ---- Amap：kokoryh 明文脚本。只挂开屏/首页/打车推广/「我的」广告卡；不挂 frogserver、附近页、热词、天气 ----
+高德 = type=http-response, pattern=^https:\/\/(m5|m5-zb)\.amap\.com\/ws\/valueadded\/alimama\/splash_screen, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/kokoryh/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+高德-02 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/kokoryh/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+高德-03 = type=http-response, pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/kokoryh/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+高德-04 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas, script-path=https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/mirrors/scripts/kokoryh/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400
+
+[MITM]
+# 不使用 *；B站仅保留 app.bilibili.com 开屏接口；酷安仅对 api.coolapk.com 的 main/init 执行正文改写。
+h2 = true
+hostname = %APPEND% app.bilibili.com, api.coolapk.com, acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, api.m.jd.com, edith.xiaohongshu.com, www.xiaohongshu.com, so.xiaohongshu.com, m5.amap.com, m5-zb.amap.com

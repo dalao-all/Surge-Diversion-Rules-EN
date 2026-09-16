@@ -1,0 +1,42 @@
+# MESL interest-driven patch bot
+# Asia/Shanghai 09:00 & 21:00 == UTC 01:00 & 13:00
+# cron: 0 1,13 * * *
+name: mesl-interest-bot
+
+on:
+  schedule:
+    - cron: "0 1,13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: mesl-interest-bot
+  cancel-in-progress: false
+
+jobs:
+  interest-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run daily_patch_bot (PR mode + fetch upstream)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          echo "Timezone note: cron 0 1,13 * * * UTC = 09:00 & 21:00 Asia/Shanghai"
+          python3 scripts/daily_patch_bot.py --mode apply --fetch-upstream
+          echo "Bot finished (no candidates => no-op success)"

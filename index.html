@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MESL Surge V6.0</title>
+<style>
+  :root {
+    --bg: #070b14;
+    --card: rgba(14, 22, 40, 0.92);
+    --border: rgba(80, 140, 255, 0.22);
+    --text: #d8e6ff;
+    --muted: #8aa0c0;
+    --surge: #5ac8fa;
+    --surge2: #007aff;
+    --accent: #4de1ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "SF Pro Text", "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+    background: radial-gradient(1200px 600px at 50% -10%, #12203a 0%, var(--bg) 55%);
+    color: var(--text);
+    line-height: 1.65;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 36px 20px 64px; }
+  .hero { text-align: center; margin-bottom: 28px; }
+  .logo {
+    width: 64px; height: 64px; margin: 0 auto 14px;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #1c1c1e, #0a0a0a);
+    border: 1px solid rgba(90,200,250,.35);
+    box-shadow: 0 0 24px rgba(90,200,250,.25);
+    display: grid; place-items: center;
+  }
+  .logo svg { width: 40px; height: 40px; }
+  h1 {
+    margin: 0 0 8px;
+    font-size: clamp(1.6rem, 4vw, 2.1rem);
+    font-weight: 750;
+    letter-spacing: 0.02em;
+    background: linear-gradient(90deg, var(--surge), #a5d8ff 40%, #7c5cff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .subtitle { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+  .lang-switch {
+    display: inline-flex; gap: 6px; justify-content: center;
+    padding: 4px; border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(10,18,34,.7);
+  }
+  .lang-switch button {
+    border: 0; cursor: pointer; border-radius: 999px;
+    padding: 8px 18px; font-size: 13px; font-weight: 600;
+    background: transparent; color: var(--muted);
+  }
+  .lang-switch button.active {
+    background: linear-gradient(90deg, rgba(90,200,250,.25), rgba(124,92,255,.25));
+    color: #fff;
+    box-shadow: 0 0 0 1px rgba(90,200,250,.35) inset;
+  }
+  .panel {
+    margin-top: 22px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 22px 10px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.35);
+  }
+  .disclaimer {
+    border-left: 3px solid var(--surge);
+    padding: 10px 14px;
+    background: rgba(90,200,250,.08);
+    border-radius: 8px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  h2 { font-size: 1.15rem; margin: 22px 0 10px; color: #eaf2ff; }
+  h3 { font-size: 1rem; margin: 16px 0 8px; color: #cfe0ff; }
+  p, li { color: #c5d5ef; font-size: 14.5px; }
+  ul { padding-left: 1.2em; }
+  a { color: var(--accent); }
+  img.preview {
+    width: 100%; border-radius: 12px; border: 1px solid var(--border);
+    margin: 8px 0 6px;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 8px 0 12px; }
+  th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; }
+  th { background: rgba(30,50,90,.45); color: #dce8ff; }
+  pre {
+    background: #0a1220; border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px; overflow: auto; font-size: 12.5px; color: #cde7ff;
+  }
+  .hidden { display: none !important; }
+  footer {
+    text-align: center; color: var(--muted); font-size: 12px; margin-top: 28px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="logo" title="Surge" aria-hidden="true">
+        <!-- Stylized Surge mark (wave + bolt), not an official trademark asset -->
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="4" width="56" height="56" rx="14" fill="#111"/>
+          <path d="M12 38c6-10 12-10 18 0s12 10 18 0" stroke="#5ac8fa" stroke-width="3.2" stroke-linecap="round"/>
+          <path d="M12 46c6-10 12-10 18 0s12 10 18 0" stroke="#007aff" stroke-width="3.2" stroke-linecap="round" opacity=".85"/>
+          <path d="M34 14l-8 16h8l-4 14 14-20h-8l6-10h-8z" fill="url(#g)"/>
+          <defs>
+            <linearGradient id="g" x1="22" y1="14" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#5ac8fa"/><stop offset="1" stop-color="#7c5cff"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <h1>MESL Surge V6.0</h1>
+      <p class="subtitle" data-i18n="subtitle">MESL Surge diversion rules · V6.0</p>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" id="btn-en" class="active" onclick="setLang('en')">English</button>
+        <button type="button" id="btn-zh" onclick="setLang('zh')">中文</button>
+      </div>
+    </header>
+
+    <main id="content-en" class="panel">
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> This page is for <strong>rule-setting discussion and technical exchange only</strong>.
+        It is <strong>not</strong> sharing of proxy access, <strong>not</strong> promotion of any VPN/airport/service, and <strong>not</strong> an offer to provide connectivity.
+        No live subscription URLs or nodes are included. Placeholders must be filled with your own lawful resources.
+        You are responsible for GitHub terms and local laws. This is not legal advice.
+      </div>
+
+      <h2>Purpose</h2>
+      <p>Discuss how a Surge profile can structure <strong>policy groups</strong> and <strong>match order</strong>. Artifacts are <strong>configuration examples for study</strong>, not a packaged service.</p>
+
+      <h2>Routing logic (short)</h2>
+      <ul>
+        <li><strong>Protect and clean</strong> — DoH/DoT / STUN related rejects; ad/tracker rejects with allowlists.</li>
+        <li><strong>Finance-related policies</strong> — example splits by region policy labels (EU / TW / UK / PayPal).</li>
+        <li><strong>AI and identity-related policies</strong> — example grouping for AI domains and shared challenge/telemetry hosts.</li>
+        <li><strong>TikTok-related policy</strong> — example Smart group filtered by node name patterns.</li>
+        <li><strong>Domestic and LAN</strong> — domestic apps / Apple CN-CDN / NTP / China IP / GEOIP → DIRECT.</li>
+        <li><strong>Streaming-related policies</strong> — example sets for YouTube / Netflix / regional lists.</li>
+        <li><strong>General international policies</strong> — chat / GitHub / global lists.</li>
+        <li><strong>FINAL</strong> — fallback policy (<code>dns-failed</code> aware).</li>
+      </ul>
+      <p>These names are <strong>labels in a sample profile</strong>, not recommendations to buy or use any provider.</p>
+
+      <h2>Rule map (preview)</h2>
+      <img class="preview" src="assets/rule-map-preview.png" alt="Surge rule map preview"/>
+      <p>Open the interactive study map: <a href="rule-map.html">rule-map.html</a> (browser local file). EN/中文 UI inside the map defaults to English.</p>
+
+      <h2>Files (examples)</h2>
+      <table>
+        <tr><th>File</th><th>Role</th></tr>
+        <tr><td><code>index.html</code></td><td>This description page (one language at a time)</td></tr>
+        <tr><td><code>rule-map.html</code></td><td>Interactive sample rule graph</td></tr>
+        <tr><td><code>profiles/MESL-Surge-V6.0.share.conf</code></td><td>Sample Surge profile (placeholders only)</td></tr>
+        <tr><td><code>profiles/MESL-AdBlock-V6.0.sgmodule</code></td><td>Sample ad-related module</td></tr>
+      </table>
+
+      <h2>Personalizing the sample</h2>
+      <ol>
+        <li>Replace <code>REPLACE_WITH_YOUR_SUBSCRIPTION</code> on <code>policy-path</code> with a subscription you already own and may use.</li>
+        <li>Replace <code>your-subscribe-host.example</code> if needed.</li>
+        <li>Import into Surge only if lawful for you.</li>
+      </ol>
+
+      <h2>Agent prompts (optional)</h2>
+      <h3>A) Chat-driven</h3>
+      <pre>Customize this sample Surge profile for my own already-owned subscription.
+Files: profiles/MESL-Surge-V6.0.share.conf, profiles/MESL-AdBlock-V6.0.sgmodule, rule-map.html.
+1) Replace REPLACE_WITH_YOUR_SUBSCRIPTION with MY_OWN_SUBSCRIPTION_URL
+2) Replace your-subscribe-host.example with MY_OWN_HOST
+3) Do not change policy logic unless I ask
+4) Output the full modified files. Do not invent nodes or provide access.</pre>
+      <h3>B) Write local result files</h3>
+      <pre>Open this sample repo.
+Replace policy-path=REPLACE_WITH_YOUR_SUBSCRIPTION with my own URL.
+Replace your-subscribe-host.example with my own host.
+Write ./dist/MESL-Surge-V6.0.personalized.conf and copy the sgmodule to ./dist/
+Summarize placeholder replacements only. Do not commit/push unless I ask.</pre>
+
+      <h2>Notes on other clients (e.g. Shadowrocket)</h2>
+      <p>Conversion here means <strong>format study</strong> of match rules you already have rights to use—not providing a proxy service. Smart / MITM / Script may not map 1:1.</p>
+    </main>
+
+    <main id="content-zh" class="panel hidden">
+      <div class="disclaimer">
+        <strong>声明：</strong>本页仅用于<strong>规则设定交流与技术讨论</strong>。
+        <strong>不是</strong>分享可用代理接入，<strong>不是</strong>推广任何 VPN/机场/服务，<strong>也不是</strong>向他人提供连接。
+        不含真实订阅链接或节点。占位符需自行替换为你有权使用的资源。
+        请自行遵守 GitHub 条款及所在地法律法规。本文不构成法律意见。
+      </div>
+
+      <h2>用途说明</h2>
+      <p>讨论 Surge <strong>策略组与规则匹配顺序</strong>的设定方式。内容是<strong>配置样例</strong>，不是代理服务或推广。</p>
+
+      <h2>分流逻辑（简要）</h2>
+      <ul>
+        <li><strong>防护与清理</strong> — DoH/DoT、STUN 等相关拒绝；广告/追踪拒绝（含白名单）。</li>
+        <li><strong>金融相关策略</strong> — 样例按地区策略标签划分（欧/台/英/PayPal 等）。</li>
+        <li><strong>AI 与身份相关策略</strong> — AI 域名与共用验证/遥测主机的归组样例。</li>
+        <li><strong>TikTok 相关策略</strong> — Smart 组与节点名过滤写法样例。</li>
+        <li><strong>国内与局域网</strong> — 国内应用 / Apple 国内 CDN / NTP / 国内 IP / GEOIP → 直连。</li>
+        <li><strong>流媒体相关策略</strong> — YouTube / Netflix 及分区列表等样例。</li>
+        <li><strong>一般国际策略</strong> — 通讯 / GitHub / 全球列表等样例。</li>
+        <li><strong>FINAL</strong> — 兜底策略（含 <code>dns-failed</code>）。</li>
+      </ul>
+      <p>以上名称仅为<strong>样例标签</strong>，不构成对任何服务商的推荐或推广。</p>
+
+      <h2>规则图（预览）</h2>
+      <img class="preview" src="assets/rule-map-preview.png" alt="Surge 规则图预览"/>
+      <p>打开交互学习图：<a href="rule-map.html">rule-map.html</a>（本地用浏览器打开）。图内也可切换 EN/中文，默认英文。</p>
+
+      <h2>文件（样例）</h2>
+      <table>
+        <tr><th>文件</th><th>作用</th></tr>
+        <tr><td><code>index.html</code></td><td>本描述页（同一时间只显示一种语言）</td></tr>
+        <tr><td><code>rule-map.html</code></td><td>样例规则拓扑交互图</td></tr>
+        <tr><td><code>profiles/MESL-Surge-V6.0.share.conf</code></td><td>Surge 配置样例（仅占位符）</td></tr>
+        <tr><td><code>profiles/MESL-AdBlock-V6.0.sgmodule</code></td><td>去广告相关模块样例</td></tr>
+      </table>
+
+      <h2>自行替换占位符</h2>
+      <ol>
+        <li>将 <code>policy-path</code> 的 <code>REPLACE_WITH_YOUR_SUBSCRIPTION</code> 换成你自己已有且有权使用的订阅。</li>
+        <li>按需替换 <code>your-subscribe-host.example</code>。</li>
+        <li>仅在合法合规前提下导入 Surge。</li>
+      </ol>
+
+      <h2>Agent 提示词（可选）</h2>
+      <h3>A) 对话式</h3>
+      <pre>请把该 Surge 规则样例改成我自己已有订阅可用的配置。
+文件：profiles/MESL-Surge-V6.0.share.conf、profiles/MESL-AdBlock-V6.0.sgmodule、rule-map.html。
+1) 「REPLACE_WITH_YOUR_SUBSCRIPTION」→ 我自己的订阅 URL
+2) your-subscribe-host.example → 我自己的域名
+3) 不改策略逻辑，除非我另说
+4) 输出完整文件。不要编造节点，不要提供任何代理服务。</pre>
+      <h3>B) 直接写出结果文件</h3>
+      <pre>打开本样例仓库。
+用我自己的订阅 URL 替换 policy-path=REPLACE_WITH_YOUR_SUBSCRIPTION。
+用我自己的域名替换 your-subscribe-host.example。
+写出 ./dist/MESL-Surge-V6.0.personalized.conf，并复制 sgmodule 到 ./dist/
+只汇报占位符替换摘要。未经允许不要 commit/push。</pre>
+
+      <h2>关于其他客户端（如 Shadowrocket）</h2>
+      <p>所谓转换仅指<strong>规则写法学习/格式对照</strong>，不是提供代理或推广任何服务。Smart / MITM / 脚本等可能无法一一对应。</p>
+    </main>
+
+    <footer>
+      MESL Surge V6.0 · technical exchange only
+    </footer>
+  </div>
+<script>
+function setLang(lang) {
+  const en = document.getElementById('content-en');
+  const zh = document.getElementById('content-zh');
+  const btnEn = document.getElementById('btn-en');
+  const btnZh = document.getElementById('btn-zh');
+  const isZh = lang === 'zh';
+  en.classList.toggle('hidden', isZh);
+  zh.classList.toggle('hidden', !isZh);
+  btnEn.classList.toggle('active', !isZh);
+  btnZh.classList.toggle('active', isZh);
+  document.documentElement.lang = isZh ? 'zh-CN' : 'en';
+  const sub = document.querySelector('[data-i18n="subtitle"]');
+  if (sub) sub.textContent = isZh ? 'MESL Surge 分流规则 · V6.0' : 'MESL Surge diversion rules · V6.0';
+  localStorage.setItem('sdr_lang', lang);
+  location.hash = isZh ? 'zh' : 'en';
+}
+(function init() {
+  const fromHash = (location.hash || '').replace('#','');
+  const saved = localStorage.getItem('sdr_lang');
+  const lang = (fromHash === 'zh' || fromHash === 'en') ? fromHash : (saved || 'en');
+  setLang(lang);
+})();
+</script>
+</body>
+</html>

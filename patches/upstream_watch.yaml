@@ -1,0 +1,160 @@
+# MESL V6.0 — 只 watch 主配置已引用的上游路径（非全站 SKK）
+# 维护模型：docs/MAINTENANCE.md + docs/INTEREST_MODEL.md
+# schedule（Asia/Shanghai）：frequent → 每天 09:00 与 21:00；frozen → 一次性/极少更新
+
+version: "6.0"
+timezone: Asia/Shanghai
+schedule:
+  frequent_cron: "0 9,21 * * *"
+  note: "拉取 frequent → diff 新增 → 兴趣筛选；禁止整包同步 reject"
+
+base_url: "https://ruleset.skk.moe"
+
+# 频繁更新：广告底座、AI、流媒体等变化快或影响大的域名规则
+frequent:
+  - id: skk-reject-drop
+    path: /List/non_ip/reject-drop.conf
+    kind: RULE-SET
+    category: reject
+    policy_hint: REJECT-DROP
+  - id: skk-domainset-reject
+    path: /List/domainset/reject.conf
+    kind: DOMAIN-SET
+    category: reject
+    policy_hint: REJECT
+  - id: skk-domainset-reject-extra
+    path: /List/domainset/reject_extra.conf
+    kind: DOMAIN-SET
+    category: reject
+    policy_hint: REJECT
+  - id: skk-domainset-reject-phishing
+    path: /List/domainset/reject_phishing.conf
+    kind: DOMAIN-SET
+    category: reject
+    policy_hint: REJECT
+  - id: skk-reject
+    path: /List/non_ip/reject.conf
+    kind: RULE-SET
+    category: reject
+    policy_hint: REJECT
+    note: "只 diff 兴趣命中；禁止同步整包"
+  - id: skk-reject-no-drop
+    path: /List/non_ip/reject-no-drop.conf
+    kind: RULE-SET
+    category: reject
+    policy_hint: REJECT-NO-DROP
+  - id: skk-ai
+    path: /List/non_ip/ai.conf
+    kind: RULE-SET
+    category: ai
+    policy_hint: "🤖 AI住宅"
+  - id: skk-gitlab
+    path: /List/non_ip/gitlab.conf
+    kind: RULE-SET
+    category: ai
+    policy_hint: "🤖 AI住宅"
+  - id: skk-stream-us
+    path: /List/non_ip/stream_us.conf
+    kind: RULE-SET
+    category: stream_us
+    policy_hint: "🎬 流媒体"
+  - id: skk-stream
+    path: /List/non_ip/stream.conf
+    kind: RULE-SET
+    category: stream
+    policy_hint: "🎬 流媒体"
+  - id: skk-stream-jp
+    path: /List/non_ip/stream_jp.conf
+    kind: RULE-SET
+    category: stream_jp
+    policy_hint: "🇯🇵 日本节点池"
+  - id: skk-stream-tw
+    path: /List/non_ip/stream_tw.conf
+    kind: RULE-SET
+    category: stream_tw
+    policy_hint: "🇨🇳 台湾机房池"
+  - id: skk-telegram
+    path: /List/non_ip/telegram.conf
+    kind: RULE-SET
+    category: telegram
+    policy_hint: "🌍 国际网络"
+  - id: skk-global
+    path: /List/non_ip/global.conf
+    kind: RULE-SET
+    category: global
+    policy_hint: "🌍 国际网络"
+    note: "默认几乎全部 ignore；仅兴趣命中才 review"
+
+# 不怎么更新：一次性抓全 → 固化手动 list；日常不整包 diff
+frozen:
+  - id: skk-apple-services
+    path: /List/non_ip/apple_services.conf
+    kind: RULE-SET
+    category: apple
+    policy_hint: DIRECT
+  - id: skk-apple-cdn
+    path: /List/domainset/apple_cdn.conf
+    kind: DOMAIN-SET
+    category: apple
+    policy_hint: DIRECT
+  - id: skk-apple-cn
+    path: /List/non_ip/apple_cn.conf
+    kind: RULE-SET
+    category: apple
+    policy_hint: DIRECT
+  - id: skk-microsoft-cdn
+    path: /List/non_ip/microsoft_cdn.conf
+    kind: RULE-SET
+    category: microsoft
+    policy_hint: DIRECT
+  - id: skk-microsoft
+    path: /List/non_ip/microsoft.conf
+    kind: RULE-SET
+    category: microsoft
+    policy_hint: "🌍 国际网络"
+  - id: skk-neteasemusic
+    path: /List/non_ip/neteasemusic.conf
+    kind: RULE-SET
+    category: domestic
+    policy_hint: DIRECT
+  - id: skk-domestic
+    path: /List/non_ip/domestic.conf
+    kind: RULE-SET
+    category: domestic
+    policy_hint: DIRECT
+  - id: skk-direct
+    path: /List/non_ip/direct.conf
+    kind: RULE-SET
+    category: direct
+    policy_hint: DIRECT
+  - id: skk-sogouinput
+    path: /List/non_ip/sogouinput.conf
+    kind: RULE-SET
+    category: reject
+    policy_hint: REJECT
+  - id: skk-cdn
+    path: /List/non_ip/cdn.conf
+    kind: RULE-SET
+    category: cdn
+    policy_hint: "🌍 国际网络"
+  - id: skk-download
+    path: /List/non_ip/download.conf
+    kind: RULE-SET
+    category: download
+    policy_hint: "🌍 国际网络"
+
+# IP 规则集：主配置有引用，但不进域名兴趣流水线（可选只记哈希）
+ip_sets_hash_only:
+  - /List/ip/ai.conf
+  - /List/ip/reject.conf
+  - /List/ip/telegram.conf
+  - /List/ip/stream.conf
+  - /List/ip/stream_us.conf
+  - /List/ip/stream_jp.conf
+  - /List/ip/stream_tw.conf
+  - /List/ip/stream_eu.conf
+  - /List/ip/stream_kr.conf
+  - /List/ip/stream_hk.conf
+  - /List/ip/domestic.conf
+  - /List/ip/china_ip.conf
+  - /List/ip/neteasemusic.conf

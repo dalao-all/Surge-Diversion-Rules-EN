@@ -1,0 +1,193 @@
+{
+  "version": "6.0",
+  "updated": "2026-09-16",
+  "notes": "覆盖财务第2页 + Claude/TikTok/B站/微信/支付宝/YouTube；scope=main_config 的 case 由主配置/SKK 覆盖，patches 回归可跳过命中检查。",
+  "cases": [
+    {
+      "name": "claude-api",
+      "domain": "api.anthropic.com",
+      "expect_policy": "🤖 AI住宅",
+      "app": "Claude"
+    },
+    {
+      "name": "claude-statsig",
+      "domain": "statsig.anthropic.com",
+      "expect_policy": "🤖 AI住宅",
+      "app": "Claude"
+    },
+    {
+      "name": "openai-featuregates",
+      "domain": "featuregates.org",
+      "expect_policy": "🤖 AI住宅"
+    },
+    {
+      "name": "google-oauth-accounts",
+      "domain": "accounts.google.com",
+      "expect_policy": "🤖 AI住宅",
+      "notes": "Authenticator(Google)/AI 登录亲和；若主配置 Google 段策略不同以主配置为准",
+      "scope": "main_config",
+      "app": "Authenticator"
+    },
+    {
+      "name": "tiktok-main",
+      "domain": "www.tiktok.com",
+      "expect_policy": "🎵 TikTok",
+      "scope": "main_config",
+      "app": "TikTok",
+      "notes": "由主配置/SKK 覆盖，patches 回归可跳过命中检查"
+    },
+    {
+      "name": "tiktok-pangle-b-reject",
+      "domain": "tiktokpangle-b.us",
+      "expect_action": "REJECT",
+      "notes": "不前置放行，交广告集拒绝",
+      "app": "TikTok"
+    },
+    {
+      "name": "tiktok-pangle-cdn-reject",
+      "domain": "tiktokpangle-cdn-us.com",
+      "expect_action": "REJECT",
+      "app": "TikTok"
+    },
+    {
+      "name": "youtube-main",
+      "domain": "www.youtube.com",
+      "expect_policy": "🎬 流媒体",
+      "scope": "main_config",
+      "app": "YouTube"
+    },
+    {
+      "name": "wechat-qq-direct",
+      "domain": "weixin.qq.com",
+      "expect_action": "DIRECT",
+      "scope": "main_config",
+      "app": "微信"
+    },
+    {
+      "name": "alipay-direct",
+      "domain": "alipay.com",
+      "expect_action": "DIRECT",
+      "scope": "main_config",
+      "app": "支付宝"
+    },
+    {
+      "name": "biliapi-grpc",
+      "domain": "grpc.biliapi.net",
+      "expect_action": "DIRECT",
+      "app": "哔哩哔哩"
+    },
+    {
+      "name": "biliapi-app",
+      "domain": "app.biliapi.net",
+      "expect_action": "DIRECT",
+      "app": "哔哩哔哩"
+    },
+    {
+      "name": "coolapk-api",
+      "domain": "api.coolapk.com",
+      "expect_action": "DIRECT"
+    },
+    {
+      "name": "xhs-t2",
+      "domain": "t2.xiaohongshu.com",
+      "expect_action": "DIRECT"
+    },
+    {
+      "name": "taobao-amdc",
+      "domain": "amdc.m.taobao.com",
+      "expect_action": "DIRECT"
+    },
+    {
+      "name": "appstore-apple",
+      "domain": "apps.apple.com",
+      "expect_action": "DIRECT",
+      "scope": "main_config"
+    },
+    {
+      "name": "finance-toblog",
+      "domain": "toblog.tobsnssdk.com",
+      "expect_policy": "🪙 数字资产",
+      "app": "欧易 OKX"
+    },
+    {
+      "name": "finance-tobapplog",
+      "domain": "tobapplog.tobsnssdk.com",
+      "expect_policy": "🪙 数字资产",
+      "app": "欧易 OKX"
+    },
+    {
+      "name": "finance-okex",
+      "domain": "www.okex.com",
+      "expect_policy": "🪙 数字资产",
+      "app": "欧易 OKX"
+    },
+    {
+      "name": "finance-okx-main",
+      "domain": "www.okx.com",
+      "expect_policy": "🪙 数字资产",
+      "scope": "main_config",
+      "app": "欧易 OKX"
+    },
+    {
+      "name": "finance-uuwallet",
+      "domain": "uuwallet.com",
+      "expect_policy": "🪙 数字资产",
+      "scope": "main_config",
+      "app": "UU Wallet"
+    },
+    {
+      "name": "finance-plasma-one",
+      "domain": "plasma.one",
+      "expect_policy": "🪙 数字资产",
+      "scope": "main_config",
+      "app": "Plasma One"
+    },
+    {
+      "name": "finance-bitget",
+      "domain": "bitget.com",
+      "expect_policy": "🪙 数字资产",
+      "scope": "main_config",
+      "app": "Bitget Wallet"
+    },
+    {
+      "name": "finance-wise",
+      "domain": "wise.com",
+      "expect_policy": "🪙 数字资产",
+      "scope": "main_config",
+      "app": "Wise"
+    },
+    {
+      "name": "finance-paypal",
+      "domain": "paypal.com",
+      "expect_policy": "💰 PayPal",
+      "scope": "main_config",
+      "app": "PayPal"
+    },
+    {
+      "name": "bybit-eu-af",
+      "domain": "iyzy2h-abc.appsflyersdk.com",
+      "expect_policy": "🇩🇪 Bybit 欧洲",
+      "app": "Bybit EU"
+    },
+    {
+      "name": "bybit-eu-main",
+      "domain": "bybit.eu",
+      "expect_policy": "🇩🇪 Bybit 欧洲",
+      "scope": "main_config",
+      "app": "Bybit EU"
+    },
+    {
+      "name": "bybit-global-ffbbb",
+      "domain": "ffbbbdc6d3c353211fe2ba39c9f744cd.com",
+      "expect_policy": "💳 Bybit 全球",
+      "app": "Bybit"
+    },
+    {
+      "name": "bybit-global-main",
+      "domain": "bybit.com",
+      "expect_policy": "💳 Bybit 全球",
+      "scope": "main_config",
+      "app": "Bybit"
+    }
+  ]
+}

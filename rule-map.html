@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MESL Surge V6.0 · 规则神经网络拓扑</title>
+<style>
+:root {
+  --bg: #070b14;
+  --bg2: #0d1526;
+  --panel: rgba(12, 20, 40, 0.92);
+  --border: rgba(80, 140, 255, 0.25);
+  --text: #d8e6ff;
+  --muted: #7a8fb0;
+  --neon: #4de1ff;
+  --neon2: #a78bfa;
+  --green: #34d399;
+  --red: #f87171;
+  --purple: #c084fc;
+  --pink: #f472b6;
+  --gold: #fbbf24;
+  --cyan: #22d3ee;
+  --blue: #60a5fa;
+  --orange: #fb923c;
+  --region: #94a3b8;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; background: var(--bg); color: var(--text); font-family: "SF Pro Text", "PingFang SC", "Noto Sans SC", system-ui, sans-serif; overflow: hidden; }
+body { display: flex; flex-direction: column; }
+header {
+  flex: 0 0 auto;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 10px 16px;
+  background: linear-gradient(180deg, #0f1a30, #0a1222);
+  border-bottom: 1px solid var(--border);
+  z-index: 20;
+}
+header h1 {
+  font-size: 15px; font-weight: 650; letter-spacing: 0.02em;
+  background: linear-gradient(90deg, var(--neon), var(--neon2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.badge {
+  font-size: 11px; padding: 2px 8px; border-radius: 999px;
+  border: 1px solid var(--border); color: var(--muted); background: rgba(30,50,90,0.4);
+}
+.controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-left: auto; }
+.controls input[type="search"] {
+  width: 220px; max-width: 40vw; padding: 6px 10px; border-radius: 8px;
+  border: 1px solid var(--border); background: #0a1424; color: var(--text); outline: none;
+}
+.controls input:focus { border-color: var(--neon); box-shadow: 0 0 0 2px rgba(77,225,255,0.15); }
+.btn {
+  padding: 6px 12px; border-radius: 8px; border: 1px solid var(--border);
+  background: rgba(30,50,90,0.5); color: var(--text); cursor: pointer; font-size: 12px;
+}
+.btn:hover { border-color: var(--neon); color: var(--neon); }
+.btn.active { background: rgba(77,225,255,0.15); border-color: var(--neon); color: var(--neon); }
+.main { flex: 1; display: flex; min-height: 0; position: relative; }
+#canvas-wrap {
+  flex: 1; position: relative; overflow: hidden; background:
+    radial-gradient(ellipse at 20% 50%, rgba(77,225,255,0.05), transparent 50%),
+    radial-gradient(ellipse at 80% 40%, rgba(167,139,250,0.06), transparent 45%),
+    var(--bg);
+  cursor: grab;
+}
+#canvas-wrap.dragging { cursor: grabbing; }
+canvas#net { position: absolute; inset: 0; width: 100%; height: 100%; }
+.side {
+  width: 340px; max-width: 40vw; flex: 0 0 auto;
+  background: var(--panel); border-left: 1px solid var(--border);
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.side h2 { font-size: 13px; padding: 12px 14px 6px; color: var(--neon); border-bottom: 1px solid var(--border); }
+.side .body { flex: 1; overflow: auto; padding: 10px 14px; font-size: 12px; line-height: 1.55; }
+.side .body::-webkit-scrollbar { width: 6px; }
+.side .body::-webkit-scrollbar-thumb { background: #334; border-radius: 3px; }
+.kv { display: grid; grid-template-columns: 88px 1fr; gap: 4px 8px; margin-bottom: 10px; }
+.kv .k { color: var(--muted); }
+.kv .v { word-break: break-all; }
+.tag {
+  display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 4px;
+  margin: 2px 2px 2px 0; border: 1px solid;
+}
+.tag.direct { color: var(--green); border-color: var(--green); }
+.tag.reject { color: var(--red); border-color: var(--red); }
+.tag.ai { color: var(--purple); border-color: var(--purple); }
+.tag.tiktok { color: var(--pink); border-color: var(--pink); }
+.tag.finance { color: var(--gold); border-color: var(--gold); }
+.tag.stream { color: var(--cyan); border-color: var(--cyan); }
+.tag.intl { color: var(--blue); border-color: var(--blue); }
+.tag.module, .tag.orange { color: var(--orange); border-color: var(--orange); }
+.tag.region { color: var(--region); border-color: var(--region); }
+.tag.other { color: var(--muted); border-color: var(--muted); }
+.raw {
+  margin-top: 8px; padding: 8px; background: #060a12; border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px;
+  white-space: pre-wrap; word-break: break-all; color: #b8c8e8;
+  border: 1px solid #1a2740;
+}
+.legend {
+  position: absolute; left: 12px; bottom: 48px; z-index: 5;
+  background: rgba(8,14,28,0.88); border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 12px; font-size: 11px; backdrop-filter: blur(8px);
+  max-width: 220px;
+}
+.legend h3 { font-size: 11px; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+.legend .row { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
+.legend .dot { width: 10px; height: 10px; border-radius: 50%; box-shadow: 0 0 6px currentColor; }
+.callout {
+  position: absolute; top: 12px; left: 12px; z-index: 5;
+  background: rgba(8,14,28,0.88); border: 1px solid rgba(251,191,36,0.35);
+  border-radius: 10px; padding: 8px 12px; font-size: 11px; color: var(--gold);
+  max-width: 280px; backdrop-filter: blur(8px);
+}
+footer {
+  flex: 0 0 auto; padding: 6px 14px; font-size: 11px; color: var(--muted);
+  border-top: 1px solid var(--border); background: #080e1a;
+  display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
+}
+footer strong { color: var(--neon); font-weight: 600; }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px; margin-top: 6px; }
+.list-item {
+  padding: 6px 8px; margin: 3px 0; border-radius: 6px; cursor: pointer;
+  border: 1px solid transparent; background: rgba(20,35,70,0.35);
+}
+.list-item:hover, .list-item.active { border-color: var(--neon); background: rgba(77,225,255,0.08); }
+.list-item .t { font-size: 10px; color: var(--muted); }
+.hint { color: var(--muted); font-size: 11px; margin-top: 8px; }
+.tabs { display: flex; gap: 4px; padding: 8px 10px 0; flex-wrap: wrap; }
+.tab {
+  font-size: 11px; padding: 4px 8px; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--border); color: var(--muted);
+}
+.tab.active { color: var(--neon); border-color: var(--neon); background: rgba(77,225,255,0.1); }
+#minimap {
+  position: absolute; right: 352px; bottom: 48px; width: 140px; height: 80px;
+  border: 1px solid var(--border); border-radius: 6px; background: rgba(0,0,0,0.5);
+  z-index: 5; pointer-events: none; display: none;
+}
+@media (max-width: 800px) {
+  .side { width: 100%; max-width: 100%; position: absolute; right: 0; top: 0; bottom: 0;
+    transform: translateX(100%); transition: transform .2s; z-index: 30; }
+  .side.open { transform: translateX(0); }
+}
+
+.lang-switch { display:inline-flex; gap:4px; margin-left:8px; }
+.lang-switch button { padding:4px 10px; border-radius:8px; border:1px solid var(--border); background:rgba(30,50,90,0.5); color:var(--muted); cursor:pointer; font-size:12px; }
+.lang-switch button.active { background:rgba(77,225,255,0.15); border-color:var(--neon); color:var(--neon); }
+
+</style>
+</head>
+<body>
+<header>
+  <h1>MESL Surge V6.0 · Rule Neural Map</h1>
+<div class="lang-switch" title="Language">
+  <button type="button" id="lang-en" class="active" onclick="setLang('en')">EN</button>
+  <button type="button" id="lang-zh" onclick="setLang('zh')">中文</button>
+</div>
+  <span class="badge" id="stat-total">规则 —</span>
+  <span class="badge" id="stat-conf">主配置 —</span>
+  <span class="badge" id="stat-mod">模块 —</span>
+  <div class="controls">
+    <input type="search" id="search" placeholder="搜索域名 / 关键词 / 策略…" autocomplete="off"/>
+    <button class="btn" id="btn-expand" title="将每个规则绘制为独立节点">展开全部规则节点</button>
+    <button class="btn" id="btn-reset" title="恢复舒适默认相机（非压扁全图）">重置视图</button>
+    <button class="btn" id="btn-anim" class="active">动画 ON</button>
+  </div>
+</header>
+<div class="main">
+  <div id="canvas-wrap">
+    <div class="callout">⚡ 匹配优先级：自上而下（左层靠前）· 默认已拉开间距，滚轮放大看细节 · 远程 RULE-SET 不展开</div>
+    <div class="legend" id="legend">
+      <h3>图例 · 动作着色</h3>
+      <div class="row"><span class="dot" style="color:var(--green);background:var(--green)"></span> DIRECT 直连</div>
+      <div class="row"><span class="dot" style="color:var(--red);background:var(--red)"></span> REJECT / DROP</div>
+      <div class="row"><span class="dot" style="color:var(--purple);background:var(--purple)"></span> 🤖 AI住宅</div>
+      <div class="row"><span class="dot" style="color:var(--pink);background:var(--pink)"></span> 🎵 TikTok</div>
+      <div class="row"><span class="dot" style="color:var(--gold);background:var(--gold)"></span> 金融 / 支付</div>
+      <div class="row"><span class="dot" style="color:var(--cyan);background:var(--cyan)"></span> 🎬 流媒体</div>
+      <div class="row"><span class="dot" style="color:var(--blue);background:var(--blue)"></span> 🌍 国际网络</div>
+      <div class="row"><span class="dot" style="color:var(--orange);background:var(--orange)"></span> 模块广告拦截</div>
+      <div class="row"><span class="dot" style="color:var(--region);background:var(--region)"></span> 区域池 / 其他</div>
+      <div style="margin-top:6px;color:var(--muted)">默认已拉开间距，滚轮放大看细节</div>
+      <div style="margin-top:2px;color:var(--muted)">拖拽平移 · 点击节点高亮连边</div>
+    </div>
+    <canvas id="net"></canvas>
+  </div>
+  <aside class="side" id="side">
+    <div class="tabs" id="tabs">
+      <div class="tab active" data-tab="detail" data-tab="detail">详情</div>
+      <div class="tab" data-tab="stats" data-tab="stats">统计</div>
+      <div class="tab" data-tab="module">模块改写</div>
+      <div class="tab" data-tab="general" data-tab="general" data-tab="general" data-tab="general">General</div>
+    </div>
+    <div class="body" id="panel-body">
+      <p class="hint">点击左侧节点查看规则 / 策略详情。</p>
+    </div>
+  </aside>
+</div>
+<footer id="footer">
+  <span>完整性校验中…</span>
+</footer>
+<script id="DATA" type="application/json">{"meta":{"title":"MESL Surge V6.0 规则拓扑图","version":"V6.0","date":"2026-09-13","conf_rules":570,"module_rules":58,"total_rules":628,"general":{"dns-server":"223.5.5.5, 119.29.29.29","encrypted-dns-server":"https://223.5.5.5/dns-query, https://1.12.12.12/dns-query","skip-proxy":"127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 169.254.0.0/16, 224.0.0.0/4, 255.255.255.255/32, localhost, *.local, captive.apple.com, 223.71.70.56/32","hijack-dns":"*:53","ipv6":"false","block-quic":"per-policy","udp-policy-not-supported-behaviour":"REJECT","all_keys":["loglevel","dns-server","encrypted-dns-server","encrypted-dns-follow-outbound-mode","ipv6","allow-dns-svcb","udp-policy-not-supported-behaviour","block-quic","udp-priority","skip-proxy","tun-excluded-routes","exclude-simple-hostnames","read-etc-hosts","show-error-page-for-reject","proxy-test-url","internet-test-url","test-timeout","hijack-dns","always-real-ip"]},"note":"远程 RULE-SET / DOMAIN-SET 仅显示为单节点（含 URL），不展开远程内容。Surge 规则自上而下优先匹配。","subscription_placeholder":true,"had_subscription_placeholder":true},"sections":[{"id":"0-dns-leak","label":"0. DNS / WebRTC 防泄漏","count":7},{"id":"0-proto","label":"0. 协议级防护与死域名","count":28},{"id":"1-prematch","label":"1. pre-matching 隐私/遥测","count":33},{"id":"1.1-compat","label":"1.1 兼容性例外","count":27},{"id":"1.2-reject","label":"1.2 拒绝策略分层","count":26},{"id":"1.3-claude","label":"1.3 Claude 登录/风控","count":13},{"id":"1.4-skk","label":"1.4 SKK 广告底座","count":6},{"id":"1.5-app","label":"1.5 应用层去开屏","count":0},{"id":"2-finance","label":"2. 高风险金融业务","count":75},{"id":"3-ai","label":"3. AI / TikTok / Meta","count":224},{"id":"4-cn","label":"4. 国内直连","count":68},{"id":"5-stream","label":"5. 流媒体专区","count":14},{"id":"6-global","label":"6. 全球国际网络","count":31},{"id":"7-ip","label":"7. IP 段终局兜底","count":17},{"id":"8-final","label":"8. FINAL 终局兜底","count":1},{"id":"module-wzry","label":"模块 · 王者兼容","count":2},{"id":"module-splash","label":"模块 · 开屏漏拦","count":5},{"id":"module-bili","label":"模块 · Bilibili","count":1},{"id":"module-taobao","label":"模块 · 淘宝广告","count":32},{"id":"module-jd","label":"模块 · 京东广告","count":11},{"id":"module-xhs","label":"模块 · 小红书广告","count":4},{"id":"module-amap","label":"模块 · 高德广告","count":3}],"rules":[{"id":"conf-0","order":0,"source":"conf","section":"0-dns-leak","type":"DEST-PORT","value":"853","policy":"REJECT","flags":[],"raw":"DEST-PORT,853,REJECT","remote":false},{"id":"conf-1","order":1,"source":"conf","section":"0-dns-leak","type":"DOMAIN-SUFFIX","value":"cloudflare-dns.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,cloudflare-dns.com,REJECT","remote":false},{"id":"conf-2","order":2,"source":"conf","section":"0-dns-leak","type":"DOMAIN-SUFFIX","value":"dns.google","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,dns.google,REJECT","remote":false},{"id":"conf-3","order":3,"source":"conf","section":"0-dns-leak","type":"DOMAIN-SUFFIX","value":"dns.quad9.net","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,dns.quad9.net,REJECT","remote":false},{"id":"conf-4","order":4,"source":"conf","section":"0-dns-leak","type":"DOMAIN-SUFFIX","value":"dns.nextdns.io","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,dns.nextdns.io,REJECT","remote":false},{"id":"conf-5","order":5,"source":"conf","section":"0-dns-leak","type":"DOMAIN-SUFFIX","value":"dns.adguard-dns.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,dns.adguard-dns.com,REJECT","remote":false},{"id":"conf-6","order":6,"source":"conf","section":"0-dns-leak","type":"DOMAIN","value":"doh.opendns.com","policy":"REJECT","flags":[],"raw":"DOMAIN,doh.opendns.com,REJECT","remote":false},{"id":"conf-7","order":7,"source":"conf","section":"0-proto","type":"DOMAIN-SUFFIX","value":"smoba.qq.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,smoba.qq.com,DIRECT","remote":false},{"id":"conf-8","order":8,"source":"conf","section":"0-proto","type":"DOMAIN-SUFFIX","value":"ingame.qq.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,ingame.qq.com,DIRECT","remote":false},{"id":"conf-9","order":9,"source":"conf","section":"0-proto","type":"DOMAIN-SUFFIX","value":"tmga.qq.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,tmga.qq.com,DIRECT","remote":false},{"id":"conf-10","order":10,"source":"conf","section":"0-proto","type":"DOMAIN-SUFFIX","value":"gcloudsvcs.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,gcloudsvcs.com,DIRECT","remote":false},{"id":"conf-11","order":11,"source":"conf","section":"0-proto","type":"DOMAIN-SUFFIX","value":"gcloudcs.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,gcloudcs.com,DIRECT","remote":false},{"id":"conf-12","order":12,"source":"conf","section":"0-proto","type":"DOMAIN-SUFFIX","value":"gcloudsdk.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,gcloudsdk.com,DIRECT","remote":false},{"id":"conf-13","order":13,"source":"conf","section":"0-proto","type":"DOMAIN-SUFFIX","value":"stun.qq.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,stun.qq.com,DIRECT","remote":false},{"id":"conf-14","order":14,"source":"conf","section":"0-proto","type":"DOMAIN-SUFFIX","value":"voip.qq.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,voip.qq.com,DIRECT","remote":false},{"id":"conf-15","order":15,"source":"conf","section":"0-proto","type":"PROTOCOL","value":"STUN","policy":"REJECT","flags":[],"raw":"PROTOCOL,STUN,REJECT","remote":false},{"id":"conf-16","order":16,"source":"conf","section":"0-proto","type":"DOMAIN","value":"captive.apple.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,captive.apple.com,DIRECT","remote":false},{"id":"conf-17","order":17,"source":"conf","section":"0-proto","type":"DOMAIN","value":"captive.apple.com.cn","policy":"DIRECT","flags":[],"raw":"DOMAIN,captive.apple.com.cn,DIRECT","remote":false},{"id":"conf-18","order":18,"source":"conf","section":"0-proto","type":"DOMAIN-SUFFIX","value":"your-subscribe-host.example","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,your-subscribe-host.example,DIRECT","remote":false},{"id":"conf-19","order":19,"source":"conf","section":"0-proto","type":"DOMAIN","value":"humb.apple.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,humb.apple.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-20","order":20,"source":"conf","section":"0-proto","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/apple_services.conf","policy":"DIRECT","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf,DIRECT","remote":true},{"id":"conf-21","order":21,"source":"conf","section":"0-proto","type":"DOMAIN-SET","value":"https://ruleset.skk.moe/List/domainset/apple_cdn.conf","policy":"DIRECT","flags":[],"raw":"DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf,DIRECT","remote":true},{"id":"conf-22","order":22,"source":"conf","section":"0-proto","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/apple_cn.conf","policy":"DIRECT","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,DIRECT","remote":true},{"id":"conf-23","order":23,"source":"conf","section":"0-proto","type":"DOMAIN-SUFFIX","value":"mzstatic.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,mzstatic.com,DIRECT","remote":false},{"id":"conf-24","order":24,"source":"conf","section":"0-proto","type":"DOMAIN","value":"drive-cn.dirvt.com","policy":"REJECT","flags":[],"raw":"DOMAIN,drive-cn.dirvt.com,REJECT","remote":false},{"id":"conf-25","order":25,"source":"conf","section":"0-proto","type":"DOMAIN","value":"sync-v.dirvt.com","policy":"REJECT","flags":[],"raw":"DOMAIN,sync-v.dirvt.com,REJECT","remote":false},{"id":"conf-26","order":26,"source":"conf","section":"0-proto","type":"DOMAIN","value":"sealine.youku.com","policy":"REJECT","flags":[],"raw":"DOMAIN,sealine.youku.com,REJECT","remote":false},{"id":"conf-27","order":27,"source":"conf","section":"0-proto","type":"DOMAIN","value":"a.rdt.tfogc.com","policy":"REJECT","flags":[],"raw":"DOMAIN,a.rdt.tfogc.com,REJECT","remote":false},{"id":"conf-28","order":28,"source":"conf","section":"0-proto","type":"DOMAIN","value":"signal-t1-v6-az1-03.rtcxyz.com","policy":"REJECT","flags":[],"raw":"DOMAIN,signal-t1-v6-az1-03.rtcxyz.com,REJECT","remote":false},{"id":"conf-29","order":29,"source":"conf","section":"0-proto","type":"DOMAIN","value":"signal-t1-v6-az2-01.rtcxyz.com","policy":"REJECT","flags":[],"raw":"DOMAIN,signal-t1-v6-az2-01.rtcxyz.com,REJECT","remote":false},{"id":"conf-30","order":30,"source":"conf","section":"0-proto","type":"DOMAIN","value":"mozilla.cloudflare-dns.com","policy":"REJECT","flags":[],"raw":"DOMAIN,mozilla.cloudflare-dns.com,REJECT","remote":false},{"id":"conf-31","order":31,"source":"conf","section":"0-proto","type":"DOMAIN","value":"security.cloudflare-dns.com","policy":"REJECT","flags":[],"raw":"DOMAIN,security.cloudflare-dns.com,REJECT","remote":false},{"id":"conf-32","order":32,"source":"conf","section":"0-proto","type":"DOMAIN","value":"family.cloudflare-dns.com","policy":"REJECT","flags":[],"raw":"DOMAIN,family.cloudflare-dns.com,REJECT","remote":false},{"id":"conf-33","order":33,"source":"conf","section":"0-proto","type":"DOMAIN","value":"dns.nextdns.io","policy":"REJECT","flags":[],"raw":"DOMAIN,dns.nextdns.io,REJECT","remote":false},{"id":"conf-34","order":34,"source":"conf","section":"0-proto","type":"DOMAIN","value":"dns.adguard-dns.com","policy":"REJECT","flags":[],"raw":"DOMAIN,dns.adguard-dns.com,REJECT","remote":false},{"id":"conf-35","order":35,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"mask.icloud.com","policy":"REJECT-NO-DROP","flags":["pre-matching"],"raw":"DOMAIN,mask.icloud.com,REJECT-NO-DROP,pre-matching","remote":false},{"id":"conf-36","order":36,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"mask-h2.icloud.com","policy":"REJECT-NO-DROP","flags":["pre-matching"],"raw":"DOMAIN,mask-h2.icloud.com,REJECT-NO-DROP,pre-matching","remote":false},{"id":"conf-37","order":37,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"mask-api.icloud.com","policy":"REJECT-NO-DROP","flags":["pre-matching"],"raw":"DOMAIN,mask-api.icloud.com,REJECT-NO-DROP,pre-matching","remote":false},{"id":"conf-38","order":38,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"apple-relay.apple.com","policy":"REJECT-NO-DROP","flags":["pre-matching"],"raw":"DOMAIN,apple-relay.apple.com,REJECT-NO-DROP,pre-matching","remote":false},{"id":"conf-39","order":39,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"apple-relay.cloudflare.com","policy":"REJECT-NO-DROP","flags":["pre-matching"],"raw":"DOMAIN,apple-relay.cloudflare.com,REJECT-NO-DROP,pre-matching","remote":false},{"id":"conf-40","order":40,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"apple-relay.fastly-edge.com","policy":"REJECT-NO-DROP","flags":["pre-matching"],"raw":"DOMAIN,apple-relay.fastly-edge.com,REJECT-NO-DROP,pre-matching","remote":false},{"id":"conf-41","order":41,"source":"conf","section":"1-prematch","type":"DOMAIN-KEYWORD","value":"ohttp-relay","policy":"REJECT-NO-DROP","flags":["pre-matching"],"raw":"DOMAIN-KEYWORD,ohttp-relay,REJECT-NO-DROP,pre-matching","remote":false},{"id":"conf-42","order":42,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"stun.cloudflare.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,stun.cloudflare.com,REJECT,pre-matching","remote":false},{"id":"conf-43","order":43,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"stun.l.google.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,stun.l.google.com,REJECT,pre-matching","remote":false},{"id":"conf-44","order":44,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"stun1.l.google.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,stun1.l.google.com,REJECT,pre-matching","remote":false},{"id":"conf-45","order":45,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"stun2.l.google.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,stun2.l.google.com,REJECT,pre-matching","remote":false},{"id":"conf-46","order":46,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"stun3.l.google.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,stun3.l.google.com,REJECT,pre-matching","remote":false},{"id":"conf-47","order":47,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"stun4.l.google.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,stun4.l.google.com,REJECT,pre-matching","remote":false},{"id":"conf-48","order":48,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"global.stun.twilio.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,global.stun.twilio.com,REJECT,pre-matching","remote":false},{"id":"conf-49","order":49,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"stun.services.mozilla.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,stun.services.mozilla.com,REJECT,pre-matching","remote":false},{"id":"conf-50","order":50,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"nr-data.net","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN-SUFFIX,nr-data.net,REJECT,pre-matching","remote":false},{"id":"conf-51","order":51,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"newrelic.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN-SUFFIX,newrelic.com,REJECT,pre-matching","remote":false},{"id":"conf-52","order":52,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"go-mpulse.net","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN-SUFFIX,go-mpulse.net,REJECT,pre-matching","remote":false},{"id":"conf-53","order":53,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"akstat.io","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN-SUFFIX,akstat.io,REJECT,pre-matching","remote":false},{"id":"conf-54","order":54,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"scorecardresearch.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN-SUFFIX,scorecardresearch.com,REJECT,pre-matching","remote":false},{"id":"conf-55","order":55,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"adobedtm.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN-SUFFIX,adobedtm.com,REJECT,pre-matching","remote":false},{"id":"conf-56","order":56,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"adgrx.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,adgrx.com,REJECT","remote":false},{"id":"conf-57","order":57,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"pdscrb.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,pdscrb.com,REJECT","remote":false},{"id":"conf-58","order":58,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"amazon-adsystem.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,amazon-adsystem.com,REJECT","remote":false},{"id":"conf-59","order":59,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"placed.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,placed.com,REJECT","remote":false},{"id":"conf-60","order":60,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"impression.link","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,impression.link,REJECT","remote":false},{"id":"conf-61","order":61,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"awstrack.me","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,awstrack.me,REJECT","remote":false},{"id":"conf-62","order":62,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"prod.telemetry.tableausoftware.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,prod.telemetry.tableausoftware.com,REJECT,pre-matching","remote":false},{"id":"conf-63","order":63,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"dc.services.visualstudio.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,dc.services.visualstudio.com,REJECT,pre-matching","remote":false},{"id":"conf-64","order":64,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"arc.msn.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,arc.msn.com,REJECT,pre-matching","remote":false},{"id":"conf-65","order":65,"source":"conf","section":"1-prematch","type":"DOMAIN","value":"geolocation.onetrust.com","policy":"REJECT","flags":[],"raw":"DOMAIN,geolocation.onetrust.com,REJECT","remote":false},{"id":"conf-66","order":66,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"doubleverify.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,doubleverify.com,REJECT","remote":false},{"id":"conf-67","order":67,"source":"conf","section":"1-prematch","type":"DOMAIN-SUFFIX","value":"cloudflareinsights.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,cloudflareinsights.com,REJECT","remote":false},{"id":"conf-68","order":68,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"grpc.biliapi.net","policy":"DIRECT","flags":[],"raw":"DOMAIN,grpc.biliapi.net,DIRECT","remote":false},{"id":"conf-69","order":69,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"app.biliapi.net","policy":"DIRECT","flags":[],"raw":"DOMAIN,app.biliapi.net,DIRECT","remote":false},{"id":"conf-70","order":70,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"app.biliapi.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,app.biliapi.com,DIRECT","remote":false},{"id":"conf-71","order":71,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"api.biliapi.net","policy":"DIRECT","flags":[],"raw":"DOMAIN,api.biliapi.net,DIRECT","remote":false},{"id":"conf-72","order":72,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"api.biliapi.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,api.biliapi.com,DIRECT","remote":false},{"id":"conf-73","order":73,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"app.bilibili.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,app.bilibili.com,DIRECT","remote":false},{"id":"conf-74","order":74,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"api.bilibili.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,api.bilibili.com,DIRECT","remote":false},{"id":"conf-75","order":75,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"httpdns.bilivideo.com","policy":"DIRECT","flags":["extended-matching"],"raw":"DOMAIN,httpdns.bilivideo.com,DIRECT,extended-matching","remote":false},{"id":"conf-76","order":76,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"t2.xiaohongshu.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,t2.xiaohongshu.com,DIRECT","remote":false},{"id":"conf-77","order":77,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"edith.xiaohongshu.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,edith.xiaohongshu.com,DIRECT","remote":false},{"id":"conf-78","order":78,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"www.xiaohongshu.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,www.xiaohongshu.com,DIRECT","remote":false},{"id":"conf-79","order":79,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"policy.video.iqiyi.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,policy.video.iqiyi.com,DIRECT","remote":false},{"id":"conf-80","order":80,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"api.iqiyi.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,api.iqiyi.com,DIRECT","remote":false},{"id":"conf-81","order":81,"source":"conf","section":"1.1-compat","type":"DOMAIN-SUFFIX","value":"iqiyipic.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,iqiyipic.com,DIRECT","remote":false},{"id":"conf-82","order":82,"source":"conf","section":"1.1-compat","type":"DOMAIN-SUFFIX","value":"ppsimg.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,ppsimg.com,DIRECT","remote":false},{"id":"conf-83","order":83,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"tdid.m.qq.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,tdid.m.qq.com,DIRECT","remote":false},{"id":"conf-84","order":84,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"api.coolapk.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,api.coolapk.com,DIRECT","remote":false},{"id":"conf-85","order":85,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"image.coolapk.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,image.coolapk.com,DIRECT","remote":false},{"id":"conf-86","order":86,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"avatar.coolapk.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,avatar.coolapk.com,DIRECT","remote":false},{"id":"conf-87","order":87,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"roovza.launches.appsflyersdk.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN,roovza.launches.appsflyersdk.com,\"🎵 TikTok\"","remote":false},{"id":"conf-88","order":88,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"roovza.cdn-settings.appsflyersdk.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN,roovza.cdn-settings.appsflyersdk.com,\"🎵 TikTok\"","remote":false},{"id":"conf-89","order":89,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"guide-acs.m.taobao.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,guide-acs.m.taobao.com,DIRECT","remote":false},{"id":"conf-90","order":90,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"acs.m.taobao.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,acs.m.taobao.com,DIRECT","remote":false},{"id":"conf-91","order":91,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"amdc.m.taobao.com","policy":"DIRECT","flags":["extended-matching"],"raw":"DOMAIN,amdc.m.taobao.com,DIRECT,extended-matching","remote":false},{"id":"conf-92","order":92,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"api.m.jd.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,api.m.jd.com,DIRECT","remote":false},{"id":"conf-93","order":93,"source":"conf","section":"1.1-compat","type":"DOMAIN","value":"snowflake.qq.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,snowflake.qq.com,DIRECT","remote":false},{"id":"conf-94","order":94,"source":"conf","section":"1.1-compat","type":"DOMAIN-SUFFIX","value":"mdt.qq.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,mdt.qq.com,DIRECT","remote":false},{"id":"conf-95","order":95,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"log-api.pangolin-sdk-toutiao-b.com","policy":"REJECT-DROP","flags":["pre-matching"],"raw":"DOMAIN,log-api.pangolin-sdk-toutiao-b.com,REJECT-DROP,pre-matching","remote":false},{"id":"conf-96","order":96,"source":"conf","section":"1.2-reject","type":"DOMAIN-SUFFIX","value":"ctobsnssdk.com","policy":"REJECT-DROP","flags":["pre-matching"],"raw":"DOMAIN-SUFFIX,ctobsnssdk.com,REJECT-DROP,pre-matching","remote":false},{"id":"conf-97","order":97,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"msg.qy.net","policy":"REJECT-DROP","flags":["pre-matching"],"raw":"DOMAIN,msg.qy.net,REJECT-DROP,pre-matching","remote":false},{"id":"conf-98","order":98,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"amsg.qy.net","policy":"REJECT-DROP","flags":["pre-matching"],"raw":"DOMAIN,amsg.qy.net,REJECT-DROP,pre-matching","remote":false},{"id":"conf-99","order":99,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"livemsg.qy.net","policy":"REJECT-DROP","flags":["pre-matching"],"raw":"DOMAIN,livemsg.qy.net,REJECT-DROP,pre-matching","remote":false},{"id":"conf-100","order":100,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"spider-tracker.xiaohongshu.com","policy":"REJECT-DROP","flags":["pre-matching"],"raw":"DOMAIN,spider-tracker.xiaohongshu.com,REJECT-DROP,pre-matching","remote":false},{"id":"conf-101","order":101,"source":"conf","section":"1.2-reject","type":"DOMAIN-KEYWORD","value":"pangolin-sdk-toutiao","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT,pre-matching","remote":false},{"id":"conf-102","order":102,"source":"conf","section":"1.2-reject","type":"DOMAIN-SUFFIX","value":"pglstatp-toutiao.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT,pre-matching","remote":false},{"id":"conf-103","order":103,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"pangolin.snssdk.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,pangolin.snssdk.com,REJECT,pre-matching","remote":false},{"id":"conf-104","order":104,"source":"conf","section":"1.2-reject","type":"DOMAIN-SUFFIX","value":"gdt.qq.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN-SUFFIX,gdt.qq.com,REJECT,pre-matching","remote":false},{"id":"conf-105","order":105,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"splashqqlive.gtimg.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,splashqqlive.gtimg.com,REJECT,pre-matching","remote":false},{"id":"conf-106","order":106,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"livew.l.qq.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,livew.l.qq.com,REJECT,pre-matching","remote":false},{"id":"conf-107","order":107,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"lives.l.qq.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,lives.l.qq.com,REJECT,pre-matching","remote":false},{"id":"conf-108","order":108,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"im-x.jd.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,im-x.jd.com,REJECT,pre-matching","remote":false},{"id":"conf-109","order":109,"source":"conf","section":"1.2-reject","type":"DOMAIN-SUFFIX","value":"jddebug.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN-SUFFIX,jddebug.com,REJECT,pre-matching","remote":false},{"id":"conf-110","order":110,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"bdsp-x.jd.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,bdsp-x.jd.com,REJECT,pre-matching","remote":false},{"id":"conf-111","order":111,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"dsp-x.jd.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,dsp-x.jd.com,REJECT,pre-matching","remote":false},{"id":"conf-112","order":112,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"bdsp.x.jd.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,bdsp.x.jd.com,REJECT,pre-matching","remote":false},{"id":"conf-113","order":113,"source":"conf","section":"1.2-reject","type":"DOMAIN-SUFFIX","value":"cupid.iqiyi.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT,pre-matching","remote":false},{"id":"conf-114","order":114,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"i.qchannel03.cn","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN,i.qchannel03.cn,REJECT,pre-matching","remote":false},{"id":"conf-115","order":115,"source":"conf","section":"1.2-reject","type":"DOMAIN-WILDCARD","value":"ads-*.xhscdn.com","policy":"REJECT","flags":["pre-matching"],"raw":"DOMAIN-WILDCARD,ads-*.xhscdn.com,REJECT,pre-matching","remote":false},{"id":"conf-116","order":116,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"et.tanx.com","policy":"REJECT-DROP","flags":["pre-matching"],"raw":"DOMAIN,et.tanx.com,REJECT-DROP,pre-matching","remote":false},{"id":"conf-117","order":117,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"sdk-config.tanx.com","policy":"REJECT-DROP","flags":["pre-matching"],"raw":"DOMAIN,sdk-config.tanx.com,REJECT-DROP,pre-matching","remote":false},{"id":"conf-118","order":118,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"ma-adx.ctrip.com","policy":"REJECT-DROP","flags":["pre-matching"],"raw":"DOMAIN,ma-adx.ctrip.com,REJECT-DROP,pre-matching","remote":false},{"id":"conf-119","order":119,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"ad.12306.cn","policy":"REJECT-DROP","flags":["pre-matching"],"raw":"DOMAIN,ad.12306.cn,REJECT-DROP,pre-matching","remote":false},{"id":"conf-120","order":120,"source":"conf","section":"1.2-reject","type":"DOMAIN","value":"sdk.beizi.biz","policy":"REJECT-DROP","flags":["pre-matching"],"raw":"DOMAIN,sdk.beizi.biz,REJECT-DROP,pre-matching","remote":false},{"id":"conf-121","order":121,"source":"conf","section":"1.3-claude","type":"DOMAIN","value":"api3.siftscience.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,api3.siftscience.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-122","order":122,"source":"conf","section":"1.3-claude","type":"DOMAIN-SUFFIX","value":"siftscience.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,siftscience.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-123","order":123,"source":"conf","section":"1.3-claude","type":"DOMAIN","value":"api.anthropic.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,api.anthropic.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-124","order":124,"source":"conf","section":"1.3-claude","type":"DOMAIN","value":"http-intake.logs.us5.datadoghq.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,http-intake.logs.us5.datadoghq.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-125","order":125,"source":"conf","section":"1.3-claude","type":"DOMAIN","value":"browser-intake-us5-datadoghq.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,browser-intake-us5-datadoghq.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-126","order":126,"source":"conf","section":"1.3-claude","type":"DOMAIN","value":"platform.claude.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,platform.claude.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-127","order":127,"source":"conf","section":"1.3-claude","type":"DOMAIN","value":"mcp-proxy.anthropic.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,mcp-proxy.anthropic.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-128","order":128,"source":"conf","section":"1.3-claude","type":"DOMAIN","value":"downloads.claude.ai","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,downloads.claude.ai,\"🤖 AI住宅\"","remote":false},{"id":"conf-129","order":129,"source":"conf","section":"1.3-claude","type":"DOMAIN","value":"code.claude.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,code.claude.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-130","order":130,"source":"conf","section":"1.3-claude","type":"DOMAIN","value":"assets-proxy.anthropic.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,assets-proxy.anthropic.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-131","order":131,"source":"conf","section":"1.3-claude","type":"DOMAIN","value":"bridge.claudeusercontent.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,bridge.claudeusercontent.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-132","order":132,"source":"conf","section":"1.3-claude","type":"DOMAIN-SUFFIX","value":"frame.claudeusercontent.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,frame.claudeusercontent.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-133","order":133,"source":"conf","section":"1.3-claude","type":"DOMAIN","value":"o1158394.ingest.us.sentry.io","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,o1158394.ingest.us.sentry.io,\"🤖 AI住宅\"","remote":false},{"id":"conf-134","order":134,"source":"conf","section":"1.4-skk","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/reject-drop.conf","policy":"REJECT-DROP","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP","remote":true},{"id":"conf-135","order":135,"source":"conf","section":"1.4-skk","type":"DOMAIN-SET","value":"https://ruleset.skk.moe/List/domainset/reject.conf","policy":"REJECT","flags":[],"raw":"DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT","remote":true},{"id":"conf-136","order":136,"source":"conf","section":"1.4-skk","type":"DOMAIN-SET","value":"https://ruleset.skk.moe/List/domainset/reject_extra.conf","policy":"REJECT","flags":[],"raw":"DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_extra.conf,REJECT","remote":true},{"id":"conf-137","order":137,"source":"conf","section":"1.4-skk","type":"DOMAIN-SET","value":"https://ruleset.skk.moe/List/domainset/reject_phishing.conf","policy":"REJECT","flags":[],"raw":"DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_phishing.conf,REJECT","remote":true},{"id":"conf-138","order":138,"source":"conf","section":"1.4-skk","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/reject.conf","policy":"REJECT","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT","remote":true},{"id":"conf-139","order":139,"source":"conf","section":"1.4-skk","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf","policy":"REJECT-NO-DROP","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP","remote":true},{"id":"conf-140","order":140,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bybit.eu","policy":"🇩🇪 Bybit 欧洲","flags":[],"raw":"DOMAIN-SUFFIX,bybit.eu,\"🇩🇪 Bybit 欧洲\"","remote":false},{"id":"conf-141","order":141,"source":"conf","section":"2-finance","type":"DOMAIN-WILDCARD","value":"iyzy2h-*.appsflyersdk.com","policy":"🇩🇪 Bybit 欧洲","flags":[],"raw":"DOMAIN-WILDCARD,iyzy2h-*.appsflyersdk.com,\"🇩🇪 Bybit 欧洲\"","remote":false},{"id":"conf-142","order":142,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bybit.com","policy":"💳 Bybit 全球","flags":[],"raw":"DOMAIN-SUFFIX,bybit.com,\"💳 Bybit 全球\"","remote":false},{"id":"conf-143","order":143,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bybit-exchange.org","policy":"💳 Bybit 全球","flags":[],"raw":"DOMAIN-SUFFIX,bybit-exchange.org,\"💳 Bybit 全球\"","remote":false},{"id":"conf-144","order":144,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"byapps.net","policy":"💳 Bybit 全球","flags":[],"raw":"DOMAIN-SUFFIX,byapps.net,\"💳 Bybit 全球\"","remote":false},{"id":"conf-145","order":145,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bycsi.com","policy":"💳 Bybit 全球","flags":[],"raw":"DOMAIN-SUFFIX,bycsi.com,\"💳 Bybit 全球\"","remote":false},{"id":"conf-146","order":146,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bybit.biz","policy":"💳 Bybit 全球","flags":[],"raw":"DOMAIN-SUFFIX,bybit.biz,\"💳 Bybit 全球\"","remote":false},{"id":"conf-147","order":147,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"byabcde.com","policy":"💳 Bybit 全球","flags":[],"raw":"DOMAIN-SUFFIX,byabcde.com,\"💳 Bybit 全球\"","remote":false},{"id":"conf-148","order":148,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bybdc6.com","policy":"💳 Bybit 全球","flags":[],"raw":"DOMAIN-SUFFIX,bybdc6.com,\"💳 Bybit 全球\"","remote":false},{"id":"conf-149","order":149,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"byd3c3.com","policy":"💳 Bybit 全球","flags":[],"raw":"DOMAIN-SUFFIX,byd3c3.com,\"💳 Bybit 全球\"","remote":false},{"id":"conf-150","order":150,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"ffbbbdc6d3c353211fe2ba39c9f744cd.com","policy":"💳 Bybit 全球","flags":[],"raw":"DOMAIN-SUFFIX,ffbbbdc6d3c353211fe2ba39c9f744cd.com,\"💳 Bybit 全球\"","remote":false},{"id":"conf-151","order":151,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bynbc.com","policy":"💳 Bybit 全球","flags":[],"raw":"DOMAIN-SUFFIX,bynbc.com,\"💳 Bybit 全球\"","remote":false},{"id":"conf-152","order":152,"source":"conf","section":"2-finance","type":"DOMAIN","value":"api.wsot2022.com","policy":"💳 Bybit 全球","flags":[],"raw":"DOMAIN,api.wsot2022.com,\"💳 Bybit 全球\"","remote":false},{"id":"conf-153","order":153,"source":"conf","section":"2-finance","type":"DOMAIN","value":"20007249l4s.my-imcloud.com","policy":"💳 Bybit 全球","flags":[],"raw":"DOMAIN,20007249l4s.my-imcloud.com,\"💳 Bybit 全球\"","remote":false},{"id":"conf-154","order":154,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"okx.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,okx.com,\"🪙 数字资产\"","remote":false},{"id":"conf-155","order":155,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"okex.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,okex.com,\"🪙 数字资产\"","remote":false},{"id":"conf-156","order":156,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"okx-dns.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,okx-dns.com,\"🪙 数字资产\"","remote":false},{"id":"conf-157","order":157,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"okx-dns1.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,okx-dns1.com,\"🪙 数字资产\"","remote":false},{"id":"conf-158","order":158,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"okx-dns2.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,okx-dns2.com,\"🪙 数字资产\"","remote":false},{"id":"conf-159","order":159,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"okx.com.cdn.cloudflare.net","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,okx.com.cdn.cloudflare.net,\"🪙 数字资产\"","remote":false},{"id":"conf-160","order":160,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"ng-dex.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,ng-dex.com,\"🪙 数字资产\"","remote":false},{"id":"conf-161","order":161,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"cnouyi.pizza","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,cnouyi.pizza,\"🪙 数字资产\"","remote":false},{"id":"conf-162","order":162,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"oklink.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,oklink.com,\"🪙 数字资产\"","remote":false},{"id":"conf-163","order":163,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"okg.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,okg.com,\"🪙 数字资产\"","remote":false},{"id":"conf-164","order":164,"source":"conf","section":"2-finance","type":"DOMAIN-KEYWORD","value":"okx","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-KEYWORD,okx,\"🪙 数字资产\"","remote":false},{"id":"conf-165","order":165,"source":"conf","section":"2-finance","type":"DOMAIN-KEYWORD","value":"okex","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-KEYWORD,okex,\"🪙 数字资产\"","remote":false},{"id":"conf-166","order":166,"source":"conf","section":"2-finance","type":"DOMAIN","value":"toblog.tobsnssdk.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN,toblog.tobsnssdk.com,\"🪙 数字资产\"","remote":false},{"id":"conf-167","order":167,"source":"conf","section":"2-finance","type":"DOMAIN","value":"dkapi.geetest.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN,dkapi.geetest.com,\"🪙 数字资产\"","remote":false},{"id":"conf-168","order":168,"source":"conf","section":"2-finance","type":"DOMAIN","value":"cloudauth-device.cn-hongkong.aliyuncs.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN,cloudauth-device.cn-hongkong.aliyuncs.com,\"🪙 数字资产\"","remote":false},{"id":"conf-169","order":169,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"online-metrix.net","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,online-metrix.net,\"🪙 数字资产\"","remote":false},{"id":"conf-170","order":170,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"turingfraud.net","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,turingfraud.net,\"🪙 数字资产\"","remote":false},{"id":"conf-171","order":171,"source":"conf","section":"2-finance","type":"DOMAIN-WILDCARD","value":"ipyp0a-*.appsflyersdk.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-WILDCARD,ipyp0a-*.appsflyersdk.com,\"🪙 数字资产\"","remote":false},{"id":"conf-172","order":172,"source":"conf","section":"2-finance","type":"DOMAIN-WILDCARD","value":"m3ond3-*.appsflyersdk.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-WILDCARD,m3ond3-*.appsflyersdk.com,\"🪙 数字资产\"","remote":false},{"id":"conf-173","order":173,"source":"conf","section":"2-finance","type":"DOMAIN-WILDCARD","value":"jekkyy-*.appsflyersdk.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-WILDCARD,jekkyy-*.appsflyersdk.com,\"🪙 数字资产\"","remote":false},{"id":"conf-174","order":174,"source":"conf","section":"2-finance","type":"DOMAIN","value":"d1nil3qbkxfj92.cloudfront.net","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN,d1nil3qbkxfj92.cloudfront.net,\"🪙 数字资产\"","remote":false},{"id":"conf-175","order":175,"source":"conf","section":"2-finance","type":"DOMAIN","value":"d1w1p0smpsoh5j.cloudfront.net","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN,d1w1p0smpsoh5j.cloudfront.net,\"🪙 数字资产\"","remote":false},{"id":"conf-176","order":176,"source":"conf","section":"2-finance","type":"DOMAIN","value":"d2p7qknqur0nu9.cloudfront.net","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN,d2p7qknqur0nu9.cloudfront.net,\"🪙 数字资产\"","remote":false},{"id":"conf-177","order":177,"source":"conf","section":"2-finance","type":"DOMAIN","value":"d3f0nrrzpmxcu1.cloudfront.net","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN,d3f0nrrzpmxcu1.cloudfront.net,\"🪙 数字资产\"","remote":false},{"id":"conf-178","order":178,"source":"conf","section":"2-finance","type":"DOMAIN","value":"d2tbe9c16nz8ju.cloudfront.net","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN,d2tbe9c16nz8ju.cloudfront.net,\"🪙 数字资产\"","remote":false},{"id":"conf-179","order":179,"source":"conf","section":"2-finance","type":"DOMAIN","value":"d1a9ug9i3w9ke0.cloudfront.net","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN,d1a9ug9i3w9ke0.cloudfront.net,\"🪙 数字资产\"","remote":false},{"id":"conf-180","order":180,"source":"conf","section":"2-finance","type":"RULE-SET","value":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OKX/OKX.list","policy":"🪙 数字资产","flags":[],"raw":"RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OKX/OKX.list,\"🪙 数字资产\"","remote":true},{"id":"conf-181","order":181,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bitget.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,bitget.com,\"🪙 数字资产\"","remote":false},{"id":"conf-182","order":182,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bitgetapp.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,bitgetapp.com,\"🪙 数字资产\"","remote":false},{"id":"conf-183","order":183,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bitget.site","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,bitget.site,\"🪙 数字资产\"","remote":false},{"id":"conf-184","order":184,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bgportable.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,bgportable.com,\"🪙 数字资产\"","remote":false},{"id":"conf-185","order":185,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bitkeep.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,bitkeep.com,\"🪙 数字资产\"","remote":false},{"id":"conf-186","order":186,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bitkeep.org","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,bitkeep.org,\"🪙 数字资产\"","remote":false},{"id":"conf-187","order":187,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bitkeep.io","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,bitkeep.io,\"🪙 数字资产\"","remote":false},{"id":"conf-188","order":188,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bknft.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,bknft.com,\"🪙 数字资产\"","remote":false},{"id":"conf-189","order":189,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"uuwallet.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,uuwallet.com,\"🪙 数字资产\"","remote":false},{"id":"conf-190","order":190,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"plasma.one","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,plasma.one,\"🪙 数字资产\"","remote":false},{"id":"conf-191","order":191,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"plasma.to","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,plasma.to,\"🪙 数字资产\"","remote":false},{"id":"conf-192","order":192,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"plasma.org","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,plasma.org,\"🪙 数字资产\"","remote":false},{"id":"conf-193","order":193,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"wise.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,wise.com,\"🪙 数字资产\"","remote":false},{"id":"conf-194","order":194,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"transferwise.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,transferwise.com,\"🪙 数字资产\"","remote":false},{"id":"conf-195","order":195,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"binance.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,binance.com,\"🪙 数字资产\"","remote":false},{"id":"conf-196","order":196,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"bnbstatic.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,bnbstatic.com,\"🪙 数字资产\"","remote":false},{"id":"conf-197","order":197,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"binance.charity","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,binance.charity,\"🪙 数字资产\"","remote":false},{"id":"conf-198","order":198,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"binance.co","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,binance.co,\"🪙 数字资产\"","remote":false},{"id":"conf-199","order":199,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"binance.cloud","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,binance.cloud,\"🪙 数字资产\"","remote":false},{"id":"conf-200","order":200,"source":"conf","section":"2-finance","type":"RULE-SET","value":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Binance/Binance.list","policy":"🪙 数字资产","flags":[],"raw":"RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Binance/Binance.list,\"🪙 数字资产\"","remote":true},{"id":"conf-201","order":201,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"walletconnect.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,walletconnect.com,\"🪙 数字资产\"","remote":false},{"id":"conf-202","order":202,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"walletconnect.org","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,walletconnect.org,\"🪙 数字资产\"","remote":false},{"id":"conf-203","order":203,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"reown.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,reown.com,\"🪙 数字资产\"","remote":false},{"id":"conf-204","order":204,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"web3modal.com","policy":"🪙 数字资产","flags":[],"raw":"DOMAIN-SUFFIX,web3modal.com,\"🪙 数字资产\"","remote":false},{"id":"conf-205","order":205,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"giffgaff.com","policy":"🇬🇧 英国专属","flags":[],"raw":"DOMAIN-SUFFIX,giffgaff.com,\"🇬🇧 英国专属\"","remote":false},{"id":"conf-206","order":206,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"giffgaff.co.uk","policy":"🇬🇧 英国专属","flags":[],"raw":"DOMAIN-SUFFIX,giffgaff.co.uk,\"🇬🇧 英国专属\"","remote":false},{"id":"conf-207","order":207,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"giffgaff-cdn.com","policy":"🇬🇧 英国专属","flags":[],"raw":"DOMAIN-SUFFIX,giffgaff-cdn.com,\"🇬🇧 英国专属\"","remote":false},{"id":"conf-208","order":208,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"paypal.com","policy":"💰 PayPal","flags":[],"raw":"DOMAIN-SUFFIX,paypal.com,\"💰 PayPal\"","remote":false},{"id":"conf-209","order":209,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"paypal.me","policy":"💰 PayPal","flags":[],"raw":"DOMAIN-SUFFIX,paypal.me,\"💰 PayPal\"","remote":false},{"id":"conf-210","order":210,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"paypalobjects.com","policy":"💰 PayPal","flags":[],"raw":"DOMAIN-SUFFIX,paypalobjects.com,\"💰 PayPal\"","remote":false},{"id":"conf-211","order":211,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"pypl.com","policy":"💰 PayPal","flags":[],"raw":"DOMAIN-SUFFIX,pypl.com,\"💰 PayPal\"","remote":false},{"id":"conf-212","order":212,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"venmo.com","policy":"💰 PayPal","flags":[],"raw":"DOMAIN-SUFFIX,venmo.com,\"💰 PayPal\"","remote":false},{"id":"conf-213","order":213,"source":"conf","section":"2-finance","type":"DOMAIN-SUFFIX","value":"braintreegateway.com","policy":"💰 PayPal","flags":[],"raw":"DOMAIN-SUFFIX,braintreegateway.com,\"💰 PayPal\"","remote":false},{"id":"conf-214","order":214,"source":"conf","section":"2-finance","type":"RULE-SET","value":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list","policy":"💰 PayPal","flags":[],"raw":"RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list,\"💰 PayPal\"","remote":true},{"id":"conf-215","order":215,"source":"conf","section":"3-ai","type":"DOMAIN","value":"challenges.cloudflare.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,challenges.cloudflare.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-216","order":216,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"arkoselabs.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,arkoselabs.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-217","order":217,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"hcaptcha.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,hcaptcha.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-218","order":218,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"hcaptcha.net","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,hcaptcha.net,\"🤖 AI住宅\"","remote":false},{"id":"conf-219","order":219,"source":"conf","section":"3-ai","type":"DOMAIN-KEYWORD","value":"sift","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-KEYWORD,sift,\"🤖 AI住宅\"","remote":false},{"id":"conf-220","order":220,"source":"conf","section":"3-ai","type":"DOMAIN-KEYWORD","value":"browser-intake","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-KEYWORD,browser-intake,\"🤖 AI住宅\"","remote":false},{"id":"conf-221","order":221,"source":"conf","section":"3-ai","type":"DOMAIN-KEYWORD","value":"http-intake","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-KEYWORD,http-intake,\"🤖 AI住宅\"","remote":false},{"id":"conf-222","order":222,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"datadoghq.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,datadoghq.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-223","order":223,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"sentry.io","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,sentry.io,\"🤖 AI住宅\"","remote":false},{"id":"conf-224","order":224,"source":"conf","section":"3-ai","type":"DOMAIN","value":"o64374.ingest.sentry.io","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,o64374.ingest.sentry.io,\"🤖 AI住宅\"","remote":false},{"id":"conf-225","order":225,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ingest.us.sentry.io","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,ingest.us.sentry.io,\"🤖 AI住宅\"","remote":false},{"id":"conf-226","order":226,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"statsig.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,statsig.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-227","order":227,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"statsigapi.net","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,statsigapi.net,\"🤖 AI住宅\"","remote":false},{"id":"conf-228","order":228,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"statsigproxy.net","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,statsigproxy.net,\"🤖 AI住宅\"","remote":false},{"id":"conf-229","order":229,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"statsigcdn.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,statsigcdn.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-230","order":230,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"oaistatsig.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,oaistatsig.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-231","order":231,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"featuregates.org","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,featuregates.org,\"🤖 AI住宅\"","remote":false},{"id":"conf-232","order":232,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"featureassets.org","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,featureassets.org,\"🤖 AI住宅\"","remote":false},{"id":"conf-233","order":233,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"assetsconfigcdn.org","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,assetsconfigcdn.org,\"🤖 AI住宅\"","remote":false},{"id":"conf-234","order":234,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"beyondwickedmapping.org","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,beyondwickedmapping.org,\"🤖 AI住宅\"","remote":false},{"id":"conf-235","order":235,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"prodregistryv2.org","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,prodregistryv2.org,\"🤖 AI住宅\"","remote":false},{"id":"conf-236","order":236,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"growthbook.io","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,growthbook.io,\"🤖 AI住宅\"","remote":false},{"id":"conf-237","order":237,"source":"conf","section":"3-ai","type":"DOMAIN","value":"cdn.growthbook.io","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,cdn.growthbook.io,\"🤖 AI住宅\"","remote":false},{"id":"conf-238","order":238,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"usefathom.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,usefathom.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-239","order":239,"source":"conf","section":"3-ai","type":"DOMAIN","value":"cdn.usefathom.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,cdn.usefathom.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-240","order":240,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"segment.io","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,segment.io,\"🤖 AI住宅\"","remote":false},{"id":"conf-241","order":241,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"segment.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,segment.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-242","order":242,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"amplitude.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,amplitude.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-243","order":243,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"launchdarkly.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,launchdarkly.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-244","order":244,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"posthog.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,posthog.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-245","order":245,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"workos.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,workos.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-246","order":246,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"workoscdn.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,workoscdn.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-247","order":247,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"intercom.io","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,intercom.io,\"🤖 AI住宅\"","remote":false},{"id":"conf-248","order":248,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"intercomcdn.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,intercomcdn.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-249","order":249,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"bugsnag.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,bugsnag.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-250","order":250,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"doubleclick.net","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,doubleclick.net,\"🤖 AI住宅\"","remote":false},{"id":"conf-251","order":251,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"anthropic.com.cn","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,anthropic.com.cn,\"🤖 AI住宅\"","remote":false},{"id":"conf-252","order":252,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"claude.ai","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,claude.ai,\"🤖 AI住宅\"","remote":false},{"id":"conf-253","order":253,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"claude.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,claude.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-254","order":254,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"claudeusercontent.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,claudeusercontent.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-255","order":255,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"anthropic.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,anthropic.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-256","order":256,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"anthropic.ai","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,anthropic.ai,\"🤖 AI住宅\"","remote":false},{"id":"conf-257","order":257,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"clau.de","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,clau.de,\"🤖 AI住宅\"","remote":false},{"id":"conf-258","order":258,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"claude.app","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,claude.app,\"🤖 AI住宅\"","remote":false},{"id":"conf-259","order":259,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"claude.new","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,claude.new,\"🤖 AI住宅\"","remote":false},{"id":"conf-260","order":260,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"claude.site","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,claude.site,\"🤖 AI住宅\"","remote":false},{"id":"conf-261","order":261,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"claudepages.dev","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,claudepages.dev,\"🤖 AI住宅\"","remote":false},{"id":"conf-262","order":262,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"claudestudio.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,claudestudio.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-263","order":263,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"claudemcpclient.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,claudemcpclient.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-264","order":264,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"claudemcpcontent.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,claudemcpcontent.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-265","order":265,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"antspace.dev","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,antspace.dev,\"🤖 AI住宅\"","remote":false},{"id":"conf-266","order":266,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"modelcontextprotocol.io","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,modelcontextprotocol.io,\"🤖 AI住宅\"","remote":false},{"id":"conf-267","order":267,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"modelcontextprotocol.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,modelcontextprotocol.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-268","order":268,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"modelcontextprotocol.net","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,modelcontextprotocol.net,\"🤖 AI住宅\"","remote":false},{"id":"conf-269","order":269,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"modelcontextprotocol.org","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,modelcontextprotocol.org,\"🤖 AI住宅\"","remote":false},{"id":"conf-270","order":270,"source":"conf","section":"3-ai","type":"DOMAIN-KEYWORD","value":"anthropic","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-KEYWORD,anthropic,\"🤖 AI住宅\"","remote":false},{"id":"conf-271","order":271,"source":"conf","section":"3-ai","type":"DOMAIN-KEYWORD","value":"claude","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-KEYWORD,claude,\"🤖 AI住宅\"","remote":false},{"id":"conf-272","order":272,"source":"conf","section":"3-ai","type":"DOMAIN-KEYWORD","value":"usage4claude","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-KEYWORD,usage4claude,\"🤖 AI住宅\"","remote":false},{"id":"conf-273","order":273,"source":"conf","section":"3-ai","type":"DOMAIN-KEYWORD","value":"aidente","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-KEYWORD,aidente,\"🤖 AI住宅\"","remote":false},{"id":"conf-274","order":274,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"openai.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,openai.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-275","order":275,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"openai.fm","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,openai.fm,\"🤖 AI住宅\"","remote":false},{"id":"conf-276","order":276,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"chatgpt.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,chatgpt.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-277","order":277,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"chat.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,chat.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-278","order":278,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"oaistatic.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,oaistatic.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-279","order":279,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"oaiusercontent.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,oaiusercontent.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-280","order":280,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"sora.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,sora.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-281","order":281,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"livekit.cloud","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,livekit.cloud,\"🤖 AI住宅\"","remote":false},{"id":"conf-282","order":282,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"chatgpt.livekit.cloud","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,chatgpt.livekit.cloud,\"🤖 AI住宅\"","remote":false},{"id":"conf-283","order":283,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"host.livekit.cloud","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,host.livekit.cloud,\"🤖 AI住宅\"","remote":false},{"id":"conf-284","order":284,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"turn.livekit.cloud","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,turn.livekit.cloud,\"🤖 AI住宅\"","remote":false},{"id":"conf-285","order":285,"source":"conf","section":"3-ai","type":"DOMAIN-KEYWORD","value":"openai","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-KEYWORD,openai,\"🤖 AI住宅\"","remote":false},{"id":"conf-286","order":286,"source":"conf","section":"3-ai","type":"DOMAIN-KEYWORD","value":"chatgpt","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-KEYWORD,chatgpt,\"🤖 AI住宅\"","remote":false},{"id":"conf-287","order":287,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"x.ai","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,x.ai,\"🤖 AI住宅\"","remote":false},{"id":"conf-288","order":288,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"grok.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,grok.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-289","order":289,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"xai.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,xai.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-290","order":290,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"cursor.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,cursor.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-291","order":291,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"cursor.sh","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,cursor.sh,\"🤖 AI住宅\"","remote":false},{"id":"conf-292","order":292,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"cursorapi.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,cursorapi.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-293","order":293,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"cursor-cdn.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,cursor-cdn.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-294","order":294,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"trae.ai","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,trae.ai,\"🤖 AI住宅\"","remote":false},{"id":"conf-295","order":295,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"windsurf.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,windsurf.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-296","order":296,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"codeium.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,codeium.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-297","order":297,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"augmentcode.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,augmentcode.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-298","order":298,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"zed.dev","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,zed.dev,\"🤖 AI住宅\"","remote":false},{"id":"conf-299","order":299,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"replit.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,replit.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-300","order":300,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"midjourney.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,midjourney.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-301","order":301,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"mistral.ai","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,mistral.ai,\"🤖 AI住宅\"","remote":false},{"id":"conf-302","order":302,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"perplexity.ai","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,perplexity.ai,\"🤖 AI住宅\"","remote":false},{"id":"conf-303","order":303,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"perplexity.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,perplexity.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-304","order":304,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"pplx.ai","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,pplx.ai,\"🤖 AI住宅\"","remote":false},{"id":"conf-305","order":305,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"poe.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,poe.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-306","order":306,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"cohere.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,cohere.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-307","order":307,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"cohere.ai","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,cohere.ai,\"🤖 AI住宅\"","remote":false},{"id":"conf-308","order":308,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"openrouter.ai","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,openrouter.ai,\"🤖 AI住宅\"","remote":false},{"id":"conf-309","order":309,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"groq.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,groq.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-310","order":310,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"sourcegraph.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,sourcegraph.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-311","order":311,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"githubcopilot.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,githubcopilot.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-312","order":312,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"huggingface.co","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,huggingface.co,\"🤖 AI住宅\"","remote":false},{"id":"conf-313","order":313,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"hf.co","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,hf.co,\"🤖 AI住宅\"","remote":false},{"id":"conf-314","order":314,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"hf.space","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,hf.space,\"🤖 AI住宅\"","remote":false},{"id":"conf-315","order":315,"source":"conf","section":"3-ai","type":"DOMAIN","value":"copilot.microsoft.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,copilot.microsoft.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-316","order":316,"source":"conf","section":"3-ai","type":"DOMAIN","value":"accounts.youtube.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,accounts.youtube.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-317","order":317,"source":"conf","section":"3-ai","type":"DOMAIN","value":"play.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,play.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-318","order":318,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"youtube.com","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN-SUFFIX,youtube.com,\"🎬 流媒体\"","remote":false},{"id":"conf-319","order":319,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"googlevideo.com","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN-SUFFIX,googlevideo.com,\"🎬 流媒体\"","remote":false},{"id":"conf-320","order":320,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ytimg.com","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN-SUFFIX,ytimg.com,\"🎬 流媒体\"","remote":false},{"id":"conf-321","order":321,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"youtu.be","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN-SUFFIX,youtu.be,\"🎬 流媒体\"","remote":false},{"id":"conf-322","order":322,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"yt.be","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN-SUFFIX,yt.be,\"🎬 流媒体\"","remote":false},{"id":"conf-323","order":323,"source":"conf","section":"3-ai","type":"DOMAIN","value":"youtubei.googleapis.com","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN,youtubei.googleapis.com,\"🎬 流媒体\"","remote":false},{"id":"conf-324","order":324,"source":"conf","section":"3-ai","type":"DOMAIN","value":"youtube.googleapis.com","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN,youtube.googleapis.com,\"🎬 流媒体\"","remote":false},{"id":"conf-325","order":325,"source":"conf","section":"3-ai","type":"RULE-SET","value":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list","policy":"🎬 流媒体","flags":[],"raw":"RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list,\"🎬 流媒体\"","remote":true},{"id":"conf-326","order":326,"source":"conf","section":"3-ai","type":"RULE-SET","value":"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list","policy":"🎬 流媒体","flags":[],"raw":"RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list,\"🎬 流媒体\"","remote":true},{"id":"conf-327","order":327,"source":"conf","section":"3-ai","type":"DOMAIN","value":"gemini.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,gemini.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-328","order":328,"source":"conf","section":"3-ai","type":"DOMAIN","value":"aistudio.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,aistudio.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-329","order":329,"source":"conf","section":"3-ai","type":"DOMAIN","value":"notebooklm.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,notebooklm.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-330","order":330,"source":"conf","section":"3-ai","type":"DOMAIN","value":"jules.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,jules.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-331","order":331,"source":"conf","section":"3-ai","type":"DOMAIN","value":"bard.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,bard.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-332","order":332,"source":"conf","section":"3-ai","type":"DOMAIN","value":"makersuite.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,makersuite.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-333","order":333,"source":"conf","section":"3-ai","type":"DOMAIN","value":"ai.google.dev","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,ai.google.dev,\"🤖 AI住宅\"","remote":false},{"id":"conf-334","order":334,"source":"conf","section":"3-ai","type":"DOMAIN","value":"generativelanguage.googleapis.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,generativelanguage.googleapis.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-335","order":335,"source":"conf","section":"3-ai","type":"DOMAIN","value":"aiplatform.googleapis.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,aiplatform.googleapis.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-336","order":336,"source":"conf","section":"3-ai","type":"DOMAIN","value":"antigravity.google","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,antigravity.google,\"🤖 AI住宅\"","remote":false},{"id":"conf-337","order":337,"source":"conf","section":"3-ai","type":"DOMAIN","value":"accounts.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,accounts.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-338","order":338,"source":"conf","section":"3-ai","type":"DOMAIN","value":"myaccount.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,myaccount.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-339","order":339,"source":"conf","section":"3-ai","type":"DOMAIN","value":"signin.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,signin.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-340","order":340,"source":"conf","section":"3-ai","type":"DOMAIN","value":"apis.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,apis.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-341","order":341,"source":"conf","section":"3-ai","type":"DOMAIN","value":"oauth2.googleapis.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,oauth2.googleapis.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-342","order":342,"source":"conf","section":"3-ai","type":"DOMAIN","value":"oauthaccountmanager.googleapis.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,oauthaccountmanager.googleapis.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-343","order":343,"source":"conf","section":"3-ai","type":"DOMAIN","value":"openidconnect.googleapis.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,openidconnect.googleapis.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-344","order":344,"source":"conf","section":"3-ai","type":"DOMAIN","value":"securetoken.googleapis.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,securetoken.googleapis.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-345","order":345,"source":"conf","section":"3-ai","type":"DOMAIN","value":"identitytoolkit.googleapis.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,identitytoolkit.googleapis.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-346","order":346,"source":"conf","section":"3-ai","type":"DOMAIN","value":"mail.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,mail.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-347","order":347,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"gmail.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,gmail.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-348","order":348,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"googlemail.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,googlemail.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-349","order":349,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"maps.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,maps.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-350","order":350,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"drive.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,drive.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-351","order":351,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"authenticator.google.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,authenticator.google.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-352","order":352,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"gstatic.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,gstatic.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-353","order":353,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ggpht.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,ggpht.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-354","order":354,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"recaptcha.net","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,recaptcha.net,\"🤖 AI住宅\"","remote":false},{"id":"conf-355","order":355,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"googleusercontent.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,googleusercontent.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-356","order":356,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"googleapis.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,googleapis.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-357","order":357,"source":"conf","section":"3-ai","type":"DOMAIN","value":"lf16-effectcdn.byteeffecttos-g.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN,lf16-effectcdn.byteeffecttos-g.com,\"🎵 TikTok\"","remote":false},{"id":"conf-358","order":358,"source":"conf","section":"3-ai","type":"DOMAIN","value":"lf16-pkgcdn.pitaya-clientai.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN,lf16-pkgcdn.pitaya-clientai.com,\"🎵 TikTok\"","remote":false},{"id":"conf-359","order":359,"source":"conf","section":"3-ai","type":"DOMAIN","value":"p16-tiktokcdn-com.akamaized.net","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN,p16-tiktokcdn-com.akamaized.net,\"🎵 TikTok\"","remote":false},{"id":"conf-360","order":360,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"pangle.io","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,pangle.io,\"🎵 TikTok\"","remote":false},{"id":"conf-361","order":361,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokpangle.us","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokpangle.us,\"🎵 TikTok\"","remote":false},{"id":"conf-362","order":362,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokpangle-b.us","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokpangle-b.us,\"🎵 TikTok\"","remote":false},{"id":"conf-363","order":363,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokpangle-cdn-us.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokpangle-cdn-us.com,\"🎵 TikTok\"","remote":false},{"id":"conf-364","order":364,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktok.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktok.com,\"🎵 TikTok\"","remote":false},{"id":"conf-365","order":365,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokv.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokv.com,\"🎵 TikTok\"","remote":false},{"id":"conf-366","order":366,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokv.us","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokv.us,\"🎵 TikTok\"","remote":false},{"id":"conf-367","order":367,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokcdn.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokcdn.com,\"🎵 TikTok\"","remote":false},{"id":"conf-368","order":368,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokcdn-us.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokcdn-us.com,\"🎵 TikTok\"","remote":false},{"id":"conf-369","order":369,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ttcdn-us.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,ttcdn-us.com,\"🎵 TikTok\"","remote":false},{"id":"conf-370","order":370,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokd.net","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokd.net,\"🎵 TikTok\"","remote":false},{"id":"conf-371","order":371,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokd.org","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokd.org,\"🎵 TikTok\"","remote":false},{"id":"conf-372","order":372,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktok-row.net","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktok-row.net,\"🎵 TikTok\"","remote":false},{"id":"conf-373","order":373,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokmusic.app","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokmusic.app,\"🎵 TikTok\"","remote":false},{"id":"conf-374","order":374,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokglobalshop.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokglobalshop.com,\"🎵 TikTok\"","remote":false},{"id":"conf-375","order":375,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokshop.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokshop.com,\"🎵 TikTok\"","remote":false},{"id":"conf-376","order":376,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokseller.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokseller.com,\"🎵 TikTok\"","remote":false},{"id":"conf-377","order":377,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokforbusiness.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokforbusiness.com,\"🎵 TikTok\"","remote":false},{"id":"conf-378","order":378,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokapis.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokapis.com,\"🎵 TikTok\"","remote":false},{"id":"conf-379","order":379,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokw.us","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokw.us,\"🎵 TikTok\"","remote":false},{"id":"conf-380","order":380,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokls.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokls.com,\"🎵 TikTok\"","remote":false},{"id":"conf-381","order":381,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokvod.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokvod.com,\"🎵 TikTok\"","remote":false},{"id":"conf-382","order":382,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokcdn-eu.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokcdn-eu.com,\"🎵 TikTok\"","remote":false},{"id":"conf-383","order":383,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tiktokrow-cdn.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tiktokrow-cdn.com,\"🎵 TikTok\"","remote":false},{"id":"conf-384","order":384,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"tik-tokapi.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,tik-tokapi.com,\"🎵 TikTok\"","remote":false},{"id":"conf-385","order":385,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ttwebview.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,ttwebview.com,\"🎵 TikTok\"","remote":false},{"id":"conf-386","order":386,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ttwstatic.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,ttwstatic.com,\"🎵 TikTok\"","remote":false},{"id":"conf-387","order":387,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"byteoversea.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,byteoversea.com,\"🎵 TikTok\"","remote":false},{"id":"conf-388","order":388,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"byteintlapi.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,byteintlapi.com,\"🎵 TikTok\"","remote":false},{"id":"conf-389","order":389,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"bytedapm.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,bytedapm.com,\"🎵 TikTok\"","remote":false},{"id":"conf-390","order":390,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"bytegecko-i18n.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,bytegecko-i18n.com,\"🎵 TikTok\"","remote":false},{"id":"conf-391","order":391,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ibytedtos.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,ibytedtos.com,\"🎵 TikTok\"","remote":false},{"id":"conf-392","order":392,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ibyteimg.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,ibyteimg.com,\"🎵 TikTok\"","remote":false},{"id":"conf-393","order":393,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ipstatp.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,ipstatp.com,\"🎵 TikTok\"","remote":false},{"id":"conf-394","order":394,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"sgpstatp.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,sgpstatp.com,\"🎵 TikTok\"","remote":false},{"id":"conf-395","order":395,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"snssdk.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,snssdk.com,\"🎵 TikTok\"","remote":false},{"id":"conf-396","order":396,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"muscdn.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,muscdn.com,\"🎵 TikTok\"","remote":false},{"id":"conf-397","order":397,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"musical.ly","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,musical.ly,\"🎵 TikTok\"","remote":false},{"id":"conf-398","order":398,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"isnssdk.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,isnssdk.com,\"🎵 TikTok\"","remote":false},{"id":"conf-399","order":399,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"capcut.com","policy":"🎵 TikTok","flags":[],"raw":"DOMAIN-SUFFIX,capcut.com,\"🎵 TikTok\"","remote":false},{"id":"conf-400","order":400,"source":"conf","section":"3-ai","type":"DOMAIN","value":"graph.facebook.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,graph.facebook.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-401","order":401,"source":"conf","section":"3-ai","type":"DOMAIN","value":"graph.instagram.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,graph.instagram.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-402","order":402,"source":"conf","section":"3-ai","type":"DOMAIN","value":"edge-mqtt.facebook.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,edge-mqtt.facebook.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-403","order":403,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"facebook.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,facebook.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-404","order":404,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"fbcdn.net","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,fbcdn.net,\"🤖 AI住宅\"","remote":false},{"id":"conf-405","order":405,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"facebook.net","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,facebook.net,\"🤖 AI住宅\"","remote":false},{"id":"conf-406","order":406,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"fb.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,fb.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-407","order":407,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"fb.me","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,fb.me,\"🤖 AI住宅\"","remote":false},{"id":"conf-408","order":408,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"messenger.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,messenger.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-409","order":409,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"instagram.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,instagram.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-410","order":410,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"cdninstagram.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,cdninstagram.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-411","order":411,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"instagr.am","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,instagr.am,\"🤖 AI住宅\"","remote":false},{"id":"conf-412","order":412,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"threads.net","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,threads.net,\"🤖 AI住宅\"","remote":false},{"id":"conf-413","order":413,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"threads.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,threads.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-414","order":414,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"meta.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,meta.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-415","order":415,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"stripe.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,stripe.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-416","order":416,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"stripe.network","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,stripe.network,\"🤖 AI住宅\"","remote":false},{"id":"conf-417","order":417,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"stripecdn.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,stripecdn.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-418","order":418,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"link.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,link.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-419","order":419,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"notion.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,notion.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-420","order":420,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"notion.so","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,notion.so,\"🤖 AI住宅\"","remote":false},{"id":"conf-421","order":421,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"notion.site","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,notion.site,\"🤖 AI住宅\"","remote":false},{"id":"conf-422","order":422,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"notion-static.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,notion-static.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-423","order":423,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"notion.new","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,notion.new,\"🤖 AI住宅\"","remote":false},{"id":"conf-424","order":424,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"notionusercontent.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,notionusercontent.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-425","order":425,"source":"conf","section":"3-ai","type":"DOMAIN","value":"prod-files-secure.s3.us-west-2.amazonaws.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN,prod-files-secure.s3.us-west-2.amazonaws.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-426","order":426,"source":"conf","section":"3-ai","type":"IP-CIDR","value":"131.149.232.0/21","policy":"🤖 AI住宅","flags":["no-resolve"],"raw":"IP-CIDR,131.149.232.0/21,\"🤖 AI住宅\",no-resolve","remote":false},{"id":"conf-427","order":427,"source":"conf","section":"3-ai","type":"IP-CIDR","value":"208.103.161.0/24","policy":"🤖 AI住宅","flags":["no-resolve"],"raw":"IP-CIDR,208.103.161.0/24,\"🤖 AI住宅\",no-resolve","remote":false},{"id":"conf-428","order":428,"source":"conf","section":"3-ai","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/ai.conf","policy":"🤖 AI住宅","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/ai.conf,\"🤖 AI住宅\"","remote":true},{"id":"conf-429","order":429,"source":"conf","section":"3-ai","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/gitlab.conf","policy":"🤖 AI住宅","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/gitlab.conf,\"🤖 AI住宅\"","remote":true},{"id":"conf-430","order":430,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ip-api.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,ip-api.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-431","order":431,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ipinfo.io","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,ipinfo.io,\"🤖 AI住宅\"","remote":false},{"id":"conf-432","order":432,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ipify.org","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,ipify.org,\"🤖 AI住宅\"","remote":false},{"id":"conf-433","order":433,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ip.sb","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,ip.sb,\"🤖 AI住宅\"","remote":false},{"id":"conf-434","order":434,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ipleak.net","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,ipleak.net,\"🤖 AI住宅\"","remote":false},{"id":"conf-435","order":435,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"browserleaks.com","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,browserleaks.com,\"🤖 AI住宅\"","remote":false},{"id":"conf-436","order":436,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"whoer.net","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,whoer.net,\"🤖 AI住宅\"","remote":false},{"id":"conf-437","order":437,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ifconfig.co","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,ifconfig.co,\"🤖 AI住宅\"","remote":false},{"id":"conf-438","order":438,"source":"conf","section":"3-ai","type":"DOMAIN-SUFFIX","value":"ifconfig.me","policy":"🤖 AI住宅","flags":[],"raw":"DOMAIN-SUFFIX,ifconfig.me,\"🤖 AI住宅\"","remote":false},{"id":"conf-439","order":439,"source":"conf","section":"4-cn","type":"RULE-SET","value":"LAN","policy":"DIRECT","flags":["no-resolve"],"raw":"RULE-SET,LAN,DIRECT,no-resolve","remote":false},{"id":"conf-440","order":440,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"your-service.example","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,your-service.example,\"🌍 国际网络\"","remote":false},{"id":"conf-441","order":441,"source":"conf","section":"4-cn","type":"IP-CIDR","value":"223.71.70.56/32","policy":"DIRECT","flags":["no-resolve"],"raw":"IP-CIDR,223.71.70.56/32,DIRECT,no-resolve","remote":false},{"id":"conf-442","order":442,"source":"conf","section":"4-cn","type":"IP-CIDR","value":"172.16.238.100/32","policy":"DIRECT","flags":["no-resolve"],"raw":"IP-CIDR,172.16.238.100/32,DIRECT,no-resolve","remote":false},{"id":"conf-443","order":443,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"keruioil.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,keruioil.com,DIRECT","remote":false},{"id":"conf-444","order":444,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"deepoil.cc","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,deepoil.cc,DIRECT","remote":false},{"id":"conf-445","order":445,"source":"conf","section":"4-cn","type":"DOMAIN-KEYWORD","value":"keruioil","policy":"DIRECT","flags":[],"raw":"DOMAIN-KEYWORD,keruioil,DIRECT","remote":false},{"id":"conf-446","order":446,"source":"conf","section":"4-cn","type":"DOMAIN-KEYWORD","value":"deepoil","policy":"DIRECT","flags":[],"raw":"DOMAIN-KEYWORD,deepoil,DIRECT","remote":false},{"id":"conf-447","order":447,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"sangfor.com.cn","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,sangfor.com.cn,DIRECT","remote":false},{"id":"conf-448","order":448,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"tgalileo.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,tgalileo.com,DIRECT","remote":false},{"id":"conf-449","order":449,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"codebuddy.cn","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,codebuddy.cn,DIRECT","remote":false},{"id":"conf-450","order":450,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"workbuddy.cn","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,workbuddy.cn,DIRECT","remote":false},{"id":"conf-451","order":451,"source":"conf","section":"4-cn","type":"IP-CIDR","value":"206.206.82.0/24","policy":"DIRECT","flags":["no-resolve"],"raw":"IP-CIDR,206.206.82.0/24,DIRECT,no-resolve","remote":false},{"id":"conf-452","order":452,"source":"conf","section":"4-cn","type":"IP-CIDR","value":"14.102.231.0/24","policy":"DIRECT","flags":["no-resolve"],"raw":"IP-CIDR,14.102.231.0/24,DIRECT,no-resolve","remote":false},{"id":"conf-453","order":453,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"delivery.mp.microsoft.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,delivery.mp.microsoft.com,DIRECT","remote":false},{"id":"conf-454","order":454,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"officecdn.microsoft.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,officecdn.microsoft.com,DIRECT","remote":false},{"id":"conf-455","order":455,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"c2r.ts.cdn.office.net","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,c2r.ts.cdn.office.net,DIRECT","remote":false},{"id":"conf-456","order":456,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"windowsupdate.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,windowsupdate.com,DIRECT","remote":false},{"id":"conf-457","order":457,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"msftconnecttest.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,msftconnecttest.com,DIRECT","remote":false},{"id":"conf-458","order":458,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"msftncsi.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,msftncsi.com,DIRECT","remote":false},{"id":"conf-459","order":459,"source":"conf","section":"4-cn","type":"IP-CIDR","value":"47.246.0.0/16","policy":"DIRECT","flags":["no-resolve"],"raw":"IP-CIDR,47.246.0.0/16,DIRECT,no-resolve","remote":false},{"id":"conf-460","order":460,"source":"conf","section":"4-cn","type":"IP-CIDR","value":"139.95.0.0/16","policy":"DIRECT","flags":["no-resolve"],"raw":"IP-CIDR,139.95.0.0/16,DIRECT,no-resolve","remote":false},{"id":"conf-461","order":461,"source":"conf","section":"4-cn","type":"IP-CIDR","value":"163.181.0.0/16","policy":"DIRECT","flags":["no-resolve"],"raw":"IP-CIDR,163.181.0.0/16,DIRECT,no-resolve","remote":false},{"id":"conf-462","order":462,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"tableau.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,tableau.com,DIRECT","remote":false},{"id":"conf-463","order":463,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"tableausoftware.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,tableausoftware.com,DIRECT","remote":false},{"id":"conf-464","order":464,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"tableaucdn.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,tableaucdn.com,DIRECT","remote":false},{"id":"conf-465","order":465,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"sfdcstatic.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,sfdcstatic.com,DIRECT","remote":false},{"id":"conf-466","order":466,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"tableauusercontent.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,tableauusercontent.com,DIRECT","remote":false},{"id":"conf-467","order":467,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"trae.com.cn","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,trae.com.cn,DIRECT","remote":false},{"id":"conf-468","order":468,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"ima.qq.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,ima.qq.com,DIRECT","remote":false},{"id":"conf-469","order":469,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"deepseek.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,deepseek.com,DIRECT","remote":false},{"id":"conf-470","order":470,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"kimi.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,kimi.com,DIRECT","remote":false},{"id":"conf-471","order":471,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"moonshot.cn","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,moonshot.cn,DIRECT","remote":false},{"id":"conf-472","order":472,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"qianwen.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,qianwen.com,DIRECT","remote":false},{"id":"conf-473","order":473,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"tongyi.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,tongyi.com,DIRECT","remote":false},{"id":"conf-474","order":474,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"siliconflow.cn","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,siliconflow.cn,DIRECT","remote":false},{"id":"conf-475","order":475,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"siliconflow.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,siliconflow.com,DIRECT","remote":false},{"id":"conf-476","order":476,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"minimaxi.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,minimaxi.com,DIRECT","remote":false},{"id":"conf-477","order":477,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"minimax.chat","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,minimax.chat,DIRECT","remote":false},{"id":"conf-478","order":478,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"stepfun.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,stepfun.com,DIRECT","remote":false},{"id":"conf-479","order":479,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"stepfun.cn","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,stepfun.cn,DIRECT","remote":false},{"id":"conf-480","order":480,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"baichuan-ai.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,baichuan-ai.com,DIRECT","remote":false},{"id":"conf-481","order":481,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"iqiyi.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,iqiyi.com,DIRECT","remote":false},{"id":"conf-482","order":482,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"qiyi.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,qiyi.com,DIRECT","remote":false},{"id":"conf-483","order":483,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"qy.net","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,qy.net,DIRECT","remote":false},{"id":"conf-484","order":484,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"71edge.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,71edge.com,DIRECT","remote":false},{"id":"conf-485","order":485,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"bilibili.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,bilibili.com,DIRECT","remote":false},{"id":"conf-486","order":486,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"bilivideo.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,bilivideo.com,DIRECT","remote":false},{"id":"conf-487","order":487,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"biliapi.net","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,biliapi.net,DIRECT","remote":false},{"id":"conf-488","order":488,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"biliapi.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,biliapi.com,DIRECT","remote":false},{"id":"conf-489","order":489,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"biligame.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,biligame.com,DIRECT","remote":false},{"id":"conf-490","order":490,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"hdslb.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,hdslb.com,DIRECT","remote":false},{"id":"conf-491","order":491,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"qq.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,qq.com,DIRECT","remote":false},{"id":"conf-492","order":492,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"tencent.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,tencent.com,DIRECT","remote":false},{"id":"conf-493","order":493,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"gtimg.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,gtimg.com,DIRECT","remote":false},{"id":"conf-494","order":494,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"qpic.cn","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,qpic.cn,DIRECT","remote":false},{"id":"conf-495","order":495,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"ntp.org","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,ntp.org,DIRECT","remote":false},{"id":"conf-496","order":496,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"ntp.org.cn","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,ntp.org.cn,DIRECT","remote":false},{"id":"conf-497","order":497,"source":"conf","section":"4-cn","type":"DOMAIN","value":"ntp.nasa.gov","policy":"DIRECT","flags":[],"raw":"DOMAIN,ntp.nasa.gov,DIRECT","remote":false},{"id":"conf-498","order":498,"source":"conf","section":"4-cn","type":"DOMAIN","value":"time.windows.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,time.windows.com,DIRECT","remote":false},{"id":"conf-499","order":499,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"pool.ntp.org","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,pool.ntp.org,DIRECT","remote":false},{"id":"conf-500","order":500,"source":"conf","section":"4-cn","type":"DEST-PORT","value":"123","policy":"DIRECT","flags":[],"raw":"DEST-PORT,123,DIRECT","remote":false},{"id":"conf-501","order":501,"source":"conf","section":"4-cn","type":"DOMAIN-SUFFIX","value":"cn","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,cn,DIRECT","remote":false},{"id":"conf-502","order":502,"source":"conf","section":"4-cn","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf","policy":"DIRECT","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf,DIRECT","remote":true},{"id":"conf-503","order":503,"source":"conf","section":"4-cn","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/neteasemusic.conf","policy":"DIRECT","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/neteasemusic.conf,DIRECT","remote":true},{"id":"conf-504","order":504,"source":"conf","section":"4-cn","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/domestic.conf","policy":"DIRECT","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/domestic.conf,DIRECT","remote":true},{"id":"conf-505","order":505,"source":"conf","section":"4-cn","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/direct.conf","policy":"DIRECT","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/direct.conf,DIRECT","remote":true},{"id":"conf-506","order":506,"source":"conf","section":"4-cn","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/sogouinput.conf","policy":"REJECT","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/sogouinput.conf,REJECT","remote":true},{"id":"conf-507","order":507,"source":"conf","section":"5-stream","type":"DOMAIN-SUFFIX","value":"netflix.com","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN-SUFFIX,netflix.com,\"🎬 流媒体\"","remote":false},{"id":"conf-508","order":508,"source":"conf","section":"5-stream","type":"DOMAIN-SUFFIX","value":"nflxvideo.net","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN-SUFFIX,nflxvideo.net,\"🎬 流媒体\"","remote":false},{"id":"conf-509","order":509,"source":"conf","section":"5-stream","type":"DOMAIN-SUFFIX","value":"nflximg.net","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN-SUFFIX,nflximg.net,\"🎬 流媒体\"","remote":false},{"id":"conf-510","order":510,"source":"conf","section":"5-stream","type":"DOMAIN-SUFFIX","value":"nflxext.com","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN-SUFFIX,nflxext.com,\"🎬 流媒体\"","remote":false},{"id":"conf-511","order":511,"source":"conf","section":"5-stream","type":"DOMAIN-SUFFIX","value":"nflxso.net","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN-SUFFIX,nflxso.net,\"🎬 流媒体\"","remote":false},{"id":"conf-512","order":512,"source":"conf","section":"5-stream","type":"DOMAIN-SUFFIX","value":"viki.com","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN-SUFFIX,viki.com,\"🎬 流媒体\"","remote":false},{"id":"conf-513","order":513,"source":"conf","section":"5-stream","type":"DOMAIN-SUFFIX","value":"viki.io","policy":"🎬 流媒体","flags":[],"raw":"DOMAIN-SUFFIX,viki.io,\"🎬 流媒体\"","remote":false},{"id":"conf-514","order":514,"source":"conf","section":"5-stream","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/stream_jp.conf","policy":"🇯🇵 日本节点池","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/stream_jp.conf,\"🇯🇵 日本节点池\"","remote":true},{"id":"conf-515","order":515,"source":"conf","section":"5-stream","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/stream_tw.conf","policy":"🇨🇳 台湾机房池","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/stream_tw.conf,\"🇨🇳 台湾机房池\"","remote":true},{"id":"conf-516","order":516,"source":"conf","section":"5-stream","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/stream_eu.conf","policy":"🇬🇧 英国机房池","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/stream_eu.conf,\"🇬🇧 英国机房池\"","remote":true},{"id":"conf-517","order":517,"source":"conf","section":"5-stream","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/stream_kr.conf","policy":"🎬 流媒体","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/stream_kr.conf,\"🎬 流媒体\"","remote":true},{"id":"conf-518","order":518,"source":"conf","section":"5-stream","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/stream_hk.conf","policy":"🎬 流媒体","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/stream_hk.conf,\"🎬 流媒体\"","remote":true},{"id":"conf-519","order":519,"source":"conf","section":"5-stream","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/stream_us.conf","policy":"🎬 流媒体","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/stream_us.conf,\"🎬 流媒体\"","remote":true},{"id":"conf-520","order":520,"source":"conf","section":"5-stream","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/stream.conf","policy":"🎬 流媒体","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/stream.conf,\"🎬 流媒体\"","remote":true},{"id":"conf-521","order":521,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"discord.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,discord.com,\"🌍 国际网络\"","remote":false},{"id":"conf-522","order":522,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"discord.gg","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,discord.gg,\"🌍 国际网络\"","remote":false},{"id":"conf-523","order":523,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"discordapp.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,discordapp.com,\"🌍 国际网络\"","remote":false},{"id":"conf-524","order":524,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"discordapp.net","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,discordapp.net,\"🌍 国际网络\"","remote":false},{"id":"conf-525","order":525,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"discord.media","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,discord.media,\"🌍 国际网络\"","remote":false},{"id":"conf-526","order":526,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"discordcdn.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,discordcdn.com,\"🌍 国际网络\"","remote":false},{"id":"conf-527","order":527,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"telegram.org","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,telegram.org,\"🌍 国际网络\"","remote":false},{"id":"conf-528","order":528,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"t.me","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,t.me,\"🌍 国际网络\"","remote":false},{"id":"conf-529","order":529,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"telegra.ph","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,telegra.ph,\"🌍 国际网络\"","remote":false},{"id":"conf-530","order":530,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"tdesktop.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,tdesktop.com,\"🌍 国际网络\"","remote":false},{"id":"conf-531","order":531,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"whatsapp.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,whatsapp.com,\"🌍 国际网络\"","remote":false},{"id":"conf-532","order":532,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"whatsapp.net","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,whatsapp.net,\"🌍 国际网络\"","remote":false},{"id":"conf-533","order":533,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"wa.me","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,wa.me,\"🌍 国际网络\"","remote":false},{"id":"conf-534","order":534,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"x.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,x.com,\"🌍 国际网络\"","remote":false},{"id":"conf-535","order":535,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"twitter.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,twitter.com,\"🌍 国际网络\"","remote":false},{"id":"conf-536","order":536,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"twimg.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,twimg.com,\"🌍 国际网络\"","remote":false},{"id":"conf-537","order":537,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"obsidian.md","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,obsidian.md,\"🌍 国际网络\"","remote":false},{"id":"conf-538","order":538,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"dejavocab.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,dejavocab.com,\"🌍 国际网络\"","remote":false},{"id":"conf-539","order":539,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"github.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,github.com,\"🌍 国际网络\"","remote":false},{"id":"conf-540","order":540,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"githubusercontent.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,githubusercontent.com,\"🌍 国际网络\"","remote":false},{"id":"conf-541","order":541,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"githubassets.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,githubassets.com,\"🌍 国际网络\"","remote":false},{"id":"conf-542","order":542,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"immersivetranslate.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,immersivetranslate.com,\"🌍 国际网络\"","remote":false},{"id":"conf-543","order":543,"source":"conf","section":"6-global","type":"DOMAIN-SUFFIX","value":"deepl.com","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SUFFIX,deepl.com,\"🌍 国际网络\"","remote":false},{"id":"conf-544","order":544,"source":"conf","section":"6-global","type":"IP-CIDR","value":"43.153.77.155/32","policy":"🇺🇸 美国机房池","flags":["no-resolve"],"raw":"IP-CIDR,43.153.77.155/32,\"🇺🇸 美国机房池\",no-resolve","remote":false},{"id":"conf-545","order":545,"source":"conf","section":"6-global","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/microsoft.conf","policy":"🌍 国际网络","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/microsoft.conf,\"🌍 国际网络\"","remote":true},{"id":"conf-546","order":546,"source":"conf","section":"6-global","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/telegram.conf","policy":"🌍 国际网络","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/telegram.conf,\"🌍 国际网络\"","remote":true},{"id":"conf-547","order":547,"source":"conf","section":"6-global","type":"DOMAIN-SET","value":"https://ruleset.skk.moe/List/domainset/cdn.conf","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,\"🌍 国际网络\"","remote":true},{"id":"conf-548","order":548,"source":"conf","section":"6-global","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/cdn.conf","policy":"🌍 国际网络","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,\"🌍 国际网络\"","remote":true},{"id":"conf-549","order":549,"source":"conf","section":"6-global","type":"DOMAIN-SET","value":"https://ruleset.skk.moe/List/domainset/download.conf","policy":"🌍 国际网络","flags":[],"raw":"DOMAIN-SET,https://ruleset.skk.moe/List/domainset/download.conf,\"🌍 国际网络\"","remote":true},{"id":"conf-550","order":550,"source":"conf","section":"6-global","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/download.conf","policy":"🌍 国际网络","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/download.conf,\"🌍 国际网络\"","remote":true},{"id":"conf-551","order":551,"source":"conf","section":"6-global","type":"RULE-SET","value":"https://ruleset.skk.moe/List/non_ip/global.conf","policy":"🌍 国际网络","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,\"🌍 国际网络\"","remote":true},{"id":"conf-552","order":552,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/ai.conf","policy":"🤖 AI住宅","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/ai.conf,\"🤖 AI住宅\"","remote":true},{"id":"conf-553","order":553,"source":"conf","section":"7-ip","type":"IP-ASN","value":"399358","policy":"🤖 AI住宅","flags":["no-resolve"],"raw":"IP-ASN,399358,\"🤖 AI住宅\",no-resolve","remote":false},{"id":"conf-554","order":554,"source":"conf","section":"7-ip","type":"IP-CIDR","value":"160.79.104.0/21","policy":"🤖 AI住宅","flags":["no-resolve"],"raw":"IP-CIDR,160.79.104.0/21,\"🤖 AI住宅\",no-resolve","remote":false},{"id":"conf-555","order":555,"source":"conf","section":"7-ip","type":"IP-CIDR6","value":"2607:6bc0::/48","policy":"🤖 AI住宅","flags":["no-resolve"],"raw":"IP-CIDR6,2607:6bc0::/48,\"🤖 AI住宅\",no-resolve","remote":false},{"id":"conf-556","order":556,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/reject.conf","policy":"REJECT-DROP","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP","remote":true},{"id":"conf-557","order":557,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/telegram.conf","policy":"🌍 国际网络","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/telegram.conf,\"🌍 国际网络\"","remote":true},{"id":"conf-558","order":558,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/stream_jp.conf","policy":"🇯🇵 日本节点池","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/stream_jp.conf,\"🇯🇵 日本节点池\"","remote":true},{"id":"conf-559","order":559,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/stream_tw.conf","policy":"🇨🇳 台湾机房池","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/stream_tw.conf,\"🇨🇳 台湾机房池\"","remote":true},{"id":"conf-560","order":560,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/stream_eu.conf","policy":"🇬🇧 英国机房池","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/stream_eu.conf,\"🇬🇧 英国机房池\"","remote":true},{"id":"conf-561","order":561,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/stream_kr.conf","policy":"🎬 流媒体","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/stream_kr.conf,\"🎬 流媒体\"","remote":true},{"id":"conf-562","order":562,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/stream_hk.conf","policy":"🎬 流媒体","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/stream_hk.conf,\"🎬 流媒体\"","remote":true},{"id":"conf-563","order":563,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/stream_us.conf","policy":"🎬 流媒体","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/stream_us.conf,\"🎬 流媒体\"","remote":true},{"id":"conf-564","order":564,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/stream.conf","policy":"🎬 流媒体","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/stream.conf,\"🎬 流媒体\"","remote":true},{"id":"conf-565","order":565,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/neteasemusic.conf","policy":"DIRECT","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/neteasemusic.conf,DIRECT","remote":true},{"id":"conf-566","order":566,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/domestic.conf","policy":"DIRECT","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT","remote":true},{"id":"conf-567","order":567,"source":"conf","section":"7-ip","type":"RULE-SET","value":"https://ruleset.skk.moe/List/ip/china_ip.conf","policy":"DIRECT","flags":[],"raw":"RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT","remote":true},{"id":"conf-568","order":568,"source":"conf","section":"7-ip","type":"GEOIP","value":"CN","policy":"DIRECT","flags":["no-resolve"],"raw":"GEOIP,CN,DIRECT,no-resolve","remote":false},{"id":"conf-569","order":569,"source":"conf","section":"8-final","type":"FINAL","value":"","policy":"🌍 国际网络","flags":["dns-failed"],"raw":"FINAL,🌍 国际网络,dns-failed","remote":false},{"id":"module-570","order":570,"source":"module","section":"module-wzry","type":"DOMAIN","value":"snowflake.qq.com","policy":"DIRECT","flags":[],"raw":"DOMAIN,snowflake.qq.com,DIRECT","remote":false},{"id":"module-571","order":571,"source":"module","section":"module-wzry","type":"DOMAIN-SUFFIX","value":"mdt.qq.com","policy":"DIRECT","flags":[],"raw":"DOMAIN-SUFFIX,mdt.qq.com,DIRECT","remote":false},{"id":"module-572","order":572,"source":"module","section":"module-splash","type":"DOMAIN","value":"et.tanx.com","policy":"REJECT","flags":[],"raw":"DOMAIN,et.tanx.com,REJECT","remote":false},{"id":"module-573","order":573,"source":"module","section":"module-splash","type":"DOMAIN","value":"sdk-config.tanx.com","policy":"REJECT","flags":[],"raw":"DOMAIN,sdk-config.tanx.com,REJECT","remote":false},{"id":"module-574","order":574,"source":"module","section":"module-splash","type":"DOMAIN","value":"ma-adx.ctrip.com","policy":"REJECT","flags":[],"raw":"DOMAIN,ma-adx.ctrip.com,REJECT","remote":false},{"id":"module-575","order":575,"source":"module","section":"module-splash","type":"DOMAIN","value":"ad.12306.cn","policy":"REJECT","flags":[],"raw":"DOMAIN,ad.12306.cn,REJECT","remote":false},{"id":"module-576","order":576,"source":"module","section":"module-splash","type":"DOMAIN","value":"sdk.beizi.biz","policy":"REJECT","flags":[],"raw":"DOMAIN,sdk.beizi.biz,REJECT","remote":false},{"id":"module-577","order":577,"source":"module","section":"module-bili","type":"AND","value":"((DOMAIN-SUFFIX,chat.bilibili.com),(OR,((DOMAIN-KEYWORD,stun),(DOMAIN-KEYWORD,tracker))))","policy":"REJECT","flags":[],"raw":"AND,((DOMAIN-SUFFIX,chat.bilibili.com),(OR,((DOMAIN-KEYWORD,stun),(DOMAIN-KEYWORD,tracker)))),REJECT","remote":false},{"id":"module-578","order":578,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"apoll.m.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,apoll.m.taobao.com,REJECT","remote":false},{"id":"module-579","order":579,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"h-adashx.ut.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,h-adashx.ut.taobao.com,REJECT","remote":false},{"id":"module-580","order":580,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"w.m.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,w.m.taobao.com,REJECT","remote":false},{"id":"module-581","order":581,"source":"module","section":"module-taobao","type":"DOMAIN","value":"tunion-api.m.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN,tunion-api.m.taobao.com,REJECT","remote":false},{"id":"module-582","order":582,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"re.m.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,re.m.taobao.com,REJECT","remote":false},{"id":"module-583","order":583,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"agoodm.m.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,agoodm.m.taobao.com,REJECT","remote":false},{"id":"module-584","order":584,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"ai.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,ai.taobao.com,REJECT","remote":false},{"id":"module-585","order":585,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"api.waptest.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,api.waptest.taobao.com,REJECT","remote":false},{"id":"module-586","order":586,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"dsp.simba.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,dsp.simba.taobao.com,REJECT","remote":false},{"id":"module-587","order":587,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"fav.simba.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,fav.simba.taobao.com,REJECT","remote":false},{"id":"module-588","order":588,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"m.simba.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,m.simba.taobao.com,REJECT","remote":false},{"id":"module-589","order":589,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"mclick.simba.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,mclick.simba.taobao.com,REJECT","remote":false},{"id":"module-590","order":590,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"re.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,re.taobao.com,REJECT","remote":false},{"id":"module-591","order":591,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"redirect.simba.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,redirect.simba.taobao.com,REJECT","remote":false},{"id":"module-592","order":592,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"simba.m.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,simba.m.taobao.com,REJECT","remote":false},{"id":"module-593","order":593,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"srd.simba.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,srd.simba.taobao.com,REJECT","remote":false},{"id":"module-594","order":594,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"temai.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,temai.taobao.com,REJECT","remote":false},{"id":"module-595","order":595,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"textlink.simba.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,textlink.simba.taobao.com,REJECT","remote":false},{"id":"module-596","order":596,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"unitacs.m.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,unitacs.m.taobao.com,REJECT","remote":false},{"id":"module-597","order":597,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"acs4baichuan.m.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,acs4baichuan.m.taobao.com,REJECT","remote":false},{"id":"module-598","order":598,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"adashbc.ut.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,adashbc.ut.taobao.com,REJECT","remote":false},{"id":"module-599","order":599,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"adash-c.ut.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,adash-c.ut.taobao.com,REJECT","remote":false},{"id":"module-600","order":600,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"adashxgc.ut.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,adashxgc.ut.taobao.com,REJECT","remote":false},{"id":"module-601","order":601,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"adashx4yt.m.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,adashx4yt.m.taobao.com,REJECT","remote":false},{"id":"module-602","order":602,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"tunion-api.m.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,tunion-api.m.taobao.com,REJECT","remote":false},{"id":"module-603","order":603,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"tns.simba.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,tns.simba.taobao.com,REJECT","remote":false},{"id":"module-604","order":604,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"click.mz.simba.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,click.mz.simba.taobao.com,REJECT","remote":false},{"id":"module-605","order":605,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"click.simba.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,click.simba.taobao.com,REJECT","remote":false},{"id":"module-606","order":606,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"click.tz.simba.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,click.tz.simba.taobao.com,REJECT","remote":false},{"id":"module-607","order":607,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"stat.simba.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,stat.simba.taobao.com,REJECT","remote":false},{"id":"module-608","order":608,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"m-adash.m.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,m-adash.m.taobao.com,REJECT","remote":false},{"id":"module-609","order":609,"source":"module","section":"module-taobao","type":"DOMAIN-SUFFIX","value":"adashbc.m.taobao.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,adashbc.m.taobao.com,REJECT","remote":false},{"id":"module-610","order":610,"source":"module","section":"module-jd","type":"DOMAIN-SUFFIX","value":"jzt.jd.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,jzt.jd.com,REJECT","remote":false},{"id":"module-611","order":611,"source":"module","section":"module-jd","type":"DOMAIN-SUFFIX","value":"img-x.jd.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,img-x.jd.com,REJECT","remote":false},{"id":"module-612","order":612,"source":"module","section":"module-jd","type":"DOMAIN-SUFFIX","value":"du.jd.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,du.jd.com,REJECT","remote":false},{"id":"module-613","order":613,"source":"module","section":"module-jd","type":"DOMAIN-SUFFIX","value":"c-nfa.jd.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,c-nfa.jd.com,REJECT","remote":false},{"id":"module-614","order":614,"source":"module","section":"module-jd","type":"DOMAIN-SUFFIX","value":"cm.jd.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,cm.jd.com,REJECT","remote":false},{"id":"module-615","order":615,"source":"module","section":"module-jd","type":"DOMAIN-SUFFIX","value":"jddebug.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,jddebug.com,REJECT","remote":false},{"id":"module-616","order":616,"source":"module","section":"module-jd","type":"DOMAIN-SUFFIX","value":"kepler.jd.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,kepler.jd.com,REJECT","remote":false},{"id":"module-617","order":617,"source":"module","section":"module-jd","type":"DOMAIN-SUFFIX","value":"bdsp.x.jd.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,bdsp.x.jd.com,REJECT","remote":false},{"id":"module-618","order":618,"source":"module","section":"module-jd","type":"DOMAIN-SUFFIX","value":"keplerapi.jd.com","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,keplerapi.jd.com,REJECT","remote":false},{"id":"module-619","order":619,"source":"module","section":"module-jd","type":"DOMAIN-SUFFIX","value":"ad.3.cn","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,ad.3.cn,REJECT","remote":false},{"id":"module-620","order":620,"source":"module","section":"module-jd","type":"DOMAIN-SUFFIX","value":"jd.c-ptsp.com.cn","policy":"REJECT","flags":[],"raw":"DOMAIN-SUFFIX,jd.c-ptsp.com.cn,REJECT","remote":false},{"id":"module-621","order":621,"source":"module","section":"module-xhs","type":"DOMAIN","value":"ads-img-qc.xhscdn.com","policy":"REJECT","flags":[],"raw":"DOMAIN,ads-img-qc.xhscdn.com,REJECT","remote":false},{"id":"module-622","order":622,"source":"module","section":"module-xhs","type":"DOMAIN","value":"ads-video-al.xhscdn.com","policy":"REJECT","flags":[],"raw":"DOMAIN,ads-video-al.xhscdn.com,REJECT","remote":false},{"id":"module-623","order":623,"source":"module","section":"module-xhs","type":"DOMAIN","value":"ads-video-qc.xhscdn.com","policy":"REJECT","flags":[],"raw":"DOMAIN,ads-video-qc.xhscdn.com,REJECT","remote":false},{"id":"module-624","order":624,"source":"module","section":"module-xhs","type":"DOMAIN","value":"t-ads.xiaohongshu.com","policy":"REJECT","flags":[],"raw":"DOMAIN,t-ads.xiaohongshu.com,REJECT","remote":false},{"id":"module-625","order":625,"source":"module","section":"module-amap","type":"DOMAIN","value":"optimus-ads.amap.com","policy":"REJECT","flags":[],"raw":"DOMAIN,optimus-ads.amap.com,REJECT","remote":false},{"id":"module-626","order":626,"source":"module","section":"module-amap","type":"DOMAIN","value":"amap-aos-info-nogw.amap.com","policy":"REJECT","flags":[],"raw":"DOMAIN,amap-aos-info-nogw.amap.com,REJECT","remote":false},{"id":"module-627","order":627,"source":"module","section":"module-amap","type":"DOMAIN","value":"awaken.amap.com","policy":"REJECT","flags":[],"raw":"DOMAIN,awaken.amap.com,REJECT","remote":false}],"proxy_groups":[{"name":"📦 节点订阅","type":"select","include":[],"params":{"policy-path":"你的订阅","update-interval":"-1"},"hidden":false,"raw":"📦 节点订阅 = select, policy-path=你的订阅","is_pool":false,"is_upstream":true},{"name":"🤖 AI住宅","type":"fallback","include":["🇺🇸 美国家宽池"],"params":{"interval":"300"},"hidden":false,"raw":"🤖 AI住宅 = fallback, include-other-group=\"🇺🇸 美国家宽池,🇺🇸 美国机房池\", interval=300","is_pool":false,"is_upstream":false},{"name":"🎵 TikTok","type":"smart","include":["📦 节点订阅"],"params":{"policy-regex-filter":"^(?!.*0\\.3X|.*家宽).*美国"},"hidden":false,"raw":"🎵 TikTok = smart, include-other-group=\"📦 节点订阅\", policy-regex-filter=^(?!.*0\\.3X|.*家宽).*美国","is_pool":false,"is_upstream":false},{"name":"🪙 数字资产","type":"fallback","include":["🇨🇳 台湾家宽池"],"params":{"interval":"300"},"hidden":false,"raw":"🪙 数字资产 = fallback, include-other-group=\"🇨🇳 台湾家宽池,🇨🇳 台湾机房池\", interval=300","is_pool":false,"is_upstream":false},{"name":"💳 Bybit 全球","type":"fallback","include":["🇨🇳 台湾机房池"],"params":{"interval":"300"},"hidden":false,"raw":"💳 Bybit 全球 = fallback, include-other-group=\"🇨🇳 台湾机房池,🇨🇳 台湾家宽池\", interval=300","is_pool":false,"is_upstream":false},{"name":"🇩🇪 Bybit 欧洲","type":"fallback","include":["🇩🇪 德国家宽池"],"params":{"interval":"300"},"hidden":false,"raw":"🇩🇪 Bybit 欧洲 = fallback, include-other-group=\"🇩🇪 德国家宽池,🇩🇪 德国机房池\", interval=300","is_pool":false,"is_upstream":false},{"name":"🇬🇧 英国专属","type":"fallback","include":["🇬🇧 英国家宽池"],"params":{"interval":"300"},"hidden":false,"raw":"🇬🇧 英国专属 = fallback, include-other-group=\"🇬🇧 英国家宽池,🇬🇧 英国机房池\", interval=300","is_pool":false,"is_upstream":false},{"name":"💰 PayPal","type":"fallback","include":["🇺🇸 美国家宽池"],"params":{"interval":"300"},"hidden":false,"raw":"💰 PayPal = fallback, include-other-group=\"🇺🇸 美国家宽池,🇬🇧 英国家宽池\", interval=300","is_pool":false,"is_upstream":false},{"name":"🎬 流媒体","type":"smart","include":["📦 节点订阅"],"params":{"policy-regex-filter":"^(?!.*0\\.3X|.*家宽).*(香港|新加坡|日本|台湾|韩国|美国)","policy-priority":"香港:0.85;新加坡:0.9;日本:0.9;台湾:0.95;韩国:0.95;美国:1.1"},"hidden":false,"raw":"🎬 流媒体 = smart, include-other-group=\"📦 节点订阅\", policy-regex-filter=^(?!.*0\\.3X|.*家宽).*(香港|新加坡|日本|台湾|韩国|美国), policy-priority=香港:0.85;新加坡:0.9;日本:0.9;台湾:0.95;韩国:0.95;美国:1.1","is_pool":false,"is_upstream":false},{"name":"🌍 国际网络","type":"smart","include":["📦 节点订阅"],"params":{"policy-regex-filter":"^(?!.*0\\.3X|.*家宽|.*香港).*(新加坡|日本|台湾|韩国|美国)","policy-priority":"新加坡:0.85;日本:0.85;台湾:0.95;韩国:0.95;美国:1.1"},"hidden":false,"raw":"🌍 国际网络 = smart, include-other-group=\"📦 节点订阅\", policy-regex-filter=^(?!.*0\\.3X|.*家宽|.*香港).*(新加坡|日本|台湾|韩国|美国), policy-priority=新加坡:0.85;日本:0.85;台湾:0.95;韩国:0.95;美国:1.1","is_pool":false,"is_upstream":false},{"name":"🇺🇸 美国家宽池","type":"fallback","include":["📦 节点订阅"],"params":{"policy-regex-filter":"美国.*家宽","interval":"300","hidden":"1"},"hidden":true,"raw":"🇺🇸 美国家宽池 = fallback, include-other-group=\"📦 节点订阅\", policy-regex-filter=美国.*家宽, interval=300, hidden=1","is_pool":true,"is_upstream":false},{"name":"🇺🇸 美国机房池","type":"fallback","include":["📦 节点订阅"],"params":{"policy-regex-filter":"^(?!.*0\\.3X)(?!.*家宽).*美国","interval":"300","hidden":"1"},"hidden":true,"raw":"🇺🇸 美国机房池 = fallback, include-other-group=\"📦 节点订阅\", policy-regex-filter=^(?!.*0\\.3X)(?!.*家宽).*美国, interval=300, hidden=1","is_pool":true,"is_upstream":false},{"name":"🇨🇳 台湾家宽池","type":"fallback","include":["📦 节点订阅"],"params":{"policy-regex-filter":"台湾.*家宽","interval":"300","hidden":"1"},"hidden":true,"raw":"🇨🇳 台湾家宽池 = fallback, include-other-group=\"📦 节点订阅\", policy-regex-filter=台湾.*家宽, interval=300, hidden=1","is_pool":true,"is_upstream":false},{"name":"🇨🇳 台湾机房池","type":"fallback","include":["📦 节点订阅"],"params":{"policy-regex-filter":"^(?!.*0\\.3X)(?!.*家宽).*台湾","interval":"300","hidden":"1"},"hidden":true,"raw":"🇨🇳 台湾机房池 = fallback, include-other-group=\"📦 节点订阅\", policy-regex-filter=^(?!.*0\\.3X)(?!.*家宽).*台湾, interval=300, hidden=1","is_pool":true,"is_upstream":false},{"name":"🇩🇪 德国家宽池","type":"fallback","include":["📦 节点订阅"],"params":{"policy-regex-filter":"德国.*家宽","interval":"300","hidden":"1"},"hidden":true,"raw":"🇩🇪 德国家宽池 = fallback, include-other-group=\"📦 节点订阅\", policy-regex-filter=德国.*家宽, interval=300, hidden=1","is_pool":true,"is_upstream":false},{"name":"🇩🇪 德国机房池","type":"fallback","include":["📦 节点订阅"],"params":{"policy-regex-filter":"^(?!.*0\\.3X)(?!.*家宽).*德国","interval":"300","hidden":"1"},"hidden":true,"raw":"🇩🇪 德国机房池 = fallback, include-other-group=\"📦 节点订阅\", policy-regex-filter=^(?!.*0\\.3X)(?!.*家宽).*德国, interval=300, hidden=1","is_pool":true,"is_upstream":false},{"name":"🇬🇧 英国家宽池","type":"fallback","include":["📦 节点订阅"],"params":{"policy-regex-filter":"英国.*家宽","interval":"300","hidden":"1"},"hidden":true,"raw":"🇬🇧 英国家宽池 = fallback, include-other-group=\"📦 节点订阅\", policy-regex-filter=英国.*家宽, interval=300, hidden=1","is_pool":true,"is_upstream":false},{"name":"🇬🇧 英国机房池","type":"fallback","include":["📦 节点订阅"],"params":{"policy-regex-filter":"^(?!.*0\\.3X)(?!.*家宽).*英国","interval":"300","hidden":"1"},"hidden":true,"raw":"🇬🇧 英国机房池 = fallback, include-other-group=\"📦 节点订阅\", policy-regex-filter=^(?!.*0\\.3X)(?!.*家宽).*英国, interval=300, hidden=1","is_pool":true,"is_upstream":false},{"name":"🇯🇵 日本节点池","type":"fallback","include":["📦 节点订阅"],"params":{"policy-regex-filter":"^(?!.*0\\.3X)(?!.*家宽).*日本","interval":"300","hidden":"1"},"hidden":true,"raw":"🇯🇵 日本节点池 = fallback, include-other-group=\"📦 节点订阅\", policy-regex-filter=^(?!.*0\\.3X)(?!.*家宽).*日本, interval=300, hidden=1","is_pool":true,"is_upstream":false}],"module":{"url_rewrite":["^https?:\\/\\/api\\.m\\.jd\\.com\\/client\\.action\\?functionId=getWidgetV1052 - reject","^https?:\\/\\/m5\\.amap\\.com\\/ws\\/asa\\/ads_attribution - reject","^https?://(?:www\\.)?(?:g|google)\\.cn(?:/|$) https://www.google.com 302"],"map_local":["^https?:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.alibaba\\.advertisementservice\\.getadv data-type=text data=\"{}\" status-code=200 header=\"Content-Type:application/json\"","^https?:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.alimama\\.etao\\.config\\.query\\/.+?etao_advertise data-type=text data=\"{}\" status-code=200 header=\"Content-Type:application/json\"","^https?:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.alimusic\\.common\\.mobileservice\\.startinit data-type=text data=\"{}\" status-code=200 header=\"Content-Type:application/json\"","^https?:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.etao\\.noah\\.query\\/.+tao_splash data-type=text data=\"{}\" status-code=200 header=\"Content-Type:application/json\"","^https?:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.film\\.mtopadvertiseapi\\.queryadvertise data-type=text data=\"{}\" status-code=200 header=\"Content-Type:application/json\"","^https?:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.o2o\\.ad\\.gateway\\.get data-type=text data=\"{}\" status-code=200 header=\"Content-Type:application/json\"","^https?:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.taobao\\.idle\\.home\\.welcome data-type=text data=\"{}\" status-code=200 header=\"Content-Type:application/json\"","^https?:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.trip\\.activity\\.querytmsresources data-type=text data=\"{}\" status-code=200 header=\"Content-Type:application/json\"","^https?:\\/\\/guide-acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.taobao\\.(volvo\\.secondfloor\\.getconfig|wireless\\.home\\.newface\\.awesome\\.get) data-type=text data=\"{}\" status-code=200 header=\"Content-Type:application/json\"","^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/surprisebox\\/(?:get_style|open|submit_action) data-type=text data=\"{}\" status-code=200 header=\"Content-Type:application/json\"","^https?:\\/\\/www\\.xiaohongshu\\.com\\/api\\/marketing\\/box\\/trigger\\? data-type=text data=\"{}\" status-code=200 header=\"Content-Type:application/json\"","^https?:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/dsp\\/app\\/startup\\/init\\? data-type=text data=\"{}\" status-code=200 header=\"Content-Type:application/json\""],"body_rewrite":["http-response-jq ^https:\\/\\/app\\.bilibili\\.com\\/x\\/v2\\/splash\\/(list|show|event\\/list2)\\? '.data |= with_entries(if .key | IN(\"show\", \"event_list\") then .value = [] else . end)'","http-response-jq ^https:\\/\\/api\\.coolapk\\.com\\/v6\\/main\\/init(?:\\?|$) '.data |= (if type == \"array\" then map(select((.entityId != 945) and (.entityTemplate != \"sponsorCard\"))) else . end)'"],"scripts":[{"name":"淘宝","raw":"淘宝 = type=http-response, pattern=^https?:\\/\\/guide-acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.taobao\\.(cloudvideo\\.video\\.query|wireless\\.home\\.splash\\.awesome\\.get), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400","config":"type=http-response, pattern=^https?:\\/\\/guide-acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.taobao\\.(cloudvideo\\.video\\.query|wireless\\.home\\.splash\\.awesome\\.get), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400"},{"name":"淘宝-02","raw":"淘宝-02 = type=http-response, pattern=^https?:\\/\\/poplayer\\.template\\.alibaba\\.com\\/\\w+\\.json, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400","config":"type=http-response, pattern=^https?:\\/\\/poplayer\\.template\\.alibaba\\.com\\/\\w+\\.json, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400"},{"name":"京东","raw":"京东 = type=http-response, pattern=^https:\\/\\/api\\.m\\.jd\\.com\\/client\\.action\\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jingdong.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400","config":"type=http-response, pattern=^https:\\/\\/api\\.m\\.jd\\.com\\/client\\.action\\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jingdong.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400"},{"name":"小红书搜索页","raw":"小红书搜索页 = type=http-response, pattern=^https?:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v\\d+\\/search\\/(banner|hot)_list, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400","config":"type=http-response, pattern=^https?:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v\\d+\\/search\\/(banner|hot)_list, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400"},{"name":"小红书搜索页-02","raw":"小红书搜索页-02 = type=http-response, pattern=^https?:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v\\d+\\/search\\/(hint|trending)\\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400","config":"type=http-response, pattern=^https?:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v\\d+\\/search\\/(hint|trending)\\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400"},{"name":"小红书搜索页-03","raw":"小红书搜索页-03 = type=http-response, pattern=^https?:\\/\\/(so|edith)\\.xiaohongshu\\.com\\/api\\/sns\\/v\\d+\\/search\\/notes\\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400","config":"type=http-response, pattern=^https?:\\/\\/(so|edith)\\.xiaohongshu\\.com\\/api\\/sns\\/v\\d+\\/search\\/notes\\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400"},{"name":"小红书开屏广告","raw":"小红书开屏广告 = type=http-response, pattern=^https?:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v\\d+\\/system_service\\/config\\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400","config":"type=http-response, pattern=^https?:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v\\d+\\/system_service\\/config\\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400"},{"name":"小红书开屏广告-02","raw":"小红书开屏广告-02 = type=http-response, pattern=^https?:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v\\d+\\/system_service\\/splash_config, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400","config":"type=http-response, pattern=^https?:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v\\d+\\/system_service\\/splash_config, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400"},{"name":"高德","raw":"高德 = type=http-response, pattern=^https:\\/\\/(m5|m5-zb)\\.amap\\.com\\/ws\\/valueadded\\/alimama\\/splash_screen, script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400","config":"type=http-response, pattern=^https:\\/\\/(m5|m5-zb)\\.amap\\.com\\/ws\\/valueadded\\/alimama\\/splash_screen, script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400"},{"name":"高德-02","raw":"高德-02 = type=http-response, pattern=^https:\\/\\/m5\\.amap\\.com\\/ws\\/faas\\/amap-navigation\\/main-page, script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400","config":"type=http-response, pattern=^https:\\/\\/m5\\.amap\\.com\\/ws\\/faas\\/amap-navigation\\/main-page, script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400"},{"name":"高德-03","raw":"高德-03 = type=http-response, pattern=^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/promotion-web\\/resource, script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400","config":"type=http-response, pattern=^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/promotion-web\\/resource, script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400"},{"name":"高德-04","raw":"高德-04 = type=http-response, pattern=^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/dsp\\/profile\\/index\\/nodefaas, script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400","config":"type=http-response, pattern=^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/dsp\\/profile\\/index\\/nodefaas, script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js, requires-body=true, max-size=524288, timeout=10, script-update-interval=86400"}],"mitm_hostnames":["app.bilibili.com","api.coolapk.com","acs.m.taobao.com","guide-acs.m.taobao.com","poplayer.template.alibaba.com","api.m.jd.com","edith.xiaohongshu.com","www.xiaohongshu.com","so.xiaohongshu.com","m5.amap.com","m5-zb.amap.com"],"mitm_raw":["h2 = true","hostname = %APPEND% app.bilibili.com, api.coolapk.com, acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, api.m.jd.com, edith.xiaohongshu.com, www.xiaohongshu.com, so.xiaohongshu.com, m5.amap.com, m5-zb.amap.com"]},"policy_counts":{"🤖 AI住宅":190,"REJECT":121,"DIRECT":112,"🪙 数字资产":51,"🎵 TikTok":45,"🌍 国际网络":33,"🎬 流媒体":24,"REJECT-DROP":13,"💳 Bybit 全球":12,"REJECT-NO-DROP":8,"💰 PayPal":7,"🇬🇧 英国专属":3,"🇩🇪 Bybit 欧洲":2,"🇯🇵 日本节点池":2,"🇨🇳 台湾机房池":2,"🇬🇧 英国机房池":2,"🇺🇸 美国机房池":1},"warnings":[],"completeness":{"conf_raw":570,"conf_parsed":570,"module_raw":58,"module_parsed":58,"missing_conf":0,"missing_module":0,"ok":true}}</script>
+<script>
+(function(){
+"use strict";
+const DATA = JSON.parse(document.getElementById("DATA").textContent);
+console.log("[] conf rules:", DATA.meta.conf_rules, "module:", DATA.meta.module_rules, "total:", DATA.meta.total_rules);
+console.log("[] completeness:", DATA.completeness);
+console.log("[] policy counts:", DATA.policy_counts);
+if (DATA.warnings && DATA.warnings.length) console.warn("[] warnings:", DATA.warnings);
+
+const COLORS = {
+  direct: "#34d399", reject: "#f87171", ai: "#c084fc", tiktok: "#f472b6",
+  finance: "#fbbf24", stream: "#22d3ee", intl: "#60a5fa", module: "#fb923c",
+  orange: "#fb923c", region: "#94a3b8", other: "#7a8fb0",
+  section: "#4de1ff", pool: "#a78bfa", upstream: "#e879f9", edge: "rgba(100,160,255,0.25)"
+};
+
+function policyKey(policy) {
+  const p = (policy || "").toUpperCase();
+  const name = policy || "";
+  if (p.includes("REJECT") || p.includes("DROP")) return "reject";
+  if (p === "DIRECT" || name === "DIRECT") return "direct";
+  if (name.includes("AI") || name.includes("🤖")) return "ai";
+  if (name.includes("TikTok") || name.includes("🎵")) return "tiktok";
+  if (/数字资产|Bybit|PayPal|🪙|💳|💰/.test(name)) return "finance";
+  if (name.includes("流媒体") || name.includes("🎬")) return "stream";
+  if (name.includes("国际") || name.includes("🌍")) return "intl";
+  if (/英国|德国|日本|台湾|美国|🇨🇳|🇩🇪|🇬🇧|🇯🇵|🇺🇸/.test(name)) return "region";
+  return "other";
+}
+
+const canvas = document.getElementById("net");
+const wrap = document.getElementById("canvas-wrap");
+const ctx = canvas.getContext("2d");
+let W = 0, H = 0, dpr = 1;
+let cam = { x: 36, y: 48, scale: 1.08 };
+let dragging = false, lastX = 0, lastY = 0;
+let expandAll = false;
+let animOn = true;
+let searchQ = "";
+let selected = null;
+let nodes = [];
+let edges = [];
+let particles = [];
+let hover = null;
+
+function resize() {
+  dpr = Math.min(window.devicePixelRatio || 1, 2);
+  W = wrap.clientWidth; H = wrap.clientHeight;
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  canvas.style.width = W + "px"; canvas.style.height = H + "px";
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+window.addEventListener("resize", () => { resize(); });
+
+// ---------- Graph build ----------
+const sectionLabel = {};
+DATA.sections.forEach(s => { sectionLabel[s.id] = s.label; });
+
+function buildGraph() {
+  nodes = []; edges = []; particles = [];
+  const bySection = {};
+  DATA.rules.forEach(r => {
+    (bySection[r.section] = bySection[r.section] || []).push(r);
+  });
+
+  // Layer X positions — wide horizontal gaps (world coords)
+  const LX = { A: 100, B: 560, C: 1050, D: 1500 };
+  let yA = 80;
+  const sectionNodes = {};
+  const policyNodes = {};
+  const poolNodes = {};
+
+  // Layer A — sections (ordered), large vertical spacing ~100px
+  const secOrder = DATA.sections.filter(s => (bySection[s.id] || []).length > 0 || s.id === "1.5-app");
+  secOrder.forEach((s, i) => {
+    const rules = bySection[s.id] || [];
+    const n = {
+      id: "sec:" + s.id, kind: "section", layer: "A",
+      label: s.label, count: rules.length, section: s.id,
+      x: LX.A, y: yA, r: 7 + Math.min(5, Math.sqrt(rules.length) * 0.35),
+      color: s.id.startsWith("module") ? COLORS.module : COLORS.section,
+      rules
+    };
+    sectionNodes[s.id] = n;
+    nodes.push(n);
+    yA += 100 + Math.min(16, rules.length * 0.04);
+  });
+
+  // Layer C — policy groups (~70px spacing)
+  const policiesFromRules = new Set(DATA.rules.map(r => r.policy));
+  const groups = DATA.proxy_groups || [];
+  const visibleGroups = groups.filter(g => !g.hidden && !g.is_upstream);
+  const pools = groups.filter(g => g.is_pool || g.hidden);
+  const upstream = groups.filter(g => g.is_upstream);
+
+  let yC = 80;
+  function addPolicyNode(name, extra) {
+    if (policyNodes[name]) return policyNodes[name];
+    const key = policyKey(name);
+    const n = {
+      id: "pol:" + name, kind: "policy", layer: "C",
+      label: name, count: DATA.policy_counts[name] || 0,
+      x: LX.C, y: yC, r: 8,
+      color: COLORS[key] || COLORS.other,
+      policy: name, ...extra
+    };
+    policyNodes[name] = n;
+    nodes.push(n);
+    yC += 70;
+    return n;
+  }
+
+  // Builtin
+  ["DIRECT", "REJECT", "REJECT-DROP", "REJECT-NO-DROP"].forEach(p => {
+    if (policiesFromRules.has(p)) addPolicyNode(p, { builtin: true });
+  });
+  visibleGroups.forEach(g => addPolicyNode(g.name, { group: g }));
+  // any remaining policies referenced by rules
+  policiesFromRules.forEach(p => {
+    if (!policyNodes[p]) addPolicyNode(p, {});
+  });
+
+  // Layer D — pools + upstream (~60px)
+  let yD = 100;
+  pools.forEach(g => {
+    const n = {
+      id: "pool:" + g.name, kind: "pool", layer: "D",
+      label: g.name, x: LX.D, y: yD, r: 7,
+      color: COLORS.pool, group: g
+    };
+    poolNodes[g.name] = n;
+    nodes.push(n);
+    yD += 60;
+  });
+  upstream.forEach(g => {
+    const n = {
+      id: "up:" + g.name, kind: "upstream", layer: "D",
+      label: g.name + " (你的订阅)",
+      x: LX.D + 60, y: yD + 20, r: 10,
+      color: COLORS.upstream, group: g
+    };
+    poolNodes[g.name] = n;
+    nodes.push(n);
+    yD += 70;
+  });
+
+  function addEdge(a, b, color, weight) {
+    edges.push({ a, b, color: color || COLORS.edge, weight: weight || 1, particles: [] });
+  }
+
+  if (!expandAll) {
+    // Cluster mode: section → each distinct policy used in section
+    Object.keys(sectionNodes).forEach(sid => {
+      const sn = sectionNodes[sid];
+      const polCount = {};
+      sn.rules.forEach(r => { polCount[r.policy] = (polCount[r.policy] || 0) + 1; });
+      Object.keys(polCount).forEach(p => {
+        const pn = policyNodes[p];
+        if (pn) addEdge(sn, pn, pn.color, Math.min(8, 1 + Math.log2(polCount[p] + 1)));
+      });
+    });
+  } else {
+    // Expand: multi-column layout under Layer B (≥16px row pitch, 5 cols)
+    const COLS = 5;
+    const COL_W = 150;
+    const ROW_H = 18;
+    DATA.rules.forEach((r, idx) => {
+      const sn = sectionNodes[r.section];
+      const col = COLORS[policyKey(r.policy)] || COLORS.other;
+      const color = r.source === "module" && (r.policy === "REJECT" || r.policy.startsWith("REJECT"))
+        ? COLORS.module : col;
+      const c = idx % COLS;
+      const row = Math.floor(idx / COLS);
+      const n = {
+        id: r.id, kind: "rule", layer: "B",
+        label: shortLabel(r), rule: r,
+        x: LX.B + c * COL_W, y: 50 + row * ROW_H, r: r.remote ? 3.2 : 2.2,
+        color: color, remote: r.remote
+      };
+      nodes.push(n);
+      if (sn) addEdge(sn, n, color, 0.6);
+      const pn = policyNodes[r.policy];
+      if (pn) addEdge(n, pn, color, 0.8);
+    });
+  }
+
+  // Policy → pools via include-other-group
+  groups.forEach(g => {
+    const from = policyNodes[g.name] || poolNodes[g.name];
+    if (!from) return;
+    (g.include || []).forEach(inc => {
+      const to = poolNodes[inc] || policyNodes[inc];
+      if (to) addEdge(from, to, COLORS.pool, 2);
+    });
+  });
+  // Pools → upstream 
+  pools.forEach(g => {
+    const from = poolNodes[g.name];
+    (g.include || []).forEach(inc => {
+      const to = poolNodes[inc];
+      if (from && to) addEdge(from, to, COLORS.upstream, 2.5);
+    });
+  });
+
+  // Particles seed — kept on all edges; draw only highlights them
+  edges.forEach(e => {
+    const n = Math.min(3, Math.max(1, Math.floor(e.weight)));
+    for (let i = 0; i < n; i++) {
+      particles.push({ e, t: Math.random(), speed: 0.002 + Math.random() * 0.004, r: 1.2 + Math.random() });
+    }
+  });
+
+  setComfortableCamera();
+}
+
+function setComfortableCamera() {
+  // Do NOT fit entire tall graph into viewport — comfortable readable scale
+  cam.scale = 1.08;
+  cam.x = 36;
+  cam.y = 48;
+}
+
+function shortLabel(r) {
+  if (r.type === "FINAL") return "FINAL → " + r.policy;
+  if (r.remote) {
+    const u = r.value || "";
+    const leaf = u.split("/").pop() || u;
+    return r.type + " ☁ " + leaf;
+  }
+  const v = (r.value || "").slice(0, 36);
+  return r.type + " " + v;
+}
+
+// ---------- Interaction ----------
+wrap.addEventListener("wheel", ev => {
+  ev.preventDefault();
+  const rect = wrap.getBoundingClientRect();
+  const mx = ev.clientX - rect.left, my = ev.clientY - rect.top;
+  const worldX = (mx - cam.x) / cam.scale, worldY = (my - cam.y) / cam.scale;
+  const factor = ev.deltaY < 0 ? 1.12 : 1 / 1.12;
+  cam.scale = Math.max(0.15, Math.min(4, cam.scale * factor));
+  cam.x = mx - worldX * cam.scale;
+  cam.y = my - worldY * cam.scale;
+}, { passive: false });
+
+wrap.addEventListener("pointerdown", ev => {
+  if (ev.button !== 0) return;
+  dragging = true; lastX = ev.clientX; lastY = ev.clientY;
+  wrap.classList.add("dragging");
+  wrap.setPointerCapture(ev.pointerId);
+});
+wrap.addEventListener("pointermove", ev => {
+  const rect = wrap.getBoundingClientRect();
+  const mx = ev.clientX - rect.left, my = ev.clientY - rect.top;
+  const wx = (mx - cam.x) / cam.scale, wy = (my - cam.y) / cam.scale;
+  hover = hitTest(wx, wy);
+  canvas.style.cursor = hover ? "pointer" : (dragging ? "grabbing" : "grab");
+  if (dragging) {
+    cam.x += ev.clientX - lastX;
+    cam.y += ev.clientY - lastY;
+    lastX = ev.clientX; lastY = ev.clientY;
+  }
+});
+wrap.addEventListener("pointerup", ev => {
+  const wasDrag = Math.hypot(ev.clientX - lastX, ev.clientY - lastY);
+  dragging = false; wrap.classList.remove("dragging");
+  const rect = wrap.getBoundingClientRect();
+  const mx = ev.clientX - rect.left, my = ev.clientY - rect.top;
+  const wx = (mx - cam.x) / cam.scale, wy = (my - cam.y) / cam.scale;
+  const n = hitTest(wx, wy);
+  if (n) selectNode(n);
+});
+wrap.addEventListener("pointerleave", () => { dragging = false; hover = null; });
+
+function hitTest(wx, wy) {
+  // reverse for top-most
+  for (let i = nodes.length - 1; i >= 0; i--) {
+    const n = nodes[i];
+    if (filterHide(n)) continue;
+    const dx = wx - n.x, dy = wy - n.y;
+    const rr = (n.r + 4) / (n.kind === "rule" ? 1 : 1);
+    if (dx * dx + dy * dy <= (n.r + 6) * (n.r + 6)) return n;
+  }
+  return null;
+}
+
+function filterHide(n) {
+  if (!searchQ) return false;
+  const q = searchQ.toLowerCase();
+  if (n.kind === "section") {
+    return !(n.label.toLowerCase().includes(q) || (n.rules || []).some(r => ruleMatch(r, q)));
+  }
+  if (n.kind === "rule") return !ruleMatch(n.rule, q);
+  if (n.kind === "policy" || n.kind === "pool" || n.kind === "upstream") {
+    return !((n.label || "").toLowerCase().includes(q) || (n.policy || "").toLowerCase().includes(q));
+  }
+  return false;
+}
+function ruleMatch(r, q) {
+  return (r.raw || "").toLowerCase().includes(q)
+    || (r.value || "").toLowerCase().includes(q)
+    || (r.policy || "").toLowerCase().includes(q)
+    || (r.type || "").toLowerCase().includes(q)
+    || (sectionLabel[r.section] || "").toLowerCase().includes(q);
+}
+
+function selectNode(n) {
+  selected = n;
+  showTab("detail");
+  renderDetail(n);
+  document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t.dataset.tab === "detail"));
+}
+
+function renderDetail(n) {
+  const el = document.getElementById("panel-body");
+  if (!n) { el.innerHTML = '<p class="hint">点击节点查看详情。</p>'; return; }
+  if (n.kind === "section") {
+    const rules = n.rules || [];
+    const filtered = searchQ ? rules.filter(r => ruleMatch(r, searchQ.toLowerCase())) : rules;
+    let html = `<div class="kv">
+      <div class="k">类型</div><div class="v">规则分段</div>
+      <div class="k">名称</div><div class="v">${esc(n.label)}</div>
+      <div class="k">规则数</div><div class="v">${rules.length}${searchQ ? "（过滤后 " + filtered.length + "）" : ""}</div>
+    </div><p class="hint">点击下方规则行查看完整内容；或开启「展开全部规则节点」。</p>`;
+    filtered.forEach(r => {
+      const pk = policyKey(r.policy);
+      html += `<div class="list-item" data-rid="${esc(r.id)}">
+        <div><span class="tag ${pk}">${esc(r.policy)}</span>
+        ${r.remote ? '<span class="tag other">远程集</span>' : ""}
+        ${(r.flags||[]).map(f=>'<span class="tag other">'+esc(f)+'</span>').join("")}
+        </div>
+        <div>${esc(r.type)} · ${esc((r.value||"").slice(0,60))}</div>
+        <div class="t">${esc(r.raw.slice(0,120))}</div>
+      </div>`;
+    });
+    el.innerHTML = html;
+    el.querySelectorAll(".list-item").forEach(item => {
+      item.addEventListener("click", () => {
+        const r = DATA.rules.find(x => x.id === item.dataset.rid);
+        if (r) renderRuleDetail(r);
+      });
+    });
+    return;
+  }
+  if (n.kind === "rule") { renderRuleDetail(n.rule); return; }
+  if (n.kind === "policy" || n.kind === "pool" || n.kind === "upstream") {
+    const g = n.group;
+    const related = DATA.rules.filter(r => r.policy === (n.policy || n.label.replace(/ \(token.*/, "")));
+    const pname = n.policy || (g && g.name) || n.label;
+    let html = `<div class="kv">
+      <div class="k">类型</div><div class="v">${esc(n.kind)} ${g ? "· " + esc(g.type) : ""}</div>
+      <div class="k">名称</div><div class="v">${esc(pname)}</div>
+      <div class="k">命中规则</div><div class="v">${DATA.policy_counts[pname] || related.length || 0}</div>
+    </div>`;
+    if (g) {
+      html += `<div class="kv">
+        <div class="k">隐藏池</div><div class="v">${g.hidden ? "是" : "否"}</div>
+        <div class="k">引用组</div><div class="v">${esc((g.include||[]).join(", ") || "—")}</div>
+        <div class="k">过滤</div><div class="v">${esc((g.params && g.params["policy-regex-filter"]) || "—")}</div>
+        <div class="k">订阅</div><div class="v">${esc((g.params && g.params["policy-path"]) || "—")}</div>
+      </div>
+      <div class="raw">${esc(g.raw || "")}</div>`;
+    }
+    html += `<p class="hint" style="margin-top:10px">关联规则（最多 40 条）</p>`;
+    related.slice(0, 40).forEach(r => {
+      html += `<div class="list-item" data-rid="${esc(r.id)}"><div class="t">${esc(r.section)}</div>${esc(r.raw.slice(0,100))}</div>`;
+    });
+    el.innerHTML = html;
+    el.querySelectorAll(".list-item").forEach(item => {
+      item.addEventListener("click", () => {
+        const r = DATA.rules.find(x => x.id === item.dataset.rid);
+        if (r) renderRuleDetail(r);
+      });
+    });
+  }
+}
+
+function renderRuleDetail(r) {
+  const pk = policyKey(r.policy);
+  const el = document.getElementById("panel-body");
+  el.innerHTML = `<div class="kv">
+    <div class="k">来源</div><div class="v">${r.source === "module" ? "模块 sgmodule" : "主配置 conf"}</div>
+    <div class="k">分段</div><div class="v">${esc(sectionLabel[r.section] || r.section)}</div>
+    <div class="k">序号</div><div class="v">#${r.order}</div>
+    <div class="k">类型</div><div class="v">${esc(r.type)}${r.remote ? ' <span class="tag other">远程集 · 未展开</span>' : ""}</div>
+    <div class="k">匹配值</div><div class="v">${esc(r.value || "—")}</div>
+    <div class="k">策略</div><div class="v"><span class="tag ${pk}">${esc(r.policy)}</span></div>
+    <div class="k">标志</div><div class="v">${(r.flags && r.flags.length) ? r.flags.map(f=>'<span class="tag other">'+esc(f)+'</span>').join(" ") : "—"}</div>
+  </div>
+  <div class="raw">${esc(r.raw)}</div>
+  ${r.remote ? '<p class="hint">此为远程 RULE-SET / DOMAIN-SET，仅显示 URL，不下载展开内容。</p>' : ""}`;
+}
+
+function esc(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+// ---------- Tabs ----------
+function showTab(name) {
+  const el = document.getElementById("panel-body");
+  if (name === "detail") { renderDetail(selected); return; }
+  if (name === "stats") {
+    let rows = Object.entries(DATA.policy_counts).map(([k,v]) =>
+      `<div class="list-item"><span class="tag ${policyKey(k)}">${esc(k)}</span> <strong style="float:right">${v}</strong></div>`
+    ).join("");
+    let secRows = DATA.sections.filter(s => s.count > 0).map(s =>
+      `<div class="list-item">${esc(s.label)} <strong style="float:right">${s.count}</strong></div>`
+    ).join("");
+    el.innerHTML = `<h3 style="color:var(--neon);font-size:12px;margin-bottom:6px">按策略</h3>${rows}
+      <h3 style="color:var(--neon);font-size:12px;margin:12px 0 6px">按分段</h3>${secRows}
+      <div class="stats-grid" style="margin-top:12px">
+        <div>主配置规则</div><div><strong>${DATA.meta.conf_rules}</strong></div>
+        <div>模块规则</div><div><strong>${DATA.meta.module_rules}</strong></div>
+        <div>合计</div><div><strong>${DATA.meta.total_rules}</strong></div>
+        <div>完整性</div><div><strong>${DATA.completeness.ok ? "✅ 通过" : "❌ 缺失"}</strong></div>
+      </div>`;
+    return;
+  }
+  if (name === "module") {
+    const m = DATA.module;
+    el.innerHTML = `
+      <h3 style="color:var(--orange);font-size:12px">MITM 主机名（${m.mitm_hostnames.length}）</h3>
+      <div class="raw">${esc(m.mitm_hostnames.join(", "))}</div>
+      <h3 style="color:var(--orange);font-size:12px;margin-top:10px">URL Rewrite（${m.url_rewrite.length}）</h3>
+      ${m.url_rewrite.map(x => '<div class="raw">'+esc(x)+'</div>').join("") || "<p class='hint'>无</p>"}
+      <h3 style="color:var(--orange);font-size:12px;margin-top:10px">Map Local（${m.map_local.length}）</h3>
+      ${m.map_local.map(x => '<div class="raw">'+esc(x)+'</div>').join("") || "<p class='hint'>无</p>"}
+      <h3 style="color:var(--orange);font-size:12px;margin-top:10px">Body Rewrite（${m.body_rewrite.length}）</h3>
+      ${m.body_rewrite.map(x => '<div class="raw">'+esc(x)+'</div>').join("") || "<p class='hint'>无</p>"}
+      <h3 style="color:var(--orange);font-size:12px;margin-top:10px">Script（${m.scripts.length}）</h3>
+      ${m.scripts.map(x => '<div class="list-item"><strong>'+esc(x.name)+'</strong><div class="t">'+esc(x.raw.slice(0,160))+'</div></div>').join("")}
+    `;
+    return;
+  }
+  if (name === "general") {
+    const g = DATA.meta.general;
+    el.innerHTML = `<div class="kv">
+      <div class="k">DNS</div><div class="v">${esc(g["dns-server"])}</div>
+      <div class="k">DoH</div><div class="v">${esc(g["encrypted-dns-server"])}</div>
+      <div class="k">hijack-dns</div><div class="v">${esc(g["hijack-dns"])}</div>
+      <div class="k">skip-proxy</div><div class="v">${esc(g["skip-proxy"])}</div>
+      <div class="k">IPv6</div><div class="v">${esc(g.ipv6)}</div>
+      <div class="k">block-quic</div><div class="v">${esc(g["block-quic"])}</div>
+      <div class="k">UDP 不支持</div><div class="v">${esc(g["udp-policy-not-supported-behaviour"])}</div>
+    </div>
+    <p class="hint">General 仅作元数据展示，不作为图中虚假边。</p>
+    <p class="hint">${esc(DATA.meta.note)}</p>`;
+  }
+}
+
+document.getElementById("tabs").addEventListener("click", ev => {
+  const t = ev.target.closest(".tab");
+  if (!t) return;
+  document.querySelectorAll(".tab").forEach(x => x.classList.toggle("active", x === t));
+  showTab(t.dataset.tab);
+});
+
+document.getElementById("search").addEventListener("input", ev => {
+  searchQ = ev.target.value.trim();
+  if (selected && selected.kind === "section") renderDetail(selected);
+});
+
+document.getElementById("btn-expand").addEventListener("click", function() {
+  expandAll = !expandAll;
+  this.classList.toggle("active", expandAll);
+  this.textContent = expandAll ? "聚类分段视图" : "展开全部规则节点";
+  buildGraph();
+});
+document.getElementById("btn-reset").addEventListener("click", () => {
+  searchQ = ""; document.getElementById("search").value = "";
+  buildGraph();
+});
+document.getElementById("btn-anim").addEventListener("click", function() {
+  animOn = !animOn;
+  this.textContent = animOn ? "动画 ON" : "动画 OFF";
+  this.classList.toggle("active", animOn);
+});
+
+// ---------- Draw ----------
+function worldToScreen(x, y) {
+  return [x * cam.scale + cam.x, y * cam.scale + cam.y];
+}
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+  // subtle grid
+  ctx.save();
+  ctx.strokeStyle = "rgba(40,70,120,0.15)";
+  ctx.lineWidth = 1;
+  const step = 60 * cam.scale;
+  const ox = cam.x % step, oy = cam.y % step;
+  for (let x = ox; x < W; x += step) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+  for (let y = oy; y < H; y += step) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+  ctx.restore();
+
+  // Layer titles (match LX)
+  const titles = [
+    [100, (I18N[uiLang]||I18N.en).layerA],
+    [560, (I18N[uiLang]||I18N.en)[expandAll ? "layerBExpand" : "layerBCluster"]],
+    [1050, (I18N[uiLang]||I18N.en).layerC],
+    [1500, (I18N[uiLang]||I18N.en).layerD]
+  ];
+  titles.forEach(([x, t]) => {
+    const [sx, sy] = worldToScreen(x, 24);
+    if (sy > -20 && sy < H) {
+      ctx.font = "11px sans-serif";
+      ctx.fillStyle = "rgba(122,143,176,0.85)";
+      ctx.fillText(t, sx - 30, Math.max(14, sy - 28));
+    }
+  });
+
+  const focusId = (hover && hover.id) || (selected && selected.id) || null;
+  function edgeHot(e) {
+    if (!focusId) return false;
+    return (e.a && e.a.id === focusId) || (e.b && e.b.id === focusId);
+  }
+
+  // Edges — very low alpha by default; full opacity when incident to hover/selection
+  edges.forEach(e => {
+    if (filterHide(e.a) || filterHide(e.b)) return;
+    const hot = edgeHot(e);
+    const [x1, y1] = worldToScreen(e.a.x, e.a.y);
+    const [x2, y2] = worldToScreen(e.b.x, e.b.y);
+    const mx = (x1 + x2) / 2;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.bezierCurveTo(mx, y1, mx, y2, x2, y2);
+    const base = (typeof e.color === "string" && e.color.startsWith("#") && e.color.length === 7)
+      ? e.color : (e.a.color || "#6480ff");
+    ctx.strokeStyle = base;
+    ctx.globalAlpha = hot ? 0.85 : 0.10;
+    ctx.lineWidth = hot ? Math.max(1.4, e.weight * 1.1) : Math.max(0.5, e.weight * 0.55);
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+  });
+
+  // Particles — only on highlighted (hot) edges
+  if (animOn && focusId) {
+    particles.forEach(p => {
+      const e = p.e;
+      if (!edgeHot(e)) return;
+      if (filterHide(e.a) || filterHide(e.b)) return;
+      p.t += p.speed;
+      if (p.t > 1) p.t = 0;
+      const [x1, y1] = worldToScreen(e.a.x, e.a.y);
+      const [x2, y2] = worldToScreen(e.b.x, e.b.y);
+      const t = p.t;
+      const mx = (x1 + x2) / 2;
+      const u = 1 - t;
+      const px = u*u*u*x1 + 3*u*u*t*mx + 3*u*t*t*mx + t*t*t*x2;
+      const py = u*u*u*y1 + 3*u*u*t*y1 + 3*u*t*t*y2 + t*t*t*y2;
+      const col = (e.a.color || "#4de1ff");
+      ctx.beginPath();
+      ctx.arc(px, py, p.r * (0.8 + 0.4 * cam.scale), 0, Math.PI * 2);
+      ctx.fillStyle = col;
+      ctx.globalAlpha = 0.9;
+      ctx.shadowColor = col;
+      ctx.shadowBlur = 8;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      ctx.globalAlpha = 1;
+    });
+  }
+
+  // Nodes + label LOD (min ~17px vertical gap per layer on screen)
+  const lastLabelY = { A: -1e9, B: -1e9, C: -1e9, D: -1e9 };
+  const LABEL_GAP = 17;
+
+  nodes.forEach(n => {
+    if (filterHide(n)) return;
+    const [sx, sy] = worldToScreen(n.x, n.y);
+    if (sx < -80 || sy < -80 || sx > W + 80 || sy > H + 80) return;
+    const r = n.r * (n.kind === "rule" ? Math.max(0.45, Math.min(1.0, cam.scale)) : Math.max(0.4, Math.min(1.05, cam.scale)));
+    const isSel = selected && selected.id === n.id;
+    const isHov = hover && hover.id === n.id;
+
+    ctx.beginPath();
+    ctx.arc(sx, sy, r + (isHov || isSel ? 3 : 0), 0, Math.PI * 2);
+    ctx.fillStyle = n.color;
+    ctx.globalAlpha = 0.95;
+    ctx.shadowColor = n.color;
+    ctx.shadowBlur = isSel ? 18 : 10;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    ctx.globalAlpha = 1;
+    if (isSel || isHov) {
+      ctx.strokeStyle = "#fff";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+    // ring for remote
+    if (n.remote || (n.kind === "rule" && n.rule && n.rule.remote)) {
+      ctx.beginPath();
+      ctx.arc(sx, sy, r + 3, 0, Math.PI * 2);
+      ctx.strokeStyle = "rgba(255,255,255,0.45)";
+      ctx.setLineDash([2, 2]);
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    // Label LOD
+    const layer = n.layer || "?";
+    const spaced = (sy - (lastLabelY[layer] || -1e9)) >= LABEL_GAP;
+    const wantLabel = isHov || isSel || spaced;
+    const ruleOk = n.kind !== "rule" || cam.scale > 1.15 || isHov || isSel;
+
+    if (wantLabel && ruleOk) {
+      lastLabelY[layer] = sy;
+      ctx.fillStyle = isHov || isSel ? "#fff" : "rgba(200,220,255,0.9)";
+      if (n.kind === "section") {
+        // two-line: title + count
+        ctx.font = "11px sans-serif";
+        const t1 = n.label;
+        const tw1 = ctx.measureText(t1).width;
+        ctx.fillText(t1, sx - tw1 / 2, sy + r + 14);
+        ctx.font = "9px sans-serif";
+        ctx.fillStyle = isHov || isSel ? "rgba(255,255,255,0.85)" : "rgba(160,190,230,0.85)";
+        const t2 = "(" + n.count + ")";
+        const tw2 = ctx.measureText(t2).width;
+        ctx.fillText(t2, sx - tw2 / 2, sy + r + 26);
+      } else if (n.kind === "policy") {
+        ctx.font = "11px sans-serif";
+        let label = n.label + (n.count ? "  ·" + n.count : "");
+        const tw = ctx.measureText(label).width;
+        ctx.fillText(label, sx - tw / 2, sy + r + 14);
+      } else if (n.kind === "rule") {
+        ctx.font = "9px sans-serif";
+        const label = shortLabel(n.rule);
+        ctx.fillText(label, sx + r + 4, sy + 3);
+      } else {
+        ctx.font = "11px sans-serif";
+        const label = n.label;
+        const tw = ctx.measureText(label).width;
+        ctx.fillText(label, sx - tw / 2, sy + r + 14);
+      }
+    } else if (n.kind === "section" && !wantLabel) {
+      // compact count badge inside node when label skipped
+      ctx.font = "10px sans-serif";
+      ctx.fillStyle = "#fff";
+      const badge = String(n.count);
+      ctx.fillText(badge, sx - ctx.measureText(badge).width / 2, sy + 3);
+    }
+  });
+
+  requestAnimationFrame(draw);
+}
+
+// ---------- Boot ----------
+document.getElementById("stat-total").textContent = "合计 " + DATA.meta.total_rules;
+document.getElementById("stat-conf").textContent = "主配置 " + DATA.meta.conf_rules;
+document.getElementById("stat-mod").textContent = "模块 " + DATA.meta.module_rules;
+document.getElementById("footer").innerHTML =
+  `<span>完整性：<strong>${DATA.completeness.ok ? "通过" : "失败"}</strong></span>
+   <span>主配置规则 <strong>${DATA.completeness.conf_parsed}</strong> / 原文 ${DATA.completeness.conf_raw}</span>
+   <span>模块规则 <strong>${DATA.completeness.module_parsed}</strong> / 原文 ${DATA.completeness.module_raw}</span>
+   <span>合计 <strong>${DATA.meta.total_rules}</strong></span>
+   <span>订阅 你的订阅</span>
+   <span style="margin-left:auto;opacity:.7">MESL Surge V6.0 · 离线可视化</span>`;
+
+resize();
+buildGraph();
+showTab("stats");
+document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t.dataset.tab === "stats"));
+requestAnimationFrame(draw);
+})();
+
+
+// --- i18n (default English) ---
+const I18N = {
+  en: {
+    title: "MESL Surge V6.0 · Rule Neural Map",
+    expand: "Expand all rule nodes",
+    cluster: "Cluster by section",
+    reset: "Reset view",
+    animOn: "Anim ON",
+    animOff: "Anim OFF",
+    search: "Search domain / keyword",
+    hint: "Spacing is opened by default · scroll to zoom for detail",
+    tabStats: "Stats",
+    tabDetail: "Detail",
+    tabModule: "Module",
+    tabGeneral: "General",
+    footer: "Open this HTML in a browser. Subscription fields use placeholder 你的订阅.",
+    layerA: "A · Rule sections",
+    layerBCluster: "B · Matches (clustered)",
+    layerBExpand: "B · Matches (all rules)",
+    layerC: "C · Policies",
+    layerD: "D · Pools / upstream",
+  },
+  zh: {
+    title: "MESL Surge V6.0 · 规则神经网络拓扑",
+    expand: "展开全部规则节点",
+    cluster: "聚类分段视图",
+    reset: "重置视图",
+    animOn: "动画 ON",
+    animOff: "动画 OFF",
+    search: "搜索域名 / 关键词",
+    hint: "默认已拉开间距，滚轮放大看细节",
+    tabStats: "统计",
+    tabDetail: "详情",
+    tabModule: "模块",
+    tabGeneral: "通用",
+    footer: "请用浏览器打开本 HTML。订阅相关字段为占位符「你的订阅」。",
+    layerA: "A · 规则分段",
+    layerBCluster: "B · 匹配（聚类）",
+    layerBExpand: "B · 匹配（全规则）",
+    layerC: "C · 策略组",
+    layerD: "D · 上游池 / 节点",
+  }
+};
+let uiLang = localStorage.getItem('surge_map_lang') || 'en';
+
+function setLang(lang) {
+  uiLang = lang;
+  localStorage.setItem('surge_map_lang', lang);
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  const t = I18N[lang];
+  const h1 = document.querySelector('header h1');
+  if (h1) h1.textContent = t.title;
+  const enBtn = document.getElementById('lang-en');
+  const zhBtn = document.getElementById('lang-zh');
+  if (enBtn) enBtn.classList.toggle('active', lang === 'en');
+  if (zhBtn) zhBtn.classList.toggle('active', lang === 'zh');
+  const search = document.getElementById('search');
+  if (search) search.placeholder = t.search;
+  const expand = document.getElementById('btn-expand');
+  if (expand) expand.textContent = (typeof expandAll !== 'undefined' && expandAll) ? t.cluster : t.expand;
+  const reset = document.getElementById('btn-reset');
+  if (reset) reset.textContent = t.reset;
+  const anim = document.getElementById('btn-anim');
+  if (anim) anim.textContent = (typeof animOn !== 'undefined' && animOn) ? t.animOn : t.animOff;
+  document.querySelectorAll('[data-tab]').forEach(el => {
+    const k = el.getAttribute('data-tab');
+    if (k === 'stats') el.textContent = t.tabStats;
+    if (k === 'detail') el.textContent = t.tabDetail;
+    if (k === 'module') el.textContent = t.tabModule;
+    if (k === 'general') el.textContent = t.tabGeneral;
+  });
+  const hint = document.querySelector('.callout, #hint, .hint');
+  if (hint) hint.textContent = t.hint;
+  const footer = document.querySelector('footer');
+  if (footer) {
+    // keep completeness numbers; replace leading descriptive part if simple
+    footer.setAttribute('data-i18n-footer', '1');
+  }
+  window.__layerTitles = lang === 'zh'
+    ? [[100, t.layerA],[560, t.layerBExpand],[1050, t.layerC],[1500, t.layerD]]
+    : [[100, t.layerA],[560, t.layerBExpand],[1050, t.layerC],[1500, t.layerD]];
+  // fix B title based on expandAll
+  if (typeof expandAll !== 'undefined') {
+    window.__layerTitles[1][1] = expandAll ? t.layerBExpand : t.layerBCluster;
+  }
+}
+
+// patch draw() layer titles if present
+(function patchLayerTitles() {
+  const old = window.draw;
+})();
+
+document.addEventListener('DOMContentLoaded', () => setLang(uiLang));
+setTimeout(() => setLang(uiLang), 0);
+
+</script>
+</body>
+</html>
