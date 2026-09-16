@@ -13,7 +13,7 @@
 |------|------|------|
 | Surge / HAR 长期请求日志 | **不可用** | 用户无法提供；已导出 zip 经核实为 **PacketTunnelProvider / SGLog 应用日志**，**不可作域名种子** |
 | iPhone App 分类清单 | **可用**（2026-09-16 截图识别） | 主兴趣源 → `app_catalog.yaml` → 种子草案 |
-| 现有 `profiles/MESL-Surge-V6.0.conf` + `patches/*.list` + `manifest.json` | **可用** | 补全 vendor/suffix、策略组、finance 兴趣；**不改业务规则行**（本规划阶段） |
+| 现有 `profiles/Your-Subscription-Surge-V6.0.conf` + `patches/*.list` + `manifest.json` | **可用** | 补全 vendor/suffix、策略组、finance 兴趣；**不改业务规则行**（本规划阶段） |
 | `upstream_watch.yaml` / `selectors.yaml` | **可用** | 限定 watch 面与选择器阈值 |
 
 **结论一句话**：请求日志 zip 仅含隧道/SGLog 应用日志，不能推导业务域名；种子以 App 目录 + 现有 conf/patches 为准。
@@ -38,7 +38,7 @@
 - **禁止**把 `tiktokpangle*` / pangle 类广告域写入任何 TikTok 或业务放行 list。
 - **禁止**把 STUN / iCloud Private Relay 等主配置 pre-matching 段迁入 `ads-patch.list`。
 - **禁止**把整个国内直连大段塞进 `direct-patch.list`。
-- **禁止**在规划/日常维护中改写 `profiles/MESL-Surge-V6.0.conf` 业务规则（除非另开明确变更单）。
+- **禁止**在规划/日常维护中改写 `profiles/Your-Subscription-Surge-V6.0.conf` 业务规则（除非另开明确变更单）。
 
 ---
 

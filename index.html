@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MESL Surge V6.0</title>
+<title>Your Subscription Surge V6.0</title>
 <style>
   :root {
     --bg: #070b14;
@@ -117,8 +117,8 @@
           </defs>
         </svg>
       </div>
-      <h1>MESL Surge V6.0</h1>
-      <p class="subtitle" data-i18n="subtitle">MESL Surge diversion rules · V6.0</p>
+      <h1>Your Subscription Surge V6.0</h1>
+      <p class="subtitle" data-i18n="subtitle">Your Subscription Surge diversion rules · V6.0</p>
       <div class="lang-switch" role="group" aria-label="Language">
         <button type="button" id="btn-en" class="active" onclick="setLang('en')">English</button>
         <button type="button" id="btn-zh" onclick="setLang('zh')">中文</button>
@@ -158,8 +158,8 @@
         <tr><th>File</th><th>Role</th></tr>
         <tr><td><code>index.html</code></td><td>This description page (one language at a time)</td></tr>
         <tr><td><code>rule-map.html</code></td><td>Interactive sample rule graph</td></tr>
-        <tr><td><code>profiles/MESL-Surge-V6.0.share.conf</code></td><td>Sample Surge profile (placeholders only)</td></tr>
-        <tr><td><code>profiles/MESL-AdBlock-V6.0.sgmodule</code></td><td>Sample ad-related module</td></tr>
+        <tr><td><code>profiles/Your-Subscription-Surge-V6.0.share.conf</code></td><td>Sample Surge profile (placeholders only)</td></tr>
+        <tr><td><code>profiles/Your-Subscription-AdBlock-V6.0.sgmodule</code></td><td>Sample ad-related module</td></tr>
       </table>
 
       <h2>Personalizing the sample</h2>
@@ -172,7 +172,7 @@
       <h2>Agent prompts (optional)</h2>
       <h3>A) Chat-driven</h3>
       <pre>Customize this sample Surge profile for my own already-owned subscription.
-Files: profiles/MESL-Surge-V6.0.share.conf, profiles/MESL-AdBlock-V6.0.sgmodule, rule-map.html.
+Files: profiles/Your-Subscription-Surge-V6.0.share.conf, profiles/Your-Subscription-AdBlock-V6.0.sgmodule, rule-map.html.
 1) Replace REPLACE_WITH_YOUR_SUBSCRIPTION with MY_OWN_SUBSCRIPTION_URL
 2) Replace your-subscribe-host.example with MY_OWN_HOST
 3) Do not change policy logic unless I ask
@@ -181,7 +181,7 @@ Files: profiles/MESL-Surge-V6.0.share.conf, profiles/MESL-AdBlock-V6.0.sgmodule,
       <pre>Open this sample repo.
 Replace policy-path=REPLACE_WITH_YOUR_SUBSCRIPTION with my own URL.
 Replace your-subscribe-host.example with my own host.
-Write ./dist/MESL-Surge-V6.0.personalized.conf and copy the sgmodule to ./dist/
+Write ./dist/Your-Subscription-Surge-V6.0.personalized.conf and copy the sgmodule to ./dist/
 Summarize placeholder replacements only. Do not commit/push unless I ask.</pre>
 
       <h2>Notes on other clients (e.g. Shadowrocket)</h2>
@@ -221,8 +221,8 @@ Summarize placeholder replacements only. Do not commit/push unless I ask.</pre>
         <tr><th>文件</th><th>作用</th></tr>
         <tr><td><code>index.html</code></td><td>本描述页（同一时间只显示一种语言）</td></tr>
         <tr><td><code>rule-map.html</code></td><td>样例规则拓扑交互图</td></tr>
-        <tr><td><code>profiles/MESL-Surge-V6.0.share.conf</code></td><td>Surge 配置样例（仅占位符）</td></tr>
-        <tr><td><code>profiles/MESL-AdBlock-V6.0.sgmodule</code></td><td>去广告相关模块样例</td></tr>
+        <tr><td><code>profiles/Your-Subscription-Surge-V6.0.share.conf</code></td><td>Surge 配置样例（仅占位符）</td></tr>
+        <tr><td><code>profiles/Your-Subscription-AdBlock-V6.0.sgmodule</code></td><td>去广告相关模块样例</td></tr>
       </table>
 
       <h2>自行替换占位符</h2>
@@ -235,7 +235,7 @@ Summarize placeholder replacements only. Do not commit/push unless I ask.</pre>
       <h2>Agent 提示词（可选）</h2>
       <h3>A) 对话式</h3>
       <pre>请把该 Surge 规则样例改成我自己已有订阅可用的配置。
-文件：profiles/MESL-Surge-V6.0.share.conf、profiles/MESL-AdBlock-V6.0.sgmodule、rule-map.html。
+文件：profiles/Your-Subscription-Surge-V6.0.share.conf、profiles/Your-Subscription-AdBlock-V6.0.sgmodule、rule-map.html。
 1) 「REPLACE_WITH_YOUR_SUBSCRIPTION」→ 我自己的订阅 URL
 2) your-subscribe-host.example → 我自己的域名
 3) 不改策略逻辑，除非我另说
@@ -244,7 +244,7 @@ Summarize placeholder replacements only. Do not commit/push unless I ask.</pre>
       <pre>打开本样例仓库。
 用我自己的订阅 URL 替换 policy-path=REPLACE_WITH_YOUR_SUBSCRIPTION。
 用我自己的域名替换 your-subscribe-host.example。
-写出 ./dist/MESL-Surge-V6.0.personalized.conf，并复制 sgmodule 到 ./dist/
+写出 ./dist/Your-Subscription-Surge-V6.0.personalized.conf，并复制 sgmodule 到 ./dist/
 只汇报占位符替换摘要。未经允许不要 commit/push。</pre>
 
       <h2>关于其他客户端（如 Shadowrocket）</h2>
@@ -252,7 +252,7 @@ Summarize placeholder replacements only. Do not commit/push unless I ask.</pre>
     </main>
 
     <footer>
-      MESL Surge V6.0 · technical exchange only
+      Your Subscription Surge V6.0 · technical exchange only
     </footer>
   </div>
 <script>
@@ -268,7 +268,7 @@ function setLang(lang) {
   btnZh.classList.toggle('active', isZh);
   document.documentElement.lang = isZh ? 'zh-CN' : 'en';
   const sub = document.querySelector('[data-i18n="subtitle"]');
-  if (sub) sub.textContent = isZh ? 'MESL Surge 分流规则 · V6.0' : 'MESL Surge diversion rules · V6.0';
+  if (sub) sub.textContent = isZh ? '你的订阅 Surge 分流规则 · V6.0' : 'Your Subscription Surge diversion rules · V6.0';
   localStorage.setItem('sdr_lang', lang);
   location.hash = isZh ? 'zh' : 'en';
 }

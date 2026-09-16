@@ -1,6 +1,6 @@
-#!name=MESL 日常去广告 V6.0
+#!name=Your Subscription 日常去广告 V6.0
 #!desc=HAR/Surge 存档实测精简版：保留 B站与酷安开屏、淘宝、京东、小红书、高德精确去广告；重复域名拒绝交由主配置与 SKK 索引处理。
-#!author=MESL；上游：fmz200/wool_scripts、kokoryh/Sparkle（仅 HTTP 直播接口）、VenenoSix24/Ivy-Script、kokoryh/Script（高德）
+#!author=Your Subscription；上游：fmz200/wool_scripts、kokoryh/Sparkle（仅 HTTP 直播接口）、VenenoSix24/Ivy-Script、kokoryh/Script（高德）
 #!category=广告拦截
 #!system=ios
 #!homepage=https://github.com/fmz200/wool_scripts

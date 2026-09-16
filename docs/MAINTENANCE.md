@@ -1,4 +1,4 @@
-# MESL Surge V6.0 维护手册
+# 你的订阅 Surge V6.0 维护手册
 
 > ## 当前种子来源（2026-09-16）
 >
@@ -14,7 +14,7 @@
 
 ## GitHub Actions 时区
 
-仓库工作流 `docs/github-actions/mesl-interest-bot.yml.example`：
+仓库工作流 `docs/github-actions/your-subscription-interest-bot.yml.example`：
 
 ```yaml
 on:
@@ -71,7 +71,7 @@ on:
 建议 cron（Asia/Shanghai）：
 
 ```cron
-0 9,21 * * * cd /path/to/mesl-surge-v6.0 && python3 scripts/daily_patch_bot.py --mode pr --fetch-upstream >> /var/log/mesl-patch-bot.log 2>&1
+0 9,21 * * * cd /path/to/your-subscription-surge-v6.0 && python3 scripts/daily_patch_bot.py --mode pr --fetch-upstream >> /var/log/your-subscription-patch-bot.log 2>&1
 ```
 
 ### 1. 拉取频繁上游快照

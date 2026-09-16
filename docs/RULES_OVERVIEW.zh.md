@@ -1,4 +1,4 @@
-# 规则分层与策略意图（MESL Surge V6.0）
+# 规则分层与策略意图（你的订阅 Surge V6.0）
 
 本文说明我在本项目中如何分层组织规则、各策略组想表达什么，以及它们与 [`rule-map.html`](../rule-map.html) 的对应关系。
 
@@ -41,7 +41,7 @@ Surge 规则**自上而下**命中即停。若把「关键业务例外」写在�
 
 ### 2.3 `mirrors/scripts/` — 模块脚本镜像
 
-AdBlock 模块曾引用的 fmz200 / kokoryh 等脚本，镜像到本仓库后由 `profiles/MESL-AdBlock-V6.0.sgmodule` 的 raw URL 引用。  
+AdBlock 模块曾引用的 fmz200 / kokoryh 等脚本，镜像到本仓库后由 `profiles/Your-Subscription-AdBlock-V6.0.sgmodule` 的 raw URL 引用。  
 目的是自有可控、减少上游偶然失效；**不扩大** MITM / 脚本范围。
 
 ### 2.4 主 conf 内联例外
@@ -74,7 +74,7 @@ AdBlock 模块曾引用的 fmz200 / kokoryh 等脚本，镜像到本仓库后由
 
 | 策略组 | 类型 | 意图 |
 |--------|------|------|
-| 📦 MESL节点 | select + policy-path | 节点池入口（占位订阅，需自行替换） |
+| 📦 Your Subscription | select + policy-path | 节点池入口（占位订阅，需自行替换） |
 | 🤖 AI住宅 | fallback | 美国家宽优先，机房备选；敏感身份业务 |
 | 🎵 TikTok | smart | 美国机房；排除 0.3X 与家宽 |
 | 🪙 数字资产 | fallback | 台湾家宽优先（OKX / Wallet / Wise 等） |

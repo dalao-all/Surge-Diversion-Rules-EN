@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""从 MESL-Surge-V6.0.conf（及可选 patches）粗提取 interest_seed 草案。
+"""从 Your-Subscription-Surge-V6.0.conf（及可选 patches）粗提取 interest_seed 草案。
 
 用法：
   python3 scripts/export_interest_seed.py
   python3 scripts/export_interest_seed.py -o patches/interest_seed.draft.json
-  python3 scripts/export_interest_seed.py --conf /path/to/MESL-Surge-V6.0.conf
+  python3 scripts/export_interest_seed.py --conf /path/to/Your-Subscription-Surge-V6.0.conf
 
 输出为草案，需人工修订后再存为 patches/interest_seed.json。
 """
@@ -99,7 +99,7 @@ def absorb_patches(patches_dir: Path, draft: dict) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Export rough interest_seed from Surge conf + patches")
-    ap.add_argument("--conf", type=Path, default=ROOT / "profiles" / "MESL-Surge-V6.0.conf")
+    ap.add_argument("--conf", type=Path, default=ROOT / "profiles" / "Your-Subscription-Surge-V6.0.conf")
     ap.add_argument("-o", "--output", type=Path, default=ROOT / "patches" / "interest_seed.draft.json")
     ap.add_argument("--no-patches", action="store_true", help="不合并 patches/*.list")
     args = ap.parse_args()

@@ -1,4 +1,4 @@
-# MESL V6.0 finance-bybit-eu.list
+# Your Subscription V6.0 finance-bybit-eu.list
 # finance-critical 家族伴生文件（极小）：仅 Bybit 欧洲 AppsFlyer 前缀。
 # 策略由主配置 RULE-SET 行指定 → 「🇩🇪 Bybit 欧洲」
 # 不泛放行整个 appsflyersdk.com。

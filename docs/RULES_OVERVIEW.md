@@ -1,4 +1,4 @@
-# Rule layers & policy intent (MESL Surge V6.0)
+# Rule layers & policy intent (Your Subscription Surge V6.0)
 
 How I layer rules in this project, what each policy group is for, and how that maps to [`rule-map.html`](../rule-map.html).
 
@@ -41,7 +41,7 @@ I do **not** rewrite semantics here; deltas go to `patches/` or inline. See `SOU
 
 ### 2.3 `mirrors/scripts/` — module script mirror
 
-Scripts formerly pulled from fmz200 / kokoryh etc. are mirrored here and referenced by `profiles/MESL-AdBlock-V6.0.sgmodule`.  
+Scripts formerly pulled from fmz200 / kokoryh etc. are mirrored here and referenced by `profiles/Your-Subscription-AdBlock-V6.0.sgmodule`.  
 Goal: owned, stable raw URLs — **without** expanding MITM / script scope.
 
 ### 2.4 Inline exceptions in the main conf
@@ -74,7 +74,7 @@ Simplified order:
 
 | Group | Type | Intent |
 |-------|------|--------|
-| 📦 MESL节点 | select + policy-path | Node-pool entry (placeholder sub — replace yourself) |
+| 📦 Your Subscription | select + policy-path | Node-pool entry (placeholder sub — replace yourself) |
 | 🤖 AI住宅 | fallback | US residential preferred; sensitive identity traffic |
 | 🎵 TikTok | smart | US datacenter; exclude 0.3X and residential |
 | 🪙 数字资产 | fallback | TW residential preferred (OKX / wallets / Wise, …) |

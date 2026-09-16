@@ -7,7 +7,7 @@
     "primary": "app_catalog",
     "app_catalog": "patches/app_catalog.yaml",
     "supplemental": [
-      "MESL-Surge-V5.3.conf",
+      "Your-Subscription-Surge-V5.3.conf",
       "patches/*.list",
       "patches/manifest.json"
     ],

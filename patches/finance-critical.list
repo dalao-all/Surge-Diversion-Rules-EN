@@ -1,4 +1,4 @@
-# MESL V6.0 finance-critical.list
+# Your Subscription V6.0 finance-critical.list
 # 用途：数字资产组关键前置例外（toblog/tobapplog、okex、部分 AppsFlyer 前缀）。
 # 策略由主配置 RULE-SET 行指定 → 「🪙 数字资产」
 # 同属 finance-critical 家族：Bybit EU/Global 因 Surge RULE-SET 整文件共用策略，

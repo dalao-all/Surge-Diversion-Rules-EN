@@ -1,4 +1,4 @@
-# MESL V5.3 — iPhone App 分类清单结构化（兴趣源）
+# 你的订阅 V5.3 — iPhone App 分类清单结构化（兴趣源）
 # 来源：2026-09-16 截图识别清单（国内 131 + 国外 22）
 # 字段：name, region(cn|intl|system), folder, surge_interest, policy_hint, vendors[], notes
 # 系统自带 App：surge_interest=false，不进种子

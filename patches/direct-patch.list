@@ -1,4 +1,4 @@
-# MESL V6.0 direct-patch.list
+# Your Subscription V6.0 direct-patch.list
 # 用途：防广告集误杀的 DIRECT 兼容例外（仅 SKK 前真正需要的精确项）。
 # 策略由主配置 RULE-SET 行指定 → DIRECT
 # 不要把整个国内直连大段搬入本文件。

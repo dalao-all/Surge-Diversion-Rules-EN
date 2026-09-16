@@ -1,4 +1,4 @@
-# MESL Surge V6.0 — Getting started
+# Your Subscription Surge V6.0 — Getting started
 
 Timezone: “09:00 / 21:00 daily” means **Asia/Shanghai (UTC+8)**.  
 GitHub Actions cron (UTC): `0 1,13 * * *` = 09:00 / 21:00 Beijing time.
@@ -15,14 +15,14 @@ GitHub Actions cron (UTC): `0 1,13 * * *` = 09:00 / 21:00 Beijing time.
 
 ### 1. Import the main profile
 
-Download and import [`profiles/MESL-Surge-V6.0.share.conf`](../profiles/MESL-Surge-V6.0.share.conf) that I provide.
+Download and import [`profiles/Your-Subscription-Surge-V6.0.share.conf`](../profiles/Your-Subscription-Surge-V6.0.share.conf) that I provide.
 
 ### 2. Replace the subscription placeholder (required)
 
 The main profile contains:
 
 ```text
-📦 MESL节点 = select, policy-path=https://subscription.example.invalid/REPLACE_WITH_YOUR_SUBSCRIPTION, update-interval=-1
+📦 Your Subscription = select, policy-path=https://subscription.example.invalid/REPLACE_WITH_YOUR_SUBSCRIPTION, update-interval=-1
 ```
 
 Replace that URL **in full** with your own subscription. Replace `your-subscribe-host.example` with your subscribe host if needed.
@@ -33,11 +33,11 @@ Replace that URL **in full** with your own subscription. Replace `your-subscribe
 - Share profiles in my public repos always stay desensitized
 - After forking, keep real subscriptions local or private — do not push tokens in PRs
 
-Then manually refresh「📦 MESL节点」in Surge and confirm the node list is non-empty.
+Then manually refresh「📦 Your Subscription」in Surge and confirm the node list is non-empty.
 
 ### 3. Install the AdBlock module
 
-Enable [`profiles/MESL-AdBlock-V6.0.sgmodule`](../profiles/MESL-AdBlock-V6.0.sgmodule).  
+Enable [`profiles/Your-Subscription-AdBlock-V6.0.sgmodule`](../profiles/Your-Subscription-AdBlock-V6.0.sgmodule).  
 It covers precise Bilibili/Coolapk splash and Taobao/JD/Xiaohongshu/Amap rewrites; it does **not** expand to “MITM all hostnames”.
 
 ### 4. Trust the CA (only if the module must decrypt HTTPS)
@@ -53,7 +53,7 @@ Run Surge’s config check and fix any errors.
 
 ### 6. Optional: GitHub Actions
 
-Enable `mesl-interest-bot` (see `docs/github-actions/` example): runs at 09:00 / 21:00 Asia/Shanghai for interest-driven patch candidates. Review before merge.
+Enable `your-subscription-interest-bot` (see `docs/github-actions/` example): runs at 09:00 / 21:00 Asia/Shanghai for interest-driven patch candidates. Review before merge.
 
 ## Daily notes
 

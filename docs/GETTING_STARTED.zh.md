@@ -1,4 +1,4 @@
-# MESL Surge V6.0 — 入门
+# 你的订阅 Surge V6.0 — 入门
 
 时区：下文「每天 09:00 / 21:00」指 **Asia/Shanghai（UTC+8）**。  
 GitHub Actions cron（UTC）：`0 1,13 * * *` = 北京时间 09:00 / 21:00。
@@ -15,14 +15,14 @@ GitHub Actions cron（UTC）：`0 1,13 * * *` = 北京时间 09:00 / 21:00。
 
 ### 1. 导入主配置
 
-下载并导入我提供的 [`profiles/MESL-Surge-V6.0.share.conf`](../profiles/MESL-Surge-V6.0.share.conf)。
+下载并导入我提供的 [`profiles/Your-Subscription-Surge-V6.0.share.conf`](../profiles/Your-Subscription-Surge-V6.0.share.conf)。
 
 ### 2. 替换订阅占位（必须）
 
 主配置中有：
 
 ```text
-📦 MESL节点 = select, policy-path=https://subscription.example.invalid/REPLACE_WITH_YOUR_SUBSCRIPTION, update-interval=-1
+📦 Your Subscription = select, policy-path=https://subscription.example.invalid/REPLACE_WITH_YOUR_SUBSCRIPTION, update-interval=-1
 ```
 
 把占位 URL **整段**换成你自己的订阅。按需把 `your-subscribe-host.example` 换成你的订阅域名。
@@ -33,11 +33,11 @@ GitHub Actions cron（UTC）：`0 1,13 * * *` = 北京时间 09:00 / 21:00。
 - 我公开仓库里的主配置始终保持脱敏占位
 - fork 后请用本地覆盖或私有位置保存真实订阅，不要把 token 推进 PR
 
-改完后在 Surge 手动「更新」`📦 MESL节点`，确认节点列表非空。
+改完后在 Surge 手动「更新」`📦 Your Subscription`，确认节点列表非空。
 
 ### 3. 安装去广告模块
 
-启用 [`profiles/MESL-AdBlock-V6.0.sgmodule`](../profiles/MESL-AdBlock-V6.0.sgmodule)。  
+启用 [`profiles/Your-Subscription-AdBlock-V6.0.sgmodule`](../profiles/Your-Subscription-AdBlock-V6.0.sgmodule)。  
 模块覆盖 B站/酷安开屏、淘宝/京东/小红书/高德等**精确**去广告；**不会**扩大到「MITM 全部主机」。
 
 ### 4. 信任 CA（仅在需要模块解密时）
@@ -53,7 +53,7 @@ GitHub Actions cron（UTC）：`0 1,13 * * *` = 北京时间 09:00 / 21:00。
 
 ### 6. 可选：GitHub Actions
 
-启用 `mesl-interest-bot`（见 `docs/github-actions/` 示例）：每天北京时间 09:00 / 21:00 跑兴趣驱动补丁候选。合并前请人工审阅。
+启用 `your-subscription-interest-bot`（见 `docs/github-actions/` 示例）：每天北京时间 09:00 / 21:00 跑兴趣驱动补丁候选。合并前请人工审阅。
 
 ## 日常注意
 

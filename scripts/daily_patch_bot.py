@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""MESL Surge V6.0 每日兴趣驱动补丁机器人（标准库骨架）。
+"""你的订阅 Surge V6.0 每日兴趣驱动补丁机器人（标准库骨架）。
 
 日程（Asia/Shanghai）：每天 09:00 与 21:00 拉取 frequent 上游 → diff 新增 →
 按 interest_seed + selectors 筛选 → 写入 candidates / 生成 PR 说明。
 默认不整包同步 SKK reject 等大文件。
 
 Cron 示例：
-  0 9,21 * * * cd /path/to/mesl-surge-v6.0 && \\
+  0 9,21 * * * cd /path/to/your-subscription-surge-v6.0 && \\
     python3 scripts/daily_patch_bot.py --mode pr --fetch-upstream \\
-    >> /var/log/mesl-patch-bot.log 2>&1
+    >> /var/log/your-subscription-patch-bot.log 2>&1
 
 详见 docs/MAINTENANCE.md、docs/INTEREST_MODEL.md。
 """
@@ -714,7 +714,7 @@ def build_pr_body(
     high = [c for c in candidates if c["action"] == "auto_pr_high"]
     review = [c for c in candidates if c["action"] == "review"]
     return {
-        "title": f"MESL interest patches {datetime.now(TZ).date().isoformat()}",
+        "title": f"Your Subscription interest patches {datetime.now(TZ).date().isoformat()}",
         "mode": mode,
         "blocked": blocked,
         "schedule_note": "Asia/Shanghai 09:00 & 21:00 frequent upstream interest diff",
@@ -765,7 +765,7 @@ def maybe_open_github_pr(pr_body: Dict[str, Any], candidates: List[Dict[str, Any
     # Write candidates artifact for the PR branch
     CANDIDATES.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now(TZ).strftime("%Y%m%d-%H%M%S")
-    branch = f"mesl/interest-bot-{stamp}"
+    branch = f"your-subscription/interest-bot-{stamp}"
     cand_path = CANDIDATES / f"interest-{stamp}.json"
     cand_path.write_text(json.dumps(candidates, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     report_md = PATCHES / "candidates" / f"PR-{stamp}.md"
@@ -798,15 +798,15 @@ def maybe_open_github_pr(pr_body: Dict[str, Any], candidates: List[Dict[str, Any
             result["detail"] = "not a git repo — skip PR push"
             print("  GitHub PR skip:", result["detail"])
             return result
-        run(["git", "config", "user.name", "mesl-interest-bot"])
-        run(["git", "config", "user.email", "mesl-interest-bot@users.noreply.github.com"])
+        run(["git", "config", "user.name", "your-subscription-interest-bot"])
+        run(["git", "config", "user.email", "your-subscription-interest-bot@users.noreply.github.com"])
         run(["git", "checkout", "-B", branch])
         run(["git", "add", str(cand_path.relative_to(ROOT)), str(report_md.relative_to(ROOT))])
         # also add report if present
         report_file = Path(__file__).resolve().parent / "last_bot_report.json"
         if report_file.exists():
             run(["git", "add", str(report_file.relative_to(ROOT))])
-        msg = pr_body.get("title") or f"MESL interest patches {stamp}"
+        msg = pr_body.get("title") or f"Your Subscription interest patches {stamp}"
         commit = run(["git", "commit", "-m", msg])
         if commit.returncode != 0 and "nothing to commit" in (commit.stdout + commit.stderr):
             result["noop"] = True
@@ -844,7 +844,7 @@ def maybe_open_github_pr(pr_body: Dict[str, Any], candidates: List[Dict[str, Any
 def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "MESL V6.0 interest-driven daily patch bot (stdlib). "
+            "Your Subscription V6.0 interest-driven daily patch bot (stdlib). "
             "Schedule: Asia/Shanghai 09:00 & 21:00 fetch frequent upstream → "
             "diff → seed/selectors filter → candidates + PR body. "
             "Never sync entire reject.conf."

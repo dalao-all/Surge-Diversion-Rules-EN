@@ -1,4 +1,4 @@
-# MESL V6.0 相关性选择器 + 负担控制 + 目标 list 映射
+# 你的订阅 V6.0 相关性选择器 + 负担控制 + 目标 list 映射
 # 详见 docs/INTEREST_MODEL.md
 # 注：keywords 使用流式列表；daily_patch_bot 标准库 YAML 子集可解析
 

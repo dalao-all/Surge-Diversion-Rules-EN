@@ -9,7 +9,7 @@
     "app_catalog": "patches/app_catalog.yaml",
     "from_apps_trace": "patches/interest_seed_from_apps.json",
     "supplemental": [
-      "profiles/MESL-Surge-V6.0.conf",
+      "profiles/Your-Subscription-Surge-V6.0.conf",
       "patches/*.list",
       "patches/manifest.json"
     ],

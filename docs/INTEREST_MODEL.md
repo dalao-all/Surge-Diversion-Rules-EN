@@ -3,7 +3,7 @@
 > ## 当前种子来源（2026-09-16）
 >
 > - **主种子**：iPhone App 分类清单 → `patches/app_catalog.yaml` → 正式 `patches/interest_seed.json`（溯源见 `interest_seed_from_apps.json`）。
-> - **补充**：现有 `MESL-Surge-V6.0.conf` / `patches/*.list` / `manifest.json`（含清单未出现的 OKX/Bybit/PayPal 等 finance 兴趣）。
+> - **补充**：现有 `Your-Subscription-Surge-V6.0.conf` / `patches/*.list` / `manifest.json`（含清单未出现的 OKX/Bybit/PayPal 等 finance 兴趣）。
 > - **请求日志暂缺**：用户无法提供 Surge 长期请求记录；已核实导出 zip 为 **PacketTunnelProvider/SGLog 应用日志**，**不可作域名种子**。
 > - 规格见 `docs/BOT_REQUIREMENTS.md`；矩阵见 `docs/APP_POLICY_MATRIX.md`。
 > - **非 HAR，覆盖率有限** — 只吸收与已安装 App / 已启用策略组相关的上游增量。
@@ -29,7 +29,7 @@
 
 | 来源 | 提取什么 |
 |------|----------|
-| 主配置 `MESL-Surge-V6.0.conf` 内联 DOMAIN* | 已用域名、后缀、关键词、策略组标签 |
+| 主配置 `Your-Subscription-Surge-V6.0.conf` 内联 DOMAIN* | 已用域名、后缀、关键词、策略组标签 |
 | `patches/*.list` | 已固化自有例外（AI/金融/DIRECT/ads） |
 | `patches/manifest.json` | evidence / notes / VENDOR 线索 |
 | iPhone App 分类清单 → `app_catalog.yaml` | **当前主种子**（2026-09-16）；系统 App 排除 |

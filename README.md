@@ -1,6 +1,6 @@
 [中文](https://github.com/dalao-all/Surge-Diversion-Rules) | English
 
-# MESL Surge V6.0 — Diversion Rules
+# Your Subscription Surge V6.0 — Diversion Rules
 
 I maintain this public **Surge policy / ruleset** repo: owned mirrors, small patches, desensitized share profiles, and a rule-map visualization.  
 **This project ships no subscription secrets or nodes.** Technical exchange and personal study only — not a proxy service, and I do not provide access.
@@ -14,12 +14,12 @@ I maintain this public **Surge policy / ruleset** repo: owned mirrors, small pat
 
 ## Install (share profile)
 
-1. Download [`profiles/MESL-Surge-V6.0.share.conf`](profiles/MESL-Surge-V6.0.share.conf) that I provide
-2. Download [`profiles/MESL-AdBlock-V6.0.sgmodule`](profiles/MESL-AdBlock-V6.0.sgmodule)
+1. Download [`profiles/Your-Subscription-Surge-V6.0.share.conf`](profiles/Your-Subscription-Surge-V6.0.share.conf) that I provide
+2. Download [`profiles/Your-Subscription-AdBlock-V6.0.sgmodule`](profiles/Your-Subscription-AdBlock-V6.0.sgmodule)
 3. Open the conf in a text editor and replace  
    `https://subscription.example.invalid/REPLACE_WITH_YOUR_SUBSCRIPTION`  
    with a Surge subscription URL **you** already own; replace `your-subscribe-host.example` if needed
-4. Import into Surge and install the module; manually refresh「📦 MESL节点」
+4. Import into Surge and install the module; manually refresh「📦 Your Subscription」
 
 Rules and ad-block scripts point at this project's GitHub raw paths (canonical Chinese repo host for RULE-SET URLs):
 
