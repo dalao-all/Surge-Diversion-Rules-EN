@@ -49,7 +49,7 @@ AdBlock 模块曾引用的 fmz200 / kokoryh 等脚本，镜像到本仓库后由
 适合留在 conf 里的包括：
 
 - DoH/DoT / STUN 等协议与泄漏防护
-- 订阅 API 域名 DIRECT（`em.mesl.cloud`）；站点 `meslcloud.com` 走国际网络
+- 私用：订阅 API `em.mesl.cloud` DIRECT + 站点 `meslcloud.com` 国际网络；分享版：订阅域用 `your-subscribe-host.example` 占位，不含真实订阅
 - Apple 稳定性例外、死域名快速失败
 - TikTok / Google / PayPal 等大块业务规则（部分曾从 blackmatrix7 远程改为内联）
 - FINAL 与 GEOIP / LAN
@@ -102,7 +102,7 @@ AdBlock 模块曾引用的 fmz200 / kokoryh 等脚本，镜像到本仓库后由
 ## 6. 安全边界
 
 - 公开仓禁止出现真实订阅令牌参数、私有订阅主机名、以及订阅拉取路径  
-- 分享 conf 的 policy-path 用 `subscription.example.invalid`；订阅/站点匹配域保留真实主机名（非 token）  
+- 分享 conf：`policy-path` 用 `subscription.example.invalid`；订阅 API 域用 `your-subscribe-host.example`；不含真实 token / `em.mesl.cloud`  
 - 私用带订阅配置不进本仓库  
 
 英文说明见姊妹仓：https://github.com/dalao-all/Surge-Diversion-Rules-EN （`docs/RULES_OVERVIEW.md`）
