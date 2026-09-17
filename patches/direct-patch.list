@@ -20,3 +20,5 @@ DOMAIN,avatar.coolapk.com
 DOMAIN-SUFFIX,ynuf.aliapp.org
 DOMAIN,amdc.alipay.com
 DOMAIN-SUFFIX,amdc.alipay.com
+DOMAIN-SUFFIX,logs.amap.com
+DOMAIN-SUFFIX,dualstack-logs.amap.com
