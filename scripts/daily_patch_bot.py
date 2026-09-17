@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""你的订阅 Surge V6.0 每日兴趣驱动补丁机器人（标准库骨架）。
+"""你的订阅 Surge V6.1 每日兴趣驱动补丁机器人（标准库骨架）。
+
+TODO/NOTE (V6.1 Option A): candidates whose host is listed in
+patches/tombstones.yaml must be skipped (never re-add to reject/ads).
+See load_tombstone_hosts() / is_tombstoned_host().
 
 日程（Asia/Shanghai）：每天 09:00 与 21:00 拉取 frequent 上游 → diff 新增 →
 按 interest_seed + selectors 筛选 → 写入 candidates / 生成 PR 说明。
@@ -53,6 +57,46 @@ LIST_POLICY = {
     "ads-patch.list": "REJECT",
     "direct-patch.list": "DIRECT",
 }
+
+
+def load_tombstone_hosts() -> set:
+    """Hosts from patches/tombstones.yaml reject_domainset (Option A)."""
+    path = PATCHES / "tombstones.yaml"
+    hosts = set()
+    if not path.exists():
+        return hosts
+    in_ds = False
+    for ln in path.read_text(encoding="utf-8").splitlines():
+        s = ln.strip()
+        if s.startswith("reject_domainset:"):
+            in_ds = True
+            continue
+        if in_ds:
+            if s.startswith("-"):
+                v = s[1:].strip().strip('"').strip("'")
+                if v:
+                    hosts.add(v.lower())
+                    hosts.add(v.lower().lstrip("."))
+            elif s and ":" in s and not s.startswith("-"):
+                break
+    return hosts
+
+
+def is_tombstoned_host(host: str, tombstones: set | None = None) -> bool:
+    if tombstones is None:
+        tombstones = load_tombstone_hosts()
+    h = (host or "").lower().lstrip(".")
+    if not h:
+        return False
+    if h in tombstones or ("." + h) in tombstones:
+        return True
+    for t in tombstones:
+        t0 = t.lstrip(".")
+        if h == t0 or h.endswith("." + t0):
+            return True
+    return False
+
+
 
 
 # ---------------------------------------------------------------------------
@@ -458,6 +502,13 @@ def classify_rule(
     """返回 {action, reason, target_list, priority}。"""
     host = rule_host(rule)
     rt = rule_type(rule)
+    if is_tombstoned_host(host):
+        return {
+            "action": "ignore",
+            "reason": "tombstone",
+            "target_list": None,
+            "priority": "TOMB",
+        }
     domains = set(x.lower() for x in seed.get("domains") or [])
     suffixes = set(x.lower() for x in seed.get("suffixes") or [])
     allow = [x.lower() for x in seed.get("allow_policy_hosts") or []]
@@ -666,6 +717,9 @@ def fetch_and_filter(
         auto_file = 0
         review_file = 0
         for rule in added:
+            # V6.1 Option A: never re-add tombstoned hosts
+            if is_tombstoned_host(rule_host(rule)):
+                continue
             # 禁止整包：单文件新增极端大时只抽样报告
             if len(added) > 500 and category == "reject":
                 # 仍逐条兴趣判定，但 ignore 占绝大多数；预算截断

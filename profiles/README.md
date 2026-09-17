@@ -1,3 +1,9 @@
+# profiles（分享版）
+
+**Canonical (V6.1):** [`Surge-v6.1.conf`](Surge-v6.1.conf) — 公开脱敏；reject* → `mirrors/owned`；订阅占位。
+
+旧版 `Your-Subscription-Surge-V6.0.share.conf` 保留并指向 V6.1（避免断链）。
+
 # profiles (share only)
 
 I only put **public, desensitized** profiles here:

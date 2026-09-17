@@ -1,0 +1,15 @@
+version: "6.1"
+note: "Runtime owned reject must never contain these; interest sync must never re-add."
+reject_domainset:
+  - ".ynuf.aliapp.org"
+  - ".amdc.alipay.com"
+  - "ynuf.aliapp.org"
+  - "amdc.alipay.com"
+promote_to_direct_patch:
+  - host: "ynuf.aliapp.org"
+    rules:
+      - "DOMAIN-SUFFIX,ynuf.aliapp.org"
+  - host: "amdc.alipay.com"
+    rules:
+      - "DOMAIN,amdc.alipay.com"
+      - "DOMAIN-SUFFIX,amdc.alipay.com"

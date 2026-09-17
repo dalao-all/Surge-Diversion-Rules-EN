@@ -202,3 +202,11 @@ for each frequent upstream file F in upstream_watch:
 **例 D（pangle）**  
 任意上游新增 `DOMAIN-SUFFIX,tiktokpangle-b.us`。  
 `reject_interest` → 兴趣归 ads/reject；若有人想写进 TikTok list → 门禁拒绝。
+
+## Option A (V6.1): owned reject + tombstones
+
+- Runtime conf uses **`mirrors/owned/List/...`** for reject* DOMAIN-SET / RULE-SET.
+- **`mirrors/skk`** remains upstream cache for diff / refresh only; do not point runtime reject* at skk if you need durable Alipay fixes.
+- `patches/tombstones.yaml` hosts must **never** be re-added to owned reject; rebuild via `scripts/apply_tombstones_owned.py`.
+- Interest absorb / `daily_patch_bot.py` skips tombstoned hosts.
+- Promoted hosts go to `patches/direct-patch.list` (DIRECT, ahead of owned reject).

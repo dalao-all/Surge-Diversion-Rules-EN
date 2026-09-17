@@ -1,6 +1,6 @@
 [中文](https://github.com/dalao-all/Surge-Diversion-Rules) | English
 
-# Your Subscription Surge V6.0 — Diversion Rules
+# Your Subscription Surge V6.1 — Diversion Rules
 
 I maintain this public **Surge policy / ruleset** repo: owned mirrors, small patches, desensitized share profiles, and a rule-map visualization.  
 **This project ships no subscription secrets or nodes.** Technical exchange and personal study only — not a proxy service, and I do not provide access.
@@ -14,7 +14,7 @@ I maintain this public **Surge policy / ruleset** repo: owned mirrors, small pat
 
 ## Install (share profile)
 
-1. Download [`profiles/Your-Subscription-Surge-V6.0.share.conf`](profiles/Your-Subscription-Surge-V6.0.share.conf) that I provide
+1. Download [`profiles/Surge-v6.1.conf`](profiles/Surge-v6.1.conf) that I provide
 2. Download [`profiles/Your-Subscription-AdBlock-V6.0.sgmodule`](profiles/Your-Subscription-AdBlock-V6.0.sgmodule)
 3. Open the conf in a text editor and replace  
    `https://subscription.example.invalid/REPLACE_WITH_YOUR_SUBSCRIPTION`  

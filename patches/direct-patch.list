@@ -1,10 +1,11 @@
-# Your Subscription / 你的订阅 V6.0 direct-patch.list
+# Your Subscription / 你的订阅 V6.1 direct-patch.list
 # 用途：防广告集误杀的 DIRECT 例外（在 SKK reject* 之前由主配置 RULE-SET 引用）。
 # 策略由主配置 RULE-SET 行指定 → DIRECT
 # 注意：不要在本文件写带 extended-matching 的 DOMAIN。
 # Surge：RULE-SET 内任一 DOMAIN 带子规则 extended-matching，会作用于该文件全部域名子规则。
 # 淘宝 HTTPDNS 调度域的 extended-matching 写在主配置，不在此 list。
 
+# V6.1: ynuf.aliapp.org / amdc.alipay.com promoted from owned-reject tombstones → DIRECT.
 DOMAIN,grpc.biliapi.net
 DOMAIN,app.biliapi.net
 DOMAIN,app.biliapi.com
@@ -16,3 +17,6 @@ DOMAIN,www.xiaohongshu.com
 DOMAIN,api.coolapk.com
 DOMAIN,image.coolapk.com
 DOMAIN,avatar.coolapk.com
+DOMAIN-SUFFIX,ynuf.aliapp.org
+DOMAIN,amdc.alipay.com
+DOMAIN-SUFFIX,amdc.alipay.com

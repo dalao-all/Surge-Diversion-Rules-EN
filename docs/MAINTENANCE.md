@@ -175,3 +175,11 @@ python3 scripts/daily_patch_bot.py --mode apply --fetch-upstream
 ## 主配置注释
 
 主配置业务规则不变；可在 RULE-SET 前置段加注释指向本文与 INTEREST_MODEL.md，便于后人对齐维护模型。
+
+## Option A (V6.1): owned reject + tombstones
+
+- Runtime conf uses **`mirrors/owned/List/...`** for reject* DOMAIN-SET / RULE-SET.
+- **`mirrors/skk`** remains upstream cache for diff / refresh only; do not point runtime reject* at skk if you need durable Alipay fixes.
+- `patches/tombstones.yaml` hosts must **never** be re-added to owned reject; rebuild via `scripts/apply_tombstones_owned.py`.
+- Interest absorb / `daily_patch_bot.py` skips tombstoned hosts.
+- Promoted hosts go to `patches/direct-patch.list` (DIRECT, ahead of owned reject).
