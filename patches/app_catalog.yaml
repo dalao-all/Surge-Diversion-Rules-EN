@@ -4,7 +4,7 @@
 # 系统自带 App：surge_interest=false，不进种子
 # 加密金融若主屏幕未出现但 conf 已有：见 from_config_not_on_homescreen
 version: "6.0"
-updated: "2026-09-16"
+updated: "2026-09-17"
 timezone: Asia/Shanghai
 source: "iPhone App 截图识别清单；非 Surge 请求日志"
 log_zip_status: "PacketTunnelProvider/SGLog 应用日志 — 不可作域名种子"
@@ -1099,6 +1099,50 @@ intl_apps:
     policy_hint: "🌍 国际网络"
     vendors: [tableau, salesforce]
     notes: ""
+
+
+  - name: Discord
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [discord]
+    notes: "2026-09-17 用户补录；主配置已有 discord* → 国际网络"
+  - name: Telegram
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [telegram]
+    notes: "2026-09-17 用户补录（拼写 Telegrm→Telegram）；主配置 telegram/t.me + SKK telegram RULE-SET"
+  - name: WhatsApp
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🌍 国际网络"
+    vendors: [whatsapp, meta]
+    notes: "2026-09-17 用户补录；主配置 whatsapp*/wa.me → 国际网络"
+  - name: giffgaff
+    region: intl
+    folder: 外网
+    surge_interest: true
+    policy_hint: "🇬🇧 英国专属"
+    vendors: [giffgaff]
+    notes: "2026-09-17 用户补录；主配置 giffgaff* → 英国专属"
+  - name: Surge
+    region: intl
+    folder: 工具
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [nssurge, surge]
+    notes: "2026-09-17 用户补录；代理工具本身；更新/许可证域宜直连或按官方，不强行 REJECT"
+  - name: Shadowrocket
+    region: intl
+    folder: 工具
+    surge_interest: true
+    policy_hint: DIRECT
+    vendors: [shadowrocket]
+    notes: "2026-09-17 用户补录；代理工具；弱 reject 兴趣"
 
 # ---------------------------------------------------------------------------
 # 财务软件第 2 页（V6.0 补全；用户清单）

@@ -12,7 +12,7 @@
   4. non_ip 的 `DOMAIN-KEYWORD` / 类关键词 `DOMAIN-WILDCARD`：仅当关键词长度≥6 且命中安全长词 allowlist（如 alipay、tiktok、facebook、bilibili）。
 - **Tombstones**（永不进 owned reject，并写入 `direct-patch` → DIRECT）： `amdc.alipay.com`, `dualstack-logs.amap.com`, `logs.amap.com`, `umdc.aliapp.org`, `ynuf.aliapp.org`。
 - **reject_phishing**：仅保留金融/AI/社交品牌仿冒（alipay、paypal、taobao、google、facebook、apple、microsoft、amazon、binance、okx、bybit、chatgpt、openai、claude），整标签级匹配；文件显著变小。
-- **Tracker map 后缀**：`ad.qq.com`, `alimama.cn`, `alimama.com`, `amap.com`, `amemv.com`, `biliapi.com`, `biliapi.net`, `bilibili.cn`, `bilibili.com`, `byteoversea.com`, `ctobsnssdk.com`, `dftoutiao.com`, `dianping.com`, `ele.me`, `elemecdn.com`, `gdt.qq.com`, `gifshow.com`, `isnssdk.com`, `jd.com`, `jingdong.com`, `ksapisrv.com`, `kuaishou.com`, `kuaishouzt.com`, `l.qq.com`, `meituan.com`, `meituan.net`, `mmstat.com`, `pangle-ads.com`, `pangle-b.io`, `pangle.cn`, `pangle.io`, `pglstatp-toutiao.com`, `pinduoduo.com`, `sgsnssdk.com`, `snssdk.com`, `tanx.com`, `tiktokpangle-b.us`, `tiktokpangle-cdn-us.com`, `tiktokpangle.us`, `tobsnssdk.com`, `toutiao.com`, `weibo.cn`, `weibo.com`, `xhscdn.com`, `xiaohongshu.com`, `yangkeduo.com`。
+- **Tracker map 后缀**：`ad.qq.com`, `alimama.cn`, `alimama.com`, `amap.com`, `amemv.com`, `biliapi.com`, `biliapi.net`, `bilibili.cn`, `bilibili.com`, `byteoversea.com`, `ctobsnssdk.com`, `dftoutiao.com`, `dianping.com`, `discord.com`, `discord.media`, `discordapp.com`, `discordapp.net`, `discordcdn.com`, `ele.me`, `elemecdn.com`, `gdt.qq.com`, `giffgaff-cdn.com`, `giffgaff.co.uk`, `giffgaff.com`, `gifshow.com`, `isnssdk.com`, `jd.com`, `jingdong.com`, `ksapisrv.com`, `kuaishou.com`, `kuaishouzt.com`, `l.qq.com`, `meituan.com`, `meituan.net`, `mmstat.com`, `pangle-ads.com`, `pangle-b.io`, `pangle.cn`, `pangle.io`, `pglstatp-toutiao.com`, `pinduoduo.com`, `sgsnssdk.com`, `snssdk.com`, `t.me`, `tanx.com`, `tdesktop.com`, `telegra.ph`, `telegram.org`, `tiktokpangle-b.us`, `tiktokpangle-cdn-us.com`, `tiktokpangle.us`, `tobsnssdk.com`, `toutiao.com`, `weibo.cn`, `weibo.com`, `whatsapp.com`, `whatsapp.net`, `xhscdn.com`, `xiaohongshu.com`, `yangkeduo.com`。
 - 重建命令：`python3 scripts/slim_owned_reject_by_apps.py`（幂等）。
 
 ## 范围外
@@ -26,7 +26,7 @@ Owned 只覆盖下方 catalog `surge_interest: true` 的 App 及相关 tracker�
 
 ## Catalog 覆盖范围（`surge_interest: true`）
 
-合计：**115** 个 App。
+合计：**121** 个 App。
 
 ### Dock (1)
 
@@ -75,9 +75,10 @@ Owned 只覆盖下方 catalog `surge_interest: true` 的 App 及相关 tracker�
 - 盒马
 - 美团
 
-### 外网 (12)
+### 外网 (16)
 
 - Chrome
+- Discord
 - Facebook
 - Gmail
 - Google
@@ -85,10 +86,13 @@ Owned 只覆盖下方 catalog `surge_interest: true` 的 App 及相关 tracker�
 - Instagram
 - Netflix
 - Sanas
+- Telegram
 - TikTok
 - Viki
+- WhatsApp
 - X
 - YouTube
+- giffgaff
 
 ### 家庭控制 (8)
 
@@ -100,6 +104,11 @@ Owned 只覆盖下方 catalog `surge_interest: true` 的 App 及相关 tracker�
 - 吉利汽车
 - 无忧行
 - 米家
+
+### 工具 (2)
+
+- Shadowrocket
+- Surge
 
 ### 教育 (1)
 

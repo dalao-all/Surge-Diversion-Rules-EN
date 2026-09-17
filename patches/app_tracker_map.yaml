@@ -111,3 +111,37 @@ apps:
       - meituan.net
       - dianping.com
     notes: "Meituan/Dianping analytics."
+
+  - name: Discord
+    id: discord
+    keep_suffixes:
+      - discord.com
+      - discordapp.com
+      - discordapp.net
+      - discord.media
+      - discordcdn.com
+    notes: "Keep ad/telemetry under discord* from SKK if present; business traffic is 国际网络 in main conf."
+
+  - name: Telegram
+    id: telegram
+    keep_suffixes:
+      - telegram.org
+      - t.me
+      - telegra.ph
+      - tdesktop.com
+    notes: "Prefer SKK telegram RULE-SET for routing; map only for reject-side noise under these suffixes."
+
+  - name: WhatsApp
+    id: whatsapp
+    keep_suffixes:
+      - whatsapp.com
+      - whatsapp.net
+    notes: "Meta messaging; reject only clear ad/telemetry under these suffixes from SKK."
+
+  - name: giffgaff
+    id: giffgaff
+    keep_suffixes:
+      - giffgaff.com
+      - giffgaff.co.uk
+      - giffgaff-cdn.com
+    notes: "UK carrier; business → 英国专属 in main conf."

@@ -1,9 +1,9 @@
 {
-  "version": "6.0",
-  "updated": "2026-09-16",
+  "version": "6.1",
+  "updated": "2026-09-17",
   "timezone": "Asia/Shanghai",
   "status": "production",
-  "notes": "V6.0 正式兴趣种子：合并 app_catalog（含财务第2页）+ finance/AI/DIRECT 关键域 + reject_interest。来源说明见 interest_seed_from_apps.json（草案/溯源，非生产入口）。非 HAR；Authenticator 按 Google Authenticator 假设，不编造未核实域名。",
+  "notes": "V6.0 正式兴趣种子：合并 app_catalog（含财务第2页）+ finance/AI/DIRECT 关键域 + reject_interest。来源说明见 interest_seed_from_apps.json（草案/溯源，非生产入口）。非 HAR；Authenticator 按 Google Authenticator 假设，不编造未核实域名。 2026-09-17 补录：Discord、Telegram、WhatsApp、giffgaff、Surge、Shadowrocket。",
   "seed_source": {
     "primary": "app_catalog+finance_page2+critical_patches",
     "app_catalog": "patches/app_catalog.yaml",
@@ -26,7 +26,8 @@
     "🇩🇪 Bybit 欧洲",
     "💰 PayPal",
     "REJECT",
-    "REJECT-DROP"
+    "REJECT-DROP",
+    "🇬🇧 英国专属"
   ],
   "vendors": [
     "alibaba",
@@ -85,7 +86,14 @@
     "wise",
     "xai",
     "xiaohongshu",
-    "youtube"
+    "youtube",
+    "discord",
+    "telegram",
+    "whatsapp",
+    "giffgaff",
+    "nssurge",
+    "shadowrocket",
+    "surge"
   ],
   "keywords": [
     "alipay",
@@ -129,7 +137,13 @@
     "wise",
     "xai",
     "xiaohongshu",
-    "youtube"
+    "youtube",
+    "discord",
+    "telegram",
+    "whatsapp",
+    "giffgaff",
+    "shadowrocket",
+    "nssurge"
   ],
   "suffixes": [
     "alicdn.com",
@@ -196,7 +210,24 @@
     "xhscdn.com",
     "xiaohongshu.com",
     "youtube.com",
-    "ytimg.com"
+    "ytimg.com",
+    "discord.com",
+    "discord.gg",
+    "discordapp.com",
+    "discordapp.net",
+    "discord.media",
+    "discordcdn.com",
+    "telegram.org",
+    "t.me",
+    "telegra.ph",
+    "tdesktop.com",
+    "whatsapp.com",
+    "whatsapp.net",
+    "wa.me",
+    "giffgaff.com",
+    "giffgaff.co.uk",
+    "giffgaff-cdn.com",
+    "nssurge.com"
   ],
   "domains": [
     "a-api.anthropic.com",
@@ -254,7 +285,16 @@
     "uuwallet.com",
     "wise.com",
     "xiaohongshu.com",
-    "youtube.com"
+    "youtube.com",
+    "discord.com",
+    "telegram.org",
+    "t.me",
+    "whatsapp.com",
+    "whatsapp.net",
+    "giffgaff.com",
+    "giffgaff.co.uk",
+    "giffgaff-cdn.com",
+    "nssurge.com"
   ],
   "reject_interest": [
     "tiktokpangle-b.us",
@@ -338,7 +378,13 @@
     "支付宝",
     "欧易 OKX",
     "淘宝",
-    "酷安"
+    "酷安",
+    "Discord",
+    "Telegram",
+    "WhatsApp",
+    "giffgaff",
+    "Surge",
+    "Shadowrocket"
   ],
   "coverage_warning": "非 HAR；财务第2页已补全进 catalog；Authenticator 无独立未核实域名；系统 App 已排除；国内/国际版勿混淆。"
 }
