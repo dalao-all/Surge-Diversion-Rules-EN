@@ -714,7 +714,7 @@ def build_pr_body(
     high = [c for c in candidates if c["action"] == "auto_pr_high"]
     review = [c for c in candidates if c["action"] == "review"]
     return {
-        "title": f"Your Subscription interest patches {datetime.now(TZ).date().isoformat()}",
+        "title": f"你的订阅 interest patches {datetime.now(TZ).date().isoformat()}",
         "mode": mode,
         "blocked": blocked,
         "schedule_note": "Asia/Shanghai 09:00 & 21:00 frequent upstream interest diff",
@@ -806,7 +806,7 @@ def maybe_open_github_pr(pr_body: Dict[str, Any], candidates: List[Dict[str, Any
         report_file = Path(__file__).resolve().parent / "last_bot_report.json"
         if report_file.exists():
             run(["git", "add", str(report_file.relative_to(ROOT))])
-        msg = pr_body.get("title") or f"Your Subscription interest patches {stamp}"
+        msg = pr_body.get("title") or f"你的订阅 interest patches {stamp}"
         commit = run(["git", "commit", "-m", msg])
         if commit.returncode != 0 and "nothing to commit" in (commit.stdout + commit.stderr):
             result["noop"] = True
@@ -844,7 +844,7 @@ def maybe_open_github_pr(pr_body: Dict[str, Any], candidates: List[Dict[str, Any
 def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "Your Subscription V6.0 interest-driven daily patch bot (stdlib). "
+            "你的订阅 V6.0 interest-driven daily patch bot (stdlib). "
             "Schedule: Asia/Shanghai 09:00 & 21:00 fetch frequent upstream → "
             "diff → seed/selectors filter → candidates + PR body. "
             "Never sync entire reject.conf."

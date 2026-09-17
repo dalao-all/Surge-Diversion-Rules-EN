@@ -1,6 +1,6 @@
 {
   "version": "6.0",
-  "updated": "2026-09-16",
+  "updated": "2026-09-17",
   "notes": "覆盖财务第2页 + Claude/TikTok/B站/微信/支付宝/YouTube；scope=main_config 的 case 由主配置/SKK 覆盖，patches 回归可跳过命中检查。",
   "cases": [
     {
@@ -95,7 +95,9 @@
     {
       "name": "taobao-amdc",
       "domain": "amdc.m.taobao.com",
-      "expect_action": "DIRECT"
+      "expect_action": "DIRECT",
+      "scope": "main_config",
+      "notes": "淘宝 HTTPDNS amdc 带 extended-matching，写在主配置而非 direct-patch；patches 回归跳过命中检查"
     },
     {
       "name": "appstore-apple",
