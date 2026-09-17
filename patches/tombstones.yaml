@@ -7,6 +7,10 @@ reject_domainset:
   - "amdc.alipay.com"
   - ".logs.amap.com"
   - ".dualstack-logs.amap.com"
+  - "logs.amap.com"
+  - "dualstack-logs.amap.com"
+  - ".umdc.aliapp.org"
+  - "umdc.aliapp.org"
 promote_to_direct_patch:
   - host: "ynuf.aliapp.org"
     rules:
@@ -19,3 +23,6 @@ promote_to_direct_patch:
     rules:
       - "DOMAIN-SUFFIX,logs.amap.com"
       - "DOMAIN-SUFFIX,dualstack-logs.amap.com"
+  - host: "umdc.aliapp.org"
+    rules:
+      - "DOMAIN-SUFFIX,umdc.aliapp.org"

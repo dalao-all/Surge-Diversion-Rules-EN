@@ -1,0 +1,113 @@
+# App → tracker suffixes/domains to KEEP in owned reject (ads/telemetry from SKK).
+# Matching: host equals suffix OR ends with "." + suffix (full DNS labels).
+# Tombstones always win (never keep). Do not use bare short substrings here.
+version: "6.1"
+note: "Used by scripts/slim_owned_reject_by_apps.py together with interest_seed + tombstones."
+
+apps:
+  - name: 高德地图
+    id: amap
+    keep_suffixes:
+      - amap.com
+    # logs.amap.com / dualstack-logs.amap.com are tombstoned → DIRECT
+    notes: "Keep ad/telemetry hosts e.g. optimus-ads.amap.com, adashx.ut.amap.com; exclude tombstones."
+
+  - name: 抖音/字节
+    id: bytedance
+    keep_suffixes:
+      - snssdk.com
+      - isnssdk.com
+      - sgsnssdk.com
+      - ctobsnssdk.com
+      - tobsnssdk.com
+      - toutiao.com
+      - dftoutiao.com
+      - byteoversea.com
+      - pangle.io
+      - pangle-b.io
+      - pangle.cn
+      - pangle-ads.com
+      - amemv.com
+      - pglstatp-toutiao.com
+      - tiktokpangle.us
+      - tiktokpangle-b.us
+      - tiktokpangle-cdn-us.com
+    notes: "Douyin/ByteDance ads + log/mon hosts from SKK."
+
+  - name: 淘宝/阿里广告
+    id: alibaba_ads
+    keep_suffixes:
+      - mmstat.com
+      - alimama.com
+      - alimama.cn
+      - tanx.com
+    notes: "Ali ads/analytics; ut.taobao.com covered via interest_seed taobao.com suffix."
+
+  - name: 拼多多
+    id: pinduoduo
+    keep_suffixes:
+      - pinduoduo.com
+      - yangkeduo.com
+    notes: "PDD ad/DSP hosts e.g. t-dsp.pinduoduo.com."
+
+  - name: 饿了么
+    id: eleme
+    keep_suffixes:
+      - ele.me
+      - elemecdn.com
+    notes: "Full-label ele.me only — never bare 'ele' substring."
+
+  - name: 腾讯/GDT
+    id: tencent_gdt
+    keep_suffixes:
+      - gdt.qq.com
+      - l.qq.com
+      - ad.qq.com
+    notes: "Existing good vendor: QQ/Tencent ads."
+
+  - name: 京东广告
+    id: jd_ads
+    keep_suffixes:
+      - jd.com
+      - jingdong.com
+    notes: "JD ads/log hosts already largely in seed; map reinforces."
+
+  - name: 微博
+    id: weibo
+    keep_suffixes:
+      - weibo.com
+      - weibo.cn
+    notes: "Weibo ad/uve hosts."
+
+  - name: 快手
+    id: kuaishou
+    keep_suffixes:
+      - kuaishou.com
+      - kuaishouzt.com
+      - gifshow.com
+      - ksapisrv.com
+    notes: "Kuaishou ads/log."
+
+  - name: 哔哩哔哩
+    id: bilibili
+    keep_suffixes:
+      - bilibili.com
+      - bilibili.cn
+      - biliapi.com
+      - biliapi.net
+    notes: "Full bilibili labels only — never bare 'bili'."
+
+  - name: 小红书
+    id: xiaohongshu
+    keep_suffixes:
+      - xiaohongshu.com
+      - xhscdn.com
+    notes: "XHS ads CDN / apm if present in SKK interest."
+
+  - name: 美团/点评
+    id: meituan
+    keep_suffixes:
+      - meituan.com
+      - meituan.net
+      - dianping.com
+    notes: "Meituan/Dianping analytics."

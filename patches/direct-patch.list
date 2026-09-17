@@ -5,7 +5,7 @@
 # Surge：RULE-SET 内任一 DOMAIN 带子规则 extended-matching，会作用于该文件全部域名子规则。
 # 淘宝 HTTPDNS 调度域的 extended-matching 写在主配置，不在此 list。
 
-# V6.1: ynuf.aliapp.org / amdc.alipay.com promoted from owned-reject tombstones → DIRECT.
+# V6.1: ynuf / amdc.alipay / logs.amap / dualstack-logs.amap / umdc.aliapp → DIRECT (tombstones).
 DOMAIN,grpc.biliapi.net
 DOMAIN,app.biliapi.net
 DOMAIN,app.biliapi.com
@@ -22,3 +22,4 @@ DOMAIN,amdc.alipay.com
 DOMAIN-SUFFIX,amdc.alipay.com
 DOMAIN-SUFFIX,logs.amap.com
 DOMAIN-SUFFIX,dualstack-logs.amap.com
+DOMAIN-SUFFIX,umdc.aliapp.org

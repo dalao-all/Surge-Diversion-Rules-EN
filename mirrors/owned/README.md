@@ -1,26 +1,32 @@
-# mirrors/owned — Option A (V6.1) app-scoped reject
+# mirrors/owned — V6.1 自建精简 reject（Option A）
 
-Runtime `reject*` DOMAIN-SET / RULE-SET in Surge conf point here (`mirrors/owned/List/...`), **not** at full SKK.
+运行时 Surge 的 `reject*` DOMAIN-SET / RULE-SET 指向此处（`mirrors/owned/List/...`），**不是**完整 SKK。
 
-## What this is
+## 本次策略变更（精简误删 / 误留修复）
 
-- **Self-built / curated** `domainset/{reject,reject_extra,reject_phishing}.conf` and `non_ip/{reject,reject-drop,reject-no-drop}.conf`.
-- **Scoped** to apps with `surge_interest: true` in `patches/app_catalog.yaml`, matched via `patches/interest_seed.json` (domains / suffixes / keywords / vendors).
-- **Tombstones** from `patches/tombstones.yaml` are never included (e.g. `ynuf.aliapp.org`, `amdc.alipay.com`, `logs.amap.com`, `dualstack-logs.amap.com`). Those hosts are promoted to DIRECT via `patches/direct-patch.list`.
-- Rebuild: `python3 scripts/slim_owned_reject_by_apps.py` (idempotent; reads SKK cache + seed + tombstones + catalog).
+- **停止**使用短裸子串 needle 做 keep 判断：禁止 `meta` / `wise` / `viki` / `grok` / `qwen` / `okex` / `plasma` / `venmo` 等（长度≤5 或显式黑名单）。 由此 `metalex.io` / `metamx` 一类噪声不再因 `meta` 误留。
+- **Keep 条件**（从空集合重建）：
+  1. `patches/app_tracker_map.yaml` 中的 tracker 后缀/域名（整标签匹配）；
+  2. `interest_seed.json` 的 domains / suffixes（整标签 equals / ends-with）；
+  3. `reject_interest` 精确/后缀，或无点关键词的整标签级匹配（如 `pangolin`）；
+  4. non_ip 的 `DOMAIN-KEYWORD` / 类关键词 `DOMAIN-WILDCARD`：仅当关键词长度≥6 且命中安全长词 allowlist（如 alipay、tiktok、facebook、bilibili）。
+- **Tombstones**（永不进 owned reject，并写入 `direct-patch` → DIRECT）： `amdc.alipay.com`, `dualstack-logs.amap.com`, `logs.amap.com`, `umdc.aliapp.org`, `ynuf.aliapp.org`。
+- **reject_phishing**：仅保留金融/AI/社交品牌仿冒（alipay、paypal、taobao、google、facebook、apple、microsoft、amazon、binance、okx、bybit、chatgpt、openai、claude），整标签级匹配；文件显著变小。
+- **Tracker map 后缀**：`ad.qq.com`, `alimama.cn`, `alimama.com`, `amap.com`, `amemv.com`, `biliapi.com`, `biliapi.net`, `bilibili.cn`, `bilibili.com`, `byteoversea.com`, `ctobsnssdk.com`, `dftoutiao.com`, `dianping.com`, `ele.me`, `elemecdn.com`, `gdt.qq.com`, `gifshow.com`, `isnssdk.com`, `jd.com`, `jingdong.com`, `ksapisrv.com`, `kuaishou.com`, `kuaishouzt.com`, `l.qq.com`, `meituan.com`, `meituan.net`, `mmstat.com`, `pangle-ads.com`, `pangle-b.io`, `pangle.cn`, `pangle.io`, `pglstatp-toutiao.com`, `pinduoduo.com`, `sgsnssdk.com`, `snssdk.com`, `tanx.com`, `tiktokpangle-b.us`, `tiktokpangle-cdn-us.com`, `tiktokpangle.us`, `tobsnssdk.com`, `toutiao.com`, `weibo.cn`, `weibo.com`, `xhscdn.com`, `xiaohongshu.com`, `yangkeduo.com`。
+- 重建命令：`python3 scripts/slim_owned_reject_by_apps.py`（幂等）。
 
-## Outside this scope
+## 范围外
 
-Owned rejects **only** cover the catalog apps listed below. For other apps / full ad-block lists, use upstream SKK:
+Owned 只覆盖下方 catalog `surge_interest: true` 的 App 及相关 tracker。其他 App / 完整广告列表请用上游 SKK：
 
 - https://ruleset.skk.moe
-- or local cache: `mirrors/skk/List/domainset/` and `mirrors/skk/List/non_ip/`
+- 或本地缓存：`mirrors/skk/List/domainset/` 与 `mirrors/skk/List/non_ip/`
 
-`mirrors/skk` remains an upstream cache for diff / refresh — do **not** delete it.
+`mirrors/skk` 仍作上游缓存，供 diff / 刷新 — **不要删除**。
 
-## Catalog apps in scope (`surge_interest: true`)
+## Catalog 覆盖范围（`surge_interest: true`）
 
-Total: **115** apps.
+合计：**115** 个 App。
 
 ### Dock (1)
 
@@ -182,8 +188,8 @@ Total: **115** apps.
 - 飞智游戏厅
 - 黑猫投诉
 
-## Notes
+## 注意
 
-- Interest absorb / daily bot must **skip** tombstoned hosts (never re-add into owned reject or ads-patch).
-- Do **not** whole-replace owned from upstream without running this slim filter.
-- Legacy `scripts/apply_tombstones_owned.py` only stripped tombstones; prefer `slim_owned_reject_by_apps.py` for V6.1 Option A size.
+- 兴趣吸收 / daily bot **不得**把 tombstone 主机写回 owned reject 或 ads-patch。
+- **禁止**在未跑本精简脚本的情况下整包覆盖 owned。
+- 旧脚本 `apply_tombstones_owned.py` 仅剥 tombstone；V6.1 请用本脚本。
