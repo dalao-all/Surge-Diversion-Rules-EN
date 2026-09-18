@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-09-17T09:21:58+08:00",
+  "fetched_at": "2026-09-18T09:18:42+08:00",
   "entries": [
     {
       "repo_path": "mirrors/scripts/fmz200/myBlockAds.js",
       "upstream_url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js",
       "sha256": "4cf62100424886068a5470daecec319e93ccd034c647d79a9daaa72bbbc341bb",
       "bytes": 7652,
-      "fetched_at": "2026-09-17T09:21:58+08:00",
+      "fetched_at": "2026-09-18T09:18:43+08:00",
       "http_status": 200,
       "ok": true
     },
@@ -15,7 +15,7 @@
       "upstream_url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jingdong.js",
       "sha256": "3e7cc975f8985a4d2dbdbdefc405d0e3e6c9c07bf3c5361da1ecae206b6c04a1",
       "bytes": 10303,
-      "fetched_at": "2026-09-17T09:21:59+08:00",
+      "fetched_at": "2026-09-18T09:18:43+08:00",
       "http_status": 200,
       "ok": true
     },
@@ -24,7 +24,7 @@
       "upstream_url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js",
       "sha256": "318d89bce1117edb26a93b383804e195649ec4674a04efa9e3ddb4ef7f34b498",
       "bytes": 28643,
-      "fetched_at": "2026-09-17T09:21:59+08:00",
+      "fetched_at": "2026-09-18T09:18:43+08:00",
       "http_status": 200,
       "ok": true
     },
@@ -33,7 +33,7 @@
       "upstream_url": "https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js",
       "sha256": "aaa57af3b8c63428f3a405d575380c3b16334b738ea440b12fb31498b87d2880",
       "bytes": 2041,
-      "fetched_at": "2026-09-17T09:21:59+08:00",
+      "fetched_at": "2026-09-18T09:18:43+08:00",
       "http_status": 200,
       "ok": true
     }

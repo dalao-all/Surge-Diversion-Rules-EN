@@ -1,6 +1,6 @@
 {
   "version": "6.0",
-  "updated": "2026-09-16",
+  "updated": "2026-09-18",
   "family_notes": {
     "finance-critical": "finance-bybit-eu.list 与 finance-bybit-global.list 为同家族极小伴生文件，不是第二套通用底座。",
     "ads-patch": "当前多为 placeholder；勿将 STUN/iCloud relay pre-matching 迁入。",
@@ -552,6 +552,78 @@
       "last_verified": "2026-09-16",
       "expires": "2027-03-16",
       "notes": "酷安头像；勿误杀"
+    },
+    {
+      "id": "dir-ynuf-aliapp",
+      "file": "direct-patch.list",
+      "rule": "DOMAIN-SUFFIX,ynuf.aliapp.org",
+      "policy": "DIRECT",
+      "source": "v6.1-alipay-pengyipeng",
+      "evidence_type": "har",
+      "first_seen": "2026-09-17",
+      "last_verified": "2026-09-18",
+      "expires": "2027-03-18",
+      "notes": "支付宝碰一碰：ynuf 被 SKK reject 误杀；tombstone+direct-patch"
+    },
+    {
+      "id": "dir-amdc-alipay",
+      "file": "direct-patch.list",
+      "rule": "DOMAIN,amdc.alipay.com",
+      "policy": "DIRECT",
+      "source": "v6.1-alipay-pengyipeng",
+      "evidence_type": "preventive",
+      "first_seen": "2026-09-17",
+      "last_verified": "2026-09-18",
+      "expires": "2027-03-18",
+      "notes": "支付宝 HTTPDNS/调度；tombstone+direct-patch（精确域）"
+    },
+    {
+      "id": "dir-amdc-alipay-suffix",
+      "file": "direct-patch.list",
+      "rule": "DOMAIN-SUFFIX,amdc.alipay.com",
+      "policy": "DIRECT",
+      "source": "v6.1-alipay-pengyipeng",
+      "evidence_type": "preventive",
+      "first_seen": "2026-09-17",
+      "last_verified": "2026-09-18",
+      "expires": "2027-03-18",
+      "notes": "支付宝 amdc 后缀兜底；tombstone+direct-patch"
+    },
+    {
+      "id": "dir-logs-amap",
+      "file": "direct-patch.list",
+      "rule": "DOMAIN-SUFFIX,logs.amap.com",
+      "policy": "DIRECT",
+      "source": "v6.1-alipay-pengyipeng-location",
+      "evidence_type": "har",
+      "first_seen": "2026-09-17",
+      "last_verified": "2026-09-18",
+      "expires": "2027-03-18",
+      "notes": "碰一碰支付定位：logs.amap.com DIRECT；tombstone+direct-patch"
+    },
+    {
+      "id": "dir-dualstack-logs-amap",
+      "file": "direct-patch.list",
+      "rule": "DOMAIN-SUFFIX,dualstack-logs.amap.com",
+      "policy": "DIRECT",
+      "source": "v6.1-alipay-pengyipeng-location",
+      "evidence_type": "har",
+      "first_seen": "2026-09-17",
+      "last_verified": "2026-09-18",
+      "expires": "2027-03-18",
+      "notes": "logs.amap dualstack 伴生域；tombstone+direct-patch"
+    },
+    {
+      "id": "dir-umdc-aliapp",
+      "file": "direct-patch.list",
+      "rule": "DOMAIN-SUFFIX,umdc.aliapp.org",
+      "policy": "DIRECT",
+      "source": "v6.1-alipay-pengyipeng",
+      "evidence_type": "preventive",
+      "first_seen": "2026-09-17",
+      "last_verified": "2026-09-18",
+      "expires": "2027-03-18",
+      "notes": "umdc.aliapp.org 伴生；tombstone+direct-patch"
     }
   ]
 }
