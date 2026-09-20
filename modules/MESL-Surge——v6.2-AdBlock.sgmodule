@@ -2452,7 +2452,6 @@ jingdong_invalid_15 = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/c
 
 # ---- StartUpAds: ku'an (酷安) ----
 # ===== ku'an =====
-ku_an_17 = type=http-response, pattern=^https?:\/\/api.coolapk.com\/v6\/main\/init, requires-body=true, max-size=524288, timeout=10, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/coolapk.js
 
 # ---- StartUpAds: iQiYi (爱奇艺) ----
 # ===== iQiYi =====
