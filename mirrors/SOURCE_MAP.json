@@ -3,7 +3,7 @@
   "source_base": "https://ruleset.skk.moe/",
   "mirror_prefix": "mirrors/skk/",
   "count": 43,
-  "fetched_at": "2026-09-21T06:17:13+08:00",
+  "fetched_at": "2026-09-27T05:53:33+08:00",
   "entries": [
     {
       "upstream_url": "https://ruleset.skk.moe/List/domainset/apple_cdn.conf",
@@ -11,16 +11,16 @@
       "sha256": "0c81cbe6af3a1c3befbe973441bb5667caf817a9447fca55022182d015669180",
       "bytes": 4628,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:13+08:00",
+      "fetched_at": "2026-09-27T05:53:33+08:00",
       "ok": true
     },
     {
       "upstream_url": "https://ruleset.skk.moe/List/domainset/cdn.conf",
       "repo_relative_path": "mirrors/skk/List/domainset/cdn.conf",
-      "sha256": "bcc0002d75a69dcb814e460e61a4b290ef2dd75b825b175b8f47fac9d6cd7f11",
-      "bytes": 89523,
+      "sha256": "df5209fb94a0f3b740692417121313d62c8bc63db37928afed03521f397f0d30",
+      "bytes": 89597,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:13+08:00",
+      "fetched_at": "2026-09-27T05:53:33+08:00",
       "ok": true
     },
     {
@@ -29,34 +29,34 @@
       "sha256": "f01106cfbec214e1916a65f482e6b6d6623c1ef6dd4f03262b5ef384acb1c042",
       "bytes": 45717,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:13+08:00",
+      "fetched_at": "2026-09-27T05:53:33+08:00",
       "ok": true
     },
     {
       "upstream_url": "https://ruleset.skk.moe/List/domainset/reject.conf",
       "repo_relative_path": "mirrors/skk/List/domainset/reject.conf",
-      "sha256": "b0c72411302414675b094fa34cf6a45b5913d65d607cd8e390cff3b9a1f5dee2",
-      "bytes": 3001340,
+      "sha256": "899fb5f356f5b6449228d18b3cec5004331b745ea71e7fb5368cbc6c8d9781c5",
+      "bytes": 3013949,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:14+08:00",
+      "fetched_at": "2026-09-27T05:53:33+08:00",
       "ok": true
     },
     {
       "upstream_url": "https://ruleset.skk.moe/List/domainset/reject_extra.conf",
       "repo_relative_path": "mirrors/skk/List/domainset/reject_extra.conf",
-      "sha256": "8bb0197ffdc4fb2bbdd35450cb8537ada8ed8331236448472b72273832980e6a",
-      "bytes": 1560566,
+      "sha256": "6bad13a5662571d001fd19c3967e52a89db599aae93e835665092ed090c45ecf",
+      "bytes": 1587904,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:14+08:00",
+      "fetched_at": "2026-09-27T05:53:33+08:00",
       "ok": true
     },
     {
       "upstream_url": "https://ruleset.skk.moe/List/domainset/reject_phishing.conf",
       "repo_relative_path": "mirrors/skk/List/domainset/reject_phishing.conf",
-      "sha256": "712a447211439eca5ee094be16300f71d62a2545d51ca6706e9807cab49a7e71",
-      "bytes": 3101317,
+      "sha256": "5761d6d3479f694603d7edef5a3480336205d8e62844d9c067f1737578a1b2b5",
+      "bytes": 3080405,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:14+08:00",
+      "fetched_at": "2026-09-27T05:53:33+08:00",
       "ok": true
     },
     {
@@ -65,16 +65,16 @@
       "sha256": "d2ab24c3306cf912cd1b425b1e1322245cbe0d8beee8badaab7d1bdaf332ea95",
       "bytes": 1435,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:14+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
       "upstream_url": "https://ruleset.skk.moe/List/ip/china_ip.conf",
       "repo_relative_path": "mirrors/skk/List/ip/china_ip.conf",
-      "sha256": "4f14570d58f8717b6ee6489228915a8992bbfe7e2e327e4a4b00a4c34a91d05d",
-      "bytes": 92439,
+      "sha256": "4f505fe03802f2aae9101250b7e99555c6ec35ad59d106c8fd844367b494abcd",
+      "bytes": 92487,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:14+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
@@ -83,7 +83,7 @@
       "sha256": "99fd01e3b16bb3715dc2a07f5e3c4fde213c2031469256282c55aa7e1ed46494",
       "bytes": 566,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:15+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
@@ -92,16 +92,16 @@
       "sha256": "49783e54766c86852c17299e2aa0182e53fa31435e33f5b66a40c4e32705f29c",
       "bytes": 1094,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:15+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
       "upstream_url": "https://ruleset.skk.moe/List/ip/reject.conf",
       "repo_relative_path": "mirrors/skk/List/ip/reject.conf",
-      "sha256": "21a86ae6174d6298e4bbdf548dbcf8d2e240fca65ea7653fee0b4119323c0ee9",
-      "bytes": 22292,
+      "sha256": "7015f1e7ea42006c532b2644c9c90e0d6213a5d4ecfa9a49569d08d16f872228",
+      "bytes": 22267,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:15+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
@@ -110,7 +110,7 @@
       "sha256": "e99e1e589e7bb2c92f9f68dbfed59e3e1182adfb78eeedb8d74d62b5156dc348",
       "bytes": 1869,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:15+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
@@ -119,7 +119,7 @@
       "sha256": "a68eb796f1b1044f78b15c8782782dfd88bb33454e2cc89c2ce00c56e8b39f88",
       "bytes": 454,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:15+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
@@ -128,7 +128,7 @@
       "sha256": "63137a000c89bb5ae5679ff91c14808ca41d6da5c09064f4e29079b8c3bb60a7",
       "bytes": 516,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:15+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
@@ -137,7 +137,7 @@
       "sha256": "69b1b205209c2694fcea0eeaa37560999406943aa7e21302d816acbfea55dd13",
       "bytes": 515,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:15+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
@@ -146,7 +146,7 @@
       "sha256": "4af571f5c42708cecbb7fcd2e5a699731b376c4cbf7d01eb726d896fdcb76810",
       "bytes": 451,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:15+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
@@ -155,7 +155,7 @@
       "sha256": "875e3fe79abca6702bbe96d7859cf7a163c6328fcc21928f30627dc3cf16ea0d",
       "bytes": 529,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:15+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
@@ -164,7 +164,7 @@
       "sha256": "8362f4a41e9c0e9f3f03305de97ef3c3f5a66a663703cd4a49f858f7c8ca5846",
       "bytes": 605,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:15+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
@@ -173,7 +173,7 @@
       "sha256": "27f6bab896e98ec9631fd187ff5147fb101260fc7a322c0dc994bbd27ed0a81f",
       "bytes": 1116,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:15+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
@@ -182,7 +182,7 @@
       "sha256": "92c818f6dc242420d27fa0fd9c07df75013af5645cdf9e3df964fef6d34837d9",
       "bytes": 2010,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:34+08:00",
       "ok": true
     },
     {
@@ -191,7 +191,7 @@
       "sha256": "a31f9e98c5a4fdd585a7c78b6f3a1994015ab54a57a3d82057bd17f278f6a76f",
       "bytes": 826,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -200,7 +200,7 @@
       "sha256": "9c32e8eb6e1d334a85b972791a0afc4b0fc81f57d3a80902a50c9168269f7602",
       "bytes": 1157,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -209,7 +209,7 @@
       "sha256": "110f955569b55bb09ca837c77dc8c43c99c75c3bee139d9049f3a6a25931b5c6",
       "bytes": 3447,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -218,16 +218,16 @@
       "sha256": "46c65d1a59289d07f52f7652f9d1695d2996f65c125a14593b3eb7322086f8ec",
       "bytes": 6317,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
       "upstream_url": "https://ruleset.skk.moe/List/non_ip/domestic.conf",
       "repo_relative_path": "mirrors/skk/List/non_ip/domestic.conf",
-      "sha256": "109b7e60a62342b53d16263fb76dffd0188b084d71ee14d909cd7399471b25dd",
-      "bytes": 22661,
+      "sha256": "c5c03b0c88e197cbdf3b55909772bf60be254a96fa0734476f903c9f537388c1",
+      "bytes": 22683,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -236,7 +236,7 @@
       "sha256": "741c1e7dda34bae2dd7611262c15431a66a50f6bdac24b96f070e1529479a594",
       "bytes": 874,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -245,7 +245,7 @@
       "sha256": "d43baf4354759c0baa342bb63d08f74f52d578ffc95648577221fc869522af17",
       "bytes": 521,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -254,7 +254,7 @@
       "sha256": "270bb9779f34df58825dab7ed591c51cd949411a6e54c8e2a06741da7a639eaa",
       "bytes": 33265,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -263,7 +263,7 @@
       "sha256": "1cc7293548c9f251adf9e373a57bfef3501f6e6756d8234aed5415a5ead4e439",
       "bytes": 2714,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -272,7 +272,7 @@
       "sha256": "c2efcfedd34fdedfeb16460dc7fd6a1842cd5230d31cd57a702194d1c8eeb6bd",
       "bytes": 3113,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -281,7 +281,7 @@
       "sha256": "8e3017a526f50ed80deddf4b26339f25cc0f60ad1c4ef0667ec7080f3ee1215e",
       "bytes": 608,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -290,7 +290,7 @@
       "sha256": "f5f3606947fdcb055fc1c937fc8e89b6692d5f63afc58f8a1bc45438853fcd11",
       "bytes": 1360,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:16+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -299,7 +299,7 @@
       "sha256": "e0d48603980bd4c5862b0727e93ab0446d2c22a2a814cf4e2cbb5da28b2b8254",
       "bytes": 1908,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:17+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -308,7 +308,7 @@
       "sha256": "0620fd54346f03eb1a17cb18aeff45423cb801845aaa7a0eb7486277a1bff91a",
       "bytes": 13524,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:17+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -317,7 +317,7 @@
       "sha256": "46884691525c0fb7058ff6dd06fb2d78174c8ab2759114ccbaa65de8b4554ccc",
       "bytes": 879,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:17+08:00",
+      "fetched_at": "2026-09-27T05:53:35+08:00",
       "ok": true
     },
     {
@@ -326,7 +326,7 @@
       "sha256": "e35f4e37b3e1a39c6c2a1c09750299c4318feb72b65a6e79a18b4a2b39f44ce6",
       "bytes": 10487,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:17+08:00",
+      "fetched_at": "2026-09-27T05:53:36+08:00",
       "ok": true
     },
     {
@@ -335,7 +335,7 @@
       "sha256": "722e0d571b44a13a06f3d17a7d74206d9023d5f34a4702e6298e37c98566180d",
       "bytes": 704,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:17+08:00",
+      "fetched_at": "2026-09-27T05:53:36+08:00",
       "ok": true
     },
     {
@@ -344,7 +344,7 @@
       "sha256": "7893cb28a7e5f5cea8a122445e3331c98227c18cd2e7ca8282ddbde2705176e4",
       "bytes": 1558,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:17+08:00",
+      "fetched_at": "2026-09-27T05:53:36+08:00",
       "ok": true
     },
     {
@@ -353,7 +353,7 @@
       "sha256": "ad79821bb7d7c381e28f8b6972d487218a6176b87f60671901d9e2473f5c3645",
       "bytes": 1221,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:17+08:00",
+      "fetched_at": "2026-09-27T05:53:36+08:00",
       "ok": true
     },
     {
@@ -362,7 +362,7 @@
       "sha256": "40aa62a2122605612a5db88d51bb447d0d34cb95f8ab4b20cee4993f2aec33af",
       "bytes": 527,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:17+08:00",
+      "fetched_at": "2026-09-27T05:53:36+08:00",
       "ok": true
     },
     {
@@ -371,7 +371,7 @@
       "sha256": "c3abeaed7b3783c55de5f7e8a718112f8fa477e919b3d7beaef6174433306025",
       "bytes": 1612,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:17+08:00",
+      "fetched_at": "2026-09-27T05:53:36+08:00",
       "ok": true
     },
     {
@@ -380,7 +380,7 @@
       "sha256": "54887849393eb274da450ac0479c6e054a2227811be810f99dc39a0c1072ee83",
       "bytes": 1959,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:17+08:00",
+      "fetched_at": "2026-09-27T05:53:36+08:00",
       "ok": true
     },
     {
@@ -389,7 +389,7 @@
       "sha256": "bccbd162554d2cb56b16cdd59fbc2d1abec645bd53c9db18460137ffccbbc2a2",
       "bytes": 834,
       "http_status": 200,
-      "fetched_at": "2026-09-21T06:17:17+08:00",
+      "fetched_at": "2026-09-27T05:53:36+08:00",
       "ok": true
     }
   ]

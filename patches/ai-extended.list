@@ -1,0 +1,43 @@
+# ai-extended.list — 国外 AI 全量补丁（官方+社区+遥测）
+# 引用行（加在 [Rule] 第 3 节顶部、现有 AI 内联规则之前）：
+# RULE-SET,https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/patches/ai-extended.list,"🤖 AI住宅",update-interval=86400
+# 设计说明：
+# - 主配置已有的后缀（openai.com/claude.ai/anthropic.com/googleapis.com 等）不重复收录
+# - 共享遥测后缀（sentry.io/segment.io/datadoghq.com 等）已在主配置内联指向 AI 组，不重复
+# - SukkaW ai.conf 保留作广覆盖兜底；本文件补官方新增、社区发现与新兴服务
+# - 精确主机用 DOMAIN，品牌域用 DOMAIN-SUFFIX，避免误伤共用 CDN
+
+# --- OpenAI / ChatGPT / Sora：官方 CDN 与存储补充 ---
+DOMAIN,openaicom.imgix.net
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,openaiapi-site.azureedge.net
+DOMAIN,production-openaicom-storage.azureedge.net
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
+DOMAIN,chat.openai.com.cdn.cloudflare.net
+
+# --- Anthropic / Claude：官网 CDN 补充 ---
+DOMAIN,servd-anthropic-website.b-cdn.net
+
+# --- Google AI：品牌域补充（API 端点已由 googleapis.com 后缀覆盖）---
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,gemini.google
+DOMAIN-SUFFIX,notebooklm.google
+
+# --- Cloudflare AI 网关 ---
+DOMAIN,gateway.ai.cloudflare.com
+
+# --- 新兴 AI 服务 ---
+DOMAIN-SUFFIX,manus.im
+DOMAIN-SUFFIX,genspark.ai
+DOMAIN-SUFFIX,dify.ai
+DOMAIN-SUFFIX,jasper.ai
+DOMAIN-SUFFIX,clipdrop.co
+DOMAIN-SUFFIX,openart.ai
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,v0.dev
+DOMAIN-SUFFIX,v0.app
+# sanas.ai：用户手机装有 Sanas，域名待抓包验证，先收录观察命中日志
+DOMAIN-SUFFIX,sanas.ai
+# 注：vercel.com 为通用托管平台（大量非 AI 站点），故意未收录以免误伤
