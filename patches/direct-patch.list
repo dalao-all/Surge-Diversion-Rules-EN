@@ -23,3 +23,8 @@ DOMAIN-SUFFIX,amdc.alipay.com
 DOMAIN-SUFFIX,logs.amap.com
 DOMAIN-SUFFIX,dualstack-logs.amap.com
 DOMAIN-SUFFIX,umdc.aliapp.org
+
+# V1.2.4: icost.vip / xhslink.com → DIRECT（用户快捷指令所需 API 与小红书短链域；ffdns 描述文件下曾无法打开）。
+# 注：两域均不在 ads-patch 拦截表中（xhslink.com 还是上游白名单）；加白为兜底，保证快捷指令直连可用。
+DOMAIN-SUFFIX,icost.vip
+DOMAIN-SUFFIX,xhslink.com
