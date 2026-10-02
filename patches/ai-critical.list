@@ -1,3 +1,6 @@
+# —— Upstream status (Your Subscription, verified 2026-10-02) ——
+# Source: Self-maintained (verified via HAR/captures) | Active entries: 24 (excl. comments/blanks)
+# Review: self-maintained tables update on feedback; snapshot tables re-pull upstream periodically.
 # Your Subscription V6.0 ai-critical.list
 # 用途：Claude / OpenAI 等与 SKK 广告集冲突的精确前置例外。
 # 策略由主配置 RULE-SET 行指定 → 「🤖 AI住宅」

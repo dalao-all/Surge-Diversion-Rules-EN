@@ -1,0 +1,295 @@
+# ads-supplement.list | Splash/in-app ads cross-supplement
+# Sources: AWAvenue Ads Rule (TG-Twilight, manually vetted, v1.7.8, 2026-09-21) + Blockads (thNylHx/Tools, 2026-09-06)
+# Built: 2026-10-02 | Entries: 229 (domains) + 1 (IP)
+# Method: curated sources MINUS ads-patch.list (17,414) MINUS direct-patch/ai-critical DIRECT MINUS Apple MINUS conservative exclusions (functional risk)
+# Usage: RULE-SET,https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/patches/ads-supplement.list,REJECT,update-interval=43200
+# Suggested position: section 1.3, after ads-patch.list, before SKK ad base.
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,17admob.com,REJECT
+# —— 百度贴吧（Blockads）
+DOMAIN-SUFFIX,180.76.76.200,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,66mobi.com,REJECT
+DOMAIN-SUFFIX,a0.app.xiaomi.com,REJECT
+# —— 番茄小说（Blockads）
+DOMAIN-SUFFIX,abtest3-misc.zijieapi.com,REJECT
+# —— 彩云天气（Blockads）
+DOMAIN-SUFFIX,abyss.cyapi.cn,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,acjs.aliyun.com,REJECT
+DOMAIN-SUFFIX,acs4baichuan.m.taobao.com,REJECT
+DOMAIN-SUFFIX,ad-evods.tianya.tv,REJECT
+DOMAIN-SUFFIX,ad.aggrxinc.com,REJECT
+# —— 车来了（Blockads）
+DOMAIN-SUFFIX,ad.chelaile.net.cn,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,ad.xelements.cn,REJECT
+DOMAIN-SUFFIX,adash-emas.cn-hangzhou.aliyuncs.com,REJECT
+# —— e充电（Blockads）
+DOMAIN-SUFFIX,adash-evone.echargenet.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,adfunlink.com,REJECT
+DOMAIN-SUFFIX,adhub.com.cn,REJECT
+DOMAIN-SUFFIX,adjust.net.in,REJECT
+DOMAIN-SUFFIX,admobile.mobi,REJECT
+DOMAIN-SUFFIX,admobile.net.cn,REJECT
+DOMAIN-SUFFIX,admobile.vip,REJECT
+DOMAIN-SUFFIX,adn-plus.com.cn,REJECT
+DOMAIN-SUFFIX,adnplus.com.cn,REJECT
+DOMAIN-SUFFIX,adsappier.com,REJECT
+DOMAIN-SUFFIX,adscope.cn,REJECT
+DOMAIN-SUFFIX,adscope.com.cn,REJECT
+DOMAIN-SUFFIX,adscope.xyz,REJECT
+DOMAIN-SUFFIX,adshenshi.com,REJECT
+DOMAIN-SUFFIX,adsrvr.cn,REJECT
+DOMAIN-SUFFIX,adtaipo.com,REJECT
+DOMAIN-SUFFIX,adtianmai.com,REJECT
+DOMAIN-SUFFIX,adv.sec.miui.com,REJECT
+# —— 什么值得买（Blockads）
+DOMAIN-SUFFIX,adx-api.zdmimg.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,adx.52qumao.com,REJECT
+DOMAIN-SUFFIX,adx.yixin.im,REJECT
+DOMAIN-SUFFIX,aegis.qq.com,REJECT
+DOMAIN-SUFFIX,amdcopen.m.taobao.com,REJECT
+DOMAIN-SUFFIX,amplitude.com,REJECT
+DOMAIN-SUFFIX,analysis.chatglm.cn,REJECT
+DOMAIN-SUFFIX,anyrtb.com,REJECT
+DOMAIN-SUFFIX,anythinktech.com,REJECT
+DOMAIN-SUFFIX,apd-pcdnwxstat.teg.tencent-cloud.net,REJECT
+# —— 拼多多（Blockads）
+DOMAIN-SUFFIX,apm.pinduoduo.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,app-analytics-services.com,REJECT
+DOMAIN-SUFFIX,app-measurement.com,REJECT
+DOMAIN-SUFFIX,appcfg.v.qq.com,REJECT
+DOMAIN-SUFFIX,applog.lc.quark.cn,REJECT
+DOMAIN-SUFFIX,appsad.cn,REJECT
+DOMAIN-SUFFIX,arms-retcode.aliyuncs.com,REJECT
+DOMAIN-SUFFIX,artcto.com,REJECT
+DOMAIN-SUFFIX,atoken.m.taobao.com,REJECT
+DOMAIN-SUFFIX,audid-api.taobao.com,REJECT
+# —— 美柚（Blockads）
+DOMAIN-SUFFIX,axxd.xmseeyouyima.com,REJECT
+DOMAIN-SUFFIX,beacon-api.aliyuncs.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,beanxin.com,REJECT
+DOMAIN-SUFFIX,beizi.info,REJECT
+DOMAIN-SUFFIX,beizi.online,REJECT
+DOMAIN-SUFFIX,browser.events.data.msn.com,REJECT
+DOMAIN-SUFFIX,bxsnews.com,REJECT
+DOMAIN-SUFFIX,byteadverts.com,REJECT
+DOMAIN-SUFFIX,c.evidon.com,REJECT
+DOMAIN-SUFFIX,c.gj.qq.com,REJECT
+# —— HTTPDNS拦截（Blockads）
+DOMAIN-SUFFIX,cdndns.kwd.inkuai.com,REJECT
+DOMAIN-SUFFIX,cfg.imtt.qq.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,combocn.com,REJECT
+DOMAIN-SUFFIX,conf.hpplay.cn,REJECT
+DOMAIN-SUFFIX,cxwlad.com,REJECT
+DOMAIN-SUFFIX,data.mistat.xiaomi.com,REJECT
+# —— 叮咚买菜（Blockads）
+DOMAIN-SUFFIX,ddfs-public.ddimg.mobi,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,deepinstall.com,REJECT
+DOMAIN-SUFFIX,dig.bdurl.net,REJECT
+DOMAIN-SUFFIX,dm.toutiao.com,REJECT
+# —— HTTPDNS拦截（Blockads）
+DOMAIN-SUFFIX,dns.iqiyi.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,dratio.com,REJECT
+DOMAIN-SUFFIX,dsp.fcbox.com,REJECT
+# —— 微信小程序（Blockads）
+DOMAIN-SUFFIX,e.jparking.cn,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,ep7.facebook.com,REJECT
+DOMAIN-SUFFIX,eshiqi.com,REJECT
+DOMAIN-SUFFIX,etoolads.cn,REJECT
+DOMAIN-SUFFIX,fancydsp.com,REJECT
+DOMAIN-SUFFIX,fanglinad.com,REJECT
+DOMAIN-SUFFIX,firebaseinappmessaging.googleapis.com,REJECT
+DOMAIN-SUFFIX,fireluck.cn,REJECT
+DOMAIN-SUFFIX,fivecdm.com,REJECT
+DOMAIN-SUFFIX,fwosapp.com,REJECT
+# —— 彩云天气（Blockads）
+DOMAIN-SUFFIX,gather.colorfulclouds.net,REJECT
+DOMAIN-SUFFIX,gdfp.gifshow.com,REJECT
+DOMAIN-SUFFIX,google-analytics.com,REJECT
+DOMAIN-SUFFIX,googleadservices.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,googlesyndication-cn.com,REJECT
+DOMAIN-SUFFIX,h-adashx.ut.taobao.com,REJECT
+DOMAIN-SUFFIX,h5.hpplay.com.cn,REJECT
+DOMAIN-SUFFIX,halomobi.com,REJECT
+# —— HTTPDNS拦截（Blockads）
+DOMAIN-SUFFIX,hdns.k-dyn.com,REJECT
+DOMAIN-SUFFIX,httpdns-sc.aliyuncs.com,REJECT
+DOMAIN-SUFFIX,httpdns-v6.gslb.yy.com,REJECT
+DOMAIN-SUFFIX,httpdns.baidubce.com,REJECT
+DOMAIN-SUFFIX,httpdns.immomo.com,REJECT
+DOMAIN-SUFFIX,hugelog.fcbox.com,REJECT
+DOMAIN-SUFFIX,huichuan-mc.sm.cn,REJECT
+DOMAIN-SUFFIX,huichuan.sm.cn,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,hzjizhun.cn,REJECT
+DOMAIN-SUFFIX,hzjizhun.com,REJECT
+DOMAIN-SUFFIX,iaddata.com,REJECT
+# —— 网易云音乐（Blockads）
+DOMAIN-SUFFIX,iadmat.nosdn.127.net,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,iads.unity3d.com,REJECT
+DOMAIN-SUFFIX,info6.video.qq.com,REJECT
+DOMAIN-SUFFIX,installtongji.online,REJECT
+DOMAIN-SUFFIX,installtongji.top,REJECT
+DOMAIN-SUFFIX,iytcdn.com,REJECT
+DOMAIN-SUFFIX,kuaichuanad.com,REJECT
+DOMAIN-SUFFIX,kuaiyiad.com,REJECT
+DOMAIN-SUFFIX,letway.cn,REJECT
+DOMAIN-SUFFIX,lf-ad-ies.bytecdn.cn,REJECT
+# —— 番茄小说（Blockads）
+DOMAIN-SUFFIX,lf-normal-gr-sourcecdn.bytegecko.com,REJECT
+DOMAIN-SUFFIX,lf-webcast-gr-sourcecdn.bytegecko.com,REJECT
+DOMAIN-SUFFIX,log-upload.mihoyo.com,REJECT
+DOMAIN-SUFFIX,log1.cmpassport.com,REJECT
+DOMAIN-SUFFIX,log3-applog.fqnovel.com,REJECT
+DOMAIN-SUFFIX,log5-applog.fqnovel.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,lydaas.cn,REJECT
+DOMAIN-SUFFIX,lydaas.com,REJECT
+DOMAIN-SUFFIX,lydaas.com.cn,REJECT
+DOMAIN-SUFFIX,lydaas.net,REJECT
+DOMAIN-SUFFIX,lydass.cn,REJECT
+DOMAIN-SUFFIX,lydass.com.cn,REJECT
+DOMAIN-SUFFIX,lydass.net,REJECT
+# —— QQ音乐（Blockads）
+DOMAIN-SUFFIX,mc.tencentmusic.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,mentamob.com,REJECT
+DOMAIN-SUFFIX,mercury-gateway.ixiaochuan.cn,REJECT
+DOMAIN-SUFFIX,mobilelog.kugou.com,REJECT
+DOMAIN-SUFFIX,mobmore.com,REJECT
+DOMAIN-SUFFIX,moloco.com,REJECT
+# —— 番茄小说（Blockads）
+DOMAIN-SUFFIX,mon11-misc.fqnovel.com,REJECT
+DOMAIN-SUFFIX,mon3-misc.fqnovel.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,motowoo.com,REJECT
+DOMAIN-SUFFIX,newitai.com,REJECT
+DOMAIN-SUFFIX,o2o.api.xiaomi.com,REJECT
+DOMAIN-SUFFIX,odm.app-ads-services.com,REJECT
+DOMAIN-SUFFIX,opadlink.com,REJECT
+DOMAIN-SUFFIX,openinstall.com,REJECT
+DOMAIN-SUFFIX,openinstall.io,REJECT
+DOMAIN-SUFFIX,openinstall.online,REJECT
+DOMAIN-SUFFIX,openinstall.top,REJECT
+DOMAIN-SUFFIX,openlink.cc,REJECT
+DOMAIN-SUFFIX,oplinking.com,REJECT
+DOMAIN-SUFFIX,opstatistics.cn,REJECT
+DOMAIN-SUFFIX,opstatistics.com,REJECT
+DOMAIN-SUFFIX,orbit.jd.com,REJECT
+# —— 番茄小说（Blockads）
+DOMAIN-SUFFIX,p3-developer.bytemaimg.com,REJECT
+DOMAIN-SUFFIX,p3-tt.byteimg.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,partner.gifshow.com,REJECT
+DOMAIN-SUFFIX,pgdt.gtimg.cn,REJECT
+DOMAIN-SUFFIX,popadshop.com,REJECT
+DOMAIN-SUFFIX,puata.info,REJECT
+DOMAIN-SUFFIX,public.gdtimg.com,REJECT
+DOMAIN-SUFFIX,qidianad.com,REJECT
+DOMAIN-SUFFIX,qzs.qq.com,REJECT
+DOMAIN-SUFFIX,readgps.com,REJECT
+DOMAIN-SUFFIX,redirect.shunchangzhixing.com,REJECT
+# —— HTTPDNS拦截（Blockads）
+DOMAIN-SUFFIX,resolver.msg.xiaomi.net,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,retcode.alicdn.com,REJECT
+DOMAIN-SUFFIX,rhinokeen.com,REJECT
+DOMAIN-SUFFIX,richmob.cn,REJECT
+DOMAIN-SUFFIX,rixengine.com,REJECT
+# —— 番茄小说（Blockads）
+DOMAIN-SUFFIX,rtlog3-applog.fqnovel.com,REJECT
+DOMAIN-SUFFIX,rtlog5-applog.fqnovel.com,REJECT
+# —— 叮咚买菜（Blockads）
+DOMAIN-SUFFIX,rttrack.ddxq.mobi,REJECT
+# —— 中华万年历（Blockads）
+DOMAIN-SUFFIX,sdk.ad.sfys365.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,setway.cn,REJECT
+DOMAIN-SUFFIX,shanghailingye.cn,REJECT
+DOMAIN-SUFFIX,shenshiads.com,REJECT
+DOMAIN-SUFFIX,skarb.club,REJECT
+DOMAIN-SUFFIX,skarb.work,REJECT
+DOMAIN-SUFFIX,sl.hpplay.cn,REJECT
+DOMAIN-SUFFIX,slyxmobi.com,REJECT
+DOMAIN-SUFFIX,smadex.com,REJECT
+DOMAIN-SUFFIX,staevent.work,REJECT
+DOMAIN-SUFFIX,staevent.xyz,REJECT
+DOMAIN-SUFFIX,stat.y.qq.com,REJECT
+DOMAIN-SUFFIX,stat6.y.qq.com,REJECT
+DOMAIN-SUFFIX,statchannel.store,REJECT
+DOMAIN-SUFFIX,statchannel.top,REJECT
+DOMAIN-SUFFIX,static-s.iqiyi.com,REJECT
+DOMAIN-SUFFIX,statis.miwuad.com,REJECT
+DOMAIN-SUFFIX,statisticslinks.com,REJECT
+DOMAIN-SUFFIX,statschannel.xyz,REJECT
+DOMAIN-SUFFIX,statsinstall.xyz,REJECT
+# —— 拼多多（Blockads）
+DOMAIN-SUFFIX,ta-a.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,ta.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,tagtic.cn,REJECT
+DOMAIN-SUFFIX,th-a.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,th-b.pinduoduo.com,REJECT
+DOMAIN-SUFFIX,th.pinduoduo.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,tianmu.mobi,REJECT
+# —— 拼多多（Blockads）
+DOMAIN-SUFFIX,titan.pinduoduo.com,REJECT
+# —— QQ音乐（Blockads）
+DOMAIN-SUFFIX,tmeadbak.y.qq.com,REJECT
+DOMAIN-SUFFIX,tmeadquic.y.qq.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,tobidad.cn,REJECT
+DOMAIN-SUFFIX,tobidad.com,REJECT
+DOMAIN-SUFFIX,toponad.com,REJECT
+DOMAIN-SUFFIX,toponadss.com,REJECT
+DOMAIN-SUFFIX,tpstelemetry.tencent.com,REJECT
+DOMAIN-SUFFIX,tracker.ai.xiaomi.com,REJECT
+# —— 叮咚买菜（Blockads）
+DOMAIN-SUFFIX,trackercollect.ddxq.mobi,REJECT
+DOMAIN-SUFFIX,tvapp.hpplay.cn,REJECT
+# —— HTTPDNS拦截（Blockads）
+DOMAIN-SUFFIX,ucdc.upaas.quark.cn,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,um0.cn,REJECT
+DOMAIN-SUFFIX,um1.cn,REJECT
+DOMAIN-SUFFIX,umengjmacs.m.taobao.com,REJECT
+DOMAIN-SUFFIX,umsns.com,REJECT
+DOMAIN-SUFFIX,umtrack.com,REJECT
+DOMAIN-SUFFIX,umtrack0.com,REJECT
+DOMAIN-SUFFIX,umtrack1.com,REJECT
+DOMAIN-SUFFIX,umtrack2.com,REJECT
+DOMAIN-SUFFIX,umv0.com,REJECT
+DOMAIN-SUFFIX,umv5.com,REJECT
+# —— 淘宝（Blockads）
+DOMAIN-SUFFIX,ut.taobao.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,wayio.cn,REJECT
+DOMAIN-SUFFIX,wrating.com,REJECT
+# —— 微信小程序（Blockads）
+DOMAIN-SUFFIX,wxsmsdy.video.qq.com,REJECT
+DOMAIN-SUFFIX,wxsnsdy.wxs.qq.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,xcultur.com,REJECT
+DOMAIN-SUFFIX,xdplt.com,REJECT
+# —— 拼多多（Blockads）
+DOMAIN-SUFFIX,xg.pinduoduo.com,REJECT
+# —— 广告平台拦截（Blockads）
+DOMAIN-SUFFIX,xinduoad.com,REJECT
+DOMAIN-SUFFIX,xixikf.com,REJECT
+DOMAIN-SUFFIX,yiweiads.com,REJECT
+# —— HTTPDNS拦截（Blockads）
+DOMAIN-SUFFIX,yuyin-httpdns.gslb.yy.com,REJECT
+DOMAIN-SUFFIX,zhihu-web-analytics.zhihu.com,REJECT
+IP-CIDR,180.76.76.200/32,REJECT,no-resolve

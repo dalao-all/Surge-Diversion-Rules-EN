@@ -1,3 +1,6 @@
+# —— Upstream status (Your Subscription, verified 2026-10-02) ——
+# Source: Snapshot (Thelongdarkorg/ad-rules-merged, 2026-09-27, not live-synced) | Active entries: 17414 (excl. comments/blanks)
+# Review: self-maintained tables update on feedback; snapshot tables re-pull upstream periodically.
 # Your Subscription / 你的订阅 V6.1 patches/ads-patch.list
 # Self-maintained ad splash-screen patch: Surge-format conversion of 浮风拦截规则 (Thelongdarkorg/ad-rules-merged)
 # Source snapshot: https://raw.githubusercontent.com/Thelongdarkorg/ad-rules-merged/main/merged.txt

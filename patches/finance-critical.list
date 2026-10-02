@@ -1,3 +1,6 @@
+# —— Upstream status (Your Subscription, verified 2026-10-02) ——
+# Source: Self-maintained (digital-asset critical exceptions) | Active entries: 6 (excl. comments/blanks)
+# Review: self-maintained tables update on feedback; snapshot tables re-pull upstream periodically.
 # Your Subscription V6.0 finance-critical.list
 # 用途：数字资产组关键前置例外（toblog/tobapplog、okex、部分 AppsFlyer 前缀）。
 # 策略由主配置 RULE-SET 行指定 → 「🪙 数字资产」

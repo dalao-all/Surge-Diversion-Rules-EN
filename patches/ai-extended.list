@@ -1,3 +1,6 @@
+# —— Upstream status (Your Subscription, verified 2026-10-02) ——
+# Source: Self-maintained (AI official/community/telemetry) | Active entries: 23 (excl. comments/blanks)
+# Review: self-maintained tables update on feedback; snapshot tables re-pull upstream periodically.
 # ai-extended.list — 国外 AI 全量补丁（官方+社区+遥测）
 # 引用行（加在 [Rule] 第 3 节顶部、现有 AI 内联规则之前）：
 # RULE-SET,https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules/main/patches/ai-extended.list,"🤖 AI住宅",update-interval=86400
