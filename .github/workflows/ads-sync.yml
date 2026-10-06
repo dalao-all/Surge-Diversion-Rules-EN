@@ -1,0 +1,39 @@
+# 每周把上游 Thelongdarkorg/ad-rules-merged 的变化同步到
+# patches/ads-patch.list 与 patches/ads-patch.domainset。
+# 全自动：用 GITHUB_TOKEN 提交，无需 PAT。手机端 Surge 按 update-interval
+# 自动拉新，无需重导配置。
+name: ads-patch weekly sync
+
+on:
+  schedule:
+    # 每周一 03:00 UTC = 北京时间 11:00
+    - cron: '0 3 * * 1'
+  workflow_dispatch:  # 允许手动触发验证
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Sync from upstream
+        run: python3 .github/scripts/ads_sync.py --lang en --repo .
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add patches/ads-patch.list patches/ads-patch.domainset
+          if git diff --cached --quiet; then
+            echo "no changes, skipping commit"
+          else
+            git commit -m "chore(ads): weekly upstream sync $(date +%F)"
+            git push
+          fi
