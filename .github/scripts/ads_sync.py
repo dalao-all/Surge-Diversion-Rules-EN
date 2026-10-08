@@ -34,18 +34,36 @@ def fetch(url, timeout=60):
 
 
 def parse_upstream(text):
-    block, allow = set(), set()
+    """Parse upstream rules. Returns (block, allow, path_skipped).
+
+    Only host-level rules (||host^, ||host/, ||host|) become blocks.
+    Path-specific rules (||host/some/path) are DISCARDED: Surge cannot do
+    path matching, and whole-host blocking breaks sites (e.g. turning
+    ||mp.weixin.qq.com/mp/advertisement^ into a block of all mp.weixin.qq.com
+    breaks WeChat article reading). Better to miss an ad than break a site.
+    """
+    block, allow, path_skipped = set(), set(), set()
     for line in text.splitlines():
         line = line.strip()
-        m = re.match(r'^\|\|(' + DOMAIN + r')(?=[\^/:|$]|$)', line)
+        m = re.match(r'^\|\|(' + DOMAIN + r')', line)
         if m:
-            block.add(m.group(1).lower())
+            domain = m.group(1).lower()
+            rest = re.sub(r'^:\d+', '', line[m.end():])  # strip :port
+            if rest.startswith('/'):
+                tail = rest[1:]
+                # root path ("/", "/^") -> host rule; "/real/path" -> discard
+                if tail and not re.match(r'^[\^|$]', tail):
+                    path_skipped.add(domain)
+                    continue
+            block.add(domain)
             continue
+        # only bare @@||domain (no $ options) counts as global allowlist;
+        # scoped exceptions like @@||x^$domain=y do NOT unblock the domain
         if '$' not in line:
             m = re.match(r'^@@\|\|(' + DOMAIN + r')(?=[\^/:|$]|$)', line)
             if m:
                 allow.add(m.group(1).lower())
-    return block, allow
+    return block, allow, path_skipped
 
 
 def load_exclusions():
@@ -90,7 +108,9 @@ LIST_HDR_COMMON = """# Your Subscription / 你的订阅 V6.1 patches/ads-patch.l
 # Self-maintained ad splash-screen patch: Surge-format conversion of 浮风拦截规则 (Thelongdarkorg/ad-rules-merged)
 # Source snapshot: https://raw.githubusercontent.com/Thelongdarkorg/ad-rules-merged/main/merged.txt
 # Snapshot date: {snapshot} (upstream Expires: 12h; this file is a snapshot mirror, re-sync weekly)
-# Conversion: only pure domain-blocking rules (||domain^) converted to DOMAIN-SUFFIX,REJECT
+# Conversion: host-level rules (||host^) -> DOMAIN-SUFFIX,REJECT; path-specific
+#   rules (||host/path) are discarded (Surge cannot match paths; whole-host
+#   blocking would break sites). DOMAIN-SET uses leading-dot form for suffix match.
 # Removed: upstream @@ allowlisted domains, plus standing audit exclusions
 #   (Apple system/service domains, functional domains, higher-priority overlaps).
 # Reference: main profile [Rule] section 1.3, after direct-patch, before the SKK ad base
@@ -128,7 +148,7 @@ def main():
     except Exception:
         snapshot = verify
 
-    block, allow = parse_upstream(upstream_text)
+    block, allow, path_skipped = parse_upstream(upstream_text)
     candidate = block - allow - load_exclusions()
     current = read_current_list(os.path.join(args.repo, "patches", "ads-patch.list"))
     added = sorted(candidate - current)
@@ -141,9 +161,11 @@ def main():
     list_content = (LIST_HDR[args.lang].format(verify=verify, snapshot=snapshot, count=count)
                     + LIST_HDR_COMMON.format(snapshot=snapshot)
                     + "".join(f"DOMAIN-SUFFIX,{d},REJECT\n" for d in sorted(final)))
+    # DOMAIN-SET: leading dot = suffix match (official manual). Bare domains
+    # would be exact-match only, silently dropping subdomain coverage.
     ds_content = (DS_HDR[args.lang].format(verify=verify, snapshot=snapshot,
                                            count=count, upstream_total=upstream_total)
-                  + "".join(f"{d}\n" for d in sorted(final)))
+                  + "".join(f".{d}\n" for d in sorted(final)))
 
     with open(os.path.join(args.repo, "patches", "ads-patch.list"), "w") as f:
         f.write(list_content)
@@ -151,7 +173,8 @@ def main():
         f.write(ds_content)
 
     print(f"SUMMARY net=+{net_added} removed={len(removed)} "
-          f"(new_upstream={len(added)} quarantined_apple={len(quarantine)})")
+          f"(new_upstream={len(added)} quarantined_apple={len(quarantine)} "
+          f"path_rules_skipped={len(path_skipped)})")
     if quarantine:
         print("QUARANTINED:")
         for d in quarantine:
