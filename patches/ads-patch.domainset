@@ -1,5 +1,5 @@
 # ads-patch.domainset | DOMAIN-SET form of ads-patch.list (same source, same content)
-# Source: Thelongdarkorg/ad-rules-merged (Adblock Plus, 2026-10-11 snapshot, 34039 rules), mechanical conversion
+# Source: Thelongdarkorg/ad-rules-merged (Adblock Plus, 2026-10-12 snapshot, 34039 rules), mechanical conversion
 # Built: 2026-10-12 | Entries: 20922 (pure domains)
 # Usage: DOMAIN-SET,https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/patches/ads-patch.domainset,REJECT,update-interval=43200
 # Note: pick ONE of .list / .domainset, not both.
