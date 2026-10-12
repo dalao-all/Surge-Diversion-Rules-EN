@@ -41,6 +41,14 @@ def parse_upstream(text):
     path matching, and whole-host blocking breaks sites (e.g. turning
     ||mp.weixin.qq.com/mp/advertisement^ into a block of all mp.weixin.qq.com
     breaks WeChat article reading). Better to miss an ad than break a site.
+
+    Hosts-format lines ("0.0.0.0 example.com", "127.0.0.1 example.com") are
+    whole-host blocks and are parsed as such. "*.example.com" collapses to
+    "example.com" (DOMAIN-SUFFIX covers the wildcard's scope; the apex is an
+    ad domain by upstream's own listing). Partial wildcards ("log*.x.com",
+    "beacons*.gvt3.com"), bare IPs and single-label names are SKIPPED --
+    converting "log*.aliyuncs.com" to a suffix of aliyuncs.com would nuke all
+    of Alibaba Cloud. Better to miss an ad than break a service.
     """
     block, allow, path_skipped = set(), set(), set()
     for line in text.splitlines():
@@ -56,6 +64,20 @@ def parse_upstream(text):
                     path_skipped.add(domain)
                     continue
             block.add(domain)
+            continue
+        # hosts-format: "0.0.0.0 example.com" / "127.0.0.1 example.com"
+        # (merged.txt carries ~6k 0.0.0.0 + ~5k 127.0.0.1 lines)
+        m = re.match(r'^(?:0\.0\.0\.0|127\.0\.0\.1)\s+(\S+)', line)
+        if m:
+            raw = m.group(1).lower()
+            if raw.startswith('*.'):
+                raw = raw[2:]
+            if ('*' in raw  # partial wildcard: skip, would over-block
+                    or re.match(r'^\d+\.\d+\.\d+\.\d+$', raw)  # bare IP
+                    or '.' not in raw  # single-label: localhost etc.
+                    or not re.fullmatch(DOMAIN, raw)):
+                continue
+            block.add(raw)
             continue
         # only bare @@||domain (no $ options) counts as global allowlist;
         # scoped exceptions like @@||x^$domain=y do NOT unblock the domain
@@ -108,9 +130,11 @@ LIST_HDR_COMMON = """# Your Subscription / 你的订阅 V6.1 patches/ads-patch.l
 # Self-maintained ad splash-screen patch: Surge-format conversion of 浮风拦截规则 (Thelongdarkorg/ad-rules-merged)
 # Source snapshot: https://raw.githubusercontent.com/Thelongdarkorg/ad-rules-merged/main/merged.txt
 # Snapshot date: {snapshot} (upstream Expires: 12h; this file is a snapshot mirror, re-sync weekly)
-# Conversion: host-level rules (||host^) -> DOMAIN-SUFFIX,REJECT; path-specific
-#   rules (||host/path) are discarded (Surge cannot match paths; whole-host
-#   blocking would break sites). DOMAIN-SET uses leading-dot form for suffix match.
+# Conversion: host-level rules (||host^) and hosts-format lines (0.0.0.0 /
+#   127.0.0.1 host) -> DOMAIN-SUFFIX,REJECT; path-specific rules (||host/path)
+#   are discarded (Surge cannot match paths; whole-host blocking would break
+#   sites), as are partial wildcards (log*.x.com), bare IPs and single-label
+#   names. DOMAIN-SET uses leading-dot form for suffix match.
 # Removed: upstream @@ allowlisted domains, plus standing audit exclusions
 #   (Apple system/service domains, functional domains, higher-priority overlaps).
 # Reference: main profile [Rule] section 1.3, after direct-patch, before the SKK ad base
