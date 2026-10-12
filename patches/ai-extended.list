@@ -1,5 +1,5 @@
-# —— Upstream status (Your Subscription, verified 2026-10-02) ——
-# Source: Self-maintained (AI official/community/telemetry) | Active entries: 23 (excl. comments/blanks)
+# —— Upstream status (Your Subscription, verified 2026-10-02; 5 entries added 2026-10-12) ——
+# Source: Self-maintained (AI official/community/telemetry) | Active entries: 28 (excl. comments/blanks)
 # Review: self-maintained tables update on feedback; snapshot tables re-pull upstream periodically.
 # ai-extended.list — 国外 AI 全量补丁（官方+社区+遥测）
 # 引用行（加在 [Rule] 第 3 节顶部、现有 AI 内联规则之前）：
@@ -21,6 +21,16 @@ DOMAIN,chat.openai.com.cdn.cloudflare.net
 # --- Anthropic / Claude：官网 CDN 补充 ---
 DOMAIN,servd-anthropic-website.b-cdn.net
 
+# --- Anthropic / Claude：平台新域名（2026-10-12 新增）---
+DOMAIN-SUFFIX,platform.claude.com
+
+# --- Cursor（Anysphere）：云虚拟机与二进制分发（2026-10-12 新增）---
+DOMAIN-SUFFIX,cursorvm.com
+DOMAIN,anysphere-binaries.s3.us-east-1.amazonaws.com
+
+# --- xAI：账号体系（2026-10-12 新增）---
+DOMAIN,accounts.spacex.ai
+
 # --- Google AI：品牌域补充（API 端点已由 googleapis.com 后缀覆盖）---
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
@@ -41,6 +51,8 @@ DOMAIN-SUFFIX,openart.ai
 DOMAIN-SUFFIX,meta.ai
 DOMAIN-SUFFIX,v0.dev
 DOMAIN-SUFFIX,v0.app
+# Hark：Brett Adcock 的浏览器 Agent（2026-10-12 新增）
+DOMAIN-SUFFIX,hark.com
 # sanas.ai：用户手机装有 Sanas，域名待抓包验证，先收录观察命中日志
 DOMAIN-SUFFIX,sanas.ai
 # 注：vercel.com 为通用托管平台（大量非 AI 站点），故意未收录以免误伤
