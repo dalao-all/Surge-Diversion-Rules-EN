@@ -43,12 +43,25 @@ def parse_upstream(text):
     breaks WeChat article reading). Better to miss an ad than break a site.
 
     Hosts-format lines ("0.0.0.0 example.com", "127.0.0.1 example.com") are
-    whole-host blocks and are parsed as such. "*.example.com" collapses to
-    "example.com" (DOMAIN-SUFFIX covers the wildcard's scope; the apex is an
-    ad domain by upstream's own listing). Partial wildcards ("log*.x.com",
-    "beacons*.gvt3.com"), bare IPs and single-label names are SKIPPED --
-    converting "log*.aliyuncs.com" to a suffix of aliyuncs.com would nuke all
-    of Alibaba Cloud. Better to miss an ad than break a service.
+    SKIPPED entirely (2026-10-13 fix): merged.txt carries ~11k of them, sourced
+    from aggressive personal splash-screen hosts lists that list FUNCTIONAL
+    infrastructure (0.0.0.0 apiinit.amap.com breaks Amap SDK init,
+    0.0.0.0 snssdk.com suffix-expanded to nuke all of Douyin's APIs,
+    0.0.0.0 img.360buyimg.com kills JD product images, etc.). Converting them
+    -- even as exact-host matches -- breaks apps. Better to miss an ad than
+    break a service. (The 2026-10-12 change that converted them added ~3,550
+    entries and broke Douyin/JD/Amap; reverted here.)
+
+    A || rule is only accepted when the character right after the hostname is
+    a valid ABP terminator (^, |, $, /) or end-of-line. Without this,
+    ||at*.doubanio.com^ truncated at "*" and produced "at", which became a
+    block of the entire .at TLD (same for .az .bz .ad .ads .click .download).
+    Single-label results are skipped as well.
+
+    Partial wildcards ("log*.x.com", "beacons*.gvt3.com"), bare IPs and
+    single-label names are SKIPPED -- converting "log*.aliyuncs.com" to a
+    suffix of aliyuncs.com would nuke all of Alibaba Cloud. Better to miss an
+    ad than break a service.
     """
     block, allow, path_skipped = set(), set(), set()
     for line in text.splitlines():
@@ -57,6 +70,12 @@ def parse_upstream(text):
         if m:
             domain = m.group(1).lower()
             rest = re.sub(r'^:\d+', '', line[m.end():])  # strip :port
+            # Hostname must be followed by a valid ABP terminator (^, |, $, /)
+            # or end-of-line. ||at*.doubanio.com^ must NOT become "at".
+            if '.' not in domain:
+                continue
+            if rest and rest[0] not in '/^|$':
+                continue
             if rest.startswith('/'):
                 tail = rest[1:]
                 # root path ("/", "/^") -> host rule; "/real/path" -> discard
@@ -65,20 +84,9 @@ def parse_upstream(text):
                     continue
             block.add(domain)
             continue
-        # hosts-format: "0.0.0.0 example.com" / "127.0.0.1 example.com"
-        # (merged.txt carries ~6k 0.0.0.0 + ~5k 127.0.0.1 lines)
-        m = re.match(r'^(?:0\.0\.0\.0|127\.0\.0\.1)\s+(\S+)', line)
-        if m:
-            raw = m.group(1).lower()
-            if raw.startswith('*.'):
-                raw = raw[2:]
-            if ('*' in raw  # partial wildcard: skip, would over-block
-                    or re.match(r'^\d+\.\d+\.\d+\.\d+$', raw)  # bare IP
-                    or '.' not in raw  # single-label: localhost etc.
-                    or not re.fullmatch(DOMAIN, raw)):
-                continue
-            block.add(raw)
-            continue
+        # hosts-format lines ("0.0.0.0 x", "127.0.0.1 x"): SKIPPED, see
+        # docstring. Do NOT convert them -- upstream's hosts section lists
+        # functional domains and suffix-expanding them breaks apps.
         # only bare @@||domain (no $ options) counts as global allowlist;
         # scoped exceptions like @@||x^$domain=y do NOT unblock the domain
         if '$' not in line:
@@ -130,11 +138,14 @@ LIST_HDR_COMMON = """# Your Subscription / 你的订阅 V6.1 patches/ads-patch.l
 # Self-maintained ad splash-screen patch: Surge-format conversion of 浮风拦截规则 (Thelongdarkorg/ad-rules-merged)
 # Source snapshot: https://raw.githubusercontent.com/Thelongdarkorg/ad-rules-merged/main/merged.txt
 # Snapshot date: {snapshot} (upstream Expires: 12h; this file is a snapshot mirror, re-sync weekly)
-# Conversion: host-level rules (||host^) and hosts-format lines (0.0.0.0 /
-#   127.0.0.1 host) -> DOMAIN-SUFFIX,REJECT; path-specific rules (||host/path)
-#   are discarded (Surge cannot match paths; whole-host blocking would break
-#   sites), as are partial wildcards (log*.x.com), bare IPs and single-label
-#   names. DOMAIN-SET uses leading-dot form for suffix match.
+# Conversion: host-level ||host rules (^, |, $, / terminators only) ->
+#   DOMAIN-SUFFIX,REJECT. Hosts-format lines (0.0.0.0 / 127.0.0.1) are SKIPPED:
+#   upstream's hosts section lists functional infrastructure and converting it
+#   breaks apps (2026-10-12 incident: apiinit.amap.com, snssdk.com apex, ...).
+#   Path-specific rules (||host/path) are discarded (Surge cannot match paths;
+#   whole-host blocking would break sites), as are partial wildcards
+#   (log*.x.com), bare IPs and single-label names. DOMAIN-SET uses leading-dot
+#   form for suffix match.
 # Removed: upstream @@ allowlisted domains, plus standing audit exclusions
 #   (Apple system/service domains, functional domains, higher-priority overlaps).
 # Reference: main profile [Rule] section 1.3, after direct-patch, before the SKK ad base
