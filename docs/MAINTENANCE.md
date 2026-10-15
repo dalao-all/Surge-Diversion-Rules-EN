@@ -42,7 +42,7 @@ python3 rulekit_v4/validate_release.py
 
 Offline rebuilding requires a previously verified complete local cache; that cache is not committed. For an initial online build, use `python3 rulekit_v4/build.py` in a suitable canonical checkout. The engine uses the Python standard library and git.
 
-The refresh baseline passed **37 compiler unit tests and 201 static probes**. Read the current [report](../dist/v4/report.json) for changing counts and probe evidence. These tests check static routing semantics, not phone behavior, account eligibility, actual residential exits or app completeness.
+The current validation suite contains **64 engine/health tests, 9 mirror tests and 210 static probes**; export validation covers 25 data files. Read the current [report](../dist/v4/report.json) for changing counts and probe evidence. These tests check static routing semantics, not phone behavior, account eligibility, actual residential exits or app completeness.
 
 ## Inspect release evidence
 
@@ -59,8 +59,10 @@ The app matrix contains **13 unresolved** and **5 local-only** records. All 164 
 
 Choose a verified release from Git history and restore its complete `dist/v4` artifact set in a new commit. Merge current protection history into that earlier state and rebuild before publication, so an old advertising file cannot reintroduce a fixed false block. Do not rewrite shared history with a forced push.
 
-Refresh external resources on the phone and inspect all 23 downloads. Multi-file downloads are not atomic: preserve compatible protection across old/new advertising generations. Test login, payment, messaging, media, maps and AI flows on Wi-Fi and cellular, recording real hosts, first matches and exits. Static validation, publishing a commit and passing phone acceptance are separate outcomes.
+Refresh external resources on the phone and inspect all 24 downloads. Multi-file downloads are not atomic: preserve compatible protection across old/new advertising generations. Test login, payment, messaging, media, maps and AI flows on Wi-Fi and cellular, recording real hosts, first matches and exits. Static validation, publishing a commit and passing phone acceptance are separate outcomes.
 
 ## Legacy archive
 
 The older interest model, bot specification, workflow example, v6.x profiles/modules, `patches/` and `mirrors/` are retained for compatibility and historical reference. They do not prescribe the current schedule or installation steps. [Historical bot note](BOT_REQUIREMENTS.md) · [Historical interest model](INTEREST_MODEL.md).
+
+The dedicated `ads-storm.list` uses `REJECT-DROP,pre-matching` before every ordinary allow rule; changing ordinary rule order cannot override it. Generation retains exact hosts still covered by the final advertising data and excludes all current and historical protection; new protection automatically removes intersecting storm entries. The main profile mounts 24 resources, while export validation covers 25 data files.

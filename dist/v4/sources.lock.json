@@ -1,5 +1,5 @@
 {
-  "compiler_version": "4.1.0",
+  "compiler_version": "4.1.1",
   "includes": {
     "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/qixin": {
       "path": "data/qixin",

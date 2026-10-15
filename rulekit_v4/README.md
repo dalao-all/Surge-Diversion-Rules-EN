@@ -12,7 +12,7 @@ The current public release is **[Surge V3.0.0](../profiles/surge-V3.0.0.conf)**.
 - `probes.json`: real known hosts with expected static routing results.
 - `data/` and `licenses/`: pinned parsing reference data and source notices.
 
-The engine publishes eleven `protect-*.list` files, `ads.domainset` and eleven category lists under `dist/v4`, together with hashes, source locks, report, semantic baselines and compressed provenance. Categories are `paypal`, `wise`, `binance`, `okx`, `ai`, `tiktok`, `stream`, `google`, `uk`, `global`, `cn`. Google maps to its account select group, following AI by default. Business protection precedes advertising in the generated profile.
+The engine publishes eleven `protect-*.list` files, `ads-storm.list`, `ads.domainset` and eleven category lists under `dist/v4`, together with hashes, source locks, report, semantic baselines and compressed provenance. Categories are `paypal`, `wise`, `binance`, `okx`, `ai`, `tiktok`, `stream`, `google`, `uk`, `global`, `cn`. Google maps to its account select group, following AI by default. Ordinary business protection precedes the full advertising set. The dedicated storm list uses `REJECT-DROP,pre-matching`, which takes precedence over ordinary allow rules; generation therefore excludes all current and historical protection and retains only exact hosts still matched by the final advertising data.
 
 ## Build and inspect
 
@@ -24,7 +24,7 @@ python3 rulekit_v4/validate_release.py
 
 The engine uses Python's standard library and git. An initial online build needs network access. Use `build.py --offline` only with a previously verified complete local cache; the cache is not committed. First publication is subject to the bootstrap review baseline; subsequent builds compare against published per-source semantics.
 
-The refresh baseline passed 37 unit tests and 201 static probes. Static checks do not prove device behavior or complete app coverage. The [matrix](../docs/APP_POLICY_MATRIX.md) includes 13 unresolved records and 5 local-only records; none of the 164 apps has phone acceptance or complete coverage recorded.
+The current probe suite contains 210 static probes; consult the current build output for unit-test results. Static checks do not prove device behavior or complete app coverage. The [matrix](../docs/APP_POLICY_MATRIX.md) includes 13 unresolved records and 5 local-only records; none of the 164 apps has phone acceptance or complete coverage recorded.
 
 ## Canonical maintenance and mirror
 
@@ -33,3 +33,5 @@ The [Chinese repository](https://github.com/dalao-all/Surge-Diversion-Rules) fet
 Required-source errors, unsafe semantic changes and failed probes stop publication. Review large legitimate migrations rather than bypassing checks. Keep protection history during rollback and restore all related artifacts together. Read [MAINTENANCE.md](../docs/MAINTENANCE.md) for source changes, evidence and device acceptance.
 
 Upstream data retains its own licenses and attribution. Older `mirrors/`, `patches/` and v6.x artifacts are compatibility archives, not current engine inputs unless explicitly registered in the current source manifest.
+
+[iPhone request-burst and download troubleshooting](../docs/IOS_TROUBLESHOOTING.md).

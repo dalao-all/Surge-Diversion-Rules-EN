@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "evidence": "User iPhone screenshots 2026-10-15 14:02-14:03; repeated rejected ad SDK requests. Candidates only: final cleaned ad membership and historical protection are checked every build.",
+  "official_behavior": "https://manual.nssurge.com/policies/reject.html",
+  "domains": [
+    "v3.gdt.qq.com",
+    "sdkquic.e.qq.com",
+    "v2mi.gdt.qq.com",
+    "sdk.e.qq.com",
+    "api-access.pangolin-sdk-toutiao-b.com",
+    "gromore.pangolin-sdk-toutiao.com",
+    "log-api.pangolin-sdk-toutiao.com",
+    "adashbc.ut.taobao.com",
+    "adashxgc.ut.taobao.com"
+  ]
+}

@@ -55,8 +55,8 @@ def verify_snapshot(source):
         if hashlib.sha256((source/'dist/v4'/name).read_bytes()).hexdigest()!=digest:raise SyncError('Canonical checksum mismatch')
         items.append(name)
     expected={*(f'protect-{c}.list' for c in ('paypal','wise','binance','okx','ai','tiktok','stream','google','uk','global','cn')),'ads.list',*(c+'.list' for c in ('paypal','wise','binance','okx','ai','tiktok','stream','google','uk','global','cn'))}
-    expected.add('ads.domainset')
-    if len(items)!=24 or set(items)!=expected:raise SyncError('Canonical checksum manifest must cover 23 RULE-SET exports plus the ad DOMAIN-SET')
+    expected.update(('ads.domainset','ads-storm.list'))
+    if len(items)!=25 or set(items)!=expected:raise SyncError('Canonical checksum manifest must cover 24 RULE-SET exports plus the ad DOMAIN-SET')
     report=json.loads((source/'dist/v4/report.json').read_text())
     if not report.get('probes') or any(not x.get('passed') for x in report['probes']):raise SyncError('Canonical probe report failed')
     profile=(source/'profiles/surge-V3.0.0.conf').read_text()

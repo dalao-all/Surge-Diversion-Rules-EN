@@ -1,5 +1,5 @@
 {
-  "compiler_version": "4.1.0",
+  "compiler_version": "4.1.1",
   "counts": {
     "ads": 141064,
     "ai": 66,
@@ -6119,6 +6119,132 @@
       "matched_rule": "DOMAIN,upos-bstar1-mirrorakam.akamaized.net",
       "passed": true,
       "purpose": "国际B站网站/CDN不得被国内规则遮蔽"
+    },
+    {
+      "actual_category": "ads",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "v3.gdt.qq.com",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "expected_category": "ads",
+      "id": "IOS-STORM-01",
+      "matched_rule": "DOMAIN,v3.gdt.qq.com",
+      "passed": true,
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination"
+    },
+    {
+      "actual_category": "ads",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "sdkquic.e.qq.com",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "expected_category": "ads",
+      "id": "IOS-STORM-02",
+      "matched_rule": "DOMAIN-SUFFIX,e.qq.com",
+      "passed": true,
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination"
+    },
+    {
+      "actual_category": "ads",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "v2mi.gdt.qq.com",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "expected_category": "ads",
+      "id": "IOS-STORM-03",
+      "matched_rule": "DOMAIN,v2mi.gdt.qq.com",
+      "passed": true,
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination"
+    },
+    {
+      "actual_category": "ads",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "sdk.e.qq.com",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "expected_category": "ads",
+      "id": "IOS-STORM-04",
+      "matched_rule": "DOMAIN,sdk.e.qq.com",
+      "passed": true,
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination"
+    },
+    {
+      "actual_category": "ads",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "api-access.pangolin-sdk-toutiao-b.com",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "expected_category": "ads",
+      "id": "IOS-STORM-05",
+      "matched_rule": "DOMAIN,api-access.pangolin-sdk-toutiao-b.com",
+      "passed": true,
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination"
+    },
+    {
+      "actual_category": "ads",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "gromore.pangolin-sdk-toutiao.com",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "expected_category": "ads",
+      "id": "IOS-STORM-06",
+      "matched_rule": "DOMAIN,gromore.pangolin-sdk-toutiao.com",
+      "passed": true,
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination"
+    },
+    {
+      "actual_category": "ads",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "log-api.pangolin-sdk-toutiao.com",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "expected_category": "ads",
+      "id": "IOS-STORM-07",
+      "matched_rule": "DOMAIN,log-api.pangolin-sdk-toutiao.com",
+      "passed": true,
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination"
+    },
+    {
+      "actual_category": "ads",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "adashbc.ut.taobao.com",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "expected_category": "ads",
+      "id": "IOS-STORM-08",
+      "matched_rule": "DOMAIN,adashbc.ut.taobao.com",
+      "passed": true,
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination"
+    },
+    {
+      "actual_category": "ads",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "adashxgc.ut.taobao.com",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "expected_category": "ads",
+      "id": "IOS-STORM-09",
+      "matched_rule": "DOMAIN,adashxgc.ut.taobao.com",
+      "passed": true,
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination"
     }
   ],
   "removed_ads": [
@@ -6415,5 +6541,21 @@
       "rule": "DOMAIN-SUFFIX,wxs.qq.com"
     }
   ],
-  "sources": 114
+  "sources": 114,
+  "storm_reject": {
+    "excluded": [],
+    "policy": "REJECT-DROP",
+    "pre_matching": true,
+    "rules": [
+      "DOMAIN,adashbc.ut.taobao.com",
+      "DOMAIN,adashxgc.ut.taobao.com",
+      "DOMAIN,api-access.pangolin-sdk-toutiao-b.com",
+      "DOMAIN,gromore.pangolin-sdk-toutiao.com",
+      "DOMAIN,log-api.pangolin-sdk-toutiao.com",
+      "DOMAIN,sdk.e.qq.com",
+      "DOMAIN,sdkquic.e.qq.com",
+      "DOMAIN,v2mi.gdt.qq.com",
+      "DOMAIN,v3.gdt.qq.com"
+    ]
+  }
 }

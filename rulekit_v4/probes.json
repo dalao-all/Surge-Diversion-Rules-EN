@@ -2869,6 +2869,105 @@
         "User supplied audit; checked against canonical source provenance and legacy configuration"
       ],
       "device_verified": false
+    },
+    {
+      "id": "IOS-STORM-01",
+      "domain": "v3.gdt.qq.com",
+      "expected_category": "ads",
+      "app_ids": [],
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "IOS-STORM-02",
+      "domain": "sdkquic.e.qq.com",
+      "expected_category": "ads",
+      "app_ids": [],
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "IOS-STORM-03",
+      "domain": "v2mi.gdt.qq.com",
+      "expected_category": "ads",
+      "app_ids": [],
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "IOS-STORM-04",
+      "domain": "sdk.e.qq.com",
+      "expected_category": "ads",
+      "app_ids": [],
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "IOS-STORM-05",
+      "domain": "api-access.pangolin-sdk-toutiao-b.com",
+      "expected_category": "ads",
+      "app_ids": [],
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "IOS-STORM-06",
+      "domain": "gromore.pangolin-sdk-toutiao.com",
+      "expected_category": "ads",
+      "app_ids": [],
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "IOS-STORM-07",
+      "domain": "log-api.pangolin-sdk-toutiao.com",
+      "expected_category": "ads",
+      "app_ids": [],
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "IOS-STORM-08",
+      "domain": "adashbc.ut.taobao.com",
+      "expected_category": "ads",
+      "app_ids": [],
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "IOS-STORM-09",
+      "domain": "adashxgc.ut.taobao.com",
+      "expected_category": "ads",
+      "app_ids": [],
+      "purpose": "Screenshot ad SDK blocking witness; no claim of phone runtime storm elimination",
+      "evidence": [
+        "User iPhone screenshots 2026-10-15 14:02-14:03"
+      ],
+      "device_verified": false
     }
   ],
   "uncovered_apps": [

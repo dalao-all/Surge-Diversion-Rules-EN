@@ -344,7 +344,7 @@ class BuildPublicationTests(unittest.TestCase):
         self.assertTrue(report['probes'][0]['passed'])
         self.assertFalse((self.destination / 'release-sentinel').exists())
         first = self.snapshot()
-        self.assertEqual(len([n for n in first if n.endswith('.list')]), 23)
+        self.assertEqual(len([n for n in first if n.endswith('.list')]), 24)
         self.assertIn('provenance.ndjson.gz', first)
         provenance = [json.loads(line) for line in gzip.decompress(first['provenance.ndjson.gz']).decode().splitlines()]
         record = next(r for r in provenance if r['rule'] == 'DOMAIN,login.service.example')

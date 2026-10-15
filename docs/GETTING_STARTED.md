@@ -11,14 +11,12 @@ The public file deliberately has **no node definitions in `[Proxy]`**. It also s
 1. Download the profile and keep a private working copy.
 2. Add your own node definitions to `[Proxy]`, or configure an appropriate provider using the Surge features you use. Never commit credentials or subscription tokens to a public repository.
 3. Check every fallback member and Smart filter against your actual node names. The supplied groups reference original labels; they do not automatically map arbitrary subscription names.
-4. Import the private copy into Surge, check configuration errors, and download all 23 external rule resources.
+4. Import the private copy into Surge, check configuration errors, and download all 24 external rule resources.
 5. Check the selected nodes, first matching rule, and actual exit for representative business flows before switching daily traffic.
 
 ## Node labels require attention
 
-AI and TikTok have separate fallback groups. Their supplied member order is `🇺🇸 美国 12 家宽`, `🇺🇸 美国 10 家宽`, `🇺🇸 美国 11 家宽`, `🇺🇸 美国 13 家宽`, `🇺🇸 美国 14 家宽`.
-
-The UK fallback uses `🇬🇧 英国 04 家宽`, then `🇬🇧 英国 01`, `🇬🇧 英国 02`, `🇬🇧 英国 03`.
+AI and TikTok have separate US fallback groups, and the UK group has its own UK members. Use the member order in your current private configuration; preserve any order you have already chosen.
 
 Preserve those exact labels in your private node definitions, or edit every affected group member to your own real labels. Inspect the Smart groups' country, residential and multiplier filters as well. A node name or successful URL test does not prove a residential exit, service eligibility, or a working AI login. Fallback can change your exit when a node fails.
 
@@ -26,7 +24,7 @@ Preserve those exact labels in your private node definitions, or edit every affe
 
 AI → US residential fallback; TikTok → its own US residential fallback; streaming → streaming Smart; Google → account select, following the AI group by default; UK → UK fallback; global → international Smart; CN → DIRECT. Meta's ordinary traffic uses global routing. Only evidence-backed precise AI authentication exceptions belong in the protected AI layer; Google account consistency is now an explicit reviewed exception; Meta remains on general international routing.
 
-Rules run in the profile's written order: local network foundation → eleven business-protection resources → advertising resource → eleven category resources → CN / GEOIP / FINAL fallback. See the [routing map](../rule-map.html).
+The dedicated ads-storm.list uses pre-matching before ordinary rules, including business allow rules. Remaining rules run in written order: local network foundation → eleven business-protection resources → advertising DOMAIN-SET → eleven category resources → CN / GEOIP / FINAL fallback. The storm list therefore excludes all current and historical protection ranges. See the [routing map](../rule-map.html).
 
 ## First device checks
 
@@ -42,3 +40,5 @@ V3.0.0 does not require installing the archived v6.x AdBlock module. Legacy prof
 
 
 Financial select groups: PayPal defaults to `🇺🇸 美国 12 家宽`; Wise, Binance and OKX default to `🇨🇳 台湾 07 家宽`. Preserve those original labels or change the members. The Google account select defaults to the actual `🤖 AI住宅` group; manually selecting another node changes that consistency. See [audit fixes](REVIEW_FIXES.md).
+
+[iPhone request bursts, empty groups and resource-download troubleshooting](IOS_TROUBLESHOOTING.md).

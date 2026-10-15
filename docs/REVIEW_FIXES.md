@@ -1,6 +1,6 @@
 # User audit: fixes and remaining validation
 
-The public release is surge-V3.0.0; the internal compiler is 4.1.0 and retains the v4 resource namespace.
+The public release is surge-V3.0.0; the internal compiler is 4.1.1 and retains the v4 resource namespace.
 
 1. **Financial exits:** four services were outside the original 160-app list. User-authorized additions INT029–INT032 make 164. Separate select groups default PayPal to the original US residential node and Wise/Binance/OKX to the original Taiwan residential node. Select does not automatically rotate countries. Labels and account eligibility are not verified by static routing. Fixed policies cover known service domains; shared authentication/CDN hosts cannot always be attributed to one financial app by domain alone.
 2. **Streaming overreach:** remove the whole AWS us-west-2 regional suffix and shared CookieLaw/OneTrust/Twemoji rules from streaming. Shared consent and emoji services use general international routing; no AWS-wide Netflix assumption remains.
@@ -11,6 +11,10 @@ The public release is surge-V3.0.0; the internal compiler is 4.1.0 and retains t
 7. **Telemetry:** reject explicit Amplitude ingestion API hosts and Google Tag Manager, while retaining required AI feature-flag exceptions. No blanket assumption that every SDK is an ad service.
 8. **General and ads:** IPv6 stays disabled and Proxy blank. Remove the unused replica=false legacy key and inactive Wi-Fi listener settings. The current official General documentation does not establish a deprecation statement for that specific key. CGNAT is removed from bypass settings, without claiming Tailscale connectivity is configured. Use ads.domainset for the pure-domain ad table; retain equivalent ads.list for older clients. No unmeasured memory-saving figure is claimed.
 
-Next: validate both repositories and 23 resource URLs, add authorized nodes and check their actual exit IPs, then test financial authentication, domestic verification, Bilibili, Google and AI Studio on Wi-Fi/cellular. Static tests do not replace phone business validation. Failed updates retain the previous published release; health checks now run after update completion and on the daily schedule.
+Next: validate both repositories and 24 resource URLs, add authorized nodes and check their actual exit IPs, then test financial authentication, domestic verification, Bilibili, Google and AI Studio on Wi-Fi/cellular. Static tests do not replace phone business validation. Failed updates retain the previous published release; health checks now run after update completion and on the daily schedule.
 
 Sources: [Surge domain rules](https://manual.nssurge.com/rules/domain.html), [rule sets](https://manual.nssurge.com/rules/ruleset.html), [General](https://manual.nssurge.com/profile/general.html). Per-rule origins and corrections are retained in dist/v4/provenance.ndjson.gz and report.json.
+
+## iPhone troubleshooting update (2026-10-15)
+
+Engine 4.1.1 adds a dedicated early-rejection list for nine screenshot advertising endpoints, excluding all current and historical protection. The full advertising set retains ordinary REJECT. The profile uses 24 remote resources, the export manifest covers 25 data files, and the static suite has 210 probes. IPv6 remains disabled, Proxy remains empty, and confirmed user group-member ordering is preserved. Successful independent raw retrieval does not establish recovered phone loading; request-burst improvement and real business acceptance remain pending on iPhone. See [the troubleshooting record](IOS_TROUBLESHOOTING.md) for evidence, boundaries and the local offline emergency copy.

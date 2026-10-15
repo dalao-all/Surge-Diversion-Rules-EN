@@ -12,7 +12,7 @@ A public Surge profile and an auditable rules pipeline. Keep eleven routing cate
 
 - **164 app records:** 132 CN and 32 international records, with stable IDs and explicit coverage states. There are 13 unresolved identities/services and 5 local-only records. No app is marked fully covered or validated on a phone.
 - **114 declared sources and 28 shared dependencies.** A source is evidence for candidate rules, not proof of complete app coverage.
-- **23 runtime resources:** eleven `protect-*.list` files, `ads.domainset`, and eleven category lists in [dist/v4](dist/v4).
+- **24 runtime resources:** eleven `protect-*.list` files, `ads-storm.list`, `ads.domainset`, and eleven category lists in [dist/v4](dist/v4).
 - **Eleven categories:** `paypal`, `wise`, `binance`, `okx`, `ai`, `tiktok`, `stream`, `google`, `uk`, `global`, `cn`. AI and TikTok use US residential fallback groups; Google account traffic follows the AI group by default; ordinary Meta traffic uses international Smart routing; UK uses its UK fallback; CN uses DIRECT.
 
 The release name is **V3.0.0**. The compiler directory `rulekit_v4` and resource path `dist/v4` are internal compatibility paths, not alternate user-facing release numbers.
@@ -32,7 +32,7 @@ The English mirror is scheduled at **06:07 Beijing time**, with a **21:17** heal
 - [Compiler reference](rulekit_v4/README.md)
 - [Published report](dist/v4/report.json) and [machine-readable repository status](repository-status.json)
 
-The current build passed **37 compiler unit tests and 201 static routing probes**. Static checks do not establish app login, payments, playback, node geography, or phone performance. Rule totals change with verified source updates; use the current report rather than an old fixed total.
+The routing probe suite contains **210 static probes**; consult the current build output for unit-test results. Static checks do not establish app login, payments, playback, node geography, or phone performance. Rule totals change with verified source updates; use the current report rather than an old fixed total.
 
 ## Compatibility archive
 
@@ -42,4 +42,6 @@ This repository contains no private node credentials or subscription secrets. Up
 
 ## This audit refresh
 
-The original 160-app list was explicitly extended with PayPal, Wise, Binance and OKX (164 total). There are 23 runtime resources: eleven protected sets, ads.domainset, eleven functional sets. Four fixed financial selects and a Google account select replace unstable generic routing. See [verified fixes and phone acceptance plan](docs/REVIEW_FIXES.md). The historical ads.list export remains compatible.
+The original 160-app list was explicitly extended with PayPal, Wise, Binance and OKX (164 total). There are 24 runtime resources: eleven protected sets, ads-storm.list, ads.domainset, eleven functional sets. Four fixed financial selects and a Google account select replace unstable generic routing. See [verified fixes and phone acceptance plan](docs/REVIEW_FIXES.md). The historical ads.list export remains compatible.
+
+[iPhone request-burst and download troubleshooting](docs/IOS_TROUBLESHOOTING.md).

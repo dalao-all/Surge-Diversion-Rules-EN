@@ -1,0 +1,10 @@
+# Narrow exact ad SDK endpoints; main profile applies REJECT-DROP,pre-matching.
+DOMAIN,adashbc.ut.taobao.com
+DOMAIN,adashxgc.ut.taobao.com
+DOMAIN,api-access.pangolin-sdk-toutiao-b.com
+DOMAIN,gromore.pangolin-sdk-toutiao.com
+DOMAIN,log-api.pangolin-sdk-toutiao.com
+DOMAIN,sdk.e.qq.com
+DOMAIN,sdkquic.e.qq.com
+DOMAIN,v2mi.gdt.qq.com
+DOMAIN,v3.gdt.qq.com

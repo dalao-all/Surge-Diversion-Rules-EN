@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 HERE = ROOT / 'rulekit_v4'
 CATEGORIES = ('paypal','wise','binance','okx','ai', 'tiktok', 'stream', 'google', 'uk', 'global', 'cn')
-VERSION = '4.1.0'
+VERSION = '4.1.1'
 class BuildError(Exception): pass
 
 def sha(data):
@@ -85,6 +85,21 @@ def overlaps(a, b):
         # Conservative witness checks; not a proof of arbitrary pattern disjointness.
         return matches(a, vb) or matches(b, va) or matches(a, 'probe.' + vb) or matches(b, 'probe.' + va)
     return a == b
+
+def storm_subset(ads, protected, candidates):
+    """Exact witnesses already rejected by cleaned ads, never expand blocking scope.
+
+    Pre-matching outranks ordinary allow rules, so current AND historical protections
+    are checked physically, even if a caller has not cleaned its ad set yet.
+    """
+    accepted=[];excluded=[]
+    for name in sorted(set(host(x) for x in candidates)):
+        if any(matches(p,name) for p in protected):
+            excluded.append({'domain':name,'reason':'protected-current-or-historical'})
+        elif not any(matches(r,name) for r in ads):
+            excluded.append({'domain':name,'reason':'not-in-final-ad-set'})
+        else: accepted.append(normal_rule('DOMAIN',name))
+    return accepted,excluded
 
 class Fetcher:
     def __init__(self, offline=False):
@@ -333,6 +348,7 @@ def compile_rules(offline=False, output=None):
             if conflict:
                 tables['ads'].remove(rule); removed_ads.append({'rule':rule,'protection':protection}); break
     if not tables['ads']: raise BuildError('Ads became empty')
+    storm,storm_excluded=storm_subset(tables['ads'],historical,readjson(HERE/'storm-candidates.json',{'domains':[]})['domains'])
     tables={k:sorted(v,key=lambda r:(0 if r.startswith('DOMAIN,') else 1 if r.startswith('DOMAIN-SUFFIX,') else 2,r)) for k,v in tables.items()}
     probes=readjson(HERE/'probes.json',{'probes':[]})['probes']; results=[]
     for p in probes:
@@ -364,13 +380,14 @@ def compile_rules(offline=False, output=None):
                 if winner:
                     shadow_witnesses.append({'witness':value,'winner_category':prevcat,'winner_rule':winner,'shadowed_category':cat,'shadowed_rule':r});break
         earlier.append((cat,tables[cat]))
-    report={'compiler_version':VERSION,'enabled_apps':len(active),'sources':len(sources),'counts':{k:len(v) for k,v in tables.items()},'probes':results,'removed_ads':removed_ads,'parser_omissions':parser.omissions,'legacy_allow_migration_checks':len(migration),'output_corrections':corrections,'exact_cross_category_overlaps':conflicts,'cross_category_shadow_witnesses':shadow_witnesses,'limits':['Static domain/IP checks, not iPhone business or node reachability validation','v2 regex and non-domain process rules explicitly excluded; see parser_omissions','Pattern overlap checks are conservative witnesses, not a proof of all wildcard languages','No online stale-cache fallback: any source acquisition failure keeps last published release']}
+    report={'storm_reject':{'rules':storm,'excluded':storm_excluded,'policy':'REJECT-DROP','pre_matching':True},'compiler_version':VERSION,'enabled_apps':len(active),'sources':len(sources),'counts':{k:len(v) for k,v in tables.items()},'probes':results,'removed_ads':removed_ads,'parser_omissions':parser.omissions,'legacy_allow_migration_checks':len(migration),'output_corrections':corrections,'exact_cross_category_overlaps':conflicts,'cross_category_shadow_witnesses':shadow_witnesses,'limits':['Static domain/IP checks, not iPhone business or node reachability validation','v2 regex and non-domain process rules explicitly excluded; see parser_omissions','Pattern overlap checks are conservative witnesses, not a proof of all wildcard languages','No online stale-cache fallback: any source acquisition failure keeps last published release']}
     # Only fully validated output reaches staging. Replace complete dir, restore on rename error.
     destination.parent.mkdir(parents=True,exist_ok=True)
     staging=Path(tempfile.mkdtemp(prefix='.v4-stage-',dir=destination.parent))
     try:
         for cat,rules in tables.items():
             (staging/(cat+'.list')).write_text('# Surge Rulekit v4 | '+cat+' | policy supplied by main profile\n'+'\n'.join(rules)+'\n')
+        (staging/'ads-storm.list').write_text('# Narrow exact ad SDK endpoints; main profile applies REJECT-DROP,pre-matching.\n'+'\n'.join(storm)+'\n')
         (staging/'ads.domainset').write_text('# Pure-domain ad set; exact host or leading-dot suffix. ads.list remains a compatibility export.\n'+'\n'.join(('.' if r.startswith('DOMAIN-SUFFIX,') else '')+r.split(',')[1] for r in tables['ads'])+'\n')
         (staging/'sources.lock.json').write_text(jsontext({'compiler_version':VERSION,'sources':lock,'includes':parser.children,'psl_sha256':sha((HERE/'data/public_suffix_list.dat').read_bytes())}))
         (staging/'source-rules.json').write_text(jsontext(source_rules))
