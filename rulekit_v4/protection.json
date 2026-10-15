@@ -1,0 +1,2926 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "type": "DOMAIN",
+      "value": "mobilegw.alipay.com",
+      "category": "cn",
+      "app_ids": [
+        "CN001"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "95516.com",
+      "category": "cn",
+      "app_ids": [
+        "CN002"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "m.icbc.com.cn",
+      "category": "cn",
+      "app_ids": [
+        "CN003"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "ccb.com",
+      "category": "cn",
+      "app_ids": [
+        "CN004"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "img1.scrcu.com",
+      "category": "cn",
+      "app_ids": [
+        "CN005"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "cmbchina.com",
+      "category": "cn",
+      "app_ids": [
+        "CN006"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "cib.com.cn",
+      "category": "cn",
+      "app_ids": [
+        "CN007"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "creditcard.ecitic.com",
+      "category": "cn",
+      "app_ids": [
+        "CN008"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "cc.cmbchina.com",
+      "category": "cn",
+      "app_ids": [
+        "CN009"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "jr.jd.com",
+      "category": "cn",
+      "app_ids": [
+        "CN010"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "wxs.qq.com",
+      "category": "cn",
+      "app_ids": [
+        "CN011"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "mmbiz.qpic.cn",
+      "category": "cn",
+      "app_ids": [
+        "CN011"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "vweixinthumb.tc.qq.com",
+      "category": "cn",
+      "app_ids": [
+        "CN011"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "oapi.dingtalk.com",
+      "category": "cn",
+      "app_ids": [
+        "CN012"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "qun.qq.com",
+      "category": "cn",
+      "app_ids": [
+        "CN013"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "aweme.snssdk.com",
+      "category": "cn",
+      "app_ids": [
+        "CN014"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "haohuo.jinritemai.com",
+      "category": "cn",
+      "app_ids": [
+        "CN014"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api.kuaishou.com",
+      "category": "cn",
+      "app_ids": [
+        "CN015"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "s1.kskwai.com",
+      "category": "cn",
+      "app_ids": [
+        "CN015"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "edith.xiaohongshu.com",
+      "category": "cn",
+      "app_ids": [
+        "CN016"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "app.bilibili.com",
+      "category": "cn",
+      "app_ids": [
+        "CN017"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api.bilibili.com",
+      "category": "cn",
+      "app_ids": [
+        "CN017"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "grpc.biliapi.net",
+      "category": "cn",
+      "app_ids": [
+        "CN017"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api.biliapi.net",
+      "category": "cn",
+      "app_ids": [
+        "CN017"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "httpdns.bilivideo.com",
+      "category": "cn",
+      "app_ids": [
+        "CN017"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "music.163.com",
+      "category": "cn",
+      "app_ids": [
+        "CN020"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "v.qq.com",
+      "category": "cn",
+      "app_ids": [
+        "CN021"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api.iqiyi.com",
+      "category": "cn",
+      "app_ids": [
+        "CN022"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "policy.video.iqiyi.com",
+      "category": "cn",
+      "app_ids": [
+        "CN022"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api.coolapk.com",
+      "category": "cn",
+      "app_ids": [
+        "CN028"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "acs.m.taobao.com",
+      "category": "cn",
+      "app_ids": [
+        "CN033"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "guide-acs.m.taobao.com",
+      "category": "cn",
+      "app_ids": [
+        "CN033"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "amdc.m.taobao.com",
+      "category": "cn",
+      "app_ids": [
+        "CN033"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "img.alicdn.com",
+      "category": "cn",
+      "app_ids": [
+        "CN033"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api.m.jd.com",
+      "category": "cn",
+      "app_ids": [
+        "CN034"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "img.360buyimg.com",
+      "category": "cn",
+      "app_ids": [
+        "CN034"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "apiinit.amap.com",
+      "category": "cn",
+      "app_ids": [
+        "CN049"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "page.amap.com",
+      "category": "cn",
+      "app_ids": [
+        "CN049"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "chat.deepseek.com",
+      "category": "cn",
+      "app_ids": [
+        "CN051"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api.deepseek.com",
+      "category": "cn",
+      "app_ids": [
+        "CN051"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "www.doubao.com",
+      "category": "cn",
+      "app_ids": [
+        "CN052"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "ark.cn-beijing.volces.com",
+      "category": "cn",
+      "app_ids": [
+        "CN052"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "ima.qq.com",
+      "category": "cn",
+      "app_ids": [
+        "CN054"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "trae.com.cn",
+      "category": "cn",
+      "app_ids": [
+        "CN055"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "m.ctrip.com",
+      "category": "cn",
+      "app_ids": [
+        "CN058"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "pages.c-ctrip.com",
+      "category": "cn",
+      "app_ids": [
+        "CN058"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "chatgpt.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api.openai.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "auth.openai.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "ws.chatgpt.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "claude.ai",
+      "category": "ai",
+      "app_ids": [
+        "INT002"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api.anthropic.com",
+      "category": "ai",
+      "app_ids": [
+        "INT002"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "gemini.google.com",
+      "category": "ai",
+      "app_ids": [
+        "INT003"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "generativelanguage.googleapis.com",
+      "category": "ai",
+      "app_ids": [
+        "INT003"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api2.cursor.sh",
+      "category": "ai",
+      "app_ids": [
+        "INT004"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "grok.com",
+      "category": "ai",
+      "app_ids": [
+        "INT005"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api.x.ai",
+      "category": "ai",
+      "app_ids": [
+        "INT005"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "www.youtube.com",
+      "category": "stream",
+      "app_ids": [
+        "INT008"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "youtubei.googleapis.com",
+      "category": "stream",
+      "app_ids": [
+        "INT008"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "www.tiktok.com",
+      "category": "tiktok",
+      "app_ids": [
+        "INT009"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "i.instagram.com",
+      "category": "global",
+      "app_ids": [
+        "INT010"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "graph.instagram.com",
+      "category": "global",
+      "app_ids": [
+        "INT010"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "graph-fallback.instagram.com",
+      "category": "global",
+      "app_ids": [
+        "INT010"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "graph.facebook.com",
+      "category": "global",
+      "app_ids": [
+        "INT011"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "connect.facebook.net",
+      "category": "global",
+      "app_ids": [
+        "INT011"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "www.netflix.com",
+      "category": "stream",
+      "app_ids": [
+        "INT012"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "web.whatsapp.com",
+      "category": "global",
+      "app_ids": [
+        "INT014"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api.telegram.org",
+      "category": "global",
+      "app_ids": [
+        "INT015"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "discord.com",
+      "category": "global",
+      "app_ids": [
+        "INT016"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "mail.google.com",
+      "category": "google",
+      "app_ids": [
+        "INT019"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "drive.google.com",
+      "category": "google",
+      "app_ids": [
+        "INT020"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "maps.googleapis.com",
+      "category": "google",
+      "app_ids": [
+        "INT021"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "sync.obsidian.md",
+      "category": "global",
+      "app_ids": [
+        "INT022"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "dejavocab.com",
+      "category": "global",
+      "app_ids": [
+        "INT023"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "www.sanas.ai",
+      "category": "global",
+      "app_ids": [
+        "INT025"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "www.giffgaff.com",
+      "category": "uk",
+      "app_ids": [
+        "INT026"
+      ],
+      "reason": "关键业务候选；物理清洗广告与前置策略双保护",
+      "evidence": [
+        "原配置业务例外与2026-10-14静态审查：outputs/audit/plan2-review.md"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "account.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "idmsa.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "gsa.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "appleid.cdn-apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "push.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN068",
+        "CN083",
+        "CN084",
+        "CN089",
+        "CN120"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "apps.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN069",
+        "CN081",
+        "CN082",
+        "CN117",
+        "CN123",
+        "CN125",
+        "CN128"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "itunes.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN069",
+        "CN081",
+        "CN082",
+        "CN117",
+        "CN123",
+        "CN125",
+        "CN128"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "mzstatic.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN069",
+        "CN081",
+        "CN082",
+        "CN117",
+        "CN123",
+        "CN125",
+        "CN128"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "ppq.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN069",
+        "CN081",
+        "CN082",
+        "CN117",
+        "CN123",
+        "CN125",
+        "CN128"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "appattest.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN069",
+        "CN081",
+        "CN082",
+        "CN117",
+        "CN123",
+        "CN125",
+        "CN128"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "certs.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "crl.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "ocsp.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "ocsp2.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "valid.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "ocsp.digicert.cn",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "ocsp.digicert.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "crl3.digicert.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "crl4.digicert.com",
+      "category": "cn",
+      "app_ids": [
+        "CN023",
+        "CN031",
+        "CN032",
+        "CN050",
+        "CN067",
+        "CN068",
+        "CN069",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN076",
+        "CN077",
+        "CN078",
+        "CN080",
+        "CN081",
+        "CN082",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN092",
+        "CN112",
+        "CN116",
+        "CN117",
+        "CN118",
+        "CN119",
+        "CN120",
+        "CN121",
+        "CN122",
+        "CN123",
+        "CN125",
+        "CN126",
+        "CN127",
+        "CN128",
+        "CN129"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "appldnld.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN081",
+        "CN083"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "gdmf.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN081",
+        "CN083"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "gg.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN081",
+        "CN083"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "gs.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN081",
+        "CN083"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "mesu.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN081",
+        "CN083"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "updates-http.cdn-apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN081",
+        "CN083"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "updates.cdn-apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN081",
+        "CN083"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "bpapi.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN122"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "cssubmissions.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN122"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "fba.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN122"
+      ],
+      "reason": "Apple官方共享基础：账号、推送、商店、证书、系统更新/反馈；按依赖所有权启用",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "setup.icloud.com",
+      "category": "cn",
+      "app_ids": [
+        "CN068",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN077",
+        "CN080",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN112",
+        "CN116",
+        "CN118",
+        "CN126",
+        "CN127",
+        "CN129"
+      ],
+      "reason": "Apple共享iCloud入口；不将整个Apple集团做广告豁免",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "gateway.icloud.com",
+      "category": "cn",
+      "app_ids": [
+        "CN068",
+        "CN070",
+        "CN072",
+        "CN073",
+        "CN074",
+        "CN075",
+        "CN077",
+        "CN080",
+        "CN083",
+        "CN084",
+        "CN085",
+        "CN089",
+        "CN090",
+        "CN112",
+        "CN116",
+        "CN118",
+        "CN126",
+        "CN127",
+        "CN129"
+      ],
+      "reason": "Apple共享iCloud入口；不将整个Apple集团做广告豁免",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "token.safebrowsing.apple",
+      "category": "global",
+      "app_ids": [
+        "CN069"
+      ],
+      "reason": "Safari官方安全浏览精确端点",
+      "evidence": [
+        "https://support.apple.com/en-us/101555"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "gsp-ssl.ls.apple.com",
+      "category": "cn",
+      "app_ids": [
+        "CN050"
+      ],
+      "reason": "Apple地图候选；网络分类保护不是定位业务验收",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/master/data/apple"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "accounts.google.com",
+      "category": "google",
+      "app_ids": [
+        "INT001",
+        "INT002",
+        "INT003",
+        "INT004",
+        "INT005",
+        "INT006"
+      ],
+      "reason": "账户登录与Google日常业务统一使用Google账户组，默认跟随AI当前出口",
+      "evidence": [
+        "https://developers.google.com/identity/protocols/oauth2",
+        "既有AI登录专项策略例外"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "oauth2.googleapis.com",
+      "category": "google",
+      "app_ids": [
+        "INT001",
+        "INT002",
+        "INT003",
+        "INT004",
+        "INT005",
+        "INT006"
+      ],
+      "reason": "账户登录与Google日常业务统一使用Google账户组，默认跟随AI当前出口",
+      "evidence": [
+        "https://developers.google.com/identity/protocols/oauth2",
+        "既有AI登录专项策略例外"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "accounts.youtube.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001",
+        "INT002",
+        "INT003",
+        "INT004",
+        "INT005",
+        "INT006"
+      ],
+      "reason": "AI登录共享账号精确端点保持稳定出口；Google正文与CDN仍global",
+      "evidence": [
+        "https://developers.google.com/identity/protocols/oauth2",
+        "既有AI登录专项策略例外"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "challenges.cloudflare.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "ChatGPT人机验证官方网络候选，精确主机",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "openai-api.arkoselabs.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "ChatGPT人机验证官方网络候选，精确主机",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "statsig.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "ChatGPT已公布功能开关域候选；不得基于track/ads名称默认拒绝",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "statsigapi.net",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "ChatGPT已公布功能开关域候选；不得基于track/ads名称默认拒绝",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "featureassets.org",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "ChatGPT已公布功能开关域候选；不得基于track/ads名称默认拒绝",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "firebaseinstallations.googleapis.com",
+      "category": "google",
+      "app_ids": [
+        "INT017",
+        "INT018",
+        "INT019",
+        "INT020",
+        "INT021"
+      ],
+      "reason": "Google浏览器/客户端基础服务候选，保持普通global出口",
+      "evidence": [
+        "既有allow.list，第三方ABP转换曾误杀Google功能API"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "firebaseremoteconfig.googleapis.com",
+      "category": "google",
+      "app_ids": [
+        "INT017",
+        "INT018",
+        "INT019",
+        "INT020",
+        "INT021"
+      ],
+      "reason": "Google浏览器/客户端基础服务候选，保持普通global出口",
+      "evidence": [
+        "既有allow.list，第三方ABP转换曾误杀Google功能API"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "update.googleapis.com",
+      "category": "google",
+      "app_ids": [
+        "INT017",
+        "INT018",
+        "INT019",
+        "INT020",
+        "INT021"
+      ],
+      "reason": "Google浏览器/客户端基础服务候选，保持普通global出口",
+      "evidence": [
+        "既有allow.list，第三方ABP转换曾误杀Google功能API"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "keruioil.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "仅现有企业网络基础；不扩张清单、不添加模糊关键词",
+      "evidence": [
+        "原方案二企业直连规则"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "deepoil.cc",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "仅现有企业网络基础；不扩张清单、不添加模糊关键词",
+      "evidence": [
+        "原方案二企业直连规则"
+      ],
+      "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "goofish.com",
+      "category": "cn",
+      "app_ids": [
+        "CN036"
+      ],
+      "reason": "闲鱼官方业务首页及公开App分享/下载落地页；独立精确业务保护，不把整个阿里集团白名单化。",
+      "evidence": [
+        "https://www.goofish.com/",
+        "https://terms.goofish.com/legal-agreement/terms/c_end_product_protocol/20260430142424889/20260430142424889.html",
+        "https://open.goofish.com/doc/api/advanced/share.html"
+      ],
+      "confidence": "official-business-host-candidate; not phone validated"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "www.goofish.com",
+      "category": "cn",
+      "app_ids": [
+        "CN036"
+      ],
+      "reason": "闲鱼官方业务首页及公开App分享/下载落地页；独立精确业务保护，不把整个阿里集团白名单化。",
+      "evidence": [
+        "https://www.goofish.com/",
+        "https://terms.goofish.com/legal-agreement/terms/c_end_product_protocol/20260430142424889/20260430142424889.html",
+        "https://open.goofish.com/doc/api/advanced/share.html"
+      ],
+      "confidence": "official-business-host-candidate; not phone validated"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "h5.m.goofish.com",
+      "category": "cn",
+      "app_ids": [
+        "CN036"
+      ],
+      "reason": "闲鱼官方业务首页及公开App分享/下载落地页；独立精确业务保护，不把整个阿里集团白名单化。",
+      "evidence": [
+        "https://www.goofish.com/",
+        "https://terms.goofish.com/legal-agreement/terms/c_end_product_protocol/20260430142424889/20260430142424889.html",
+        "https://open.goofish.com/doc/api/advanced/share.html"
+      ],
+      "confidence": "official-business-host-candidate; not phone validated"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "chat.bilibili.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:13"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "club.bilibili.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:14"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "tdid.m.qq.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:17"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "snowflake.qq.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:18"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "mdt.qq.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:19"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "iqiyipic.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:24"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "ppsimg.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:25"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "terms.alicdn.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:30"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "docs.c-ctrip.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:36"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "p3-sign.bdxiguaimg.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:39"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "p26-sign.bdxiguaimg.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:40"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "lf6-mgsdk-sign.dailygn.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:41"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "lf9-mgsdk-sign.dailygn.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:42"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "volces.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:43"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "w1.kskwai.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:46"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "w2.kskwai.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:47"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "tsis.jpush.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:49"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "api.jpush.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:50"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "safebrowsing.apple",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:53"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "ca.iadsdk.apple.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:54"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "roovza.launches.appsflyersdk.com",
+      "category": "tiktok",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:63"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "roovza.cdn-settings.appsflyersdk.com",
+      "category": "tiktok",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:64"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "ocsp.digicert.com",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:66"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "ocsp.godaddy.com",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:67"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "ocsp.sectigo.com",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:68"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "platform.instagram.com",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:71"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "ipinfo.io",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:72"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "ttwebview.com",
+      "category": "tiktok",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:73"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "wixstatic.com",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:74"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "cdn.jwplayer.com",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:75"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "oschina.net",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:76"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "youzanyun.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:77"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "cnnic.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:78"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "sendgrid.net",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:80"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "list-manage.com",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:81"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "fengkongcloud.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:82"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "mandrillapp.com",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:83"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "app.link",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:84"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "bnc.lt",
+      "category": "global",
+      "app_ids": [],
+      "reason": "审查迁移旧allow.list关键业务例外，防止广告层回归",
+      "evidence": [
+        "rulekit/allow.list:85"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "apple.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "Apple主站、更新、TestFlight和开发者服务在DNS解析前直接匹配",
+      "evidence": [
+        "User audit",
+        "Legacy configuration/source provenance verified"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "apple.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "Apple中国主域明确直连",
+      "evidence": [
+        "User audit",
+        "Legacy configuration/source provenance verified"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "statsig.anthropic.com",
+      "category": "ai",
+      "app_ids": [],
+      "reason": "恢复旧ai-critical.list中Anthropic功能开关精确保护；不是statsig.com子域",
+      "evidence": [
+        "User audit",
+        "Legacy configuration/source provenance verified"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "aistudio.google.com",
+      "category": "ai",
+      "app_ids": [],
+      "reason": "AI Studio精确住宅例外先于google.com",
+      "evidence": [
+        "User audit",
+        "Legacy configuration/source provenance verified"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "substack.com",
+      "category": "global",
+      "app_ids": [],
+      "reason": "移除写作/订阅服务的整域误拦",
+      "evidence": [
+        "User audit",
+        "Legacy configuration/source provenance verified"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "msedge.net",
+      "category": "global",
+      "app_ids": [],
+      "reason": "移除Microsoft Edge通用服务/CDN整域误拦",
+      "evidence": [
+        "User audit",
+        "Legacy configuration/source provenance verified"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "fosshub.com",
+      "category": "global",
+      "app_ids": [],
+      "reason": "软件下载站不应整域归广告",
+      "evidence": [
+        "User audit",
+        "Legacy configuration/source provenance verified"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "openinstall.io",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "安装与唤醒链路不应整域归广告",
+      "evidence": [
+        "User audit",
+        "Legacy configuration/source provenance verified"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "cookielaw.org",
+      "category": "global",
+      "app_ids": [],
+      "reason": "公共Cookie同意服务不绑定流媒体",
+      "evidence": [
+        "User audit",
+        "Legacy configuration/source provenance verified"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "onetrust.com",
+      "category": "global",
+      "app_ids": [],
+      "reason": "公共同意管理服务不绑定流媒体",
+      "evidence": [
+        "User audit",
+        "Legacy configuration/source provenance verified"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "twemoji.maxcdn.com",
+      "category": "global",
+      "app_ids": [],
+      "reason": "共享表情图片CDN使用普通国际出口",
+      "evidence": [
+        "User audit",
+        "Legacy configuration/source provenance verified"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "bilibili.tv",
+      "category": "stream",
+      "app_ids": [],
+      "reason": "B站国际站与国际CDN优先于国内BiliBili集合",
+      "evidence": [
+        "Old Surge-V3.0.2.conf and BM BiliBili source"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "biliintl.co",
+      "category": "stream",
+      "app_ids": [],
+      "reason": "B站国际站与国际CDN优先于国内BiliBili集合",
+      "evidence": [
+        "Old Surge-V3.0.2.conf and BM BiliBili source"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "biliintl.com",
+      "category": "stream",
+      "app_ids": [],
+      "reason": "B站国际站与国际CDN优先于国内BiliBili集合",
+      "evidence": [
+        "Old Surge-V3.0.2.conf and BM BiliBili source"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "p-bstarstatic.akamaized.net",
+      "category": "stream",
+      "app_ids": [],
+      "reason": "B站国际站与国际CDN优先于国内BiliBili集合",
+      "evidence": [
+        "Old Surge-V3.0.2.conf and BM BiliBili source"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "p.bstarstatic.com",
+      "category": "stream",
+      "app_ids": [],
+      "reason": "B站国际站与国际CDN优先于国内BiliBili集合",
+      "evidence": [
+        "Old Surge-V3.0.2.conf and BM BiliBili source"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "upos-bstar-mirrorakam.akamaized.net",
+      "category": "stream",
+      "app_ids": [],
+      "reason": "B站国际站与国际CDN优先于国内BiliBili集合",
+      "evidence": [
+        "Old Surge-V3.0.2.conf and BM BiliBili source"
+      ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "upos-bstar1-mirrorakam.akamaized.net",
+      "category": "stream",
+      "app_ids": [],
+      "reason": "B站国际站与国际CDN优先于国内BiliBili集合",
+      "evidence": [
+        "Old Surge-V3.0.2.conf and BM BiliBili source"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "paypal.com",
+      "category": "paypal",
+      "app_ids": [
+        "INT029"
+      ],
+      "reason": "用户指定金融业务稳定出口；核心认证业务优先于广告",
+      "evidence": [
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "paypalobjects.com",
+      "category": "paypal",
+      "app_ids": [
+        "INT029"
+      ],
+      "reason": "用户指定金融业务稳定出口；核心认证业务优先于广告",
+      "evidence": [
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "paypal.me",
+      "category": "paypal",
+      "app_ids": [
+        "INT029"
+      ],
+      "reason": "用户指定金融业务稳定出口；核心认证业务优先于广告",
+      "evidence": [
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "wise.com",
+      "category": "wise",
+      "app_ids": [
+        "INT030"
+      ],
+      "reason": "用户指定金融业务稳定出口；核心认证业务优先于广告",
+      "evidence": [
+        "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/wise"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "transferwise.com",
+      "category": "wise",
+      "app_ids": [
+        "INT030"
+      ],
+      "reason": "用户指定金融业务稳定出口；核心认证业务优先于广告",
+      "evidence": [
+        "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/wise"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "binance.com",
+      "category": "binance",
+      "app_ids": [
+        "INT031"
+      ],
+      "reason": "用户指定金融业务稳定出口；核心认证业务优先于广告",
+      "evidence": [
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Binance/Binance.list"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "bnbstatic.com",
+      "category": "binance",
+      "app_ids": [
+        "INT031"
+      ],
+      "reason": "用户指定金融业务稳定出口；核心认证业务优先于广告",
+      "evidence": [
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Binance/Binance.list"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "okx.com",
+      "category": "okx",
+      "app_ids": [
+        "INT032"
+      ],
+      "reason": "用户指定金融业务稳定出口；核心认证业务优先于广告",
+      "evidence": [
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OKX/OKX.list"
+      ]
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "okex.com",
+      "category": "okx",
+      "app_ids": [
+        "INT032"
+      ],
+      "reason": "用户指定金融业务稳定出口；核心认证业务优先于广告",
+      "evidence": [
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OKX/OKX.list"
+      ]
+    }
+  ],
+  "design": "每条由APP所有权启用；真实候选业务先于广告，并清洗所有拒绝输出。集团候选不等于集团全白名单。历史保护清洗范围单调保留以兼容缓存。",
+  "phone_verified": false
+}

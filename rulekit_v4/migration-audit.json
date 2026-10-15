@@ -1,0 +1,476 @@
+{
+  "legacy_source": "rulekit/allow.list",
+  "migration": [
+    {
+      "legacy_line": 8,
+      "rule": "DOMAIN,app.bilibili.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 9,
+      "rule": "DOMAIN,api.bilibili.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 10,
+      "rule": "DOMAIN,httpdns.bilivideo.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 11,
+      "rule": "DOMAIN,grpc.biliapi.net",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 12,
+      "rule": "DOMAIN,api.biliapi.net",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 13,
+      "rule": "DOMAIN,chat.bilibili.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 14,
+      "rule": "DOMAIN,club.bilibili.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 16,
+      "rule": "DOMAIN,vweixinthumb.tc.qq.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 17,
+      "rule": "DOMAIN,tdid.m.qq.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 18,
+      "rule": "DOMAIN,snowflake.qq.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 19,
+      "rule": "DOMAIN-SUFFIX,mdt.qq.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 20,
+      "rule": "DOMAIN,wxs.qq.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 22,
+      "rule": "DOMAIN,policy.video.iqiyi.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 23,
+      "rule": "DOMAIN,api.iqiyi.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 24,
+      "rule": "DOMAIN-SUFFIX,iqiyipic.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 25,
+      "rule": "DOMAIN-SUFFIX,ppsimg.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 27,
+      "rule": "DOMAIN,guide-acs.m.taobao.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 28,
+      "rule": "DOMAIN,acs.m.taobao.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 29,
+      "rule": "DOMAIN,amdc.m.taobao.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 30,
+      "rule": "DOMAIN,terms.alicdn.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 31,
+      "rule": "DOMAIN,api.m.jd.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 32,
+      "rule": "DOMAIN,img.360buyimg.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 33,
+      "rule": "DOMAIN,apiinit.amap.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 34,
+      "rule": "DOMAIN,page.amap.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 35,
+      "rule": "DOMAIN,pages.c-ctrip.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 36,
+      "rule": "DOMAIN,docs.c-ctrip.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 38,
+      "rule": "DOMAIN,haohuo.jinritemai.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 39,
+      "rule": "DOMAIN,p3-sign.bdxiguaimg.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 40,
+      "rule": "DOMAIN,p26-sign.bdxiguaimg.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 41,
+      "rule": "DOMAIN,lf6-mgsdk-sign.dailygn.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 42,
+      "rule": "DOMAIN,lf9-mgsdk-sign.dailygn.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 43,
+      "rule": "DOMAIN-SUFFIX,volces.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 45,
+      "rule": "DOMAIN,s1.kskwai.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 46,
+      "rule": "DOMAIN,w1.kskwai.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 47,
+      "rule": "DOMAIN,w2.kskwai.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 49,
+      "rule": "DOMAIN,tsis.jpush.cn",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 50,
+      "rule": "DOMAIN,api.jpush.cn",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 52,
+      "rule": "DOMAIN-SUFFIX,apps.apple.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 53,
+      "rule": "DOMAIN-SUFFIX,safebrowsing.apple",
+      "old_category": "global",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 54,
+      "rule": "DOMAIN,ca.iadsdk.apple.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 56,
+      "rule": "DOMAIN-SUFFIX,statsig.com",
+      "old_category": "ai",
+      "current_category": "ai",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 57,
+      "rule": "DOMAIN-SUFFIX,statsigapi.net",
+      "old_category": "ai",
+      "current_category": "ai",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 58,
+      "rule": "DOMAIN,graph.facebook.com",
+      "old_category": "ai",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 59,
+      "rule": "DOMAIN,graph.instagram.com",
+      "old_category": "ai",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 60,
+      "rule": "DOMAIN,firebaseinstallations.googleapis.com",
+      "old_category": "google",
+      "current_category": "google",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 61,
+      "rule": "DOMAIN,firebaseremoteconfig.googleapis.com",
+      "old_category": "google",
+      "current_category": "google",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 62,
+      "rule": "DOMAIN,update.googleapis.com",
+      "old_category": "google",
+      "current_category": "google",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 63,
+      "rule": "DOMAIN,roovza.launches.appsflyersdk.com",
+      "old_category": "tiktok",
+      "current_category": "tiktok",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 64,
+      "rule": "DOMAIN,roovza.cdn-settings.appsflyersdk.com",
+      "old_category": "tiktok",
+      "current_category": "tiktok",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 66,
+      "rule": "DOMAIN-SUFFIX,ocsp.digicert.com",
+      "old_category": "global",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 67,
+      "rule": "DOMAIN-SUFFIX,ocsp.godaddy.com",
+      "old_category": "global",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 68,
+      "rule": "DOMAIN-SUFFIX,ocsp.sectigo.com",
+      "old_category": "global",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 70,
+      "rule": "DOMAIN,connect.facebook.net",
+      "old_category": "ai",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 71,
+      "rule": "DOMAIN,platform.instagram.com",
+      "old_category": "ai",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 72,
+      "rule": "DOMAIN-SUFFIX,ipinfo.io",
+      "old_category": "ai",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 73,
+      "rule": "DOMAIN-SUFFIX,ttwebview.com",
+      "old_category": "tiktok",
+      "current_category": "tiktok",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 74,
+      "rule": "DOMAIN-SUFFIX,wixstatic.com",
+      "old_category": "global",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 75,
+      "rule": "DOMAIN,cdn.jwplayer.com",
+      "old_category": "global",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 76,
+      "rule": "DOMAIN-SUFFIX,oschina.net",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 77,
+      "rule": "DOMAIN-SUFFIX,youzanyun.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 78,
+      "rule": "DOMAIN-SUFFIX,cnnic.cn",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 80,
+      "rule": "DOMAIN-SUFFIX,sendgrid.net",
+      "old_category": "global",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 81,
+      "rule": "DOMAIN-SUFFIX,list-manage.com",
+      "old_category": "global",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 82,
+      "rule": "DOMAIN-SUFFIX,fengkongcloud.com",
+      "old_category": "cn",
+      "current_category": "cn",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 83,
+      "rule": "DOMAIN-SUFFIX,mandrillapp.com",
+      "old_category": "global",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 84,
+      "rule": "DOMAIN-SUFFIX,app.link",
+      "old_category": "global",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    },
+    {
+      "legacy_line": 85,
+      "rule": "DOMAIN-SUFFIX,bnc.lt",
+      "old_category": "global",
+      "current_category": "global",
+      "status": "explicitly_preserved_or_intentionally_reclassified"
+    }
+  ],
+  "policy_changes": "Meta SDK global; Google auth google-account group; both intentional",
+  "not_packet_capture_verified": true
+}

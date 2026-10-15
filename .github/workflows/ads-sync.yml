@@ -1,3 +1,4 @@
+# Legacy compatibility workflow: manual only; current automation uses the v4 engine.
 # 每周把上游 Thelongdarkorg/ad-rules-merged 的变化同步到
 # patches/ads-patch.list 与 patches/ads-patch.domainset。
 # 全自动：用 GITHUB_TOKEN 提交，无需 PAT。手机端 Surge 按 update-interval
@@ -5,9 +6,6 @@
 name: ads-patch weekly sync
 
 on:
-  schedule:
-    # 每周一 03:00 UTC = 北京时间 11:00
-    - cron: '0 3 * * 1'
   workflow_dispatch:  # 允许手动触发验证
 
 permissions:

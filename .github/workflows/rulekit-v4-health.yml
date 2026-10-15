@@ -1,0 +1,32 @@
+name: Surge English mirror health
+on:
+  schedule:
+    - cron: '17 13 * * *' # Beijing 21:17, independent check time
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['Surge English verified mirror']
+    types: [completed]
+permissions:
+  actions: read
+  contents: read
+jobs:
+  health:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.head_branch == github.event.repository.default_branch &&
+       github.event.workflow_run.event != 'pull_request' &&
+       github.event.workflow_run.event != 'pull_request_target' &&
+       github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Health check regression tests
+        run: python -m unittest discover -s rulekit_v4 -p test_health.py -v
+      - name: Require successful rule validation within 36 hours
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python rulekit_v4/health.py --repository "$GITHUB_REPOSITORY" --workflow rulekit-v4.yml

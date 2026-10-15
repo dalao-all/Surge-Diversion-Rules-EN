@@ -19,6 +19,6 @@ The inventory contains 164 records: original 160 plus four user-requested financ
 
 All 67 legacy allow entries have a migration check. Historical protections remain compatible with asynchronous downloads. The 233 WeChat numeric substring rules intentionally become exact /24 networks; source text and corrections remain in provenance. Output correction is separate from the accepted raw-source change baseline.
 
-report.json holds 201 static probes, correction and migration evidence. sources.lock.json pins sources; source-rules.json holds their semantic baseline. SHA256SUMS covers 23 RULE-SET exports plus the ad DOMAIN-SET. Fifty-seven engine/health and eight sync regression checks do not replace phone validation.
+report.json holds 201 static probes, correction and migration evidence. sources.lock.json pins sources; source-rules.json holds their semantic baseline. SHA256SUMS covers 23 RULE-SET exports plus the ad DOMAIN-SET. Fifty-seven engine/health and nine sync regression checks do not replace phone validation.
 
 Legacy v6.x profiles, modules, mirrors and patch scripts remain for compatibility. Their automatic writers are manual-only and no longer the installation path.

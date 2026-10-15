@@ -1,0 +1,2986 @@
+{
+  "schema_version": 1,
+  "scope": "static-domain-routing-only",
+  "probes": [
+    {
+      "id": "P0001",
+      "domain": "mobilegw.alipay.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN001"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/AliPay/AliPay.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0002",
+      "domain": "95516.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN002"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/unionpay",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/UnionPay/UnionPay.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0003",
+      "domain": "m.icbc.com.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN003"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/icbc",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/ICBC/ICBC.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0004",
+      "domain": "ccb.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN004"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/ccb",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/CCB/CCB.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0005",
+      "domain": "img1.scrcu.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN005"
+      ],
+      "purpose": "APP关联域名静态路由候选；只证明文档/隐私链接",
+      "evidence": [
+        "https://apps.apple.com/cn/app/个人手机银行/id515667501"
+      ],
+      "evidence_kind": "official-document-only",
+      "device_verified": false
+    },
+    {
+      "id": "P0006",
+      "domain": "cmbchina.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN006"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/cmb",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/CMB/CMB.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0007",
+      "domain": "cib.com.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN007"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
+        "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0008",
+      "domain": "creditcard.ecitic.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN008"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/citic"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0009",
+      "domain": "cc.cmbchina.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN009"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/cmb",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/CMB/CMB.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0010",
+      "domain": "jr.jd.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN010"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/jd",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/JingDong/JingDong.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0011",
+      "domain": "wxs.qq.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN011"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/WeChat/WeChat.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0012",
+      "domain": "oapi.dingtalk.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN012"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/dingtalk",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/DingTalk/DingTalk.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0013",
+      "domain": "qun.qq.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN013"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/tencent",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Tencent/Tencent.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Tencent/Tencent_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0014",
+      "domain": "aweme.snssdk.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN014"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/douyin",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/DouYin/DouYin.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0015",
+      "domain": "api.kuaishou.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN015"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/kuaishou",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/KuaiShou/KuaiShou.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0016",
+      "domain": "edith.xiaohongshu.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN016"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/xiaohongshu",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/XiaoHongShu/XiaoHongShu.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0017",
+      "domain": "api.bilibili.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN017"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bilibili",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/BiliBili/BiliBili.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0018",
+      "domain": "weibo.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN018"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/sina",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Weibo/Weibo.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0019",
+      "domain": "api.kuaishou.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN019"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/kuaishou",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/KuaiShou/KuaiShou.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0020",
+      "domain": "music.163.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN020"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/netease",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/NetEaseMusic/NetEaseMusic.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0021",
+      "domain": "v.qq.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN021"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/tencent",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/TencentVideo/TencentVideo.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0022",
+      "domain": "api.iqiyi.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN022"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/iqiyi",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/iQIYI/iQIYI.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0023",
+      "domain": "music.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN023"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple-music",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/AppleMusic/AppleMusic.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0024",
+      "domain": "bytecdn.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN024"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bytedance",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/ByteDance/ByteDance.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0025",
+      "domain": "game.qq.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN025"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/tencent-games",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Tencent/Tencent.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Tencent/Tencent_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0026",
+      "domain": "lol.qq.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN026"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/tencent-games",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Tencent/Tencent.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Tencent/Tencent_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0027",
+      "domain": "flydigi.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN027"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
+        "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0028",
+      "domain": "api.coolapk.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN028"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/coolapk",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Coolapk/Coolapk.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0029",
+      "domain": "meituan.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN029"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/meituan",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/MeiTuan/MeiTuan.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0030",
+      "domain": "taopiaopiao.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN030"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/alibaba",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Alibaba/Alibaba.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Alibaba/Alibaba_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0031",
+      "domain": "amp-api.podcasts.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN031"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple-podcasts"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0032",
+      "domain": "uts-api.itunes.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN032"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple-tvplus",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/AppleTV/AppleTV.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0033",
+      "domain": "acs.m.taobao.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN033"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/alibaba",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Alibaba/Alibaba.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Alibaba/Alibaba_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0034",
+      "domain": "api.m.jd.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN034"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/jd",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/JingDong/JingDong.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0035",
+      "domain": "yangkeduo.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN035"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/pinduoduo",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Pinduoduo/Pinduoduo.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0036",
+      "domain": "goofish.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN036"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/alibaba",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/XianYu/XianYu.list",
+        "https://www.goofish.com/",
+        "https://terms.goofish.com/legal-agreement/terms/c_end_product_protocol/20260430142424889/20260430142424889.html",
+        "https://open.goofish.com/doc/api/advanced/share.html"
+      ],
+      "evidence_kind": "official-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0037",
+      "domain": "meituan.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN037"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/meituan",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/MeiTuan/MeiTuan.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0038",
+      "domain": "ele.me",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN038"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/eleme",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Eleme/Eleme.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0039",
+      "domain": "dianping.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN039"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/meituan",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/MeiTuan/MeiTuan.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0040",
+      "domain": "freshhema.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN040"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/alibaba",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/HeMa/HeMa.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0041",
+      "domain": "walmart.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN041"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/walmart"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0042",
+      "domain": "dewu.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN042"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/dewu"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0043",
+      "domain": "zhuanzhuan.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN043"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/ZhuanZhuan/ZhuanZhuan.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0044",
+      "domain": "1688.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN044"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/alibaba",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Alibaba/Alibaba.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Alibaba/Alibaba_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0045",
+      "domain": "jd.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN045"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/jd",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/JingDong/JingDong.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0046",
+      "domain": "etao.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN046"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/alibaba",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Alibaba/Alibaba.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Alibaba/Alibaba_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0047",
+      "domain": "jd.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN047"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/jd",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/JingDong/JingDong.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0048",
+      "domain": "sqkb.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN048"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
+        "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0049",
+      "domain": "apiinit.amap.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN049"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/amap",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/GaoDe/GaoDe.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0050",
+      "domain": "gsp-ssl.ls.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN050"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0051",
+      "domain": "chat.deepseek.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN051"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/deepseek"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0052",
+      "domain": "www.doubao.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN052"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/doubao"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0053",
+      "domain": "qianwen.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN053"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/alibaba"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0054",
+      "domain": "ima.qq.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN054"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/tencent",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Tencent/Tencent.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Tencent/Tencent_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0055",
+      "domain": "trae.com.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN055"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/trae"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0056",
+      "domain": "privacy.qq.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN056"
+      ],
+      "purpose": "APP关联域名静态路由候选；只证明文档/隐私链接",
+      "evidence": [
+        "https://apps.apple.com/cn/app/marvis-马维斯-腾讯旗下ai助手/id6776078618"
+      ],
+      "evidence_kind": "official-document-only",
+      "device_verified": false
+    },
+    {
+      "id": "P0057",
+      "domain": "12306.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN057"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/12306/12306.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0058",
+      "domain": "m.ctrip.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN058"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/ctrip",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/XieCheng/XieCheng.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0059",
+      "domain": "umetrip.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN059"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
+        "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0060",
+      "domain": "hellobike.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN060"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
+        "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0061",
+      "domain": "dongchedi.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN063"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/dongchedi"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0062",
+      "domain": "geely.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN065"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Geely/Geely.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0063",
+      "domain": "ninebot.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN066"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
+        "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0064",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN067"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0065",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN068"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0066",
+      "domain": "token.safebrowsing.apple",
+      "expected_category": "global",
+      "app_ids": [
+        "CN069"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0067",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN070"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0068",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN072"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0069",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN073"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/AppleMail/AppleMail.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0070",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN074"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0071",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN075"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0072",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN076"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0073",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN077"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0074",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN078"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0075",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN080"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0076",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN081"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0077",
+      "domain": "apps.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN082"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/AppStore/AppStore.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0078",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN083"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0079",
+      "domain": "gateway.icloud.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN084"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/FindMy/FindMy.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0080",
+      "domain": "amp-api.fitness.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN085"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/FitnessPlus/FitnessPlus.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0081",
+      "domain": "floatingislandapps.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN086"
+      ],
+      "purpose": "APP关联域名静态路由候选；只证明文档/隐私链接",
+      "evidence": [
+        "https://apps.apple.com/tw/app/grow-你的健康貼心好夥伴/id1560604814"
+      ],
+      "evidence_kind": "official-document-only",
+      "device_verified": false
+    },
+    {
+      "id": "P0082",
+      "domain": "ha.api.io.mi.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN087"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/xiaomi-iot",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/XiaoMi/XiaoMi.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0083",
+      "domain": "huawei.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN088"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/huawei",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Huawei/Huawei.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0084",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN089"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0085",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN090"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0086",
+      "domain": "youdao.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN091"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/netease",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/NetEase/NetEase.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0087",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN092"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0088",
+      "domain": "zhipin.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN093"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
+        "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0089",
+      "domain": "zhaopin.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN094"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
+        "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0090",
+      "domain": "liepin.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN095"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/liepin"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0091",
+      "domain": "qcc.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN096"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/qcc"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0092",
+      "domain": "lianjia.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN097"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/lianjia"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0093",
+      "domain": "cdnrefresh.ctdidcii.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN098"
+      ],
+      "purpose": "APP关联域名静态路由候选；只证明文档/隐私链接",
+      "evidence": [
+        "https://apps.apple.com/tw/app/国家网络身份认证/id1588080869"
+      ],
+      "evidence_kind": "official-document-only",
+      "device_verified": false
+    },
+    {
+      "id": "P0094",
+      "domain": "www.myytx.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN099"
+      ],
+      "purpose": "APP关联域名静态路由候选；只证明文档/隐私链接",
+      "evidence": [
+        "https://apps.apple.com/cn/app/悦通行/id1547909857"
+      ],
+      "evidence_kind": "official-document-only",
+      "device_verified": false
+    },
+    {
+      "id": "P0095",
+      "domain": "10086.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN101"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/chinamobile",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/ChinaMobile/ChinaMobile.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0096",
+      "domain": "weisenjoy.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN105"
+      ],
+      "purpose": "APP关联域名静态路由候选；只证明文档/隐私链接",
+      "evidence": [
+        "https://apps.apple.com/cn/app/mono-记账-ai-识别记账-自动记账软件-简洁智能/id6670716062"
+      ],
+      "evidence_kind": "official-document-only",
+      "device_verified": false
+    },
+    {
+      "id": "P0097",
+      "domain": "noncurious.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN106"
+      ],
+      "purpose": "APP关联域名静态路由候选；只证明文档/隐私链接",
+      "evidence": [
+        "https://apps.apple.com/cn/app/cookie-记账/id1559943673"
+      ],
+      "evidence_kind": "official-document-only",
+      "device_verified": false
+    },
+    {
+      "id": "P0098",
+      "domain": "intsig.net",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN109"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/intsig"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0099",
+      "domain": "sina.com.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN110"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/sina",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Sina/Sina.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0100",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN112"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0101",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN116"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0102",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN117"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0103",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN118"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0104",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN119"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0105",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN120"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0106",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN121"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0107",
+      "domain": "fba.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN122"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0108",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN123"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0109",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN125"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0110",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN126"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0111",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN127"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0112",
+      "domain": "itunes.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN128"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/itunes",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/AppleMedia/AppleMedia.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0113",
+      "domain": "idmsa.apple.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN129"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple_Domain.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0114",
+      "domain": "www.speedtest.net",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN131"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/ookla-speedtest",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Speedtest/Speedtest.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0115",
+      "domain": "caiyunapp.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN132"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/colorfulclouds"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0116",
+      "domain": "chatgpt.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/openai",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/OpenAI/OpenAI.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0117",
+      "domain": "claude.ai",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT002"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/anthropic",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Claude/Claude.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0118",
+      "domain": "gemini.google.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT003"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google-gemini",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Gemini/Gemini.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0119",
+      "domain": "api2.cursor.sh",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT004"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/cursor"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0120",
+      "domain": "grok.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT005"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/xai"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0121",
+      "domain": "x.ai",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT006"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://apps.apple.com/us/app/grok-bot/id6794501026"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0122",
+      "domain": "api.x.com",
+      "expected_category": "global",
+      "app_ids": [
+        "INT007"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/twitter",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Twitter/Twitter.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0123",
+      "domain": "www.youtube.com",
+      "expected_category": "stream",
+      "app_ids": [
+        "INT008"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/youtube",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/YouTube/YouTube.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0124",
+      "domain": "www.tiktok.com",
+      "expected_category": "tiktok",
+      "app_ids": [
+        "INT009"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/tiktok",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/TikTok/TikTok.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0125",
+      "domain": "i.instagram.com",
+      "expected_category": "global",
+      "app_ids": [
+        "INT010"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/instagram",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Instagram/Instagram.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0126",
+      "domain": "graph.facebook.com",
+      "expected_category": "global",
+      "app_ids": [
+        "INT011"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/facebook",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Facebook/Facebook.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0127",
+      "domain": "www.netflix.com",
+      "expected_category": "stream",
+      "app_ids": [
+        "INT012"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/netflix",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Netflix/Netflix.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0128",
+      "domain": "viki.com",
+      "expected_category": "stream",
+      "app_ids": [
+        "INT013"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Viki/Viki.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0129",
+      "domain": "web.whatsapp.com",
+      "expected_category": "global",
+      "app_ids": [
+        "INT014"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/whatsapp",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Whatsapp/Whatsapp.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0130",
+      "domain": "api.telegram.org",
+      "expected_category": "global",
+      "app_ids": [
+        "INT015"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/telegram",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Telegram/Telegram.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0131",
+      "domain": "discord.com",
+      "expected_category": "global",
+      "app_ids": [
+        "INT016"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/discord",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Discord/Discord.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0132",
+      "domain": "www.google.com",
+      "expected_category": "google",
+      "app_ids": [
+        "INT017"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/GoogleSearch/GoogleSearch.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0133",
+      "domain": "update.googleapis.com",
+      "expected_category": "google",
+      "app_ids": [
+        "INT018"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Google/Google.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0134",
+      "domain": "mail.google.com",
+      "expected_category": "google",
+      "app_ids": [
+        "INT019"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Google/Google.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0135",
+      "domain": "drive.google.com",
+      "expected_category": "google",
+      "app_ids": [
+        "INT020"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/GoogleDrive/GoogleDrive.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0136",
+      "domain": "maps.googleapis.com",
+      "expected_category": "google",
+      "app_ids": [
+        "INT021"
+      ],
+      "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Google/Google.list"
+      ],
+      "evidence_kind": "shared-service-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0137",
+      "domain": "sync.obsidian.md",
+      "expected_category": "global",
+      "app_ids": [
+        "INT022"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
+        "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0138",
+      "domain": "dejavocab.com",
+      "expected_category": "global",
+      "app_ids": [
+        "INT023"
+      ],
+      "purpose": "APP关联域名静态路由候选；只证明文档/隐私链接",
+      "evidence": [
+        "https://apps.apple.com/us/app/dejavocab-得记单词-个人语料库/id6753130604"
+      ],
+      "evidence_kind": "official-document-only",
+      "device_verified": false
+    },
+    {
+      "id": "P0139",
+      "domain": "tableau.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "INT024"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/salesforce",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Salesforce/Salesforce.list"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0140",
+      "domain": "www.sanas.ai",
+      "expected_category": "global",
+      "app_ids": [
+        "INT025"
+      ],
+      "purpose": "APP关联域名静态路由候选；只证明文档/隐私链接",
+      "evidence": [
+        "https://apps.apple.com/us/app/sanas-translate/id6748606509"
+      ],
+      "evidence_kind": "official-document-only",
+      "device_verified": false
+    },
+    {
+      "id": "P0141",
+      "domain": "www.giffgaff.com",
+      "expected_category": "uk",
+      "app_ids": [
+        "INT026"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://apps.apple.com/gb/app/giffgaff/id571246020"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0142",
+      "domain": "nssurge.com",
+      "expected_category": "global",
+      "app_ids": [
+        "INT028"
+      ],
+      "purpose": "APP关联域名静态路由候选；未在手机运行启动/登录/业务验证",
+      "evidence": [
+        "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
+        "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+      ],
+      "evidence_kind": "business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0143",
+      "domain": "api.openai.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "ChatGPT API",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0144",
+      "domain": "ws.chatgpt.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "ChatGPT长连接域名候选",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0145",
+      "domain": "files.oaiusercontent.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "ChatGPT文件域候选；上传功能需手机验证",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0146",
+      "domain": "accounts.google.com",
+      "expected_category": "google",
+      "app_ids": [
+        "INT001",
+        "INT002",
+        "INT003"
+      ],
+      "purpose": "Google AI登录精确账号入口",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0147",
+      "domain": "oauth2.googleapis.com",
+      "expected_category": "google",
+      "app_ids": [
+        "INT001",
+        "INT002",
+        "INT003"
+      ],
+      "purpose": "Google OAuth精确令牌入口",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0148",
+      "domain": "statsigapi.net",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "ChatGPT功能开关",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0149",
+      "domain": "generativelanguage.googleapis.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT003"
+      ],
+      "purpose": "Gemini API",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0150",
+      "domain": "ark.cn-beijing.volces.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN052"
+      ],
+      "purpose": "豆包火山引擎候选",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0151",
+      "domain": "grpc.biliapi.net",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN017"
+      ],
+      "purpose": "Bili业务API",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0152",
+      "domain": "mmbiz.qpic.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN011"
+      ],
+      "purpose": "微信内容图片",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0153",
+      "domain": "youtubei.googleapis.com",
+      "expected_category": "stream",
+      "app_ids": [
+        "INT008"
+      ],
+      "purpose": "YouTube API优先于Google基础",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0154",
+      "domain": "googlevideo.com",
+      "expected_category": "stream",
+      "app_ids": [
+        "INT008"
+      ],
+      "purpose": "YouTube播放CDN根域候选",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0155",
+      "domain": "fast.com",
+      "expected_category": "stream",
+      "app_ids": [
+        "INT012"
+      ],
+      "purpose": "Netflix共享测速CDN候选",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0156",
+      "domain": "accounts.youtube.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT008",
+        "INT003"
+      ],
+      "purpose": "既有AI登录账号精确端点",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0157",
+      "domain": "firebaseremoteconfig.googleapis.com",
+      "expected_category": "google",
+      "app_ids": [
+        "INT017",
+        "INT018"
+      ],
+      "purpose": "Google客户端远程功能配置普通global出口",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0158",
+      "domain": "deepoil.cc",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "既有企业网络基础",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0159",
+      "domain": "keruioil.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "既有企业网络基础",
+      "evidence": [
+        "对应上游源与protection.json"
+      ],
+      "evidence_kind": "explicit-business-candidate",
+      "device_verified": false
+    },
+    {
+      "id": "P0160",
+      "domain": "ad.doubleclick.net",
+      "expected_category": "ads",
+      "app_ids": [
+        "INT008"
+      ],
+      "purpose": "已在本轮SKK/AWA上游广告分类中存在；分类依据不是对每个域的手机广告效果验收",
+      "evidence": [
+        "https://ruleset.skk.moe/List/domainset/reject.conf",
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule"
+      ],
+      "evidence_kind": "upstream-ad-classification",
+      "device_verified": false
+    },
+    {
+      "id": "P0161",
+      "domain": "pangolin.snssdk.com",
+      "expected_category": "ads",
+      "app_ids": [
+        "CN014"
+      ],
+      "purpose": "已在本轮SKK/AWA上游广告分类中存在；分类依据不是对每个域的手机广告效果验收",
+      "evidence": [
+        "https://ruleset.skk.moe/List/domainset/reject.conf",
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule"
+      ],
+      "evidence_kind": "upstream-ad-classification",
+      "device_verified": false
+    },
+    {
+      "id": "P0162",
+      "domain": "gdt.qq.com",
+      "expected_category": "ads",
+      "app_ids": [
+        "CN013"
+      ],
+      "purpose": "已在本轮SKK/AWA上游广告分类中存在；分类依据不是对每个域的手机广告效果验收",
+      "evidence": [
+        "https://ruleset.skk.moe/List/domainset/reject.conf",
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule"
+      ],
+      "evidence_kind": "upstream-ad-classification",
+      "device_verified": false
+    },
+    {
+      "id": "P0163",
+      "domain": "adkwai.com",
+      "expected_category": "ads",
+      "app_ids": [
+        "CN015"
+      ],
+      "purpose": "已在本轮SKK/AWA上游广告分类中存在；分类依据不是对每个域的手机广告效果验收",
+      "evidence": [
+        "https://ruleset.skk.moe/List/domainset/reject.conf",
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule"
+      ],
+      "evidence_kind": "upstream-ad-classification",
+      "device_verified": false
+    },
+    {
+      "id": "P0164",
+      "domain": "cupid.iqiyi.com",
+      "expected_category": "ads",
+      "app_ids": [
+        "CN022"
+      ],
+      "purpose": "已在本轮SKK/AWA上游广告分类中存在；分类依据不是对每个域的手机广告效果验收",
+      "evidence": [
+        "https://ruleset.skk.moe/List/domainset/reject.conf",
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule"
+      ],
+      "evidence_kind": "upstream-ad-classification",
+      "device_verified": false
+    },
+    {
+      "id": "P0165",
+      "domain": "ads-twitter.com",
+      "expected_category": "ads",
+      "app_ids": [
+        "INT007"
+      ],
+      "purpose": "已在本轮SKK/AWA上游广告分类中存在；分类依据不是对每个域的手机广告效果验收",
+      "evidence": [
+        "https://ruleset.skk.moe/List/domainset/reject.conf",
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule"
+      ],
+      "evidence_kind": "upstream-ad-classification",
+      "device_verified": false
+    },
+    {
+      "id": "P0166",
+      "domain": "analytics.tiktok.com",
+      "expected_category": "ads",
+      "app_ids": [
+        "INT009"
+      ],
+      "purpose": "已在本轮SKK/AWA上游广告分类中存在；分类依据不是对每个域的手机广告效果验收",
+      "evidence": [
+        "https://ruleset.skk.moe/List/domainset/reject.conf",
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule"
+      ],
+      "evidence_kind": "upstream-ad-classification",
+      "device_verified": false
+    },
+    {
+      "id": "regression-qingmail-cn",
+      "domain": "qingmail.cn",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内邮箱不得被Google gmail关键词误匹配",
+      "evidence": [
+        "https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Surge"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "regression-qingmail-com",
+      "domain": "qingmail.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内邮箱不得被Google gmail关键词误匹配",
+      "evidence": [
+        "https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Surge"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-169",
+      "domain": "paypal.com",
+      "expected_category": "paypal",
+      "app_ids": [],
+      "purpose": "金融固定选择策略首条命中",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-170",
+      "domain": "paypalobjects.com",
+      "expected_category": "paypal",
+      "app_ids": [],
+      "purpose": "金融固定选择策略首条命中",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-171",
+      "domain": "paypal.me",
+      "expected_category": "paypal",
+      "app_ids": [],
+      "purpose": "金融固定选择策略首条命中",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-172",
+      "domain": "wise.com",
+      "expected_category": "wise",
+      "app_ids": [],
+      "purpose": "金融固定选择策略首条命中",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-173",
+      "domain": "transferwise.com",
+      "expected_category": "wise",
+      "app_ids": [],
+      "purpose": "金融固定选择策略首条命中",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-174",
+      "domain": "binance.com",
+      "expected_category": "binance",
+      "app_ids": [],
+      "purpose": "金融固定选择策略首条命中",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-175",
+      "domain": "bnbstatic.com",
+      "expected_category": "binance",
+      "app_ids": [],
+      "purpose": "金融固定选择策略首条命中",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-176",
+      "domain": "okx.com",
+      "expected_category": "okx",
+      "app_ids": [],
+      "purpose": "金融固定选择策略首条命中",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-177",
+      "domain": "okex.com",
+      "expected_category": "okx",
+      "app_ids": [],
+      "purpose": "金融固定选择策略首条命中",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-178",
+      "domain": "statsig.anthropic.com",
+      "expected_category": "ai",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-179",
+      "domain": "aistudio.google.com",
+      "expected_category": "ai",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-180",
+      "domain": "www.apple.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-181",
+      "domain": "apple.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-182",
+      "domain": "swcdn.apple.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-183",
+      "domain": "testflight.apple.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-184",
+      "domain": "developer.apple.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-185",
+      "domain": "fp-it.fengkongcloud.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-186",
+      "domain": "www.substack.com",
+      "expected_category": "global",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-187",
+      "domain": "msedge.net",
+      "expected_category": "global",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-188",
+      "domain": "www.fosshub.com",
+      "expected_category": "global",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-189",
+      "domain": "openinstall.io",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-190",
+      "domain": "cookielaw.org",
+      "expected_category": "global",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-191",
+      "domain": "onetrust.com",
+      "expected_category": "global",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-192",
+      "domain": "twemoji.maxcdn.com",
+      "expected_category": "global",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-193",
+      "domain": "api2.amplitude.com",
+      "expected_category": "ads",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-194",
+      "domain": "www.googletagmanager.com",
+      "expected_category": "ads",
+      "app_ids": [],
+      "purpose": "用户反馈的实际路由回归",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-195",
+      "domain": "bilibili.tv",
+      "expected_category": "stream",
+      "app_ids": [],
+      "purpose": "国际B站网站/CDN不得被国内规则遮蔽",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-196",
+      "domain": "biliintl.co",
+      "expected_category": "stream",
+      "app_ids": [],
+      "purpose": "国际B站网站/CDN不得被国内规则遮蔽",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-197",
+      "domain": "biliintl.com",
+      "expected_category": "stream",
+      "app_ids": [],
+      "purpose": "国际B站网站/CDN不得被国内规则遮蔽",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-198",
+      "domain": "p-bstarstatic.akamaized.net",
+      "expected_category": "stream",
+      "app_ids": [],
+      "purpose": "国际B站网站/CDN不得被国内规则遮蔽",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-199",
+      "domain": "p.bstarstatic.com",
+      "expected_category": "stream",
+      "app_ids": [],
+      "purpose": "国际B站网站/CDN不得被国内规则遮蔽",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-200",
+      "domain": "upos-bstar-mirrorakam.akamaized.net",
+      "expected_category": "stream",
+      "app_ids": [],
+      "purpose": "国际B站网站/CDN不得被国内规则遮蔽",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    },
+    {
+      "id": "feedback-201",
+      "domain": "upos-bstar1-mirrorakam.akamaized.net",
+      "expected_category": "stream",
+      "app_ids": [],
+      "purpose": "国际B站网站/CDN不得被国内规则遮蔽",
+      "evidence": [
+        "User supplied audit; checked against canonical source provenance and legacy configuration"
+      ],
+      "device_verified": false
+    }
+  ],
+  "uncovered_apps": [
+    {
+      "id": "CN061",
+      "name": "天府通",
+      "reason": "暂无明确公开业务端点；不生成占位域名或复用集团根域冒充APP业务验收",
+      "device_validation_required": true
+    },
+    {
+      "id": "CN062",
+      "name": "无忧行",
+      "reason": "暂无明确公开业务端点；不生成占位域名或复用集团根域冒充APP业务验收",
+      "device_validation_required": true
+    },
+    {
+      "id": "CN064",
+      "name": "汽车之家",
+      "reason": "暂无明确公开业务端点；不生成占位域名或复用集团根域冒充APP业务验收",
+      "device_validation_required": true
+    },
+    {
+      "id": "CN071",
+      "name": "相机",
+      "reason": "纯本地功能无需域名业务探针",
+      "device_validation_required": false
+    },
+    {
+      "id": "CN079",
+      "name": "计算器",
+      "reason": "纯本地功能无需域名业务探针",
+      "device_validation_required": false
+    },
+    {
+      "id": "CN100",
+      "name": "去上网（去哒）",
+      "reason": "暂无明确公开业务端点；不生成占位域名或复用集团根域冒充APP业务验收",
+      "device_validation_required": true
+    },
+    {
+      "id": "CN102",
+      "name": "UU远程",
+      "reason": "暂无明确公开业务端点；不生成占位域名或复用集团根域冒充APP业务验收",
+      "device_validation_required": true
+    },
+    {
+      "id": "CN103",
+      "name": "交管12123",
+      "reason": "暂无明确公开业务端点；不生成占位域名或复用集团根域冒充APP业务验收",
+      "device_validation_required": true
+    },
+    {
+      "id": "CN104",
+      "name": "个人所得税",
+      "reason": "暂无明确公开业务端点；不生成占位域名或复用集团根域冒充APP业务验收",
+      "device_validation_required": true
+    },
+    {
+      "id": "CN107",
+      "name": "上岛记",
+      "reason": "暂无明确公开业务端点；不生成占位域名或复用集团根域冒充APP业务验收",
+      "device_validation_required": true
+    },
+    {
+      "id": "CN108",
+      "name": "iCost",
+      "reason": "暂无明确公开业务端点；不生成占位域名或复用集团根域冒充APP业务验收",
+      "device_validation_required": true
+    },
+    {
+      "id": "CN111",
+      "name": "爱思全能版",
+      "reason": "暂无明确公开业务端点；不生成占位域名或复用集团根域冒充APP业务验收",
+      "device_validation_required": true
+    },
+    {
+      "id": "CN113",
+      "name": "指南针",
+      "reason": "纯本地功能无需域名业务探针",
+      "device_validation_required": false
+    },
+    {
+      "id": "CN114",
+      "name": "测距仪",
+      "reason": "纯本地功能无需域名业务探针",
+      "device_validation_required": false
+    },
+    {
+      "id": "CN115",
+      "name": "放大器",
+      "reason": "纯本地功能无需域名业务探针",
+      "device_validation_required": false
+    },
+    {
+      "id": "CN124",
+      "name": "GestaltEdit",
+      "reason": "GestaltEdit身份/API未核实，暂无明确公开业务端点；不生成占位域名",
+      "device_validation_required": true
+    },
+    {
+      "id": "CN130",
+      "name": "全球网测",
+      "reason": "暂无明确公开业务端点；不生成占位域名或复用集团根域冒充APP业务验收",
+      "device_validation_required": true
+    },
+    {
+      "id": "INT027",
+      "name": "Shadowrocket",
+      "reason": "暂无明确公开业务端点；不生成占位域名或复用集团根域冒充APP业务验收",
+      "device_validation_required": true
+    }
+  ],
+  "device_validation_count": 0,
+  "note": "探针只给真实公开候选域并检查首条域名分类；未调用银行登录/交易、手机网络、节点连通、DNS/IP/协议。共享基础或隐私文档探针不能算该APP主业务覆盖。"
+}
