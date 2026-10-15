@@ -1,0 +1,3 @@
+# Surge Rulekit v4 | protect-binance | policy supplied by main profile
+DOMAIN-SUFFIX,binance.com
+DOMAIN-SUFFIX,bnbstatic.com

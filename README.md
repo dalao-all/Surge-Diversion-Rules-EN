@@ -1,73 +1,45 @@
-[中文](https://github.com/dalao-all/Surge-Diversion-Rules) | English
+[Chinese repository](https://github.com/dalao-all/Surge-Diversion-Rules) · English
 
-# Your Subscription Surge V6.1 — Diversion Rules
+# Surge V3.0.0 · Fixed routing, maintained rules
 
-I maintain this public **Surge policy / ruleset** repo: owned mirrors, small patches, desensitized share profiles, and a rule-map visualization.  
-**This project ships no subscription secrets or nodes.** Technical exchange and personal study only — not a proxy service, and I do not provide access.
+A public Surge profile and an auditable rules pipeline. Keep eleven routing categories on your device; maintain app sources, business exceptions and advertising rules in GitHub.
 
-- Description page: [`index.html`](./index.html)
-- Interactive rule map: [`rule-map.html`](./rule-map.html)
-- Rules overview: [`docs/RULES_OVERVIEW.md`](docs/RULES_OVERVIEW.md)
-- Getting started: [`docs/GETTING_STARTED.md`](docs/GETTING_STARTED.md)
+**Start with [surge-V3.0.0.conf](profiles/surge-V3.0.0.conf).** The public profile sets `ipv6 = false` and has an empty `[Proxy]` section. Add your own authorized nodes and check the named fallback members before importing. The download alone does not provide working proxy access.
 
-![Rule map preview](assets/rule-map-preview.png)
+[Download profile](https://raw.githubusercontent.com/dalao-all/Surge-Diversion-Rules-EN/main/profiles/surge-V3.0.0.conf) · [Setup guide](docs/GETTING_STARTED.md) · [Project page](index.html) · [Routing map](rule-map.html)
 
-## Install (share profile)
+## What is current
 
-1. Download [`profiles/Surge-v6.1.conf`](profiles/Surge-v6.1.conf) that I provide
-2. Download [`profiles/Your-Subscription-AdBlock-V6.0.sgmodule`](profiles/Your-Subscription-AdBlock-V6.0.sgmodule)
-3. Open the conf in a text editor and replace  
-   `https://subscription.example.invalid/REPLACE_WITH_YOUR_SUBSCRIPTION`  
-   with a Surge subscription URL **you** already own; replace `your-subscribe-host.example` if needed
-4. Import into Surge and install the module; manually refresh「📦 Your Subscription」
+- **164 app records:** 132 CN and 32 international records, with stable IDs and explicit coverage states. There are 13 unresolved identities/services and 5 local-only records. No app is marked fully covered or validated on a phone.
+- **114 declared sources and 28 shared dependencies.** A source is evidence for candidate rules, not proof of complete app coverage.
+- **23 runtime resources:** eleven `protect-*.list` files, `ads.domainset`, and eleven category lists in [dist/v4](dist/v4).
+- **Eleven categories:** `paypal`, `wise`, `binance`, `okx`, `ai`, `tiktok`, `stream`, `google`, `uk`, `global`, `cn`. AI and TikTok use US residential fallback groups; Google account traffic follows the AI group by default; ordinary Meta traffic uses international Smart routing; UK uses its UK fallback; CN uses DIRECT.
 
-Rules and ad-block scripts point at this project's GitHub raw paths (canonical Chinese repo host for RULE-SET URLs):
+The release name is **V3.0.0**. The compiler directory `rulekit_v4` and resource path `dist/v4` are internal compatibility paths, not alternate user-facing release numbers.
 
-| Path | What I put here |
-|------|-----------------|
-| `mirrors/skk/` | Owned mirror of SKK public lists |
-| `mirrors/scripts/` | Owned mirror of AdBlock helper scripts |
-| `mirrors/blackmatrix7/` | Historical remote lists (reference) |
-| `patches/` | Critical exception patches (AI / finance / DIRECT / ads) |
-| `profiles/` | Desensitized share conf + module |
-| `docs/` / `scripts/` | Docs and maintenance scripts |
+## One rule authority, two repositories
 
-## Rule layers (summary)
+The [Chinese repository](https://github.com/dalao-all/Surge-Diversion-Rules) is the canonical source and builds rules daily at **05:37 Beijing time**. This English repository mirrors verified canonical data and provides English documentation; it does not independently fetch and reinterpret upstream rules. Profile RULE-SET URLs intentionally use the canonical Chinese repository so both editions consume one authority.
 
-Rules match top-down. I split them into four layers — details in [`docs/RULES_OVERVIEW.md`](docs/RULES_OVERVIEW.md):
+The English mirror is scheduled at **06:07 Beijing time**, with a **21:17** health check. Each repository uses its own `GITHUB_TOKEN`; no PAT or cross-repository write is needed. GitHub schedules can be delayed; a configured schedule does not prove a successful run. Inspect [Actions](https://github.com/dalao-all/Surge-Diversion-Rules-EN/actions) for actual results.
 
-1. **patches/** — critical front exceptions (before the ad base)
-2. **mirrors/skk/** — main diversion + ad / domestic / streaming / global indexes
-3. **mirrors/scripts/** — scripts used by the AdBlock module
-4. **Inline exceptions in the main conf** — protocol / precise rules that should not live in lists
+## Read and maintain
 
-`rule-map.html` visualizes the same policy-group intent and match order for study.
+- [Install and validate on your device](docs/GETTING_STARTED.md)
+- [Rule order and policy intent](docs/RULES_OVERVIEW.md)
+- [All 164 apps and their coverage](docs/APP_POLICY_MATRIX.md)
+- [Maintenance, evidence and rollback](docs/MAINTENANCE.md)
+- [Compiler reference](rulekit_v4/README.md)
+- [Published report](dist/v4/report.json) and [machine-readable repository status](repository-status.json)
 
-## Policy-group intent (summary)
+The current build passed **37 compiler unit tests and 201 static routing probes**. Static checks do not establish app login, payments, playback, node geography, or phone performance. Rule totals change with verified source updates; use the current report rather than an old fixed total.
 
-| Group | Intent |
-|-------|--------|
-| 🤖 AI住宅 | Sensitive AI / identity traffic; residential preferred |
-| 🎵 TikTok | US datacenter Smart; exclude residential / low-ratio |
-| 🪙 / 💳 / 🇩🇪 / 💰 | Digital-asset & payment regional exits |
-| 🎬 流媒体 | High-bandwidth Smart |
-| 🌍 国际网络 | Chat / general international fallback |
-| DIRECT / REJECT* | Domestic direct + ad / leak protection |
+## Compatibility archive
 
-## Layout
+Older v6.x profiles, modules, `patches/`, and `mirrors/` remain available for existing consumers. They are not the installation path for V3.0.0. Historical interest-bot documents describe a superseded design; current maintenance is documented above. Existing legacy URLs are preserved rather than silently repurposed.
 
-| Path | Notes |
-|------|-------|
-| `profiles/*.share.conf` / `*.sgmodule` | Desensitized share profiles I publish |
-| `mirrors/` | Owned rule / script mirrors |
-| `patches/` | Small auditable patches |
-| `docs/` | English getting-started + overview; other maint docs included |
-| `scripts/` | Interest-driven sync tools |
-| `index.html` / `rule-map.html` / `assets/` | Description page and rule map |
+This repository contains no private node credentials or subscription secrets. Upstream data retains its own licenses and attribution; see [rulekit_v4/licenses](rulekit_v4/licenses) and the source manifests.
 
-## Updates
+## This audit refresh
 
-I sync upstream changes into `mirrors/` / `patches/` and keep the share conf aligned.  
-**I do not commit private profiles that contain real subscriptions.**
-
-> Technical exchange and personal study only. Not a proxy service. No nodes. Follow local law and GitHub terms.
+The original 160-app list was explicitly extended with PayPal, Wise, Binance and OKX (164 total). There are 23 runtime resources: eleven protected sets, ads.domainset, eleven functional sets. Four fixed financial selects and a Google account select replace unstable generic routing. See [verified fixes and phone acceptance plan](docs/REVIEW_FIXES.md). The historical ads.list export remains compatible.

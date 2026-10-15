@@ -1,70 +1,44 @@
-# Your Subscription Surge V6.0 — Getting started
+# Set up Surge V3.0.0
 
-Timezone: “09:00 / 21:00 daily” means **Asia/Shanghai (UTC+8)**.  
-GitHub Actions cron (UTC): `0 1,13 * * *` = 09:00 / 21:00 Beijing time.
+Use [surge-V3.0.0.conf](../profiles/surge-V3.0.0.conf), the current public profile. The internal engine and resource paths remain `rulekit_v4` and `dist/v4`.
 
-> Disclaimer: for technical exchange and personal study only — not a proxy service. Follow local law and platform terms.
+## Before importing
 
-## What you need
+You need a compatible Surge installation and nodes you are authorized to use. AnyTLS nodes require a Surge version that supports AnyTLS; the profile's Smart groups also require that feature to be available in your installation.
 
-1. **Surge iOS / Mac** installed
-2. A Surge-compatible node subscription **you already own**
-3. (Optional) a GitHub account to fork this project or enable Actions
+The public file deliberately has **no node definitions in `[Proxy]`**. It also sets **`ipv6 = false`**. An empty node section cannot supply proxy connectivity; adding your own nodes is a required setup step.
 
-## Install
+1. Download the profile and keep a private working copy.
+2. Add your own node definitions to `[Proxy]`, or configure an appropriate provider using the Surge features you use. Never commit credentials or subscription tokens to a public repository.
+3. Check every fallback member and Smart filter against your actual node names. The supplied groups reference original labels; they do not automatically map arbitrary subscription names.
+4. Import the private copy into Surge, check configuration errors, and download all 23 external rule resources.
+5. Check the selected nodes, first matching rule, and actual exit for representative business flows before switching daily traffic.
 
-### 1. Import the main profile
+## Node labels require attention
 
-Download and import [`profiles/Your-Subscription-Surge-V6.0.share.conf`](../profiles/Your-Subscription-Surge-V6.0.share.conf) that I provide.
+AI and TikTok have separate fallback groups. Their supplied member order is `🇺🇸 美国 12 家宽`, `🇺🇸 美国 10 家宽`, `🇺🇸 美国 11 家宽`, `🇺🇸 美国 13 家宽`, `🇺🇸 美国 14 家宽`.
 
-### 2. Replace the subscription placeholder (required)
+The UK fallback uses `🇬🇧 英国 04 家宽`, then `🇬🇧 英国 01`, `🇬🇧 英国 02`, `🇬🇧 英国 03`.
 
-The main profile contains:
+Preserve those exact labels in your private node definitions, or edit every affected group member to your own real labels. Inspect the Smart groups' country, residential and multiplier filters as well. A node name or successful URL test does not prove a residential exit, service eligibility, or a working AI login. Fallback can change your exit when a node fails.
 
-```text
-📦 Your Subscription = select, policy-path=https://subscription.example.invalid/REPLACE_WITH_YOUR_SUBSCRIPTION, update-interval=-1
-```
+## Expected routing
 
-Replace that URL **in full** with your own subscription. Replace `your-subscribe-host.example` with your subscribe host if needed.
+AI → US residential fallback; TikTok → its own US residential fallback; streaming → streaming Smart; Google → account select, following the AI group by default; UK → UK fallback; global → international Smart; CN → DIRECT. Meta's ordinary traffic uses global routing. Only evidence-backed precise AI authentication exceptions belong in the protected AI layer; Google account consistency is now an explicit reviewed exception; Meta remains on general international routing.
 
-**Security:**
+Rules run in the profile's written order: local network foundation → eleven business-protection resources → advertising resource → eleven category resources → CN / GEOIP / FINAL fallback. See the [routing map](../rule-map.html).
 
-- **Never** commit configs that contain real tokens to public GitHub
-- Share profiles in my public repos always stay desensitized
-- After forking, keep real subscriptions local or private — do not push tokens in PRs
+## First device checks
 
-Then manually refresh「📦 Your Subscription」in Surge and confirm the node list is non-empty.
+Test on Wi-Fi and cellular: bank/payment login, WeChat/DingTalk messaging, domestic video and maps, then AI login/upload/long connections, TikTok and streaming playback. Check DNS failures, node failures and rule rejects separately. Record the app ID, action, real host, first matching rule, policy, actual exit and time. Never substitute invented hosts for missing evidence.
 
-### 3. Install the AdBlock module
+The repository records 164 apps, 13 unresolved records and 5 local-only records. No record has complete or phone-validated coverage. Passing the static probes does not finish this device checklist.
 
-Enable [`profiles/Your-Subscription-AdBlock-V6.0.sgmodule`](../profiles/Your-Subscription-AdBlock-V6.0.sgmodule).  
-It covers precise Bilibili/Coolapk splash and Taobao/JD/Xiaohongshu/Amap rewrites; it does **not** expand to “MITM all hostnames”.
+## Keeping rules current
 
-### 4. Trust the CA (only if the module must decrypt HTTPS)
+The profile intentionally reads canonical Chinese repository RULE-SET URLs. After a verified publication, refresh external resources in Surge. App changes, source updates and corrections within existing categories can usually be handled in the repository. New routing groups, node setup, DNS/IPv6 settings and module behavior require a profile change.
 
-Do not leave “Capture traffic” or “MITM all hostnames” on for daily use.
+V3.0.0 does not require installing the archived v6.x AdBlock module. Legacy profiles/modules remain available only for compatibility. Read [maintenance](MAINTENANCE.md) before changing rule sources or rolling back.
 
-### 5. Confirm patches RULE-SET
 
-The main profile references six owned lists **before** SKK reject bases (default raw → `patches/` on the canonical public repo, `update-interval=86400`).  
-You may switch to local relative paths, e.g. `RULE-SET,patches/ai-critical.list,"🤖 AI住宅",update-interval=86400`.
-
-Run Surge’s config check and fix any errors.
-
-### 6. Optional: GitHub Actions
-
-Enable `your-subscription-interest-bot` (see `docs/github-actions/` example): runs at 09:00 / 21:00 Asia/Shanghai for interest-driven patch candidates. Review before merge.
-
-## Daily notes
-
-| Do | Why |
-|----|-----|
-| Avoid global MITM | This design is light MITM |
-| Avoid always-on traffic capture | Battery / certificate pain |
-| Never commit real subscription tokens | Leak = stolen nodes |
-| Do not vendor entire upstream mega-lists | This project only maintains small owned patches |
-| Do not manually allowlist pangle ad hosts | Let the ad sets reject them |
-
-More: [`RULES_OVERVIEW.md`](RULES_OVERVIEW.md) · [`MAINTENANCE.md`](MAINTENANCE.md) · [`INTEREST_MODEL.md`](INTEREST_MODEL.md) · [`APP_POLICY_MATRIX.md`](APP_POLICY_MATRIX.md)
-
-Chinese twin repo: https://github.com/dalao-all/Surge-Diversion-Rules
+Financial select groups: PayPal defaults to `🇺🇸 美国 12 家宽`; Wise, Binance and OKX default to `🇨🇳 台湾 07 家宽`. Preserve those original labels or change the members. The Google account select defaults to the actual `🤖 AI住宅` group; manually selecting another node changes that consistency. See [audit fixes](REVIEW_FIXES.md).

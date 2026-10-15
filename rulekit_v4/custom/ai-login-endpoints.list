@@ -1,0 +1,7 @@
+# 人工策展，2026-10-14；真实域名候选，不是手机验收记录
+# Evidence: https://developers.google.com/identity/protocols/oauth2
+# Evidence: https://help.openai.com/en/articles/6614161
+# Evidence: 原配置已有Google登录专项例外；accounts.google.com/oauth2.googleapis.com按AI登录稳定出口策展，不提升Google图片/云盘/CDN整域
+DOMAIN,accounts.google.com
+DOMAIN,oauth2.googleapis.com
+DOMAIN,accounts.youtube.com

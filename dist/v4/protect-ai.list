@@ -1,0 +1,20 @@
+# Surge Rulekit v4 | protect-ai | policy supplied by main profile
+DOMAIN,accounts.youtube.com
+DOMAIN,aistudio.google.com
+DOMAIN,api.anthropic.com
+DOMAIN,api.openai.com
+DOMAIN,api.x.ai
+DOMAIN,api2.cursor.sh
+DOMAIN,auth.openai.com
+DOMAIN,challenges.cloudflare.com
+DOMAIN,chatgpt.com
+DOMAIN,claude.ai
+DOMAIN,featureassets.org
+DOMAIN,gemini.google.com
+DOMAIN,generativelanguage.googleapis.com
+DOMAIN,grok.com
+DOMAIN,openai-api.arkoselabs.com
+DOMAIN,statsig.anthropic.com
+DOMAIN,ws.chatgpt.com
+DOMAIN-SUFFIX,statsig.com
+DOMAIN-SUFFIX,statsigapi.net

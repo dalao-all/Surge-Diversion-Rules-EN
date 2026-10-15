@@ -1,0 +1,11 @@
+# Surge Rulekit v4 | protect-stream | policy supplied by main profile
+DOMAIN,p-bstarstatic.akamaized.net
+DOMAIN,p.bstarstatic.com
+DOMAIN,upos-bstar-mirrorakam.akamaized.net
+DOMAIN,upos-bstar1-mirrorakam.akamaized.net
+DOMAIN,www.netflix.com
+DOMAIN,www.youtube.com
+DOMAIN,youtubei.googleapis.com
+DOMAIN-SUFFIX,bilibili.tv
+DOMAIN-SUFFIX,biliintl.co
+DOMAIN-SUFFIX,biliintl.com

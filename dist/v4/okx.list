@@ -1,0 +1,4 @@
+# Surge Rulekit v4 | okx | policy supplied by main profile
+DOMAIN-SUFFIX,okex.com
+DOMAIN-SUFFIX,oklink.com
+DOMAIN-SUFFIX,okx.com

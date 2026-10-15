@@ -6,3 +6,10 @@ scripts/__pycache__/
 scripts/last_bot_report.json
 *.pyc
 .DS_Store
+
+# Current verified engine caches
+rulekit_v4/.cache/
+__pycache__/
+*.pyc
+*.previous/
+.v4-stage-*/

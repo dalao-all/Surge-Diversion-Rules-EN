@@ -1,0 +1,4 @@
+# Surge Rulekit v4 | protect-paypal | policy supplied by main profile
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypal.me
+DOMAIN-SUFFIX,paypalobjects.com

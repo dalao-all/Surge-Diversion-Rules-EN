@@ -1,0 +1,7 @@
+# Explicit user-requested telemetry; not required AI feature flags.
+DOMAIN,api.amplitude.com
+DOMAIN,api2.amplitude.com
+DOMAIN,api.eu.amplitude.com
+DOMAIN,api.lab.amplitude.com
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,googletagmanager-cn.com

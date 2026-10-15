@@ -1,0 +1,5 @@
+# Surge Rulekit v4 | protect-tiktok | policy supplied by main profile
+DOMAIN,roovza.cdn-settings.appsflyersdk.com
+DOMAIN,roovza.launches.appsflyersdk.com
+DOMAIN,www.tiktok.com
+DOMAIN-SUFFIX,ttwebview.com

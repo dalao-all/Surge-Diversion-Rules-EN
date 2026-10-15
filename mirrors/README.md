@@ -1,34 +1,16 @@
-# mirrors/
+# Legacy mirrors and compatibility data
 
-Owned mirrors of upstream public lists so Surge RULE-SET / script URLs can point at this project's `raw.githubusercontent.com` paths.
+**Current installation:** [surge-V3.0.0.conf](../profiles/surge-V3.0.0.conf). **Current runtime rules:** [dist/v4](../dist/v4). **Current maintenance:** [MAINTENANCE.md](../docs/MAINTENANCE.md).
 
-> Chinese notes below (same content). Full English layering: [`docs/RULES_OVERVIEW.md`](../docs/RULES_OVERVIEW.md).
+This directory preserves older URLs and historical inputs for existing v6.x consumers. It is not the active routing layer for the V3.0.0 profile. Do not replace the new profile's resource URLs with these archived mirrors.
 
----
+## Preserved directories
 
-本目录存放从上游公开规则源**原样镜像**的列表，便于后续把 Surge 配置里的远程 URL 改为本仓库 `raw.githubusercontent.com` 地址。
+- `skk/`: historical upstream SKK snapshots, retaining their upstream relative paths and source maps. A cached file is not evidence of a fresh successful upstream fetch.
+- `owned/`: the older curated reject layer produced by the Option A interest/tombstone pipeline. Its counts and app scope belong to that historical pipeline.
+- `scripts/`: helper scripts used by archived AdBlock modules. V3.0.0 does not require installing those modules.
+- `blackmatrix7/`: historical list references retained for comparison and compatibility.
 
-## mirrors/skk
+Source-map files record provenance where available. Retaining a legacy URL does not mean the legacy updater remains an active scheduled publisher. The current canonical build and verified English mirror are described in the maintenance guide.
 
-- **来源**：`https://ruleset.skk.moe/List/...`（Sukka / SKK 公开规则集）
-- **用途**：供 MESL Surge 等配置在第二步把 `ruleset.skk.moe` 引用改为自有 raw URL
-- **同步**：由维护例程负责；内容应与现网 SKK 列表一致，不在此目录做语义改写
-- **映射**：见同目录 `SOURCE_MAP.json`（`upstream_url` → `repo_relative_path` / sha256 / bytes / fetched_at）
-
-路径保持 SKK 的 `List/domainset|non_ip|ip/...` 相对结构，与上游一一对应。
-
-> STEP 1（本目录就绪）只做镜像；**第二步才会改主配置里的 URL**。
-
-## blackmatrix7（历史远程，V6.0 已内联）
-
-旧版 Surge-Xiaomai 曾 RULE-SET 引用 OKX/Binance/PayPal/YouTube/YouTubeMusic 五份 list。V5.2+ 改为本地内联，V6.0 私用配置不再远程引用。此处仍保留镜像，便于对照与防上游失效。
-路径：`mirrors/blackmatrix7/*.list`
-
-## scripts（AdBlock 模块脚本）
-
-V6.0 模块曾引用 fmz200/wool_scripts 与 kokoryh/Script。已镜像到 `mirrors/scripts/`，私用模块应改指向本仓库 raw。
-
-
-## mirrors/owned (V6.1 Option A)
-
-Curated reject* copy with `patches/tombstones.yaml` applied. Runtime conf should reference `mirrors/owned/List/...` for reject*; `mirrors/skk` stays cache-only for those files. Rebuild: `python3 scripts/apply_tombstones_owned.py`.
+The active engine tracks app/source/dependency manifests and publishes 15 `dist/v4` resources with source locks, provenance and static probes. It does not interpret this directory's old lists as the current 160-app coverage matrix.

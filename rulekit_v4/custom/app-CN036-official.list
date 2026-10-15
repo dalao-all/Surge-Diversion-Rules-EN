@@ -1,0 +1,6 @@
+# 闲鱼官方业务域补充，2026-10-15；BM独立表遗漏goofish.com
+# 官方主页明确为闲鱼，软件协议明确goofish.com的服务运营主体
+# Evidence: https://www.goofish.com/
+# Evidence: https://terms.goofish.com/legal-agreement/terms/c_end_product_protocol/20260430142424889/20260430142424889.html
+# Evidence: https://open.goofish.com/doc/api/advanced/share.html
+DOMAIN-SUFFIX,goofish.com

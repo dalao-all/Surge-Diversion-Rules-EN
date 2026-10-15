@@ -1,0 +1,11 @@
+# 人工策展，2026-10-14；真实域名候选，不是手机验收记录
+# Evidence: https://support.apple.com/en-us/101555
+DOMAIN,certs.apple.com
+DOMAIN,crl.apple.com
+DOMAIN,ocsp.apple.com
+DOMAIN,ocsp2.apple.com
+DOMAIN,valid.apple.com
+DOMAIN,ocsp.digicert.cn
+DOMAIN,ocsp.digicert.com
+DOMAIN,crl3.digicert.com
+DOMAIN,crl4.digicert.com

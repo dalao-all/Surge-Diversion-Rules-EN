@@ -1,0 +1,1431 @@
+{
+  "release": "surge-V3.0.0",
+  "engine": "v4",
+  "ipv6": false,
+  "proxy_empty": true,
+  "app_count": 164,
+  "source_count": 114,
+  "dependency_count": 28,
+  "counts": {
+    "ads": 141064,
+    "ai": 66,
+    "binance": 12,
+    "cn": 6642,
+    "global": 693,
+    "google": 697,
+    "okx": 3,
+    "paypal": 246,
+    "protect-ai": 19,
+    "protect-binance": 2,
+    "protect-cn": 109,
+    "protect-global": 31,
+    "protect-google": 8,
+    "protect-okx": 2,
+    "protect-paypal": 3,
+    "protect-stream": 10,
+    "protect-tiktok": 4,
+    "protect-uk": 1,
+    "protect-wise": 2,
+    "stream": 1350,
+    "tiktok": 30,
+    "uk": 2,
+    "wise": 2
+  },
+  "probe_count": 201,
+  "coverage_counts": {
+    "independent-candidate": 62,
+    "official-document-only": 8,
+    "official-service-candidate": 3,
+    "shared-group-candidate": 29,
+    "existing-config-candidate": 8,
+    "shared-service-candidate": 33,
+    "unresolved": 13,
+    "target-site-routing": 2,
+    "local-only": 5,
+    "mail-provider-routing": 1
+  },
+  "canonical_repository": "dalao-all/Surge-Diversion-Rules",
+  "categories": [
+    {
+      "id": "paypal",
+      "policy": "💳 PayPal 美国",
+      "rule_count": 246,
+      "protected_rule_count": 3
+    },
+    {
+      "id": "wise",
+      "policy": "💸 Wise 台湾",
+      "rule_count": 2,
+      "protected_rule_count": 2
+    },
+    {
+      "id": "binance",
+      "policy": "🪙 Binance 台湾",
+      "rule_count": 12,
+      "protected_rule_count": 2
+    },
+    {
+      "id": "okx",
+      "policy": "🪙 OKX 台湾",
+      "rule_count": 3,
+      "protected_rule_count": 2
+    },
+    {
+      "id": "ai",
+      "policy": "🤖 AI住宅",
+      "rule_count": 66,
+      "protected_rule_count": 19
+    },
+    {
+      "id": "tiktok",
+      "policy": "🎵 TikTok住宅",
+      "rule_count": 30,
+      "protected_rule_count": 4
+    },
+    {
+      "id": "stream",
+      "policy": "🎬 流媒体",
+      "rule_count": 1350,
+      "protected_rule_count": 10
+    },
+    {
+      "id": "google",
+      "policy": "🔐 Google账户",
+      "rule_count": 697,
+      "protected_rule_count": 8
+    },
+    {
+      "id": "uk",
+      "policy": "🇬🇧 英国专属",
+      "rule_count": 2,
+      "protected_rule_count": 1
+    },
+    {
+      "id": "global",
+      "policy": "🌍 国际网络",
+      "rule_count": 693,
+      "protected_rule_count": 31
+    },
+    {
+      "id": "cn",
+      "policy": "DIRECT",
+      "rule_count": 6642,
+      "protected_rule_count": 109
+    }
+  ],
+  "apps": [
+    {
+      "id": "CN001",
+      "name": "支付宝",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN002",
+      "name": "云闪付",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN003",
+      "name": "中国工商银行",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN004",
+      "name": "中国建设银行",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN005",
+      "name": "个人手机银行（四川农信）",
+      "category": "cn",
+      "coverage": "official-document-only",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN006",
+      "name": "招商银行",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN007",
+      "name": "兴业银行",
+      "category": "cn",
+      "coverage": "official-service-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN008",
+      "name": "动卡空间",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN009",
+      "name": "掌上生活",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN010",
+      "name": "京东金融",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN011",
+      "name": "微信",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN012",
+      "name": "钉钉",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN013",
+      "name": "QQ",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN014",
+      "name": "抖音",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN015",
+      "name": "快手",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN016",
+      "name": "小红书",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN017",
+      "name": "哔哩哔哩",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN018",
+      "name": "微博",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN019",
+      "name": "快手极速版",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN020",
+      "name": "网易云音乐",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN021",
+      "name": "腾讯视频",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN022",
+      "name": "爱奇艺",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN023",
+      "name": "音乐",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN024",
+      "name": "剪映",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN025",
+      "name": "王者荣耀",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN026",
+      "name": "掌上英雄联盟",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN027",
+      "name": "飞智游戏厅",
+      "category": "cn",
+      "coverage": "existing-config-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN028",
+      "name": "酷安",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN029",
+      "name": "猫眼",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN030",
+      "name": "淘票票",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN031",
+      "name": "播客",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN032",
+      "name": "视频（Apple TV）",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN033",
+      "name": "淘宝",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN034",
+      "name": "京东",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN035",
+      "name": "拼多多",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN036",
+      "name": "闲鱼",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 2,
+      "enabled": true
+    },
+    {
+      "id": "CN037",
+      "name": "美团",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN038",
+      "name": "淘宝闪购",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN039",
+      "name": "大众点评",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN040",
+      "name": "盒马",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN041",
+      "name": "山姆会员商店",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN042",
+      "name": "得物",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN043",
+      "name": "转转",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN044",
+      "name": "阿里巴巴（1688）",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN045",
+      "name": "京东AI购",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN046",
+      "name": "一淘",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN047",
+      "name": "京粉",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN048",
+      "name": "省钱快报",
+      "category": "cn",
+      "coverage": "existing-config-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN049",
+      "name": "高德地图",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN050",
+      "name": "地图",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN051",
+      "name": "DeepSeek",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN052",
+      "name": "豆包",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN053",
+      "name": "千问",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN054",
+      "name": "ima",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN055",
+      "name": "TRAE",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN056",
+      "name": "Marvis",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN057",
+      "name": "铁路12306",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN058",
+      "name": "携程旅行",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN059",
+      "name": "航旅纵横",
+      "category": "cn",
+      "coverage": "existing-config-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN060",
+      "name": "哈啰",
+      "category": "cn",
+      "coverage": "existing-config-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN061",
+      "name": "天府通",
+      "category": "cn",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN062",
+      "name": "无忧行",
+      "category": "cn",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN063",
+      "name": "懂车帝",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN064",
+      "name": "汽车之家",
+      "category": "cn",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN065",
+      "name": "吉利汽车",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN066",
+      "name": "九号出行",
+      "category": "cn",
+      "coverage": "existing-config-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN067",
+      "name": "电话",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN068",
+      "name": "信息",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN069",
+      "name": "Safari浏览器",
+      "category": "cn",
+      "coverage": "target-site-routing",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN070",
+      "name": "照片",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN071",
+      "name": "相机",
+      "category": "cn",
+      "coverage": "local-only",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN072",
+      "name": "日历",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN073",
+      "name": "邮件",
+      "category": "cn",
+      "coverage": "mail-provider-routing",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN074",
+      "name": "备忘录",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN075",
+      "name": "提醒事项",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN076",
+      "name": "天气",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN077",
+      "name": "健康",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN078",
+      "name": "钱包",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN079",
+      "name": "计算器",
+      "category": "cn",
+      "coverage": "local-only",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN080",
+      "name": "文件",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN081",
+      "name": "设置",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN082",
+      "name": "App Store",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN083",
+      "name": "Watch",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN084",
+      "name": "查找",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN085",
+      "name": "健身",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN086",
+      "name": "Grow",
+      "category": "cn",
+      "coverage": "official-document-only",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN087",
+      "name": "米家",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN088",
+      "name": "华为智慧生活",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN089",
+      "name": "家庭",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN090",
+      "name": "Numbers表格",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN091",
+      "name": "网易有道词典",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN092",
+      "name": "翻译",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN093",
+      "name": "BOSS直聘",
+      "category": "cn",
+      "coverage": "existing-config-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN094",
+      "name": "智联招聘",
+      "category": "cn",
+      "coverage": "existing-config-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN095",
+      "name": "猎聘",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN096",
+      "name": "企查查",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN097",
+      "name": "贝壳找房",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN098",
+      "name": "国家网络身份认证",
+      "category": "cn",
+      "coverage": "official-document-only",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN099",
+      "name": "悦通行",
+      "category": "cn",
+      "coverage": "official-document-only",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN100",
+      "name": "去上网（去哒）",
+      "category": "cn",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN101",
+      "name": "中国移动",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN102",
+      "name": "UU远程",
+      "category": "cn",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN103",
+      "name": "交管12123",
+      "category": "cn",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN104",
+      "name": "个人所得税",
+      "category": "cn",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN105",
+      "name": "MONO记账",
+      "category": "cn",
+      "coverage": "official-document-only",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN106",
+      "name": "Cookie",
+      "category": "cn",
+      "coverage": "official-document-only",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN107",
+      "name": "上岛记",
+      "category": "cn",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN108",
+      "name": "iCost",
+      "category": "cn",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN109",
+      "name": "扫描全能王",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN110",
+      "name": "黑猫投诉",
+      "category": "cn",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN111",
+      "name": "爱思全能版",
+      "category": "cn",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN112",
+      "name": "语音备忘录",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN113",
+      "name": "指南针",
+      "category": "cn",
+      "coverage": "local-only",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN114",
+      "name": "测距仪",
+      "category": "cn",
+      "coverage": "local-only",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN115",
+      "name": "放大器",
+      "category": "cn",
+      "coverage": "local-only",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN116",
+      "name": "密码",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN117",
+      "name": "图书",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN118",
+      "name": "快捷指令",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN119",
+      "name": "股市",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN120",
+      "name": "FaceTime通话",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN121",
+      "name": "支持",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN122",
+      "name": "反馈",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN123",
+      "name": "Apple Store",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN124",
+      "name": "GestaltEdit",
+      "category": "cn",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN125",
+      "name": "提示",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN126",
+      "name": "无边记",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN127",
+      "name": "手记",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN128",
+      "name": "iTunes Store",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN129",
+      "name": "预览",
+      "category": "cn",
+      "coverage": "shared-service-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN130",
+      "name": "全球网测",
+      "category": "cn",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "CN131",
+      "name": "Speedtest",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "CN132",
+      "name": "彩云天气PRO",
+      "category": "cn",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT001",
+      "name": "ChatGPT",
+      "category": "ai",
+      "coverage": "independent-candidate",
+      "source_count": 2,
+      "enabled": true
+    },
+    {
+      "id": "INT002",
+      "name": "Claude",
+      "category": "ai",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT003",
+      "name": "Gemini",
+      "category": "ai",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT004",
+      "name": "Cursor",
+      "category": "ai",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT005",
+      "name": "Grok",
+      "category": "ai",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT006",
+      "name": "Grok Bot",
+      "category": "ai",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "INT007",
+      "name": "X",
+      "category": "global",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT008",
+      "name": "YouTube",
+      "category": "stream",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT009",
+      "name": "TikTok",
+      "category": "tiktok",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT010",
+      "name": "Instagram",
+      "category": "global",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT011",
+      "name": "Facebook",
+      "category": "global",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT012",
+      "name": "Netflix",
+      "category": "stream",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT013",
+      "name": "Viki",
+      "category": "stream",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT014",
+      "name": "WhatsApp",
+      "category": "global",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT015",
+      "name": "Telegram",
+      "category": "global",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT016",
+      "name": "Discord",
+      "category": "global",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT017",
+      "name": "Google",
+      "category": "google",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "INT018",
+      "name": "Chrome",
+      "category": "google",
+      "coverage": "target-site-routing",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "INT019",
+      "name": "Gmail",
+      "category": "google",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "INT020",
+      "name": "云端硬盘（Google Drive）",
+      "category": "google",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT021",
+      "name": "Google Maps",
+      "category": "google",
+      "coverage": "shared-group-candidate",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "INT022",
+      "name": "Obsidian",
+      "category": "global",
+      "coverage": "official-service-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT023",
+      "name": "DejaVocab",
+      "category": "global",
+      "coverage": "official-document-only",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT024",
+      "name": "Tableau",
+      "category": "cn",
+      "coverage": "existing-config-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT025",
+      "name": "Sanas",
+      "category": "global",
+      "coverage": "official-document-only",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT026",
+      "name": "gifgaff",
+      "category": "uk",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT027",
+      "name": "Shadowrocket",
+      "category": "global",
+      "coverage": "unresolved",
+      "source_count": 0,
+      "enabled": true
+    },
+    {
+      "id": "INT028",
+      "name": "Surge",
+      "category": "global",
+      "coverage": "official-service-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT029",
+      "name": "PayPal",
+      "category": "paypal",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT030",
+      "name": "Wise",
+      "category": "wise",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT031",
+      "name": "Binance",
+      "category": "binance",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    },
+    {
+      "id": "INT032",
+      "name": "OKX",
+      "category": "okx",
+      "coverage": "independent-candidate",
+      "source_count": 1,
+      "enabled": true
+    }
+  ],
+  "semantic_sha256": "2031c6733a04e9eed54ebdf35cd74497ee2678befae13abaaafc82e76a6e3a7f"
+}

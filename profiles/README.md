@@ -1,15 +1,15 @@
-# profiles（分享版）
+# Public profiles
 
-**Canonical (V6.1):** [`Surge-v6.1.conf`](Surge-v6.1.conf) — 公开脱敏；reject* → `mirrors/owned`；订阅占位。
+Current release: **[surge-V3.0.0.conf](surge-V3.0.0.conf)**.
 
-旧版 `Your-Subscription-Surge-V6.0.share.conf` 保留并指向 V6.1（避免断链）。
+This public profile sets `ipv6 = false` and has an empty `[Proxy]` section. Add your own private node definitions before use, and preserve the original node labels referenced by the US/UK fallback groups or edit those group members to match your actual nodes. Smart filters also depend on the node labels. The empty public profile does not provide proxy access.
 
-# profiles (share only)
+The 22 RULE-SET + 1 DOMAIN-SET URLs intentionally point to the canonical [Chinese repository](https://github.com/dalao-all/Surge-Diversion-Rules/tree/main/dist/v4). The English repository mirrors verified data and English documentation while keeping one runtime rule authority.
 
-I only put **public, desensitized** profiles here:
+[Setup guide](../docs/GETTING_STARTED.md) · [Routing order](../docs/RULES_OVERVIEW.md) · [Maintenance](../docs/MAINTENANCE.md).
 
-- `Your-Subscription-Surge-V6.0.share.conf` — main profile; subscription is a placeholder; rules point at this project's `mirrors/` and `patches/`
-- `Your-Subscription-AdBlock-V6.0.sgmodule` — daily AdBlock module; scripts point at `mirrors/scripts/`
+## Compatibility files
 
-Replace the `policy-path` placeholder and `your-subscribe-host.example` yourself when installing.  
-**I do not put private configs with real subscription tokens in this folder or in any public repo.**
+Old `Surge-v6.1.conf`, `Your-Subscription-Surge-V6.0.share.conf` and `Your-Subscription-AdBlock-V6.0.sgmodule` files remain for existing consumers. They are legacy artifacts, not required installation steps for V3.0.0. Their old subscription and module instructions do not apply to the new release.
+
+Keep credentials and real subscription URLs in a private local copy. Neither the current public profile nor this repository supplies nodes.

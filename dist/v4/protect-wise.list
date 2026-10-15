@@ -1,0 +1,3 @@
+# Surge Rulekit v4 | protect-wise | policy supplied by main profile
+DOMAIN-SUFFIX,transferwise.com
+DOMAIN-SUFFIX,wise.com

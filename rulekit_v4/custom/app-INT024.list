@@ -1,0 +1,7 @@
+# 人工策展，2026-10-14；真实域名候选，不是手机验收记录
+# Evidence: https://www.tableau.com/
+# Evidence: 原配置将Tableau业务域直连；不采Salesforce全集团域名
+DOMAIN-SUFFIX,tableau.com
+DOMAIN-SUFFIX,tableausoftware.com
+DOMAIN-SUFFIX,tableaucdn.com
+DOMAIN-SUFFIX,tableauusercontent.com
