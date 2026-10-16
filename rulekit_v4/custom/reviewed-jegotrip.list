@@ -1,0 +1,5 @@
+# Reviewed 2026-10-16. Not a device capture.
+# Evidence: https://apps.apple.com/cn/app/id1037589370
+# Evidence: https://app.jegotrip.com.cn/wyx/wap/protocol/tempProcotolPrivacy.html
+DOMAIN-SUFFIX,jegotrip.cn
+DOMAIN-SUFFIX,jegotrip.com.cn

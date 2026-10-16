@@ -1,0 +1,7 @@
+# Reviewed 2026-10-16. Not a device capture.
+# Evidence: https://www.autohome.com.cn/about/falv.html
+# Evidence: https://carif.api.autohome.com.cn/chejiahao/userGuide.ashx?seriesid=3788
+# Evidence: https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/category-automobile-cn
+DOMAIN-SUFFIX,autohome.com
+DOMAIN-SUFFIX,autohome.com.cn
+DOMAIN-SUFFIX,autoimg.cn

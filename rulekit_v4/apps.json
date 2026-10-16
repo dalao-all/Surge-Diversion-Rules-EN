@@ -3000,31 +3000,42 @@
       "identity": {
         "developer": null,
         "app_store_ids": [],
-        "official_urls": [],
-        "verification": "name-only",
+        "official_urls": [
+          "https://apps.apple.com/cn/app/id1358566958",
+          "https://www.cdtft.cn/"
+        ],
+        "verification": "official-site-and-developer-link",
         "domestic_or_international_version": "CN",
         "notes": "未见独立规则"
       },
       "enabled": true,
       "category": "cn",
       "policy": "DIRECT",
-      "source_ids": [],
+      "source_ids": [
+        "reviewed-tianfutong"
+      ],
       "dependency_ids": [],
       "coverage": {
-        "status": "unresolved",
+        "status": "official-service-candidate",
         "evidence": [
-          "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
-          "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+          "https://apps.apple.com/cn/app/id1358566958",
+          "https://www.cdtft.cn/"
         ],
         "complete": false,
         "device_validated": false,
-        "candidate_domains": [],
-        "known_probe_domains": [],
-        "last_device_validation": null
+        "candidate_domains": [
+          "cdtft.cn"
+        ],
+        "known_probe_domains": [
+          "cdtft.cn"
+        ],
+        "last_device_validation": null,
+        "primary_business_verified": false
       },
       "notes": [
         "两仓目录未见独立的同名应用规则；不能据此推断应用没有网络或被 China/Global 全覆盖。保留未知。",
-        "源存在不等于APP全覆盖；所有行尚无本次手机验收。"
+        "源存在不等于APP全覆盖；所有行尚无本次手机验收。",
+        "2026-10-16: verified official service domains; private API/CDN coverage remains partial, not packet-capture verified."
       ]
     },
     {
@@ -3035,31 +3046,44 @@
       "identity": {
         "developer": null,
         "app_store_ids": [],
-        "official_urls": [],
-        "verification": "name-only",
+        "official_urls": [
+          "https://apps.apple.com/cn/app/id1037589370",
+          "https://app.jegotrip.com.cn/wyx/wap/protocol/tempProcotolPrivacy.html"
+        ],
+        "verification": "official-site-and-developer-link",
         "domestic_or_international_version": "CN",
         "notes": "未见独立规则"
       },
       "enabled": true,
       "category": "cn",
       "policy": "DIRECT",
-      "source_ids": [],
+      "source_ids": [
+        "reviewed-jegotrip"
+      ],
       "dependency_ids": [],
       "coverage": {
-        "status": "unresolved",
+        "status": "official-service-candidate",
         "evidence": [
-          "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
-          "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+          "https://apps.apple.com/cn/app/id1037589370",
+          "https://app.jegotrip.com.cn/wyx/wap/protocol/tempProcotolPrivacy.html"
         ],
         "complete": false,
         "device_validated": false,
-        "candidate_domains": [],
-        "known_probe_domains": [],
-        "last_device_validation": null
+        "candidate_domains": [
+          "jegotrip.cn",
+          "jegotrip.com.cn"
+        ],
+        "known_probe_domains": [
+          "jegotrip.cn",
+          "jegotrip.com.cn"
+        ],
+        "last_device_validation": null,
+        "primary_business_verified": false
       },
       "notes": [
         "两仓目录未见独立的同名应用规则；不能据此推断应用没有网络或被 China/Global 全覆盖。保留未知。",
-        "源存在不等于APP全覆盖；所有行尚无本次手机验收。"
+        "源存在不等于APP全覆盖；所有行尚无本次手机验收。",
+        "2026-10-16: verified official service domains; private API/CDN coverage remains partial, not packet-capture verified."
       ]
     },
     {
@@ -3112,31 +3136,47 @@
       "identity": {
         "developer": null,
         "app_store_ids": [],
-        "official_urls": [],
-        "verification": "name-only",
+        "official_urls": [
+          "https://www.autohome.com.cn/about/falv.html",
+          "https://carif.api.autohome.com.cn/chejiahao/userGuide.ashx?seriesid=3788"
+        ],
+        "verification": "official-site-and-developer-link",
         "domestic_or_international_version": "CN",
         "notes": "未见独立规则"
       },
       "enabled": true,
       "category": "cn",
       "policy": "DIRECT",
-      "source_ids": [],
+      "source_ids": [
+        "reviewed-autohome"
+      ],
       "dependency_ids": [],
       "coverage": {
-        "status": "unresolved",
+        "status": "official-service-candidate",
         "evidence": [
-          "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
-          "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+          "https://www.autohome.com.cn/about/falv.html",
+          "https://carif.api.autohome.com.cn/chejiahao/userGuide.ashx?seriesid=3788",
+          "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/category-automobile-cn"
         ],
         "complete": false,
         "device_validated": false,
-        "candidate_domains": [],
-        "known_probe_domains": [],
-        "last_device_validation": null
+        "candidate_domains": [
+          "autohome.com",
+          "autohome.com.cn",
+          "autoimg.cn"
+        ],
+        "known_probe_domains": [
+          "autohome.com",
+          "autohome.com.cn",
+          "autoimg.cn"
+        ],
+        "last_device_validation": null,
+        "primary_business_verified": false
       },
       "notes": [
         "两仓目录未见独立的同名应用规则；不能据此推断应用没有网络或被 China/Global 全覆盖。保留未知。",
-        "源存在不等于APP全覆盖；所有行尚无本次手机验收。"
+        "源存在不等于APP全覆盖；所有行尚无本次手机验收。",
+        "2026-10-16: verified official service domains; private API/CDN coverage remains partial, not packet-capture verified."
       ]
     },
     {
@@ -4856,31 +4896,42 @@
       "identity": {
         "developer": null,
         "app_store_ids": [],
-        "official_urls": [],
-        "verification": "name-only",
+        "official_urls": [
+          "https://apps.apple.com/cn/app/id1642306791",
+          "https://uuyc.163.com/"
+        ],
+        "verification": "official-site-and-developer-link",
         "domestic_or_international_version": "CN",
         "notes": "未见独立规则"
       },
       "enabled": true,
       "category": "cn",
       "policy": "DIRECT",
-      "source_ids": [],
+      "source_ids": [
+        "reviewed-uuyc"
+      ],
       "dependency_ids": [],
       "coverage": {
-        "status": "unresolved",
+        "status": "official-service-candidate",
         "evidence": [
-          "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
-          "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+          "https://apps.apple.com/cn/app/id1642306791",
+          "https://uuyc.163.com/"
         ],
         "complete": false,
         "device_validated": false,
-        "candidate_domains": [],
-        "known_probe_domains": [],
-        "last_device_validation": null
+        "candidate_domains": [
+          "uuyc.163.com"
+        ],
+        "known_probe_domains": [
+          "uuyc.163.com"
+        ],
+        "last_device_validation": null,
+        "primary_business_verified": false
       },
       "notes": [
         "两仓目录未见独立的同名应用规则；不能据此推断应用没有网络或被 China/Global 全覆盖。保留未知。",
-        "源存在不等于APP全覆盖；所有行尚无本次手机验收。"
+        "源存在不等于APP全覆盖；所有行尚无本次手机验收。",
+        "2026-10-16: verified official service domains; private API/CDN coverage remains partial, not packet-capture verified."
       ]
     },
     {
@@ -4891,31 +4942,42 @@
       "identity": {
         "developer": null,
         "app_store_ids": [],
-        "official_urls": [],
-        "verification": "name-only",
+        "official_urls": [
+          "https://www.122.gov.cn/",
+          "https://gaj.shenyang.gov.cn/scjx/tbgz/202304/P020230429590660571460.pdf"
+        ],
+        "verification": "official-site-and-developer-link",
         "domestic_or_international_version": "CN",
         "notes": "未见独立规则"
       },
       "enabled": true,
       "category": "cn",
       "policy": "DIRECT",
-      "source_ids": [],
+      "source_ids": [
+        "reviewed-traffic12123"
+      ],
       "dependency_ids": [],
       "coverage": {
-        "status": "unresolved",
+        "status": "official-service-candidate",
         "evidence": [
-          "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
-          "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+          "https://www.122.gov.cn/",
+          "https://gaj.shenyang.gov.cn/scjx/tbgz/202304/P020230429590660571460.pdf"
         ],
         "complete": false,
         "device_validated": false,
-        "candidate_domains": [],
-        "known_probe_domains": [],
-        "last_device_validation": null
+        "candidate_domains": [
+          "122.gov.cn"
+        ],
+        "known_probe_domains": [
+          "122.gov.cn"
+        ],
+        "last_device_validation": null,
+        "primary_business_verified": false
       },
       "notes": [
         "两仓目录未见独立的同名应用规则；不能据此推断应用没有网络或被 China/Global 全覆盖。保留未知。",
-        "源存在不等于APP全覆盖；所有行尚无本次手机验收。"
+        "源存在不等于APP全覆盖；所有行尚无本次手机验收。",
+        "2026-10-16: verified official service domains; private API/CDN coverage remains partial, not packet-capture verified."
       ]
     },
     {
@@ -4926,31 +4988,42 @@
       "identity": {
         "developer": null,
         "app_store_ids": [],
-        "official_urls": [],
-        "verification": "name-only",
+        "official_urls": [
+          "https://etax.chinatax.gov.cn/webstatic/download.html",
+          "https://gd.etax.chinatax.gov.cn/"
+        ],
+        "verification": "official-site-and-developer-link",
         "domestic_or_international_version": "CN",
         "notes": "未见独立规则"
       },
       "enabled": true,
       "category": "cn",
       "policy": "DIRECT",
-      "source_ids": [],
+      "source_ids": [
+        "reviewed-income-tax"
+      ],
       "dependency_ids": [],
       "coverage": {
-        "status": "unresolved",
+        "status": "official-service-candidate",
         "evidence": [
-          "https://api.github.com/repos/v2fly/domain-list-community/git/trees/c6adacf29cc4fb05e04651fcf03e00989ef9f797?recursive=1",
-          "https://api.github.com/repos/blackmatrix7/ios_rule_script/git/trees/d8363caa2c1e47fb735615316032bed3f475ee57?recursive=1"
+          "https://etax.chinatax.gov.cn/webstatic/download.html",
+          "https://gd.etax.chinatax.gov.cn/"
         ],
         "complete": false,
         "device_validated": false,
-        "candidate_domains": [],
-        "known_probe_domains": [],
-        "last_device_validation": null
+        "candidate_domains": [
+          "etax.chinatax.gov.cn"
+        ],
+        "known_probe_domains": [
+          "etax.chinatax.gov.cn"
+        ],
+        "last_device_validation": null,
+        "primary_business_verified": false
       },
       "notes": [
         "两仓目录未见独立的同名应用规则；不能据此推断应用没有网络或被 China/Global 全覆盖。保留未知。",
-        "源存在不等于APP全覆盖；所有行尚无本次手机验收。"
+        "源存在不等于APP全覆盖；所有行尚无本次手机验收。",
+        "2026-10-16: verified official service domains; private API/CDN coverage remains partial, not packet-capture verified."
       ]
     },
     {
@@ -6237,7 +6310,9 @@
       "policy": "ai",
       "source_ids": [
         "bm:rule/Surge/OpenAI/OpenAI.list",
-        "ai-featureflags"
+        "ai-featureflags",
+        "v2:data/openai",
+        "reviewed-ai-auth"
       ],
       "dependency_ids": [
         "ai-auth",
@@ -6285,7 +6360,8 @@
       "category": "ai",
       "policy": "ai",
       "source_ids": [
-        "bm:rule/Surge/Claude/Claude.list"
+        "bm:rule/Surge/Claude/Claude.list",
+        "v2:data/anthropic"
       ],
       "dependency_ids": [
         "ai-auth"
@@ -6332,7 +6408,8 @@
       "category": "ai",
       "policy": "ai",
       "source_ids": [
-        "bm:rule/Surge/Gemini/Gemini.list"
+        "bm:rule/Surge/Gemini/Gemini.list",
+        "reviewed-google-ai"
       ],
       "dependency_ids": [
         "ai-auth"

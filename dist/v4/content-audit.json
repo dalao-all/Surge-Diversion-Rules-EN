@@ -1,0 +1,1919 @@
+{
+  "business_first_ad_bypasses": [
+    {
+      "actual": "google",
+      "domain": "ad.doubleclick.net"
+    },
+    {
+      "actual": "cn",
+      "domain": "pangolin.snssdk.com"
+    },
+    {
+      "actual": "cn",
+      "domain": "gdt.qq.com"
+    },
+    {
+      "actual": "cn",
+      "domain": "adkwai.com"
+    },
+    {
+      "actual": "cn",
+      "domain": "cupid.iqiyi.com"
+    },
+    {
+      "actual": "global",
+      "domain": "ads-twitter.com"
+    },
+    {
+      "actual": "tiktok",
+      "domain": "analytics.tiktok.com"
+    },
+    {
+      "actual": "google",
+      "domain": "www.googletagmanager.com"
+    },
+    {
+      "actual": "cn",
+      "domain": "v3.gdt.qq.com"
+    },
+    {
+      "actual": "cn",
+      "domain": "sdkquic.e.qq.com"
+    },
+    {
+      "actual": "cn",
+      "domain": "v2mi.gdt.qq.com"
+    },
+    {
+      "actual": "cn",
+      "domain": "sdk.e.qq.com"
+    },
+    {
+      "actual": "cn",
+      "domain": "api-access.pangolin-sdk-toutiao-b.com"
+    },
+    {
+      "actual": "cn",
+      "domain": "gromore.pangolin-sdk-toutiao.com"
+    },
+    {
+      "actual": "cn",
+      "domain": "log-api.pangolin-sdk-toutiao.com"
+    },
+    {
+      "actual": "cn",
+      "domain": "adashbc.ut.taobao.com"
+    },
+    {
+      "actual": "cn",
+      "domain": "adashxgc.ut.taobao.com"
+    }
+  ],
+  "business_probes": 219,
+  "business_results": [
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "mobilegw.alipay.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "95516.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "m.icbc.com.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "ccb.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "img1.scrcu.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "cmbchina.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "cib.com.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "creditcard.ecitic.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "cc.cmbchina.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "jr.jd.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "wxs.qq.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "oapi.dingtalk.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "qun.qq.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "aweme.snssdk.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "api.kuaishou.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "edith.xiaohongshu.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "api.bilibili.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "weibo.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "api.kuaishou.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "music.163.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "v.qq.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "api.iqiyi.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "music.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "bytecdn.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "game.qq.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "lol.qq.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "flydigi.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "api.coolapk.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "meituan.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "taopiaopiao.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "amp-api.podcasts.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "uts-api.itunes.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "acs.m.taobao.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "api.m.jd.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "yangkeduo.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "goofish.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "meituan.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "ele.me",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "dianping.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "freshhema.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "walmart.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "dewu.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "zhuanzhuan.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "1688.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "jd.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "etao.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "jd.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "sqkb.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "apiinit.amap.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "gsp-ssl.ls.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "chat.deepseek.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "www.doubao.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "qianwen.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "ima.qq.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "trae.com.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "privacy.qq.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "12306.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "m.ctrip.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "umetrip.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "hellobike.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "dongchedi.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "geely.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "ninebot.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "token.safebrowsing.apple",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "apps.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "gateway.icloud.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "amp-api.fitness.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "floatingislandapps.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "ha.api.io.mi.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "huawei.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "youdao.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "zhipin.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "zhaopin.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "liepin.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "qcc.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "lianjia.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "cdnrefresh.ctdidcii.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "www.myytx.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "10086.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "weisenjoy.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "noncurious.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "intsig.net",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "sina.com.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "fba.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "itunes.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "idmsa.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "www.speedtest.net",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "caiyunapp.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "chatgpt.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "claude.ai",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "gemini.google.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "api2.cursor.sh",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "grok.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "x.ai",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "api.x.com",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "www.youtube.com",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "tiktok",
+        "v330-business-first": "tiktok"
+      },
+      "domain": "www.tiktok.com",
+      "expected": "tiktok"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "i.instagram.com",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "graph.facebook.com",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "www.netflix.com",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "viki.com",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "web.whatsapp.com",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "api.telegram.org",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "discord.com",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "google",
+        "v330-business-first": "google"
+      },
+      "domain": "www.google.com",
+      "expected": "google"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "google",
+        "v330-business-first": "google"
+      },
+      "domain": "update.googleapis.com",
+      "expected": "google"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "google",
+        "v330-business-first": "google"
+      },
+      "domain": "mail.google.com",
+      "expected": "google"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "google",
+        "v330-business-first": "google"
+      },
+      "domain": "drive.google.com",
+      "expected": "google"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "google",
+        "v330-business-first": "google"
+      },
+      "domain": "maps.googleapis.com",
+      "expected": "google"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "sync.obsidian.md",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "dejavocab.com",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "tableau.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "www.sanas.ai",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "uk",
+        "v330-business-first": "uk"
+      },
+      "domain": "www.giffgaff.com",
+      "expected": "uk"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "nssurge.com",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "api.openai.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "ws.chatgpt.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "files.oaiusercontent.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "google",
+        "v330-business-first": "google"
+      },
+      "domain": "accounts.google.com",
+      "expected": "google"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "google",
+        "v330-business-first": "google"
+      },
+      "domain": "oauth2.googleapis.com",
+      "expected": "google"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "statsigapi.net",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "generativelanguage.googleapis.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "ark.cn-beijing.volces.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "grpc.biliapi.net",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "mmbiz.qpic.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "youtubei.googleapis.com",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "googlevideo.com",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "fast.com",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "accounts.youtube.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "google",
+        "v330-business-first": "google"
+      },
+      "domain": "firebaseremoteconfig.googleapis.com",
+      "expected": "google"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "deepoil.cc",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "keruioil.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "qingmail.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "qingmail.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "paypal",
+        "v330-business-first": "paypal"
+      },
+      "domain": "paypal.com",
+      "expected": "paypal"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "paypal",
+        "v330-business-first": "paypal"
+      },
+      "domain": "paypalobjects.com",
+      "expected": "paypal"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "paypal",
+        "v330-business-first": "paypal"
+      },
+      "domain": "paypal.me",
+      "expected": "paypal"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "wise",
+        "v330-business-first": "wise"
+      },
+      "domain": "wise.com",
+      "expected": "wise"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "wise",
+        "v330-business-first": "wise"
+      },
+      "domain": "transferwise.com",
+      "expected": "wise"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "binance",
+        "v330-business-first": "binance"
+      },
+      "domain": "binance.com",
+      "expected": "binance"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "binance",
+        "v330-business-first": "binance"
+      },
+      "domain": "bnbstatic.com",
+      "expected": "binance"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "okx",
+        "v330-business-first": "okx"
+      },
+      "domain": "okx.com",
+      "expected": "okx"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "okx",
+        "v330-business-first": "okx"
+      },
+      "domain": "okex.com",
+      "expected": "okx"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "statsig.anthropic.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "aistudio.google.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "www.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "swcdn.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "testflight.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "developer.apple.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "fp-it.fengkongcloud.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "www.substack.com",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "msedge.net",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "www.fosshub.com",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "openinstall.io",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "cookielaw.org",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "onetrust.com",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "twemoji.maxcdn.com",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "bilibili.tv",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "biliintl.co",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "biliintl.com",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "p-bstarstatic.akamaized.net",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "p.bstarstatic.com",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "upos-bstar-mirrorakam.akamaized.net",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "stream",
+        "v330-business-first": "stream"
+      },
+      "domain": "upos-bstar1-mirrorakam.akamaized.net",
+      "expected": "stream"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "trae.ai",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "marscode.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "trae-api-sg.mchost.guru",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "files.oaistatsig.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "files.oaistatic.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "assets.claude.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "assets.claude.app",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "assets.claudeusercontent.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "assets.claudemcpcontent.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "cdn.openaimerge.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "cdn.workos.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "forwarder.workos.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "frontend-apps-multi-region.workos.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "images.workoscdn.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "setup.workos.com",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "ai",
+        "v330-business-first": "ai"
+      },
+      "domain": "workos.imgix.net",
+      "expected": "ai"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "cdtft.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "jegotrip.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "jegotrip.com.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "autohome.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "autohome.com.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "autoimg.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "uuyc.163.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "122.gov.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "etax.chinatax.gov.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "discord-attachments-uploads-prd.storage.googleapis.com",
+      "expected": "global"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "google",
+        "v330-business-first": "google"
+      },
+      "domain": "edgedl.me.gvt1.com",
+      "expected": "google"
+    }
+  ],
+  "limits": [
+    "No DNS/GeoIP/IP/inline protocol emulation.",
+    "Ad bypasses are disclosed compatibility tradeoffs, not successful blocks.",
+    "No device performance or login verification."
+  ],
+  "negative_results": [
+    {
+      "actual": {
+        "legacy-ad-first": null,
+        "v330-business-first": null
+      },
+      "domain": "notopenai.example.invalid",
+      "forbidden_categories": [
+        "ai"
+      ]
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "google",
+        "v330-business-first": "google"
+      },
+      "domain": "colab-not-google.example.invalid",
+      "forbidden_categories": [
+        "ai"
+      ]
+    },
+    {
+      "actual": {
+        "legacy-ad-first": null,
+        "v330-business-first": null
+      },
+      "domain": "developerprofiles.example.invalid",
+      "forbidden_categories": [
+        "ai"
+      ]
+    },
+    {
+      "actual": {
+        "legacy-ad-first": null,
+        "v330-business-first": null
+      },
+      "domain": "generativelanguage.example.invalid",
+      "forbidden_categories": [
+        "ai"
+      ]
+    },
+    {
+      "actual": {
+        "legacy-ad-first": null,
+        "v330-business-first": null
+      },
+      "domain": "not-tiktok.example.invalid",
+      "forbidden_categories": [
+        "tiktok"
+      ]
+    },
+    {
+      "actual": {
+        "legacy-ad-first": null,
+        "v330-business-first": null
+      },
+      "domain": "musical.ly.unrelated.example.invalid",
+      "forbidden_categories": [
+        "tiktok"
+      ]
+    },
+    {
+      "actual": {
+        "legacy-ad-first": null,
+        "v330-business-first": null
+      },
+      "domain": "tenant.us-west-2.amazonaws.com",
+      "forbidden_categories": [
+        "stream"
+      ]
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "global",
+        "v330-business-first": "global"
+      },
+      "domain": "twemoji.maxcdn.com",
+      "forbidden_categories": [
+        "stream"
+      ]
+    }
+  ],
+  "routing_orders": [
+    "legacy-ad-first",
+    "v330-business-first"
+  ],
+  "scope": "static external-domain classification only"
+}

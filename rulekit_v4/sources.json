@@ -1873,7 +1873,13 @@
         "sha256": "2f74f99c2f48a2133044b7f725faaa21a5621fd503c640599e1ac8b5eb48890b",
         "active_line_count": 51,
         "etag": "\"f71a8082ef4ba83d6426604d15e6e3afef2469638c78569fc9160fec9f4c8d43\""
-      }
+      },
+      "exclude_rules": [
+        "IP-CIDR6,::ffff:c612:58a/128,no-resolve",
+        "IP-CIDR6,::ffff:c612:651/128,no-resolve",
+        "IP-CIDR6,::ffff:c612:653/128,no-resolve"
+      ],
+      "exclude_reason": "IPv4-mapped 198.18/15 benchmark/fake-IP values are not public TencentVideo endpoints."
     },
     {
       "id": "bm:rule/Surge/iQIYI/iQIYI.list",
@@ -3458,7 +3464,28 @@
         "sha256": "6f4047cdbf6953cf5d9b38c4ccd6da7bc6f1acb91b7a87134f25d5b8f5d2408b",
         "active_line_count": 35,
         "etag": "\"5a77a047af6e3b3b01f17154a5b02f5113d0205bb83cb21a6c71319d9806eb92\""
-      }
+      },
+      "exclude_rules": [
+        "DOMAIN-KEYWORD,openai",
+        "IP-ASN,20473,no-resolve"
+      ],
+      "reviewed_exclusions": {
+        "IP-ASN,20473,no-resolve": {
+          "reason": "AS20473 belongs to shared Vultr hosting, not OpenAI.",
+          "evidence": [
+            "https://docs.vultr.com/products/network/bgp/asn-information/as20473",
+            "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+          ]
+        },
+        "DOMAIN-KEYWORD,openai": {
+          "reason": "Substring catches unrelated domains; use owned suffixes and explicit service endpoints.",
+          "evidence": [
+            "https://manual.nssurge.com/rules/domain-based.html",
+            "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+          ]
+        }
+      },
+      "exclude_reason": "Reviewed exclusions; per-rule rationale and evidence in reviewed_exclusions / docs/RULE_CONTENT_REVIEW.md"
     },
     {
       "id": "bm:rule/Surge/Claude/Claude.list",
@@ -3538,7 +3565,36 @@
         "sha256": "db8f69154426dca76792ab80b3ad6b0e2d078ebe0e52e76faec1724245a4ec49",
         "active_line_count": 13,
         "etag": "\"56eca4cfa6e1909e80dd076d7a2b352f5a2d57bd58fbda85d54c11db90cad6bc\""
-      }
+      },
+      "exclude_rules": [
+        "DOMAIN-KEYWORD,colab",
+        "DOMAIN-KEYWORD,developerprofiles",
+        "DOMAIN-KEYWORD,generativelanguage"
+      ],
+      "reviewed_exclusions": {
+        "DOMAIN-KEYWORD,colab": {
+          "reason": "Substring catches unrelated domains; use owned suffixes and explicit service endpoints.",
+          "evidence": [
+            "https://manual.nssurge.com/rules/domain-based.html",
+            "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/google-deepmind"
+          ]
+        },
+        "DOMAIN-KEYWORD,developerprofiles": {
+          "reason": "Substring catches unrelated domains; use owned suffixes and explicit service endpoints.",
+          "evidence": [
+            "https://manual.nssurge.com/rules/domain-based.html",
+            "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/google-deepmind"
+          ]
+        },
+        "DOMAIN-KEYWORD,generativelanguage": {
+          "reason": "Substring catches unrelated domains; use owned suffixes and explicit service endpoints.",
+          "evidence": [
+            "https://manual.nssurge.com/rules/domain-based.html",
+            "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/google-deepmind"
+          ]
+        }
+      },
+      "exclude_reason": "Reviewed exclusions; per-rule rationale and evidence in reviewed_exclusions / docs/RULE_CONTENT_REVIEW.md"
     },
     {
       "id": "v2:data/cursor",
@@ -3660,6 +3716,12 @@
         "sha256": "42274e143447066e26e1ebbf21ae03ce6efb40827f41e2775a84fb16d390713d",
         "active_line_count": 190,
         "etag": "\"a4394b3a734db56247e5115776e90748ff94ee793fc1024e662412955ae3e013\""
+      },
+      "output_rule_overrides": {
+        "DOMAIN-SUFFIX,gvt1.com": {
+          "category": "google",
+          "reason": "Shared Google download CDN; Chrome official allowlist identifies edgedl.me.gvt1.com. Not YouTube-specific."
+        }
       }
     },
     {
@@ -3702,9 +3764,41 @@
         "etag": "\"4703a9264227ac36f5fca9a3b5b21e5883cda52120f15ff18181286ae40caa96\""
       },
       "exclude_rules": [
+        "DOMAIN-KEYWORD,musical.ly",
+        "DOMAIN-KEYWORD,tiktok",
         "DOMAIN-SUFFIX,snssdk.com"
       ],
-      "exclude_reason": "此后缀为抖音等字节国内API共享业务；不将全部snssdk.com提升海外TikTok策略。实际被排除行须留来源记录。"
+      "exclude_reason": "Reviewed exclusions; per-rule rationale and evidence in reviewed_exclusions / docs/RULE_CONTENT_REVIEW.md",
+      "reviewed_exclusions": {
+        "DOMAIN-KEYWORD,tiktok": {
+          "reason": "Substring catches unrelated domains; use owned suffixes and explicit service endpoints.",
+          "evidence": [
+            "https://manual.nssurge.com/rules/domain-based.html",
+            "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/tiktok"
+          ]
+        },
+        "DOMAIN-KEYWORD,musical.ly": {
+          "reason": "Substring catches unrelated domains; use owned suffixes and explicit service endpoints.",
+          "evidence": [
+            "https://manual.nssurge.com/rules/domain-based.html",
+            "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/tiktok"
+          ]
+        }
+      },
+      "output_rule_overrides": {
+        "DOMAIN-SUFFIX,trae.ai": {
+          "category": "ai",
+          "reason": "TRAE international feature of listed CN055, not TikTok; domestic trae.cn unchanged."
+        },
+        "DOMAIN-SUFFIX,marscode.com": {
+          "category": "ai",
+          "reason": "TRAE international feature of listed CN055, not TikTok; domestic trae.cn unchanged."
+        },
+        "DOMAIN,trae-api-sg.mchost.guru": {
+          "category": "ai",
+          "reason": "TRAE international feature of listed CN055, not TikTok; domestic trae.cn unchanged."
+        }
+      }
     },
     {
       "id": "bm:rule/Surge/Instagram/Instagram.list",
@@ -4879,6 +4973,331 @@
         "Legacy ads-supplement/module and explicit user audit"
       ],
       "coverage_claim": "已知域名候选；网页/隐私域不证明应用API覆盖"
+    },
+    {
+      "id": "v2:data/openai",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/openai",
+      "format": "v2fly",
+      "repo": "v2fly/domain-list-community",
+      "ref": "master",
+      "path": "data/openai",
+      "role": "app",
+      "category": "ai",
+      "required": true,
+      "enabled": true,
+      "app_ids": [
+        "INT001"
+      ],
+      "dependency_ids": [],
+      "exclude_tags": [
+        "ads"
+      ],
+      "license": {
+        "spdx": "MIT",
+        "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/LICENSE",
+        "redistribution_note": "保留原作者和完整许可证；规则转换注明修改日期，公开提供源清单、原始快照及转换源码。不同源按来源记录许可，不把全部产物宣称为MIT。",
+        "redistribution_allowed": true,
+        "verified_url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/LICENSE",
+        "sha256": "b9d84a22870d3f21c91a4c6e410c9cc51d00902f5233ad0c84011479244bf7d2",
+        "local_file": "licenses/v2fly__domain-list-community.LICENSE"
+      },
+      "unsupported_rule_policy": {
+        "USER-AGENT": "iOS域名规则层不可靠支持应用UA匹配，排除并在构建报告保留原行与理由",
+        "PROCESS-NAME": "iOS域名规则层不采用桌面进程名，排除并在构建报告保留原行与理由"
+      },
+      "coverage_claim": "公开社区候选；不是手机观测或完整流量保证",
+      "accepted_rules": [
+        "DOMAIN-SUFFIX,oaistatsig.com",
+        "DOMAIN-SUFFIX,chat.com",
+        "DOMAIN-SUFFIX,chatgpt.com",
+        "DOMAIN-SUFFIX,oaistatic.com",
+        "DOMAIN-SUFFIX,oaiusercontent.com",
+        "DOMAIN-SUFFIX,openai.com",
+        "DOMAIN-SUFFIX,chatgpt.livekit.cloud",
+        "DOMAIN-SUFFIX,host.livekit.cloud",
+        "DOMAIN-SUFFIX,turn.livekit.cloud"
+      ],
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      ]
+    },
+    {
+      "id": "v2:data/anthropic",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/anthropic",
+      "format": "v2fly",
+      "repo": "v2fly/domain-list-community",
+      "ref": "master",
+      "path": "data/anthropic",
+      "role": "app",
+      "category": "ai",
+      "required": true,
+      "enabled": true,
+      "app_ids": [
+        "INT002"
+      ],
+      "dependency_ids": [],
+      "exclude_tags": [
+        "ads"
+      ],
+      "license": {
+        "spdx": "MIT",
+        "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/LICENSE",
+        "redistribution_note": "保留原作者和完整许可证；规则转换注明修改日期，公开提供源清单、原始快照及转换源码。不同源按来源记录许可，不把全部产物宣称为MIT。",
+        "redistribution_allowed": true,
+        "verified_url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/LICENSE",
+        "sha256": "b9d84a22870d3f21c91a4c6e410c9cc51d00902f5233ad0c84011479244bf7d2",
+        "local_file": "licenses/v2fly__domain-list-community.LICENSE"
+      },
+      "unsupported_rule_policy": {
+        "USER-AGENT": "iOS域名规则层不可靠支持应用UA匹配，排除并在构建报告保留原行与理由",
+        "PROCESS-NAME": "iOS域名规则层不采用桌面进程名，排除并在构建报告保留原行与理由"
+      },
+      "coverage_claim": "公开社区候选；不是手机观测或完整流量保证",
+      "accepted_rules": [
+        "DOMAIN-SUFFIX,anthropic.com",
+        "DOMAIN-SUFFIX,claude.ai",
+        "DOMAIN-SUFFIX,claude.com",
+        "DOMAIN-SUFFIX,claudeusercontent.com",
+        "DOMAIN-SUFFIX,claudemcpcontent.com"
+      ],
+      "evidence": [
+        "https://code.claude.com/docs/en/desktop#network-access-requirements",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      ]
+    },
+    {
+      "id": "reviewed-ai-auth",
+      "url": null,
+      "format": "surge",
+      "repo": null,
+      "ref": null,
+      "path": "custom/reviewed-ai-auth.list",
+      "role": "app",
+      "category": "ai",
+      "required": true,
+      "enabled": true,
+      "app_ids": [
+        "INT001"
+      ],
+      "dependency_ids": [],
+      "exclude_tags": [],
+      "license": {
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_note": "本项目人工规则声明为CC0；公开官方域名事实的引用链接留在文件注释。",
+        "redistribution_allowed": true,
+        "local_file": "licenses/CC0-1.0.LICENSE"
+      },
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "coverage_claim": "Reviewed official endpoints only; not complete app API coverage"
+    },
+    {
+      "id": "reviewed-google-ai",
+      "url": null,
+      "format": "surge",
+      "repo": null,
+      "ref": null,
+      "path": "custom/reviewed-google-ai.list",
+      "role": "app",
+      "category": "ai",
+      "required": true,
+      "enabled": true,
+      "app_ids": [
+        "INT003"
+      ],
+      "dependency_ids": [],
+      "exclude_tags": [],
+      "license": {
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_note": "本项目人工规则声明为CC0；公开官方域名事实的引用链接留在文件注释。",
+        "redistribution_allowed": true,
+        "local_file": "licenses/CC0-1.0.LICENSE"
+      },
+      "evidence": [
+        "https://ai.google.dev/api/models",
+        "https://colab.research.google.com/",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/google-deepmind"
+      ],
+      "coverage_claim": "Reviewed official endpoints only; not complete app API coverage"
+    },
+    {
+      "id": "reviewed-tianfutong",
+      "url": null,
+      "format": "surge",
+      "repo": null,
+      "ref": null,
+      "path": "custom/reviewed-tianfutong.list",
+      "role": "app",
+      "category": "cn",
+      "required": true,
+      "enabled": true,
+      "app_ids": [
+        "CN061"
+      ],
+      "dependency_ids": [],
+      "exclude_tags": [],
+      "license": {
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_note": "本项目人工规则声明为CC0；公开官方域名事实的引用链接留在文件注释。",
+        "redistribution_allowed": true,
+        "local_file": "licenses/CC0-1.0.LICENSE"
+      },
+      "evidence": [
+        "https://apps.apple.com/cn/app/id1358566958",
+        "https://www.cdtft.cn/"
+      ],
+      "coverage_claim": "Reviewed official endpoints only; not complete app API coverage"
+    },
+    {
+      "id": "reviewed-jegotrip",
+      "url": null,
+      "format": "surge",
+      "repo": null,
+      "ref": null,
+      "path": "custom/reviewed-jegotrip.list",
+      "role": "app",
+      "category": "cn",
+      "required": true,
+      "enabled": true,
+      "app_ids": [
+        "CN062"
+      ],
+      "dependency_ids": [],
+      "exclude_tags": [],
+      "license": {
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_note": "本项目人工规则声明为CC0；公开官方域名事实的引用链接留在文件注释。",
+        "redistribution_allowed": true,
+        "local_file": "licenses/CC0-1.0.LICENSE"
+      },
+      "evidence": [
+        "https://apps.apple.com/cn/app/id1037589370",
+        "https://app.jegotrip.com.cn/wyx/wap/protocol/tempProcotolPrivacy.html"
+      ],
+      "coverage_claim": "Reviewed official endpoints only; not complete app API coverage"
+    },
+    {
+      "id": "reviewed-autohome",
+      "url": null,
+      "format": "surge",
+      "repo": null,
+      "ref": null,
+      "path": "custom/reviewed-autohome.list",
+      "role": "app",
+      "category": "cn",
+      "required": true,
+      "enabled": true,
+      "app_ids": [
+        "CN064"
+      ],
+      "dependency_ids": [],
+      "exclude_tags": [],
+      "license": {
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_note": "本项目人工规则声明为CC0；公开官方域名事实的引用链接留在文件注释。",
+        "redistribution_allowed": true,
+        "local_file": "licenses/CC0-1.0.LICENSE"
+      },
+      "evidence": [
+        "https://www.autohome.com.cn/about/falv.html",
+        "https://carif.api.autohome.com.cn/chejiahao/userGuide.ashx?seriesid=3788",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/category-automobile-cn"
+      ],
+      "coverage_claim": "Reviewed official endpoints only; not complete app API coverage"
+    },
+    {
+      "id": "reviewed-uuyc",
+      "url": null,
+      "format": "surge",
+      "repo": null,
+      "ref": null,
+      "path": "custom/reviewed-uuyc.list",
+      "role": "app",
+      "category": "cn",
+      "required": true,
+      "enabled": true,
+      "app_ids": [
+        "CN102"
+      ],
+      "dependency_ids": [],
+      "exclude_tags": [],
+      "license": {
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_note": "本项目人工规则声明为CC0；公开官方域名事实的引用链接留在文件注释。",
+        "redistribution_allowed": true,
+        "local_file": "licenses/CC0-1.0.LICENSE"
+      },
+      "evidence": [
+        "https://apps.apple.com/cn/app/id1642306791",
+        "https://uuyc.163.com/"
+      ],
+      "coverage_claim": "Reviewed official endpoints only; not complete app API coverage"
+    },
+    {
+      "id": "reviewed-traffic12123",
+      "url": null,
+      "format": "surge",
+      "repo": null,
+      "ref": null,
+      "path": "custom/reviewed-traffic12123.list",
+      "role": "app",
+      "category": "cn",
+      "required": true,
+      "enabled": true,
+      "app_ids": [
+        "CN103"
+      ],
+      "dependency_ids": [],
+      "exclude_tags": [],
+      "license": {
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_note": "本项目人工规则声明为CC0；公开官方域名事实的引用链接留在文件注释。",
+        "redistribution_allowed": true,
+        "local_file": "licenses/CC0-1.0.LICENSE"
+      },
+      "evidence": [
+        "https://www.122.gov.cn/",
+        "https://gaj.shenyang.gov.cn/scjx/tbgz/202304/P020230429590660571460.pdf"
+      ],
+      "coverage_claim": "Reviewed official endpoints only; not complete app API coverage"
+    },
+    {
+      "id": "reviewed-income-tax",
+      "url": null,
+      "format": "surge",
+      "repo": null,
+      "ref": null,
+      "path": "custom/reviewed-income-tax.list",
+      "role": "app",
+      "category": "cn",
+      "required": true,
+      "enabled": true,
+      "app_ids": [
+        "CN104"
+      ],
+      "dependency_ids": [],
+      "exclude_tags": [],
+      "license": {
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_note": "本项目人工规则声明为CC0；公开官方域名事实的引用链接留在文件注释。",
+        "redistribution_allowed": true,
+        "local_file": "licenses/CC0-1.0.LICENSE"
+      },
+      "evidence": [
+        "https://etax.chinatax.gov.cn/webstatic/download.html",
+        "https://gd.etax.chinatax.gov.cn/"
+      ],
+      "coverage_claim": "Reviewed official endpoints only; not complete app API coverage"
     }
   ],
   "default_ads": "仅SKK保守域名表+AWA原生；无ABP大合集，无重复MetaCubeX编译镜像",

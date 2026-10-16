@@ -2919,6 +2919,779 @@
       "evidence": [
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OKX/OKX.list"
       ]
+    },
+    {
+      "type": "DOMAIN",
+      "value": "httpdns.meituan.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "httpdnsmultiapi.meituan.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "httpdnsvip.meituan.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "httpdnsmultiapivip.meituan.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "dpmtpush.dianping.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "mapi.m.jd.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "dns.jd.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "chat1.jd.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "c-nfa.jd.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "ccc-x.jd.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "orbit.jd.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "uranus.jd.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "knicks.jd.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "kepler.jd.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "janapi.jd.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "free-aos-cdn-image.amap.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "amap-aos-info-nogw.amap.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "cloan.amap.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "awaken.amap.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "mtrace.amap.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "dns.weibo.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "gw5.push.mcp.weibo.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "gw6.push.mcp.weibo.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "game.weibo.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "game.weibo.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "huodong.weibo.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "dp.im.weibo.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "bootpreload.uve.weibo.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "datacollection.uve.weibo.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "sdkapp.uve.weibo.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "ac.dun.163yun.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "acstatic-dun.126.net",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "abtest.alibaba.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "abtest-ch.snssdk.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "activeqq.3g.qq.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "up-hl.3g.qq.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "soup.v.qq.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "apd-pcdnwxlogin.teg.tencent-cloud.net",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "1500020991.vodplayer.wxamedia.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "1500022744.vodplayer.wxamedia.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "1500026601.vodplayer.wxamedia.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "news-events.apple.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "acfeedbackws.icloud.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "userimg.qunar.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "juejin.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "juejin.im",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "aaid.umeng.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "cm.bilibili.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "核心业务与通信端点免误杀保护；防止 App 启动卡死或加载超时",
+      "evidence": [
+        "2026-10-15 误杀排查修复"
+      ],
+      "confidence": "verified business endpoint"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "trae.ai",
+      "category": "ai",
+      "app_ids": [
+        "CN055"
+      ],
+      "reason": "TRAE international feature must precede broad domestic shared suffixes.",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/bytedance-ai-!cn",
+        "https://www.trae.ai/"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "marscode.com",
+      "category": "ai",
+      "app_ids": [
+        "CN055"
+      ],
+      "reason": "TRAE international feature must precede broad domestic shared suffixes.",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/bytedance-ai-!cn",
+        "https://www.trae.ai/"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "trae-api-sg.mchost.guru",
+      "category": "ai",
+      "app_ids": [
+        "CN055"
+      ],
+      "reason": "TRAE international feature must precede broad domestic shared suffixes.",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/bytedance-ai-!cn",
+        "https://www.trae.ai/"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "oaistatsig.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "Official ChatGPT functional assets / feature configuration; preserve descendants.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "oaistatic.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "Official ChatGPT functional assets / feature configuration; preserve descendants.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "oaiusercontent.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "Official ChatGPT functional assets / feature configuration; preserve descendants.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "claude.com",
+      "category": "ai",
+      "app_ids": [
+        "INT002"
+      ],
+      "reason": "Official Claude application/user-content domains; same AI egress.",
+      "evidence": [
+        "https://code.claude.com/docs/en/desktop#network-access-requirements",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "claude.app",
+      "category": "ai",
+      "app_ids": [
+        "INT002"
+      ],
+      "reason": "Official Claude application/user-content domains; same AI egress.",
+      "evidence": [
+        "https://code.claude.com/docs/en/desktop#network-access-requirements",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "claudeusercontent.com",
+      "category": "ai",
+      "app_ids": [
+        "INT002"
+      ],
+      "reason": "Official Claude application/user-content domains; same AI egress.",
+      "evidence": [
+        "https://code.claude.com/docs/en/desktop#network-access-requirements",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "claudemcpcontent.com",
+      "category": "ai",
+      "app_ids": [
+        "INT002"
+      ],
+      "reason": "Official Claude application/user-content domains; same AI egress.",
+      "evidence": [
+        "https://code.claude.com/docs/en/desktop#network-access-requirements",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "cdn.openaimerge.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "Official authentication dependency, exact host only.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "cdn.workos.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "Official authentication dependency, exact host only.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "forwarder.workos.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "Official authentication dependency, exact host only.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "frontend-apps-multi-region.workos.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "Official authentication dependency, exact host only.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "images.workoscdn.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "Official authentication dependency, exact host only.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "setup.workos.com",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "Official authentication dependency, exact host only.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "workos.imgix.net",
+      "category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "reason": "Official authentication dependency, exact host only.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "discord-attachments-uploads-prd.storage.googleapis.com",
+      "category": "global",
+      "app_ids": [
+        "INT016"
+      ],
+      "reason": "Discord upload bucket: tenant-specific exception ahead of generic googleapis.com.",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/discord",
+        "https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Surge/Discord/Discord.list"
+      ],
+      "confidence": "official service plus upstream corroboration where available; not device verified"
     }
   ],
   "design": "每条由APP所有权启用；真实候选业务先于广告，并清洗所有拒绝输出。集团候选不等于集团全白名单。历史保护清洗范围单调保留以兼容缓存。",

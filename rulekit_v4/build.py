@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 HERE = ROOT / 'rulekit_v4'
 CATEGORIES = ('paypal','wise','binance','okx','ai', 'tiktok', 'stream', 'google', 'uk', 'global', 'cn')
-VERSION = '4.1.1'
+VERSION = '4.2.0'
 class BuildError(Exception): pass
 
 def sha(data):
@@ -57,6 +57,11 @@ def normal_rule(kind, value, options=()):
         except ValueError as e: raise BuildError(f'Invalid CIDR: {value}') from e
         if (net.version == 6) != (kind == 'IP-CIDR6'): raise BuildError('Wrong IP family')
         value = str(net)
+        # ipaddress versions differ on dotted vs hex IPv4-mapped IPv6 output.
+        # Keep one stable semantic representation for source change guards.
+        if net.version == 6 and net.network_address.ipv4_mapped is not None:
+            mapped = int(net.network_address.ipv4_mapped)
+            value = f'::ffff:{mapped >> 16:x}:{mapped & 65535:x}/{net.prefixlen}'
     elif kind == 'IP-ASN':
         if not value.isdigit() or not 0 < int(value) < 2**32: raise BuildError('Invalid ASN')
     else: raise BuildError(f'Unsupported rule type: {kind}')
@@ -301,6 +306,12 @@ def compile_rules(offline=False, output=None):
         for r,origin in records:
             if r in excluded: parser.omissions.append(dict(origin,rule=r,reason=s.get('exclude_reason','explicit reviewed source exclusion')))
         records=[(r,o) for r,o in records if r not in excluded]
+        if 'accepted_rules' in s:
+            accepted=set(s['accepted_rules'])
+            for r,origin in records:
+                if r not in accepted:
+                    parser.omissions.append(dict(origin,rule=r,reason='Supplement outside independently reviewed scope; retained as candidate, not auto-published'))
+            records=[(r,o) for r,o in records if r in accepted]
         rules=sorted({r for r,_ in records}); guard(previous.get(s['id'],[]),rules,s['id'])
         if s['id'] in bootstrap and sha('\n'.join(rules))!=bootstrap[s['id']]: raise BuildError('First-release source differs from locally reviewed baseline: '+s['id'])
         source_rules[s['id']]=rules
@@ -362,6 +373,8 @@ def compile_rules(offline=False, output=None):
         if actual!=old['current_category']: raise BuildError('Legacy allow migration regression: '+old['rule']+' expected '+old['current_category']+' got '+str(actual))
     failed=[r for r in results if not r['passed']]
     if failed: raise BuildError('Probe regression: '+json.dumps(failed,ensure_ascii=False))
+    from content_checks import check_content
+    content_audit=check_content(tables,CATEGORIES,[p for p in probes if not p.get('app_ids') or set(p['app_ids'])&active],readjson(HERE/'content-review.json',{}))
     # Record concrete cross-category overlaps. More-specific earlier categories are intentional.
     conflicts=[]
     seen={}
@@ -393,6 +406,7 @@ def compile_rules(offline=False, output=None):
         (staging/'source-rules.json').write_text(jsontext(source_rules))
         (staging/'protected-history.json').write_text(jsontext(sorted(historical)))
         (staging/'report.json').write_text(jsontext(report))
+        (staging/'content-audit.json').write_text(jsontext(content_audit))
         table_sets={k:set(v) for k,v in tables.items()}
         with (staging/'provenance.ndjson.gz').open('wb') as rawfile, gzip.GzipFile(filename='',mode='wb',fileobj=rawfile,mtime=0) as f:
             for key,origins in sorted(provenance.items()):

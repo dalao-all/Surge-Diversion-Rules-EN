@@ -4,21 +4,21 @@
   "ipv6": false,
   "proxy_empty": true,
   "app_count": 164,
-  "source_count": 114,
+  "source_count": 124,
   "dependency_count": 28,
   "counts": {
-    "ads": 141064,
-    "ai": 66,
+    "ads": 141417,
+    "ai": 79,
     "binance": 12,
-    "cn": 6642,
+    "cn": 6648,
     "global": 693,
-    "google": 697,
+    "google": 698,
     "okx": 3,
     "paypal": 246,
-    "protect-ai": 19,
+    "protect-ai": 36,
     "protect-binance": 2,
-    "protect-cn": 109,
-    "protect-global": 31,
+    "protect-cn": 157,
+    "protect-global": 32,
     "protect-google": 8,
     "protect-okx": 2,
     "protect-paypal": 3,
@@ -26,23 +26,23 @@
     "protect-tiktok": 4,
     "protect-uk": 1,
     "protect-wise": 2,
-    "stream": 1350,
-    "tiktok": 30,
+    "stream": 1349,
+    "tiktok": 28,
     "uk": 2,
     "wise": 2
   },
-  "probe_count": 210,
+  "probe_count": 237,
   "coverage_counts": {
     "independent-candidate": 62,
     "official-document-only": 8,
-    "official-service-candidate": 3,
+    "official-service-candidate": 9,
     "shared-group-candidate": 29,
     "existing-config-candidate": 8,
     "shared-service-candidate": 33,
-    "unresolved": 13,
     "target-site-routing": 2,
     "local-only": 5,
-    "mail-provider-routing": 1
+    "mail-provider-routing": 1,
+    "unresolved": 7
   },
   "canonical_repository": "dalao-all/Surge-Diversion-Rules",
   "categories": [
@@ -73,25 +73,25 @@
     {
       "id": "ai",
       "policy": "🤖 AI住宅",
-      "rule_count": 66,
-      "protected_rule_count": 19
+      "rule_count": 79,
+      "protected_rule_count": 36
     },
     {
       "id": "tiktok",
       "policy": "🎵 TikTok住宅",
-      "rule_count": 30,
+      "rule_count": 28,
       "protected_rule_count": 4
     },
     {
       "id": "stream",
       "policy": "🎬 流媒体",
-      "rule_count": 1350,
+      "rule_count": 1349,
       "protected_rule_count": 10
     },
     {
       "id": "google",
       "policy": "🔐 Google账户",
-      "rule_count": 697,
+      "rule_count": 698,
       "protected_rule_count": 8
     },
     {
@@ -104,13 +104,13 @@
       "id": "global",
       "policy": "🌍 国际网络",
       "rule_count": 693,
-      "protected_rule_count": 31
+      "protected_rule_count": 32
     },
     {
       "id": "cn",
       "policy": "DIRECT",
-      "rule_count": 6642,
-      "protected_rule_count": 109
+      "rule_count": 6648,
+      "protected_rule_count": 157
     }
   ],
   "apps": [
@@ -598,16 +598,16 @@
       "id": "CN061",
       "name": "天府通",
       "category": "cn",
-      "coverage": "unresolved",
-      "source_count": 0,
+      "coverage": "official-service-candidate",
+      "source_count": 1,
       "enabled": true
     },
     {
       "id": "CN062",
       "name": "无忧行",
       "category": "cn",
-      "coverage": "unresolved",
-      "source_count": 0,
+      "coverage": "official-service-candidate",
+      "source_count": 1,
       "enabled": true
     },
     {
@@ -622,8 +622,8 @@
       "id": "CN064",
       "name": "汽车之家",
       "category": "cn",
-      "coverage": "unresolved",
-      "source_count": 0,
+      "coverage": "official-service-candidate",
+      "source_count": 1,
       "enabled": true
     },
     {
@@ -926,24 +926,24 @@
       "id": "CN102",
       "name": "UU远程",
       "category": "cn",
-      "coverage": "unresolved",
-      "source_count": 0,
+      "coverage": "official-service-candidate",
+      "source_count": 1,
       "enabled": true
     },
     {
       "id": "CN103",
       "name": "交管12123",
       "category": "cn",
-      "coverage": "unresolved",
-      "source_count": 0,
+      "coverage": "official-service-candidate",
+      "source_count": 1,
       "enabled": true
     },
     {
       "id": "CN104",
       "name": "个人所得税",
       "category": "cn",
-      "coverage": "unresolved",
-      "source_count": 0,
+      "coverage": "official-service-candidate",
+      "source_count": 1,
       "enabled": true
     },
     {
@@ -1175,7 +1175,7 @@
       "name": "ChatGPT",
       "category": "ai",
       "coverage": "independent-candidate",
-      "source_count": 2,
+      "source_count": 4,
       "enabled": true
     },
     {
@@ -1183,7 +1183,7 @@
       "name": "Claude",
       "category": "ai",
       "coverage": "independent-candidate",
-      "source_count": 1,
+      "source_count": 2,
       "enabled": true
     },
     {
@@ -1191,7 +1191,7 @@
       "name": "Gemini",
       "category": "ai",
       "coverage": "independent-candidate",
-      "source_count": 1,
+      "source_count": 2,
       "enabled": true
     },
     {
@@ -1427,5 +1427,5 @@
       "enabled": true
     }
   ],
-  "semantic_sha256": "73e5ab6f3071b46f7defed0e610817ff8defdd234cbc0d17fbf51af5eaac4279"
+  "semantic_sha256": "96d32bc8574b97dc92983a3a11ad3278a3adb603711e2d09c98b69dcb0cc8aba"
 }

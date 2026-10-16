@@ -1,0 +1,7 @@
+# Reviewed 2026-10-16. Not a device capture.
+# Evidence: https://ai.google.dev/api/models
+# Evidence: https://colab.research.google.com/
+# Evidence: https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/google-deepmind
+DOMAIN,colab.research.google.com
+DOMAIN,generativelanguage.googleapis.com
+DOMAIN,developerprofiles-pa.googleapis.com

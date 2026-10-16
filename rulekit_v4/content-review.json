@@ -1,0 +1,357 @@
+{
+  "date": "2026-10-16",
+  "scope": "rules only; main profile unchanged",
+  "changes": [
+    {
+      "action": "exclude",
+      "source": "bm:rule/Surge/OpenAI/OpenAI.list",
+      "rule": "IP-ASN,20473,no-resolve",
+      "reason": "AS20473 belongs to shared Vultr hosting, not OpenAI.",
+      "evidence": [
+        "https://docs.vultr.com/products/network/bgp/asn-information/as20473",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      ]
+    },
+    {
+      "action": "exclude",
+      "source": "bm:rule/Surge/OpenAI/OpenAI.list",
+      "rule": "DOMAIN-KEYWORD,openai",
+      "reason": "Substring catches unrelated domains; use owned suffixes and explicit service endpoints.",
+      "evidence": [
+        "https://manual.nssurge.com/rules/domain-based.html",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      ]
+    },
+    {
+      "action": "exclude",
+      "source": "bm:rule/Surge/Gemini/Gemini.list",
+      "rule": "DOMAIN-KEYWORD,colab",
+      "reason": "Substring catches unrelated domains; use owned suffixes and explicit service endpoints.",
+      "evidence": [
+        "https://manual.nssurge.com/rules/domain-based.html",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/google-deepmind"
+      ]
+    },
+    {
+      "action": "exclude",
+      "source": "bm:rule/Surge/Gemini/Gemini.list",
+      "rule": "DOMAIN-KEYWORD,developerprofiles",
+      "reason": "Substring catches unrelated domains; use owned suffixes and explicit service endpoints.",
+      "evidence": [
+        "https://manual.nssurge.com/rules/domain-based.html",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/google-deepmind"
+      ]
+    },
+    {
+      "action": "exclude",
+      "source": "bm:rule/Surge/Gemini/Gemini.list",
+      "rule": "DOMAIN-KEYWORD,generativelanguage",
+      "reason": "Substring catches unrelated domains; use owned suffixes and explicit service endpoints.",
+      "evidence": [
+        "https://manual.nssurge.com/rules/domain-based.html",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/google-deepmind"
+      ]
+    },
+    {
+      "action": "exclude",
+      "source": "bm:rule/Surge/TikTok/TikTok.list",
+      "rule": "DOMAIN-KEYWORD,tiktok",
+      "reason": "Substring catches unrelated domains; use owned suffixes and explicit service endpoints.",
+      "evidence": [
+        "https://manual.nssurge.com/rules/domain-based.html",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/tiktok"
+      ]
+    },
+    {
+      "action": "exclude",
+      "source": "bm:rule/Surge/TikTok/TikTok.list",
+      "rule": "DOMAIN-KEYWORD,musical.ly",
+      "reason": "Substring catches unrelated domains; use owned suffixes and explicit service endpoints.",
+      "evidence": [
+        "https://manual.nssurge.com/rules/domain-based.html",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/tiktok"
+      ]
+    },
+    {
+      "action": "recategorize",
+      "rule": "DOMAIN-SUFFIX,gvt1.com",
+      "from": "stream",
+      "to": "google",
+      "evidence": [
+        "https://support.google.com/chrome/a/answer/6334001",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/google"
+      ]
+    },
+    {
+      "action": "recategorize",
+      "rules": [
+        "trae.ai",
+        "marscode.com",
+        "trae-api-sg.mchost.guru"
+      ],
+      "from": "tiktok",
+      "to": "ai",
+      "app_ids": [
+        "CN055"
+      ],
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/bytedance-ai-!cn",
+        "https://www.trae.ai/"
+      ]
+    },
+    {
+      "action": "reviewed-upstream-supplement",
+      "source": "v2:data/openai",
+      "rules": [
+        "DOMAIN-SUFFIX,oaistatsig.com",
+        "DOMAIN-SUFFIX,chat.com",
+        "DOMAIN-SUFFIX,chatgpt.com",
+        "DOMAIN-SUFFIX,oaistatic.com",
+        "DOMAIN-SUFFIX,oaiusercontent.com",
+        "DOMAIN-SUFFIX,openai.com",
+        "DOMAIN-SUFFIX,chatgpt.livekit.cloud",
+        "DOMAIN-SUFFIX,host.livekit.cloud",
+        "DOMAIN-SUFFIX,turn.livekit.cloud"
+      ],
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      ]
+    },
+    {
+      "action": "reviewed-upstream-supplement",
+      "source": "v2:data/anthropic",
+      "rules": [
+        "DOMAIN-SUFFIX,anthropic.com",
+        "DOMAIN-SUFFIX,claude.ai",
+        "DOMAIN-SUFFIX,claude.com",
+        "DOMAIN-SUFFIX,claudeusercontent.com",
+        "DOMAIN-SUFFIX,claudemcpcontent.com"
+      ],
+      "evidence": [
+        "https://code.claude.com/docs/en/desktop#network-access-requirements",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      ]
+    },
+    {
+      "action": "add-local",
+      "source": "reviewed-ai-auth",
+      "rules": [
+        "DOMAIN,cdn.openaimerge.com",
+        "DOMAIN,cdn.workos.com",
+        "DOMAIN,forwarder.workos.com",
+        "DOMAIN,frontend-apps-multi-region.workos.com",
+        "DOMAIN,images.workoscdn.com",
+        "DOMAIN,setup.workos.com",
+        "DOMAIN,workos.imgix.net"
+      ],
+      "app_ids": [
+        "INT001"
+      ],
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ]
+    },
+    {
+      "action": "add-local",
+      "source": "reviewed-google-ai",
+      "rules": [
+        "DOMAIN,colab.research.google.com",
+        "DOMAIN,generativelanguage.googleapis.com",
+        "DOMAIN,developerprofiles-pa.googleapis.com"
+      ],
+      "app_ids": [
+        "INT003"
+      ],
+      "evidence": [
+        "https://ai.google.dev/api/models",
+        "https://colab.research.google.com/",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/google-deepmind"
+      ]
+    },
+    {
+      "action": "add-local",
+      "source": "reviewed-tianfutong",
+      "rules": [
+        "DOMAIN-SUFFIX,cdtft.cn"
+      ],
+      "app_ids": [
+        "CN061"
+      ],
+      "evidence": [
+        "https://apps.apple.com/cn/app/id1358566958",
+        "https://www.cdtft.cn/"
+      ]
+    },
+    {
+      "action": "add-local",
+      "source": "reviewed-jegotrip",
+      "rules": [
+        "DOMAIN-SUFFIX,jegotrip.cn",
+        "DOMAIN-SUFFIX,jegotrip.com.cn"
+      ],
+      "app_ids": [
+        "CN062"
+      ],
+      "evidence": [
+        "https://apps.apple.com/cn/app/id1037589370",
+        "https://app.jegotrip.com.cn/wyx/wap/protocol/tempProcotolPrivacy.html"
+      ]
+    },
+    {
+      "action": "add-local",
+      "source": "reviewed-autohome",
+      "rules": [
+        "DOMAIN-SUFFIX,autohome.com",
+        "DOMAIN-SUFFIX,autohome.com.cn",
+        "DOMAIN-SUFFIX,autoimg.cn"
+      ],
+      "app_ids": [
+        "CN064"
+      ],
+      "evidence": [
+        "https://www.autohome.com.cn/about/falv.html",
+        "https://carif.api.autohome.com.cn/chejiahao/userGuide.ashx?seriesid=3788",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/category-automobile-cn"
+      ]
+    },
+    {
+      "action": "add-local",
+      "source": "reviewed-uuyc",
+      "rules": [
+        "DOMAIN-SUFFIX,uuyc.163.com"
+      ],
+      "app_ids": [
+        "CN102"
+      ],
+      "evidence": [
+        "https://apps.apple.com/cn/app/id1642306791",
+        "https://uuyc.163.com/"
+      ]
+    },
+    {
+      "action": "add-local",
+      "source": "reviewed-traffic12123",
+      "rules": [
+        "DOMAIN-SUFFIX,122.gov.cn"
+      ],
+      "app_ids": [
+        "CN103"
+      ],
+      "evidence": [
+        "https://www.122.gov.cn/",
+        "https://gaj.shenyang.gov.cn/scjx/tbgz/202304/P020230429590660571460.pdf"
+      ]
+    },
+    {
+      "action": "add-local",
+      "source": "reviewed-income-tax",
+      "rules": [
+        "DOMAIN-SUFFIX,etax.chinatax.gov.cn"
+      ],
+      "app_ids": [
+        "CN104"
+      ],
+      "evidence": [
+        "https://etax.chinatax.gov.cn/webstatic/download.html",
+        "https://gd.etax.chinatax.gov.cn/"
+      ]
+    },
+    {
+      "action": "exclude",
+      "source": "bm:rule/Surge/TencentVideo/TencentVideo.list",
+      "rules": [
+        "IP-CIDR6,::ffff:c612:58a/128,no-resolve",
+        "IP-CIDR6,::ffff:c612:651/128,no-resolve",
+        "IP-CIDR6,::ffff:c612:653/128,no-resolve"
+      ],
+      "reason": "Mapped 198.18.0.0/15 benchmark/fake-IP entries must not identify TencentVideo.",
+      "evidence": [
+        "https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml",
+        "https://manual.nssurge.com/dns.html"
+      ]
+    }
+  ],
+  "limitations": [
+    "No device capture; per-app complete remains false.",
+    "Community lists may share inputs; overlap is corroboration, not independent votes.",
+    "Business-first profile intentionally bypasses some ads; no blanket ad priority change."
+  ],
+  "negative_probes": [
+    {
+      "domain": "notopenai.example.invalid",
+      "forbidden_categories": [
+        "ai"
+      ]
+    },
+    {
+      "domain": "colab-not-google.example.invalid",
+      "forbidden_categories": [
+        "ai"
+      ]
+    },
+    {
+      "domain": "developerprofiles.example.invalid",
+      "forbidden_categories": [
+        "ai"
+      ]
+    },
+    {
+      "domain": "generativelanguage.example.invalid",
+      "forbidden_categories": [
+        "ai"
+      ]
+    },
+    {
+      "domain": "not-tiktok.example.invalid",
+      "forbidden_categories": [
+        "tiktok"
+      ]
+    },
+    {
+      "domain": "musical.ly.unrelated.example.invalid",
+      "forbidden_categories": [
+        "tiktok"
+      ]
+    },
+    {
+      "domain": "tenant.us-west-2.amazonaws.com",
+      "forbidden_categories": [
+        "stream"
+      ]
+    },
+    {
+      "domain": "twemoji.maxcdn.com",
+      "forbidden_categories": [
+        "stream"
+      ]
+    }
+  ],
+  "forbidden_rules": [
+    {
+      "category": "ai",
+      "rule": "IP-ASN,20473,no-resolve"
+    },
+    {
+      "category": "ai",
+      "rule": "DOMAIN-KEYWORD,openai"
+    },
+    {
+      "category": "stream",
+      "rule": "DOMAIN-SUFFIX,gvt1.com"
+    },
+    {
+      "category": "stream",
+      "rule": "DOMAIN-SUFFIX,us-west-2.amazonaws.com"
+    },
+    {
+      "category": "cn",
+      "rule": "DOMAIN-KEYWORD,speedtest"
+    },
+    {
+      "category": "tiktok",
+      "rule": "DOMAIN-SUFFIX,trae.ai"
+    }
+  ],
+  "forbid_benchmark_ips": true
+}

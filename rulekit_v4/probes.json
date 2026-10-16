@@ -2968,6 +2968,405 @@
         "User iPhone screenshots 2026-10-15 14:02-14:03"
       ],
       "device_verified": false
+    },
+    {
+      "id": "content-20261016-211",
+      "domain": "trae.ai",
+      "expected_category": "ai",
+      "app_ids": [
+        "CN055"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/bytedance-ai-!cn",
+        "https://www.trae.ai/"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-212",
+      "domain": "marscode.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "CN055"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/bytedance-ai-!cn",
+        "https://www.trae.ai/"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-213",
+      "domain": "trae-api-sg.mchost.guru",
+      "expected_category": "ai",
+      "app_ids": [
+        "CN055"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/bytedance-ai-!cn",
+        "https://www.trae.ai/"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-214",
+      "domain": "files.oaistatsig.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-215",
+      "domain": "files.oaistatic.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-216",
+      "domain": "assets.claude.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT002"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://code.claude.com/docs/en/desktop#network-access-requirements",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-217",
+      "domain": "assets.claude.app",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT002"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://code.claude.com/docs/en/desktop#network-access-requirements",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-218",
+      "domain": "assets.claudeusercontent.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT002"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://code.claude.com/docs/en/desktop#network-access-requirements",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-219",
+      "domain": "assets.claudemcpcontent.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT002"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://code.claude.com/docs/en/desktop#network-access-requirements",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-220",
+      "domain": "cdn.openaimerge.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-221",
+      "domain": "cdn.workos.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-222",
+      "domain": "forwarder.workos.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-223",
+      "domain": "frontend-apps-multi-region.workos.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-224",
+      "domain": "images.workoscdn.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-225",
+      "domain": "setup.workos.com",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-226",
+      "domain": "workos.imgix.net",
+      "expected_category": "ai",
+      "app_ids": [
+        "INT001"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-227",
+      "domain": "cdtft.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN061"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://apps.apple.com/cn/app/id1358566958",
+        "https://www.cdtft.cn/"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-228",
+      "domain": "jegotrip.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN062"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://apps.apple.com/cn/app/id1037589370",
+        "https://app.jegotrip.com.cn/wyx/wap/protocol/tempProcotolPrivacy.html"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-229",
+      "domain": "jegotrip.com.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN062"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://apps.apple.com/cn/app/id1037589370",
+        "https://app.jegotrip.com.cn/wyx/wap/protocol/tempProcotolPrivacy.html"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-230",
+      "domain": "autohome.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN064"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://www.autohome.com.cn/about/falv.html",
+        "https://carif.api.autohome.com.cn/chejiahao/userGuide.ashx?seriesid=3788",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/category-automobile-cn"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-231",
+      "domain": "autohome.com.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN064"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://www.autohome.com.cn/about/falv.html",
+        "https://carif.api.autohome.com.cn/chejiahao/userGuide.ashx?seriesid=3788",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/category-automobile-cn"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-232",
+      "domain": "autoimg.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN064"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://www.autohome.com.cn/about/falv.html",
+        "https://carif.api.autohome.com.cn/chejiahao/userGuide.ashx?seriesid=3788",
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/category-automobile-cn"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-233",
+      "domain": "uuyc.163.com",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN102"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://apps.apple.com/cn/app/id1642306791",
+        "https://uuyc.163.com/"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-234",
+      "domain": "122.gov.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN103"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://www.122.gov.cn/",
+        "https://gaj.shenyang.gov.cn/scjx/tbgz/202304/P020230429590660571460.pdf"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-235",
+      "domain": "etax.chinatax.gov.cn",
+      "expected_category": "cn",
+      "app_ids": [
+        "CN104"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://etax.chinatax.gov.cn/webstatic/download.html",
+        "https://gd.etax.chinatax.gov.cn/"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-236",
+      "domain": "discord-attachments-uploads-prd.storage.googleapis.com",
+      "expected_category": "global",
+      "app_ids": [
+        "INT016"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/discord"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
+    },
+    {
+      "id": "content-20261016-237",
+      "domain": "edgedl.me.gvt1.com",
+      "expected_category": "google",
+      "app_ids": [
+        "INT018"
+      ],
+      "purpose": "Reviewed positive service-routing regression",
+      "evidence": [
+        "https://support.google.com/chrome/a/answer/6334001"
+      ],
+      "evidence_kind": "official-and-community-review",
+      "device_verified": false
     }
   ],
   "uncovered_apps": [

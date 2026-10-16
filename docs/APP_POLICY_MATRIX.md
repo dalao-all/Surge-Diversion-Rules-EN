@@ -72,10 +72,10 @@ Coverage states distinguish independent/shared candidates, official-document evi
 | CN058 | 携程旅行 | cn | independent-candidate | 1 | 0 | 1 |
 | CN059 | 航旅纵横 | cn | existing-config-candidate | 1 | 0 | 1 |
 | CN060 | 哈啰 | cn | existing-config-candidate | 1 | 0 | 1 |
-| CN061 | 天府通 | cn | unresolved | 0 | 0 | 0 |
-| CN062 | 无忧行 | cn | unresolved | 0 | 0 | 0 |
+| CN061 | 天府通 | cn | official-service-candidate | 1 | 0 | 1 |
+| CN062 | 无忧行 | cn | official-service-candidate | 1 | 0 | 1 |
 | CN063 | 懂车帝 | cn | independent-candidate | 1 | 0 | 1 |
-| CN064 | 汽车之家 | cn | unresolved | 0 | 0 | 0 |
+| CN064 | 汽车之家 | cn | official-service-candidate | 1 | 0 | 1 |
 | CN065 | 吉利汽车 | cn | independent-candidate | 1 | 0 | 1 |
 | CN066 | 九号出行 | cn | existing-config-candidate | 1 | 0 | 1 |
 | CN067 | 电话 | cn | shared-service-candidate | 0 | 2 | 2 |
@@ -113,9 +113,9 @@ Coverage states distinguish independent/shared candidates, official-document evi
 | CN099 | 悦通行 | cn | official-document-only | 1 | 0 | 1 |
 | CN100 | 去上网（去哒） | cn | unresolved | 0 | 0 | 0 |
 | CN101 | 中国移动 | cn | independent-candidate | 1 | 0 | 1 |
-| CN102 | UU远程 | cn | unresolved | 0 | 0 | 0 |
-| CN103 | 交管12123 | cn | unresolved | 0 | 0 | 0 |
-| CN104 | 个人所得税 | cn | unresolved | 0 | 0 | 0 |
+| CN102 | UU远程 | cn | official-service-candidate | 1 | 0 | 1 |
+| CN103 | 交管12123 | cn | official-service-candidate | 1 | 0 | 1 |
+| CN104 | 个人所得税 | cn | official-service-candidate | 1 | 0 | 1 |
 | CN105 | MONO记账 | cn | official-document-only | 1 | 0 | 1 |
 | CN106 | Cookie | cn | official-document-only | 1 | 0 | 1 |
 | CN107 | 上岛记 | cn | unresolved | 0 | 0 | 0 |
@@ -144,9 +144,9 @@ Coverage states distinguish independent/shared candidates, official-document evi
 | CN130 | 全球网测 | cn | unresolved | 0 | 0 | 0 |
 | CN131 | Speedtest | cn | independent-candidate | 1 | 0 | 1 |
 | CN132 | 彩云天气PRO | cn | independent-candidate | 1 | 0 | 1 |
-| INT001 | ChatGPT | ai | independent-candidate | 2 | 2 | 4 |
-| INT002 | Claude | ai | independent-candidate | 1 | 1 | 2 |
-| INT003 | Gemini | ai | independent-candidate | 1 | 1 | 2 |
+| INT001 | ChatGPT | ai | independent-candidate | 4 | 2 | 6 |
+| INT002 | Claude | ai | independent-candidate | 2 | 1 | 3 |
+| INT003 | Gemini | ai | independent-candidate | 2 | 1 | 3 |
 | INT004 | Cursor | ai | independent-candidate | 1 | 1 | 2 |
 | INT005 | Grok | ai | independent-candidate | 1 | 1 | 2 |
 | INT006 | Grok Bot | ai | shared-group-candidate | 0 | 2 | 2 |
