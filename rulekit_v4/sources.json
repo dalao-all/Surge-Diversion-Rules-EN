@@ -5298,6 +5298,74 @@
         "https://gd.etax.chinatax.gov.cn/"
       ],
       "coverage_claim": "Reviewed official endpoints only; not complete app API coverage"
+    },
+    {
+      "id": "skk:List/non_ip/domestic.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/domestic.conf",
+      "format": "surge",
+      "repo": "SukkaLab/ruleset.skk.moe",
+      "ref": "master",
+      "path": "List/non_ip/domestic.conf",
+      "role": "infrastructure",
+      "category": "cn",
+      "required": true,
+      "enabled": true,
+      "app_ids": [],
+      "dependency_ids": [],
+      "exclude_tags": [],
+      "license": {
+        "spdx": "AGPL-3.0-only",
+        "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/LICENSE",
+        "redistribution_note": "保留原作者和完整许可证；规则转换注明修改日期，公开提供源清单、原始快照及转换源码。不同源按来源记录许可，不把全部产物宣称为MIT。",
+        "redistribution_allowed": true,
+        "verified_url": "https://raw.githubusercontent.com/SukkaW/Surge/8a4972eb334f3fd9d0c813577d47d04c4c442bf9/LICENSE",
+        "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+        "source_repo": "SukkaW/Surge",
+        "local_file": "licenses/SukkaW__Surge.LICENSE"
+      },
+      "unsupported_rule_policy": {
+        "USER-AGENT": "iOS域名规则层不可靠支持应用UA匹配，排除并在构建报告保留原行与理由",
+        "PROCESS-NAME": "iOS域名规则层不采用桌面进程名，排除并在构建报告保留原行与理由"
+      },
+      "evidence": [
+        "SKK 国内常用服务家族后缀（百度/知乎/豆瓣/喜马拉雅/58/央视/极光等），补齐 cn.list 抓包盲区",
+        "https://github.com/SukkaLab/ruleset.skk.moe/blob/master/List/non_ip/domestic.conf"
+      ],
+      "coverage_claim": "社区维护的国内家族后缀；用于兜底未抓包 App，不是手机实测保证"
+    },
+    {
+      "id": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/master/List/non_ip/direct.conf",
+      "format": "surge",
+      "repo": "SukkaLab/ruleset.skk.moe",
+      "ref": "master",
+      "path": "List/non_ip/direct.conf",
+      "role": "infrastructure",
+      "category": "cn",
+      "required": true,
+      "enabled": true,
+      "app_ids": [],
+      "dependency_ids": [],
+      "exclude_tags": [],
+      "license": {
+        "spdx": "AGPL-3.0-only",
+        "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/LICENSE",
+        "redistribution_note": "保留原作者和完整许可证；规则转换注明修改日期，公开提供源清单、原始快照及转换源码。不同源按来源记录许可，不把全部产物宣称为MIT。",
+        "redistribution_allowed": true,
+        "verified_url": "https://raw.githubusercontent.com/SukkaW/Surge/8a4972eb334f3fd9d0c813577d47d04c4c442bf9/LICENSE",
+        "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+        "source_repo": "SukkaW/Surge",
+        "local_file": "licenses/SukkaW__Surge.LICENSE"
+      },
+      "unsupported_rule_policy": {
+        "USER-AGENT": "iOS域名规则层不可靠支持应用UA匹配，排除并在构建报告保留原行与理由",
+        "PROCESS-NAME": "iOS域名规则层不采用桌面进程名，排除并在构建报告保留原行与理由"
+      },
+      "evidence": [
+        "SKK 必须直连的国内基础服务（运营商/测速/内网类）",
+        "https://github.com/SukkaLab/ruleset.skk.moe/blob/master/List/non_ip/direct.conf"
+      ],
+      "coverage_claim": "社区维护的国内家族后缀；用于兜底未抓包 App，不是手机实测保证"
     }
   ],
   "default_ads": "仅SKK保守域名表+AWA原生；无ABP大合集，无重复MetaCubeX编译镜像",

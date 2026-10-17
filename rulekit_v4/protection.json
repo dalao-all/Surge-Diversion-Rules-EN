@@ -17936,6 +17936,270 @@
         "Official product endpoints and verified production routing"
       ],
       "confidence": "known-business-candidate; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "jpush.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：极光推送（大量国内 App 消息/登录态依赖）",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "jpush.io",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：极光推送",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "jiguang.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：极光一键登录/推送",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "getui.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：个推推送",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "getui.net",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：个推推送",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "igexin.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：个推 SDK",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "id6.me",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：中国电信一键登录",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "wostore.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：中国联通一键登录",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "open.e.189.cn",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：中国电信认证开放平台",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "geetest.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：极验验证码（登录/风控）",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "geevisit.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：极验验证码",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "tongdun.net",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：同盾风控",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "sofire.bdstatic.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：百度安全风控；拦截导致百度系登录/验证失败",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "pushservice.10010.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：中国联通 App 推送",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "httpdns.baidu.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：百度 HTTPDNS",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "httpsdns.baidu.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：百度 HTTPS-DNS",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "httpdns.n.shifen.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：百度 HTTPDNS 调度",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "httpdns.zybang.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：作业帮 HTTPDNS",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "dns.ximalaya.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：喜马拉雅 HTTPDNS",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "hdns.ksyun.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：金山云 HTTPDNS（多 App 共用）",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "aedns.weixin.qq.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：微信调度解析",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "apidns.kwd.inkuai.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：快手调度解析",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN",
+      "value": "apidns-js.kwd.inkuai.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：快手调度解析",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
+    },
+    {
+      "type": "DOMAIN-SUFFIX",
+      "value": "resolver.gslb.mi-idc.com",
+      "category": "cn",
+      "app_ids": [],
+      "reason": "国内基础设施永不拦截：小米 GSLB 解析",
+      "evidence": [
+        "2026 配置审查：Surge-V3.3.5 ads.domainset 命中该域导致国内 App 卡顿/登录失败"
+      ],
+      "confidence": "infrastructure-never-block; static protection, not phone validation"
     }
   ],
   "design": "每条由APP所有权启用；真实候选业务先于广告，并清洗所有拒绝输出。集团候选不等于集团全白名单。历史保护清洗范围单调保留以兼容缓存。",

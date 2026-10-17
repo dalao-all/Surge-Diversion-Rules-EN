@@ -15,6 +15,7 @@ DOMAIN,acs.m.taobao.com
 DOMAIN,acstatic-dun.126.net
 DOMAIN,act.vip.iqiyi.com
 DOMAIN,activeqq.3g.qq.com
+DOMAIN,aedns.weixin.qq.com
 DOMAIN,albert.apple.com
 DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,amdc.m.taobao.com
@@ -32,6 +33,8 @@ DOMAIN,api.m.jd.com
 DOMAIN,api.smoot.apple.com
 DOMAIN,api.store.apple.com
 DOMAIN,api.trae.ai
+DOMAIN,apidns-js.kwd.inkuai.com
+DOMAIN,apidns.kwd.inkuai.com
 DOMAIN,apiinit.amap.com
 DOMAIN,app.bilibili.com
 DOMAIN,appldnld.apple.com
@@ -91,6 +94,7 @@ DOMAIN,dict.youdao.com
 DOMAIN,dispatcher.is.autonavi.com
 DOMAIN,dns.jd.com
 DOMAIN,dns.weibo.cn
+DOMAIN,dns.ximalaya.com
 DOMAIN,docs.c-ctrip.com
 DOMAIN,dp.im.weibo.cn
 DOMAIN,dpmtpush.dianping.com
@@ -148,16 +152,21 @@ DOMAIN,h5.m.goofish.com
 DOMAIN,h5.m.taobao.com
 DOMAIN,ha.api.io.mi.com
 DOMAIN,haohuo.jinritemai.com
+DOMAIN,hdns.ksyun.com
 DOMAIN,health.apple.com
 DOMAIN,healthkit.apple.com
 DOMAIN,hls-svod.itunes.apple.com
 DOMAIN,home.apple.com
 DOMAIN,homekit.apple.com
+DOMAIN,httpdns.baidu.com
 DOMAIN,httpdns.bilivideo.com
 DOMAIN,httpdns.meituan.com
+DOMAIN,httpdns.n.shifen.com
+DOMAIN,httpdns.zybang.com
 DOMAIN,httpdnsmultiapi.meituan.com
 DOMAIN,httpdnsmultiapivip.meituan.com
 DOMAIN,httpdnsvip.meituan.com
+DOMAIN,httpsdns.baidu.com
 DOMAIN,huodong.weibo.cn
 DOMAIN,i.taobao.com
 DOMAIN,identity.ess.apple.com
@@ -212,6 +221,7 @@ DOMAIN,ocsp.digicert.com
 DOMAIN,ocsp2.apple.com
 DOMAIN,online.tableau.com
 DOMAIN,open.1688.com
+DOMAIN,open.e.189.cn
 DOMAIN,orbit.jd.com
 DOMAIN,osxapps.itunes.apple.com
 DOMAIN,p26-sign.bdxiguaimg.com
@@ -226,6 +236,7 @@ DOMAIN,platform.deepseek.com
 DOMAIN,policy.video.iqiyi.com
 DOMAIN,ppq.apple.com
 DOMAIN,public.tableau.com
+DOMAIN,pushservice.10010.com
 DOMAIN,qianwen.aliyun.com
 DOMAIN,qun.qq.com
 DOMAIN,reminders.icloud.com
@@ -240,6 +251,7 @@ DOMAIN,sg.m.taobao.com
 DOMAIN,share.icloud.com
 DOMAIN,smtp.mail.me.com
 DOMAIN,snowflake.qq.com
+DOMAIN,sofire.bdstatic.com
 DOMAIN,soup.v.qq.com
 DOMAIN,statici.icloud.com
 DOMAIN,sylvan-ssl.ls.apple.com
@@ -581,10 +593,14 @@ DOMAIN-SUFFIX,geely.com
 DOMAIN-SUFFIX,geelyauto.com.hk
 DOMAIN-SUFFIX,geelydesign.com
 DOMAIN-SUFFIX,geelyholding.com
+DOMAIN-SUFFIX,geetest.com
+DOMAIN-SUFFIX,geevisit.com
 DOMAIN-SUFFIX,geometryauto.com
 DOMAIN-SUFFIX,gerensuodeshui.com.cn
 DOMAIN-SUFFIX,gestaltedit.com
 DOMAIN-SUFFIX,getsupport.apple.com
+DOMAIN-SUFFIX,getui.com
+DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,gewara.com
 DOMAIN-SUFFIX,gifshow.com
 DOMAIN-SUFFIX,gitv.tv
@@ -639,9 +655,11 @@ DOMAIN-SUFFIX,icost.app
 DOMAIN-SUFFIX,icost.vip
 DOMAIN-SUFFIX,icostapp.cn
 DOMAIN-SUFFIX,icostapp.com
+DOMAIN-SUFFIX,id6.me
 DOMAIN-SUFFIX,idqqimg.com
 DOMAIN-SUFFIX,iesdouyin.com
 DOMAIN-SUFFIX,ifaa.org.cn
+DOMAIN-SUFFIX,igexin.com
 DOMAIN-SUFFIX,im.qq.com
 DOMAIN-SUFFIX,imqq.com
 DOMAIN-SUFFIX,intsig.com
@@ -674,6 +692,7 @@ DOMAIN-SUFFIX,jegotrip.cn
 DOMAIN-SUFFIX,jegotrip.com
 DOMAIN-SUFFIX,jegotrip.com.cn
 DOMAIN-SUFFIX,jianying.com
+DOMAIN-SUFFIX,jiguang.cn
 DOMAIN-SUFFIX,jingdong.com
 DOMAIN-SUFFIX,jingfen.cn
 DOMAIN-SUFFIX,jingfen.com
@@ -685,6 +704,8 @@ DOMAIN-SUFFIX,journal.apple.com
 DOMAIN-SUFFIX,joyai.com
 DOMAIN-SUFFIX,joybuy.com
 DOMAIN-SUFFIX,joying.com
+DOMAIN-SUFFIX,jpush.cn
+DOMAIN-SUFFIX,jpush.io
 DOMAIN-SUFFIX,jr.jd.com
 DOMAIN-SUFFIX,kanzhun.com
 DOMAIN-SUFFIX,ke-cdn.com
@@ -801,6 +822,7 @@ DOMAIN-SUFFIX,qzone.qq.com
 DOMAIN-SUFFIX,rails.cn
 DOMAIN-SUFFIX,rednet.cn
 DOMAIN-SUFFIX,reserve-prime.apple.com
+DOMAIN-SUFFIX,resolver.gslb.mi-idc.com
 DOMAIN-SUFFIX,retail.apple.com
 DOMAIN-SUFFIX,rexpos.cn
 DOMAIN-SUFFIX,riotcdn.net
@@ -882,6 +904,7 @@ DOMAIN-SUFFIX,tianfutong.com
 DOMAIN-SUFFIX,tieyou.com
 DOMAIN-SUFFIX,tips.apple.com
 DOMAIN-SUFFIX,tmri.cn
+DOMAIN-SUFFIX,tongdun.net
 DOMAIN-SUFFIX,tongyi.cn
 DOMAIN-SUFFIX,tongyi.com
 DOMAIN-SUFFIX,tongyiai.com
@@ -958,6 +981,7 @@ DOMAIN-SUFFIX,wetv.vip
 DOMAIN-SUFFIX,wildrift.leagueoflegends.com
 DOMAIN-SUFFIX,work.weixin.qq.com
 DOMAIN-SUFFIX,workflow.is
+DOMAIN-SUFFIX,wostore.cn
 DOMAIN-SUFFIX,wr.pvp.net
 DOMAIN-SUFFIX,wx.gtimg.com
 DOMAIN-SUFFIX,wx.qq.com

@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 HERE = ROOT / 'rulekit_v4'
 CATEGORIES = ('paypal','wise','binance','okx','ai', 'tiktok', 'stream', 'google', 'uk', 'global', 'cn')
-VERSION = '4.2.0'
+VERSION = '4.3.0'
 class BuildError(Exception): pass
 
 def sha(data):
@@ -268,6 +268,26 @@ def active_sources(config, apps):
     if any(a.get('category') not in CATEGORIES for a in apps['apps'] if a['id'] in active): raise BuildError('Invalid app category')
     return [s for s in config['sources'] if s.get('enabled',True) and (s.get('role') in ('ads','infrastructure','network','security') or s['id'] in refs or set(s.get('dependency_ids',[]))&deps or set(s.get('app_ids',[]))&active)],active
 
+def apply_ads_guard(ads, guard_config):
+    """Physically remove ad rules whose host contains a reviewed infrastructure keyword.
+
+    Mutates ``ads`` in place and returns removal records. Each keyword has a hard cap
+    (default 100) so an overbroad keyword fails closed instead of silently gutting ads.
+    """
+    removed=[]
+    for item in guard_config.get('keyword_exemptions',[]):
+        keyword=str(item.get('keyword','')).strip().lower()
+        if len(keyword)<4 or not re.fullmatch(r'[a-z0-9.-]+',keyword):
+            raise BuildError(f'Invalid ads-guard keyword: {keyword!r}')
+        if not item.get('reason'): raise BuildError(f'ads-guard keyword needs a reason: {keyword}')
+        hits=sorted(r for r in ads if keyword in r.split(',')[1])
+        limit=int(item.get('max_removals',100))
+        if len(hits)>limit:
+            raise BuildError(f'ads-guard keyword {keyword} would remove {len(hits)} ad rules (max {limit}); review the keyword')
+        for rule in hits:
+            ads.discard(rule); removed.append({'rule':rule,'guard_keyword':keyword,'reason':item['reason']})
+    return removed
+
 def route(tables, name):
     for category in CATEGORIES:
         for r in tables['protect-'+category]:
@@ -358,6 +378,9 @@ def compile_rules(offline=False, output=None):
             conflict=(value==pv or (pk=='DOMAIN-SUFFIX' and value.endswith('.'+pv)) or (kind=='DOMAIN-SUFFIX' and pv.endswith('.'+value)))
             if conflict:
                 tables['ads'].remove(rule); removed_ads.append({'rule':rule,'protection':protection}); break
+    # Keyword guard: never REJECT resolver/HTTPDNS-style infrastructure hosts. Removal only
+    # shrinks blocking scope, so substring matching here cannot over-block (unlike protections).
+    removed_ads.extend(apply_ads_guard(tables['ads'],readjson(HERE/'ads-guard.json',{'keyword_exemptions':[]})))
     if not tables['ads']: raise BuildError('Ads became empty')
     storm,storm_excluded=storm_subset(tables['ads'],historical,readjson(HERE/'storm-candidates.json',{'domains':[]})['domains'])
     tables={k:sorted(v,key=lambda r:(0 if r.startswith('DOMAIN,') else 1 if r.startswith('DOMAIN-SUFFIX,') else 2,r)) for k,v in tables.items()}

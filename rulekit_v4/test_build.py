@@ -374,6 +374,36 @@ class BuildPublicationTests(unittest.TestCase):
         ancestor = next(r for r in provenance if r['rule'] == 'DOMAIN-SUFFIX,service.example')
         self.assertFalse(ancestor['published'])
 
+    def test_ads_guard_keyword_removes_resolver_hosts_only(self):
+        self.texts['https://example.test/ads-source'] += 'DOMAIN,httpdns.vendor.example\nDOMAIN-SUFFIX,tracker.vendor.example\n'
+        self.write_json('ads-guard.json', {'keyword_exemptions': [dict(keyword='httpdns', reason='resolver')]})
+        report = self.compile()
+        self.assertIn({'rule': 'DOMAIN,httpdns.vendor.example', 'guard_keyword': 'httpdns', 'reason': 'resolver'},
+                      report['removed_ads'])
+        published = (self.destination / 'ads.list').read_text()
+        self.assertNotIn('httpdns.vendor.example', published)
+        self.assertIn('DOMAIN-SUFFIX,tracker.vendor.example', published)
+
+    def test_ads_guard_overbroad_or_unexplained_keyword_never_publishes(self):
+        self.texts['https://example.test/ads-source'] += 'DOMAIN,httpdns.a.example\nDOMAIN,httpdns.b.example\n'
+        self.write_json('ads-guard.json', {'keyword_exemptions': [dict(keyword='httpdns', reason='r', max_removals=1)]})
+        self.assert_failure_preserves_release('ads-guard')
+        self.write_json('ads-guard.json', {'keyword_exemptions': [dict(keyword='dns', reason='r')]})
+        self.assert_failure_preserves_release('ads-guard')
+        self.write_json('ads-guard.json', {'keyword_exemptions': [dict(keyword='httpdns')]})
+        self.assert_failure_preserves_release('ads-guard')
+
+    def test_infrastructure_protection_without_app_ids_always_cleans_ads(self):
+        self.texts['https://example.test/ads-source'] += 'DOMAIN-SUFFIX,push.vendor.example\n'
+        protections = [dict(type='DOMAIN-SUFFIX', value='push.vendor.example', category='cn', app_ids=[])]
+        self.apps['apps'][0]['enabled'] = False
+        self.write_inputs(protections=protections,
+                          probes=[dict(id='P1', domain='api.push.vendor.example', expected_category='cn', app_ids=[])])
+        report = self.compile()
+        self.assertEqual(report['removed_ads'][0]['rule'], 'DOMAIN-SUFFIX,push.vendor.example')
+        self.assertTrue(report['probes'][0]['passed'])
+        self.assertIn('DOMAIN-SUFFIX,push.vendor.example', (self.destination / 'protect-cn.list').read_text())
+
     def test_wildcard_protection_requires_review_instead_of_incomplete_overlap_proof(self):
         self.texts['https://example.test/ads-source'] += 'DOMAIN-SUFFIX,example.com\n'
         self.write_inputs(protections=[dict(type='DOMAIN-WILDCARD', value='api.*.com', category='cn')])

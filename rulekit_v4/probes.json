@@ -3366,6 +3366,294 @@
       ],
       "evidence_kind": "official-and-community-review",
       "device_verified": false
+    },
+    {
+      "id": "P0167",
+      "domain": "httpdns.baidu.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0168",
+      "domain": "httpsdns.baidu.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0169",
+      "domain": "dns.ximalaya.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0170",
+      "domain": "hdns.ksyun.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0171",
+      "domain": "aedns.weixin.qq.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0172",
+      "domain": "apidns.kwd.inkuai.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0173",
+      "domain": "resolver.gslb.mi-idc.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0174",
+      "domain": "httpdns.zybang.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0175",
+      "domain": "api.jpush.cn",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0176",
+      "domain": "sdk.jiguang.cn",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0177",
+      "domain": "id6.me",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0178",
+      "domain": "www.cmpassport.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0179",
+      "domain": "open.e.189.cn",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0180",
+      "domain": "sofire.bdstatic.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0181",
+      "domain": "api.geetest.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0182",
+      "domain": "httpdns-sdk.n.netease.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0183",
+      "domain": "httpdns-api.aliyuncs.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0184",
+      "domain": "www.baidu.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0185",
+      "domain": "dss0.bdstatic.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0186",
+      "domain": "www.zhihu.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0187",
+      "domain": "m.douban.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0188",
+      "domain": "mobile.ximalaya.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0189",
+      "domain": "www.58.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
+    },
+    {
+      "id": "P0190",
+      "domain": "tv.cctv.com",
+      "expected_category": "cn",
+      "app_ids": [],
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "device_verified": false
     }
   ],
   "uncovered_apps": [

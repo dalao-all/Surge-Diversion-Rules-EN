@@ -69,7 +69,7 @@
       "domain": "adashxgc.ut.taobao.com"
     }
   ],
-  "business_probes": 219,
+  "business_probes": 243,
   "business_results": [
     {
       "actual": {
@@ -1822,6 +1822,198 @@
       },
       "domain": "edgedl.me.gvt1.com",
       "expected": "google"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "httpdns.baidu.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "httpsdns.baidu.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "dns.ximalaya.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "hdns.ksyun.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "aedns.weixin.qq.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "apidns.kwd.inkuai.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "resolver.gslb.mi-idc.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "httpdns.zybang.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "api.jpush.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "sdk.jiguang.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "id6.me",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "www.cmpassport.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "open.e.189.cn",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "sofire.bdstatic.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "api.geetest.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "httpdns-sdk.n.netease.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "httpdns-api.aliyuncs.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "www.baidu.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "dss0.bdstatic.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "www.zhihu.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "m.douban.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "mobile.ximalaya.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "www.58.com",
+      "expected": "cn"
+    },
+    {
+      "actual": {
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
+      },
+      "domain": "tv.cctv.com",
+      "expected": "cn"
     }
   ],
   "limits": [

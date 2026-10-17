@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "scope": "广告层关键词豁免：仅从 ads 物理删除规则（缩小拦截范围），不新增任何分流。用于 HTTPDNS/解析调度这类“被拦即卡顿/白屏”的基础设施主机名。",
+  "keyword_exemptions": [
+    {"keyword": "httpdns", "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。", "max_removals": 100},
+    {"keyword": "httpsdns", "reason": "同 httpdns（百度等 HTTPS 版解析入口）。", "max_removals": 20},
+    {"keyword": "apidns", "reason": "快手/快影等 App 的调度 DNS 接口；拦截导致快手系 App 加载慢。", "max_removals": 20},
+    {"keyword": "aedns", "reason": "微信 aedns 调度解析；拦截导致微信图片/视频号加载慢。", "max_removals": 20}
+  ]
+}

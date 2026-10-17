@@ -1,17 +1,17 @@
 {
-  "compiler_version": "4.2.0",
+  "compiler_version": "4.3.0",
   "counts": {
-    "ads": 140926,
-    "ai": 101,
+    "ads": 140970,
+    "ai": 102,
     "binance": 14,
-    "cn": 7188,
+    "cn": 7916,
     "global": 739,
     "google": 724,
     "okx": 20,
     "paypal": 246,
     "protect-ai": 80,
     "protect-binance": 13,
-    "protect-cn": 1004,
+    "protect-cn": 1028,
     "protect-global": 94,
     "protect-google": 39,
     "protect-okx": 19,
@@ -1635,70 +1635,70 @@
       "raw": "USER-AGENT,TikTok*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/ByteDance/ByteDance.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/ByteDance/ByteDance.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/ByteDance/ByteDance.list"
     },
     {
       "line": 382,
       "raw": "PROCESS-NAME,com.zhiliaoapp.musically",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/ByteDance/ByteDance.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/ByteDance/ByteDance.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/ByteDance/ByteDance.list"
     },
     {
       "line": 708,
       "raw": "USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Google/Google.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Google/Google.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Google/Google.list"
     },
     {
       "line": 709,
       "raw": "USER-AGENT,*com.google.Drive*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Google/Google.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Google/Google.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Google/Google.list"
     },
     {
       "line": 710,
       "raw": "USER-AGENT,Google.Drive*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Google/Google.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Google/Google.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Google/Google.list"
     },
     {
       "line": 711,
       "raw": "PROCESS-NAME,com.android.vending",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Google/Google.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Google/Google.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Google/Google.list"
     },
     {
       "line": 712,
       "raw": "PROCESS-NAME,com.google.android.gms",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Google/Google.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Google/Google.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Google/Google.list"
     },
     {
       "line": 713,
       "raw": "PROCESS-NAME,com.google.android.gsf",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Google/Google.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Google/Google.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Google/Google.list"
     },
     {
       "line": 714,
       "raw": "PROCESS-NAME,com.google.android.play.games",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Google/Google.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Google/Google.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Google/Google.list"
     },
     {
       "line": 715,
       "raw": "PROCESS-NAME,BackupandSync",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Google/Google.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Google/Google.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Google/Google.list"
     },
     {
       "app_ids": [
@@ -1717,105 +1717,105 @@
       "reason": "已用实际首条命中检查确认关键词gmail误匹配国内qingmail.cn/qingmail.com；保留Gmail明确域名后缀，排除此过宽关键词。",
       "rule": "DOMAIN-KEYWORD,gmail",
       "source": "bm:rule/Surge/Google/Google.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Google/Google.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Google/Google.list"
     },
     {
       "line": 343,
       "raw": "USER-AGENT,MicroMessenger*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/WeChat/WeChat.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/WeChat/WeChat.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/WeChat/WeChat.list"
     },
     {
       "line": 344,
       "raw": "USER-AGENT,WeChat*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/WeChat/WeChat.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/WeChat/WeChat.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/WeChat/WeChat.list"
     },
     {
       "line": 134,
       "raw": "USER-AGENT,*bili*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/BiliBili/BiliBili.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/BiliBili/BiliBili.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/BiliBili/BiliBili.list"
     },
     {
       "line": 135,
       "raw": "USER-AGENT,Bilibili*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/BiliBili/BiliBili.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/BiliBili/BiliBili.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/BiliBili/BiliBili.list"
     },
     {
       "line": 136,
       "raw": "USER-AGENT,bili*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/BiliBili/BiliBili.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/BiliBili/BiliBili.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/BiliBili/BiliBili.list"
     },
     {
       "line": 137,
       "raw": "USER-AGENT,bili-inter*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/BiliBili/BiliBili.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/BiliBili/BiliBili.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/BiliBili/BiliBili.list"
     },
     {
       "line": 138,
       "raw": "PROCESS-NAME,com.bilibili.app.blue",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/BiliBili/BiliBili.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/BiliBili/BiliBili.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/BiliBili/BiliBili.list"
     },
     {
       "line": 139,
       "raw": "PROCESS-NAME,com.bilibili.app.in",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/BiliBili/BiliBili.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/BiliBili/BiliBili.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/BiliBili/BiliBili.list"
     },
     {
       "line": 140,
       "raw": "PROCESS-NAME,com.bilibili.comic",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/BiliBili/BiliBili.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/BiliBili/BiliBili.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/BiliBili/BiliBili.list"
     },
     {
       "line": 141,
       "raw": "PROCESS-NAME,com.bilibili.comic.intl",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/BiliBili/BiliBili.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/BiliBili/BiliBili.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/BiliBili/BiliBili.list"
     },
     {
       "line": 142,
       "raw": "PROCESS-NAME,tv.danmaku.bili",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/BiliBili/BiliBili.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/BiliBili/BiliBili.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/BiliBili/BiliBili.list"
     },
     {
       "line": 143,
       "raw": "PROCESS-NAME,tv.danmaku.bilibilihd",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/BiliBili/BiliBili.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/BiliBili/BiliBili.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/BiliBili/BiliBili.list"
     },
     {
       "line": 38,
       "raw": "USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/NetEaseMusic/NetEaseMusic.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/NetEaseMusic/NetEaseMusic.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/NetEaseMusic/NetEaseMusic.list"
     },
     {
       "line": 39,
       "raw": "USER-AGENT,NeteaseMusic*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/NetEaseMusic/NetEaseMusic.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/NetEaseMusic/NetEaseMusic.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/NetEaseMusic/NetEaseMusic.list"
     },
     {
       "app_ids": [
@@ -1829,7 +1829,7 @@
       "reason": "IPv4-mapped 198.18/15 benchmark/fake-IP values are not public TencentVideo endpoints.",
       "rule": "IP-CIDR6,::ffff:c612:58a/128,no-resolve",
       "source": "bm:rule/Surge/TencentVideo/TencentVideo.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/TencentVideo/TencentVideo.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/TencentVideo/TencentVideo.list"
     },
     {
       "app_ids": [
@@ -1843,7 +1843,7 @@
       "reason": "IPv4-mapped 198.18/15 benchmark/fake-IP values are not public TencentVideo endpoints.",
       "rule": "IP-CIDR6,::ffff:c612:651/128,no-resolve",
       "source": "bm:rule/Surge/TencentVideo/TencentVideo.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/TencentVideo/TencentVideo.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/TencentVideo/TencentVideo.list"
     },
     {
       "app_ids": [
@@ -1857,98 +1857,98 @@
       "reason": "IPv4-mapped 198.18/15 benchmark/fake-IP values are not public TencentVideo endpoints.",
       "rule": "IP-CIDR6,::ffff:c612:653/128,no-resolve",
       "source": "bm:rule/Surge/TencentVideo/TencentVideo.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/TencentVideo/TencentVideo.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/TencentVideo/TencentVideo.list"
     },
     {
       "line": 67,
       "raw": "USER-AGENT,PPStream*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/iQIYI/iQIYI.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/iQIYI/iQIYI.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/iQIYI/iQIYI.list"
     },
     {
       "line": 68,
       "raw": "USER-AGENT,QIYI*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/iQIYI/iQIYI.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/iQIYI/iQIYI.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/iQIYI/iQIYI.list"
     },
     {
       "line": 69,
       "raw": "USER-AGENT,QYPlayer*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/iQIYI/iQIYI.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/iQIYI/iQIYI.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/iQIYI/iQIYI.list"
     },
     {
       "line": 70,
       "raw": "USER-AGENT,iQIYI*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/iQIYI/iQIYI.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/iQIYI/iQIYI.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/iQIYI/iQIYI.list"
     },
     {
       "line": 71,
       "raw": "USER-AGENT,iQiYi*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/iQIYI/iQIYI.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/iQIYI/iQIYI.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/iQIYI/iQIYI.list"
     },
     {
       "line": 72,
       "raw": "USER-AGENT,iQiyi*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/iQIYI/iQIYI.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/iQIYI/iQIYI.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/iQIYI/iQIYI.list"
     },
     {
       "line": 73,
       "raw": "PROCESS-NAME,com.qiyi.video",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/iQIYI/iQIYI.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/iQIYI/iQIYI.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/iQIYI/iQIYI.list"
     },
     {
       "line": 19,
       "raw": "USER-AGENT,Music*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/AppleMusic/AppleMusic.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/AppleMusic/AppleMusic.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/AppleMusic/AppleMusic.list"
     },
     {
       "line": 20,
       "raw": "PROCESS-NAME,Music",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/AppleMusic/AppleMusic.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/AppleMusic/AppleMusic.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/AppleMusic/AppleMusic.list"
     },
     {
       "line": 17,
       "raw": "USER-AGENT,AppleTV*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/AppleTV/AppleTV.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/AppleTV/AppleTV.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/AppleTV/AppleTV.list"
     },
     {
       "line": 18,
       "raw": "USER-AGENT,com.apple.tv*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/AppleTV/AppleTV.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/AppleTV/AppleTV.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/AppleTV/AppleTV.list"
     },
     {
       "line": 19,
       "raw": "PROCESS-NAME,TV",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/AppleTV/AppleTV.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/AppleTV/AppleTV.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/AppleTV/AppleTV.list"
     },
     {
       "line": 17,
       "raw": "USER-AGENT,SpeedTest*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Speedtest/Speedtest.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Speedtest/Speedtest.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Speedtest/Speedtest.list"
     },
     {
       "app_ids": [
@@ -1962,7 +1962,7 @@
       "reason": "fast.com属于Netflix/流媒体既有服务，由INT012表负责；Ookla测速不覆盖此域。 任意含speedtest站点不应强制直连；只保留明确Ookla域名。",
       "rule": "DOMAIN-SUFFIX,fast.com",
       "source": "bm:rule/Surge/Speedtest/Speedtest.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Speedtest/Speedtest.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Speedtest/Speedtest.list"
     },
     {
       "app_ids": [
@@ -1976,7 +1976,7 @@
       "reason": "fast.com属于Netflix/流媒体既有服务，由INT012表负责；Ookla测速不覆盖此域。 任意含speedtest站点不应强制直连；只保留明确Ookla域名。",
       "rule": "DOMAIN-KEYWORD,speedtest",
       "source": "bm:rule/Surge/Speedtest/Speedtest.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Speedtest/Speedtest.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Speedtest/Speedtest.list"
     },
     {
       "app_ids": [
@@ -1990,7 +1990,7 @@
       "reason": "Reviewed exclusions; per-rule rationale and evidence in reviewed_exclusions / docs/RULE_CONTENT_REVIEW.md",
       "rule": "DOMAIN-KEYWORD,openai",
       "source": "bm:rule/Surge/OpenAI/OpenAI.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/OpenAI/OpenAI.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/OpenAI/OpenAI.list"
     },
     {
       "app_ids": [
@@ -2004,7 +2004,7 @@
       "reason": "Reviewed exclusions; per-rule rationale and evidence in reviewed_exclusions / docs/RULE_CONTENT_REVIEW.md",
       "rule": "IP-ASN,20473,no-resolve",
       "source": "bm:rule/Surge/OpenAI/OpenAI.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/OpenAI/OpenAI.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/OpenAI/OpenAI.list"
     },
     {
       "app_ids": [
@@ -2018,7 +2018,7 @@
       "reason": "Reviewed exclusions; per-rule rationale and evidence in reviewed_exclusions / docs/RULE_CONTENT_REVIEW.md",
       "rule": "DOMAIN-KEYWORD,colab",
       "source": "bm:rule/Surge/Gemini/Gemini.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Gemini/Gemini.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Gemini/Gemini.list"
     },
     {
       "app_ids": [
@@ -2032,7 +2032,7 @@
       "reason": "Reviewed exclusions; per-rule rationale and evidence in reviewed_exclusions / docs/RULE_CONTENT_REVIEW.md",
       "rule": "DOMAIN-KEYWORD,developerprofiles",
       "source": "bm:rule/Surge/Gemini/Gemini.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Gemini/Gemini.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Gemini/Gemini.list"
     },
     {
       "app_ids": [
@@ -2046,70 +2046,70 @@
       "reason": "Reviewed exclusions; per-rule rationale and evidence in reviewed_exclusions / docs/RULE_CONTENT_REVIEW.md",
       "rule": "DOMAIN-KEYWORD,generativelanguage",
       "source": "bm:rule/Surge/Gemini/Gemini.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Gemini/Gemini.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Gemini/Gemini.list"
     },
     {
       "line": 194,
       "raw": "USER-AGENT,*YouTubeMusic*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/YouTube/YouTube.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/YouTube/YouTube.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/YouTube/YouTube.list"
     },
     {
       "line": 195,
       "raw": "USER-AGENT,*com.google.ios.youtubemusic*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/YouTube/YouTube.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/YouTube/YouTube.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/YouTube/YouTube.list"
     },
     {
       "line": 196,
       "raw": "USER-AGENT,*youtube*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/YouTube/YouTube.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/YouTube/YouTube.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/YouTube/YouTube.list"
     },
     {
       "line": 197,
       "raw": "USER-AGENT,YouTube*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/YouTube/YouTube.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/YouTube/YouTube.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/YouTube/YouTube.list"
     },
     {
       "line": 198,
       "raw": "USER-AGENT,YouTubeMusic*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/YouTube/YouTube.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/YouTube/YouTube.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/YouTube/YouTube.list"
     },
     {
       "line": 199,
       "raw": "USER-AGENT,com.google.ios.youtube*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/YouTube/YouTube.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/YouTube/YouTube.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/YouTube/YouTube.list"
     },
     {
       "line": 200,
       "raw": "USER-AGENT,com.google.ios.youtubemusic*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/YouTube/YouTube.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/YouTube/YouTube.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/YouTube/YouTube.list"
     },
     {
       "line": 45,
       "raw": "USER-AGENT,TikTok*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/TikTok/TikTok.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/TikTok/TikTok.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/TikTok/TikTok.list"
     },
     {
       "line": 46,
       "raw": "PROCESS-NAME,com.zhiliaoapp.musically",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/TikTok/TikTok.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/TikTok/TikTok.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/TikTok/TikTok.list"
     },
     {
       "app_ids": [
@@ -2123,7 +2123,7 @@
       "reason": "Reviewed exclusions; per-rule rationale and evidence in reviewed_exclusions / docs/RULE_CONTENT_REVIEW.md",
       "rule": "DOMAIN-SUFFIX,snssdk.com",
       "source": "bm:rule/Surge/TikTok/TikTok.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/TikTok/TikTok.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/TikTok/TikTok.list"
     },
     {
       "app_ids": [
@@ -2137,7 +2137,7 @@
       "reason": "Reviewed exclusions; per-rule rationale and evidence in reviewed_exclusions / docs/RULE_CONTENT_REVIEW.md",
       "rule": "DOMAIN-KEYWORD,musical.ly",
       "source": "bm:rule/Surge/TikTok/TikTok.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/TikTok/TikTok.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/TikTok/TikTok.list"
     },
     {
       "app_ids": [
@@ -2151,21 +2151,21 @@
       "reason": "Reviewed exclusions; per-rule rationale and evidence in reviewed_exclusions / docs/RULE_CONTENT_REVIEW.md",
       "rule": "DOMAIN-KEYWORD,tiktok",
       "source": "bm:rule/Surge/TikTok/TikTok.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/TikTok/TikTok.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/TikTok/TikTok.list"
     },
     {
       "line": 1169,
       "raw": "USER-AGENT,Argo*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Netflix/Netflix.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Netflix/Netflix.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Netflix/Netflix.list"
     },
     {
       "line": 1170,
       "raw": "PROCESS-NAME,com.netflix.mediaclient",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Netflix/Netflix.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Netflix/Netflix.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Netflix/Netflix.list"
     },
     {
       "app_ids": [
@@ -2179,7 +2179,7 @@
       "reason": " 用户审计：公共同意管理服务与整个AWS区域不是Netflix专属；不得绑定流媒体。",
       "rule": "DOMAIN-SUFFIX,cookielaw.org",
       "source": "bm:rule/Surge/Netflix/Netflix.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Netflix/Netflix.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Netflix/Netflix.list"
     },
     {
       "app_ids": [
@@ -2193,7 +2193,7 @@
       "reason": " 用户审计：公共同意管理服务与整个AWS区域不是Netflix专属；不得绑定流媒体。",
       "rule": "DOMAIN-SUFFIX,onetrust.com",
       "source": "bm:rule/Surge/Netflix/Netflix.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Netflix/Netflix.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Netflix/Netflix.list"
     },
     {
       "app_ids": [
@@ -2207,7 +2207,7 @@
       "reason": " 用户审计：公共同意管理服务与整个AWS区域不是Netflix专属；不得绑定流媒体。",
       "rule": "DOMAIN-SUFFIX,us-west-2.amazonaws.com",
       "source": "bm:rule/Surge/Netflix/Netflix.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Netflix/Netflix.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Netflix/Netflix.list"
     },
     {
       "app_ids": [
@@ -2221,70 +2221,70 @@
       "reason": " 公共表情CDN不是Viki专属，移普通国际服务。",
       "rule": "DOMAIN-SUFFIX,twemoji.maxcdn.com",
       "source": "bm:rule/Surge/Viki/Viki.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Viki/Viki.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Viki/Viki.list"
     },
     {
       "line": 54,
       "raw": "PROCESS-NAME,nekox.messenger",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Telegram/Telegram.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Telegram/Telegram.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Telegram/Telegram.list"
     },
     {
       "line": 55,
       "raw": "PROCESS-NAME,org.telegram.messenger",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Telegram/Telegram.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Telegram/Telegram.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Telegram/Telegram.list"
     },
     {
       "line": 56,
       "raw": "PROCESS-NAME,telegram-desktop",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Telegram/Telegram.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Telegram/Telegram.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Telegram/Telegram.list"
     },
     {
       "line": 57,
       "raw": "PROCESS-NAME,tw.nekomimi.nekogram",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Telegram/Telegram.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Telegram/Telegram.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Telegram/Telegram.list"
     },
     {
       "line": 58,
       "raw": "PROCESS-NAME,xyz.nextalone.nagram",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/Telegram/Telegram.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/Telegram/Telegram.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Telegram/Telegram.list"
     },
     {
       "line": 15,
       "raw": "USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/GoogleDrive/GoogleDrive.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/GoogleDrive/GoogleDrive.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/GoogleDrive/GoogleDrive.list"
     },
     {
       "line": 16,
       "raw": "USER-AGENT,*com.google.Drive*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/GoogleDrive/GoogleDrive.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/GoogleDrive/GoogleDrive.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/GoogleDrive/GoogleDrive.list"
     },
     {
       "line": 17,
       "raw": "USER-AGENT,Google.Drive*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/GoogleDrive/GoogleDrive.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/GoogleDrive/GoogleDrive.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/GoogleDrive/GoogleDrive.list"
     },
     {
       "line": 18,
       "raw": "PROCESS-NAME,BackupandSync",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/GoogleDrive/GoogleDrive.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/GoogleDrive/GoogleDrive.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/GoogleDrive/GoogleDrive.list"
     },
     {
       "app_ids": [],
@@ -2296,7 +2296,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,data",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2308,7 +2308,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,16-b.it",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2320,7 +2320,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,32-b.it",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2332,7 +2332,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,64-b.it",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2344,7 +2344,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,mypi.co",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2356,7 +2356,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,tcp4.me",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2368,7 +2368,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,you2.pl",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2380,7 +2380,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,cfolks.pl",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2392,7 +2392,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,dkonto.pl",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2404,7 +2404,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,dnsup.net",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2416,31 +2416,31 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,hicam.net",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 1300,
+      "line": 1299,
       "purpose": "ads",
       "raw": ".ntdll.top",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ntdll.top",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 1355,
+      "line": 1354,
       "purpose": "ads",
       "raw": ".ownip.net",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ownip.net",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2452,91 +2452,103 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,dnsking.ch",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 2981,
+      "line": 2978,
       "purpose": "ads",
       "raw": ".plesk.page",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,plesk.page",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 3509,
+      "line": 3506,
       "purpose": "ads",
       "raw": ".vpndns.net",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,vpndns.net",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 3548,
+      "line": 3545,
       "purpose": "ads",
       "raw": ".webhop.net",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,webhop.net",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 4278,
+      "line": 4277,
       "purpose": "ads",
       "raw": ".cprapid.com",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,cprapid.com",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 4425,
+      "line": 4424,
       "purpose": "ads",
       "raw": ".dynserv.org",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,dynserv.org",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 4526,
+      "line": 4525,
       "purpose": "ads",
       "raw": ".forumz.info",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,forumz.info",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 4534,
+      "line": 4533,
       "purpose": "ads",
       "raw": ".freeddns.us",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,freeddns.us",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
+    },
+    {
+      "app_ids": [],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 5120,
+      "purpose": "ads",
+      "raw": ".now-dns.net",
+      "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
+      "rule": "DOMAIN-SUFFIX,now-dns.net",
+      "source": "skk:List/domainset/reject.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2544,227 +2556,215 @@
       "dependency_ids": [],
       "line": 5121,
       "purpose": "ads",
-      "raw": ".now-dns.net",
-      "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
-      "rule": "DOMAIN-SUFFIX,now-dns.net",
-      "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
-    },
-    {
-      "app_ids": [],
-      "confidence": "upstream classification; not packet-capture verified",
-      "dependency_ids": [],
-      "line": 5122,
-      "purpose": "ads",
       "raw": ".now-dns.org",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,now-dns.org",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 5585,
+      "line": 5584,
       "purpose": "ads",
       "raw": ".square.site",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,square.site",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 8145,
+      "line": 8148,
       "purpose": "ads",
       "raw": ".myiphost.com",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,myiphost.com",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 8833,
+      "line": 8837,
       "purpose": "ads",
       "raw": ".servebbs.net",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,servebbs.net",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 8943,
+      "line": 8947,
       "purpose": "ads",
       "raw": ".soundcast.me",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,soundcast.me",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 9923,
+      "line": 9929,
       "purpose": "ads",
       "raw": ".yolasite.com",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,yolasite.com",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 16381,
+      "line": 16399,
       "purpose": "ads",
       "raw": ".3utilities.com",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,3utilities.com",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 31037,
+      "line": 31063,
       "purpose": "ads",
       "raw": ".webadorsite.com",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,webadorsite.com",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 39258,
+      "line": 39278,
       "purpose": "ads",
       "raw": ".try-snowplow.com",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,try-snowplow.com",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 91629,
+      "line": 91720,
       "purpose": "ads",
       "raw": ".ingress-alpha.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-alpha.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 91630,
+      "line": 91721,
       "purpose": "ads",
       "raw": ".ingress-bonde.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-bonde.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 91631,
+      "line": 91722,
       "purpose": "ads",
       "raw": ".ingress-earth.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-earth.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 91632,
+      "line": 91723,
       "purpose": "ads",
       "raw": ".ingress-haven.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-haven.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 99013,
+      "line": 99099,
       "purpose": "ads",
       "raw": ".ingress-baronn.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-baronn.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 99014,
+      "line": 99100,
       "purpose": "ads",
       "raw": ".ingress-erytho.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-erytho.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 105737,
+      "line": 105821,
       "purpose": "ads",
       "raw": ".ingress-daribow.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-daribow.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 105738,
+      "line": 105822,
       "purpose": "ads",
       "raw": ".ingress-florina.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-florina.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 125201,
+      "line": 125289,
       "purpose": "ads",
       "raw": ".ingress-comporellon.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-comporellon.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2819,7 +2819,7 @@
       "raw": "USER-AGENT,PayPal*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "bm:rule/Surge/PayPal/PayPal.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/PayPal/PayPal.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/PayPal/PayPal.list"
     },
     {
       "app_ids": [
@@ -2833,14 +2833,14 @@
       "reason": "以明确业务后缀替代paypal任意子串匹配",
       "rule": "DOMAIN-KEYWORD,paypal",
       "source": "bm:rule/Surge/PayPal/PayPal.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/933875d42861a7fdfd9f945cd18605d74fa7e943/rule/Surge/PayPal/PayPal.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/PayPal/PayPal.list"
     },
     {
-      "line": 20,
+      "line": 21,
       "raw": "regexp:^chatgpt-async-webps-prod-\\S+-\\d+\\.webpubsub\\.azure\\.com$",
       "reason": "v2 regexp has no equivalent supported Surge domain rule; explicit coverage gap",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
     },
     {
       "app_ids": [
@@ -2854,7 +2854,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN-SUFFIX,chatgpt.site",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
     },
     {
       "app_ids": [
@@ -2868,7 +2868,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN-SUFFIX,crixet.com",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
     },
     {
       "app_ids": [
@@ -2878,11 +2878,11 @@
       "dependency_ids": [],
       "line": 10,
       "purpose": "app",
-      "raw": "sora.com",
+      "raw": "openai.org",
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
-      "rule": "DOMAIN-SUFFIX,sora.com",
+      "rule": "DOMAIN-SUFFIX,openai.org",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
     },
     {
       "app_ids": [
@@ -2890,13 +2890,13 @@
       ],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 13,
+      "line": 11,
       "purpose": "app",
-      "raw": "openai.com.cdn.cloudflare.net",
+      "raw": "sora.com",
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
-      "rule": "DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net",
+      "rule": "DOMAIN-SUFFIX,sora.com",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
     },
     {
       "app_ids": [
@@ -2906,11 +2906,11 @@
       "dependency_ids": [],
       "line": 14,
       "purpose": "app",
-      "raw": "full:openaiapi-site.azureedge.net",
+      "raw": "openai.com.cdn.cloudflare.net",
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
-      "rule": "DOMAIN,openaiapi-site.azureedge.net",
+      "rule": "DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
     },
     {
       "app_ids": [
@@ -2920,11 +2920,11 @@
       "dependency_ids": [],
       "line": 15,
       "purpose": "app",
-      "raw": "full:openaiassets.blob.core.windows.net",
+      "raw": "full:openaiapi-site.azureedge.net",
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
-      "rule": "DOMAIN,openaiassets.blob.core.windows.net",
+      "rule": "DOMAIN,openaiapi-site.azureedge.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
     },
     {
       "app_ids": [
@@ -2934,11 +2934,11 @@
       "dependency_ids": [],
       "line": 16,
       "purpose": "app",
-      "raw": "full:openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+      "raw": "full:openaiassets.blob.core.windows.net",
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
-      "rule": "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+      "rule": "DOMAIN,openaiassets.blob.core.windows.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
     },
     {
       "app_ids": [
@@ -2948,11 +2948,11 @@
       "dependency_ids": [],
       "line": 17,
       "purpose": "app",
-      "raw": "full:openaicom.imgix.net",
+      "raw": "full:openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
-      "rule": "DOMAIN,openaicom.imgix.net",
+      "rule": "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
     },
     {
       "app_ids": [
@@ -2962,11 +2962,11 @@
       "dependency_ids": [],
       "line": 18,
       "purpose": "app",
-      "raw": "full:openaicomproductionae4b.blob.core.windows.net",
+      "raw": "full:openaicom.imgix.net",
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
-      "rule": "DOMAIN,openaicomproductionae4b.blob.core.windows.net",
+      "rule": "DOMAIN,openaicom.imgix.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
     },
     {
       "app_ids": [
@@ -2976,11 +2976,25 @@
       "dependency_ids": [],
       "line": 19,
       "purpose": "app",
+      "raw": "full:openaicomproductionae4b.blob.core.windows.net",
+      "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
+      "rule": "DOMAIN,openaicomproductionae4b.blob.core.windows.net",
+      "source": "v2:data/openai",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
+    },
+    {
+      "app_ids": [
+        "INT001"
+      ],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 20,
+      "purpose": "app",
       "raw": "full:production-openaicom-storage.azureedge.net",
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN,production-openaicom-storage.azureedge.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
     },
     {
       "app_ids": [
@@ -2994,7 +3008,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN-SUFFIX,clau.de",
       "source": "v2:data/anthropic",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/anthropic"
     },
     {
       "app_ids": [
@@ -3008,7 +3022,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN-SUFFIX,claude.dev",
       "source": "v2:data/anthropic",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/anthropic"
     },
     {
       "app_ids": [
@@ -3022,7 +3036,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN-SUFFIX,claudemcpclient.com",
       "source": "v2:data/anthropic",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/anthropic"
     },
     {
       "app_ids": [
@@ -3036,7 +3050,287 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN,servd-anthropic-website.b-cdn.net",
       "source": "v2:data/anthropic",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/anthropic"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/anthropic"
+    },
+    {
+      "line": 882,
+      "raw": "USER-AGENT,%E4%BC%98%E9%85%B7*",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/domestic.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/domestic.conf"
+    },
+    {
+      "line": 883,
+      "raw": "USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/domestic.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/domestic.conf"
+    },
+    {
+      "line": 884,
+      "raw": "USER-AGENT,TeslaMap",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/domestic.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/domestic.conf"
+    },
+    {
+      "line": 196,
+      "raw": "USER-AGENT,%E8%BF%85%E9%9B%B7",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 197,
+      "raw": "PROCESS-NAME,v2ray",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 198,
+      "raw": "PROCESS-NAME,xray",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 199,
+      "raw": "PROCESS-NAME,ss-local",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 200,
+      "raw": "PROCESS-NAME,clash",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 201,
+      "raw": "PROCESS-NAME,ClashX",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 202,
+      "raw": "PROCESS-NAME,trojan",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 203,
+      "raw": "PROCESS-NAME,trojan-go",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 204,
+      "raw": "PROCESS-NAME,privoxy",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 205,
+      "raw": "PROCESS-NAME,cloudflared",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 206,
+      "raw": "PROCESS-NAME,aria2c",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 207,
+      "raw": "PROCESS-NAME,fdm",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 208,
+      "raw": "PROCESS-NAME,Folx",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 209,
+      "raw": "PROCESS-NAME,NetTransport",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 210,
+      "raw": "PROCESS-NAME,Thunder",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 211,
+      "raw": "PROCESS-NAME,ThunderVIP",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 212,
+      "raw": "PROCESS-NAME,Transmission",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 213,
+      "raw": "PROCESS-NAME,transmission-daemon",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 214,
+      "raw": "PROCESS-NAME,transmission-qt",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 215,
+      "raw": "PROCESS-NAME,BitComet",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 216,
+      "raw": "PROCESS-NAME,uTorrent",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 217,
+      "raw": "PROCESS-NAME,qbittorrent*",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 218,
+      "raw": "PROCESS-NAME,DownloadService",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 219,
+      "raw": "PROCESS-NAME,qBittorrent",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 220,
+      "raw": "PROCESS-NAME,qbittorrent-nox",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 221,
+      "raw": "PROCESS-NAME,WebTorrent",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 222,
+      "raw": "PROCESS-NAME,WebTorrent Helper",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 223,
+      "raw": "PROCESS-NAME,amuled",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 224,
+      "raw": "PROCESS-NAME,LocalSend",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 225,
+      "raw": "PROCESS-NAME,UUBooster",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 226,
+      "raw": "PROCESS-NAME,tailscaled",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 227,
+      "raw": "PROCESS-NAME,parsecd",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 228,
+      "raw": "PROCESS-NAME,SunloginClient_Desktop",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 229,
+      "raw": "PROCESS-NAME,SunloginClient_Helper",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 230,
+      "raw": "PROCESS-NAME,BaiduNetdisk_mac",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 231,
+      "raw": "PROCESS-NAME,Logi Options",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+    },
+    {
+      "line": 232,
+      "raw": "PROCESS-NAME,Logi Options Daemon",
+      "reason": "non-domain app/process identity not portable to iOS domain routing",
+      "source": "skk:List/non_ip/direct.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
     }
   ],
   "probes": [
@@ -4821,7 +5115,7 @@
       "evidence_kind": "shared-service-candidate",
       "expected_category": "cn",
       "id": "P0099",
-      "matched_rule": "DOMAIN-SUFFIX,sina.com.cn",
+      "matched_rule": "DOMAIN-SUFFIX,com.cn",
       "passed": true,
       "purpose": "APP关联域名静态路由候选；共享端点不证明APP主业务"
     },
@@ -7115,6 +7409,366 @@
       "matched_rule": "DOMAIN-SUFFIX,gvt1.com",
       "passed": true,
       "purpose": "Reviewed positive service-routing regression"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "httpdns.baidu.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0167",
+      "matched_rule": "DOMAIN,httpdns.baidu.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "httpsdns.baidu.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0168",
+      "matched_rule": "DOMAIN,httpsdns.baidu.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "dns.ximalaya.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0169",
+      "matched_rule": "DOMAIN,dns.ximalaya.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "hdns.ksyun.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0170",
+      "matched_rule": "DOMAIN,hdns.ksyun.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "aedns.weixin.qq.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0171",
+      "matched_rule": "DOMAIN,aedns.weixin.qq.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "apidns.kwd.inkuai.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0172",
+      "matched_rule": "DOMAIN,apidns.kwd.inkuai.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "resolver.gslb.mi-idc.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0173",
+      "matched_rule": "DOMAIN-SUFFIX,resolver.gslb.mi-idc.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "httpdns.zybang.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0174",
+      "matched_rule": "DOMAIN,httpdns.zybang.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "api.jpush.cn",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0175",
+      "matched_rule": "DOMAIN,api.jpush.cn",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "sdk.jiguang.cn",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0176",
+      "matched_rule": "DOMAIN-SUFFIX,jiguang.cn",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "id6.me",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0177",
+      "matched_rule": "DOMAIN-SUFFIX,id6.me",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "www.cmpassport.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0178",
+      "matched_rule": "DOMAIN-SUFFIX,cmpassport.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "open.e.189.cn",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0179",
+      "matched_rule": "DOMAIN,open.e.189.cn",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "sofire.bdstatic.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0180",
+      "matched_rule": "DOMAIN,sofire.bdstatic.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "api.geetest.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0181",
+      "matched_rule": "DOMAIN-SUFFIX,geetest.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "httpdns-sdk.n.netease.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0182",
+      "matched_rule": "DOMAIN-SUFFIX,netease.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "httpdns-api.aliyuncs.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0183",
+      "matched_rule": "DOMAIN-SUFFIX,aliyuncs.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "www.baidu.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0184",
+      "matched_rule": "DOMAIN-SUFFIX,baidu.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "dss0.bdstatic.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0185",
+      "matched_rule": "DOMAIN-SUFFIX,bdstatic.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "www.zhihu.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0186",
+      "matched_rule": "DOMAIN-SUFFIX,zhihu.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "m.douban.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0187",
+      "matched_rule": "DOMAIN-SUFFIX,douban.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "mobile.ximalaya.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0188",
+      "matched_rule": "DOMAIN-SUFFIX,ximalaya.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "www.58.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0189",
+      "matched_rule": "DOMAIN-SUFFIX,58.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
+    },
+    {
+      "actual_category": "cn",
+      "app_ids": [],
+      "device_verified": false,
+      "domain": "tv.cctv.com",
+      "evidence": [
+        "2026 配置审查（V3.3.5 卡顿根因）"
+      ],
+      "evidence_kind": "infrastructure-never-block",
+      "expected_category": "cn",
+      "id": "P0190",
+      "matched_rule": "DOMAIN-SUFFIX,cctv.com",
+      "passed": true,
+      "purpose": "国内基础设施/家族兜底：必须走 cn（DIRECT），绝不能落入 ads"
     }
   ],
   "removed_ads": [
@@ -7299,7 +7953,7 @@
       "rule": "DOMAIN,advertising.apple.com"
     },
     {
-      "protection": "DOMAIN-SUFFIX,weixin.qq.com",
+      "protection": "DOMAIN,aedns.weixin.qq.com",
       "rule": "DOMAIN,aedns.weixin.qq.com"
     },
     {
@@ -7389,6 +8043,14 @@
     {
       "protection": "DOMAIN-SUFFIX,ixigua.com",
       "rule": "DOMAIN,api5-normal-quic-lf.ixigua.com"
+    },
+    {
+      "protection": "DOMAIN,apidns-js.kwd.inkuai.com",
+      "rule": "DOMAIN,apidns-js.kwd.inkuai.com"
+    },
+    {
+      "protection": "DOMAIN,apidns.kwd.inkuai.com",
+      "rule": "DOMAIN,apidns.kwd.inkuai.com"
     },
     {
       "protection": "DOMAIN-SUFFIX,v.qq.com",
@@ -7571,6 +8233,10 @@
       "rule": "DOMAIN,dns.weixin.qq.com"
     },
     {
+      "protection": "DOMAIN,dns.ximalaya.com",
+      "rule": "DOMAIN,dns.ximalaya.com"
+    },
+    {
       "protection": "DOMAIN-SUFFIX,gitv.tv",
       "rule": "DOMAIN,doh.ptqy.gitv.tv"
     },
@@ -7639,6 +8305,10 @@
       "rule": "DOMAIN,game.weibo.com"
     },
     {
+      "protection": "DOMAIN-SUFFIX,wostore.cn",
+      "rule": "DOMAIN,game.wostore.cn"
+    },
+    {
       "protection": "DOMAIN-SUFFIX,gifshow.com",
       "rule": "DOMAIN,gdfp.gifshow.com"
     },
@@ -7691,6 +8361,14 @@
       "rule": "DOMAIN,gw6.push.mcp.weibo.cn"
     },
     {
+      "protection": "DOMAIN,hdns.ksyun.com",
+      "rule": "DOMAIN,hdns.ksyun.com"
+    },
+    {
+      "protection": "DOMAIN,httpdns.baidu.com",
+      "rule": "DOMAIN,httpdns.baidu.com"
+    },
+    {
       "protection": "DOMAIN-SUFFIX,huaweicloud.com",
       "rule": "DOMAIN,httpdns.huaweicloud.com"
     },
@@ -7703,8 +8381,16 @@
       "rule": "DOMAIN,httpdns.music.163.com"
     },
     {
+      "protection": "DOMAIN,httpdns.n.shifen.com",
+      "rule": "DOMAIN,httpdns.n.shifen.com"
+    },
+    {
       "protection": "DOMAIN-SUFFIX,volces.com",
       "rule": "DOMAIN,httpdns.volces.com"
+    },
+    {
+      "protection": "DOMAIN,httpdns.zybang.com",
+      "rule": "DOMAIN,httpdns.zybang.com"
     },
     {
       "protection": "DOMAIN,httpdnsmultiapi.meituan.com",
@@ -7717,6 +8403,10 @@
     {
       "protection": "DOMAIN,httpdnsvip.meituan.com",
       "rule": "DOMAIN,httpdnsvip.meituan.com"
+    },
+    {
+      "protection": "DOMAIN,httpsdns.baidu.com",
+      "rule": "DOMAIN,httpsdns.baidu.com"
     },
     {
       "protection": "DOMAIN,huodong.weibo.cn",
@@ -7781,6 +8471,18 @@
     {
       "protection": "DOMAIN,janapi.jd.com",
       "rule": "DOMAIN,janapi.jd.com"
+    },
+    {
+      "protection": "DOMAIN-SUFFIX,jiguang.cn",
+      "rule": "DOMAIN,jiguang.cn"
+    },
+    {
+      "protection": "DOMAIN-SUFFIX,jpush.cn",
+      "rule": "DOMAIN,jpush.cn"
+    },
+    {
+      "protection": "DOMAIN-SUFFIX,jpush.io",
+      "rule": "DOMAIN,jpush.io"
     },
     {
       "protection": "DOMAIN-SUFFIX,jd.com",
@@ -8599,6 +9301,10 @@
       "rule": "DOMAIN-SUFFIX,beaconimages.netflix.net"
     },
     {
+      "protection": "DOMAIN-SUFFIX,tongdun.net",
+      "rule": "DOMAIN-SUFFIX,behavior.tongdun.net"
+    },
+    {
       "protection": "DOMAIN-SUFFIX,mi-img.com",
       "rule": "DOMAIN-SUFFIX,browser.mi-img.com"
     },
@@ -8855,6 +9561,14 @@
       "rule": "DOMAIN-SUFFIX,gdfp.gifshow.com"
     },
     {
+      "protection": "DOMAIN-SUFFIX,getui.com",
+      "rule": "DOMAIN-SUFFIX,getui.com"
+    },
+    {
+      "protection": "DOMAIN-SUFFIX,getui.net",
+      "rule": "DOMAIN-SUFFIX,getui.net"
+    },
+    {
       "protection": "DOMAIN-SUFFIX,miguvideo.com",
       "rule": "DOMAIN-SUFFIX,ggxwb.miguvideo.com"
     },
@@ -8971,6 +9685,10 @@
       "rule": "DOMAIN-SUFFIX,ichnaea.netflix.com"
     },
     {
+      "protection": "DOMAIN-SUFFIX,id6.me",
+      "rule": "DOMAIN-SUFFIX,id6.me"
+    },
+    {
       "protection": "DOMAIN-SUFFIX,autohome.com.cn",
       "rule": "DOMAIN-SUFFIX,idm.api.autohome.com.cn"
     },
@@ -8981,6 +9699,10 @@
     {
       "protection": "DOMAIN-SUFFIX,xiaomi.com",
       "rule": "DOMAIN-SUFFIX,igame.xiaomi.com"
+    },
+    {
+      "protection": "DOMAIN-SUFFIX,igexin.com",
+      "rule": "DOMAIN-SUFFIX,igexin.com"
     },
     {
       "protection": "DOMAIN-SUFFIX,tableau.com",
@@ -8999,8 +9721,16 @@
       "rule": "DOMAIN-SUFFIX,installer.xiaomi.com"
     },
     {
+      "protection": "DOMAIN-SUFFIX,jiguang.cn",
+      "rule": "DOMAIN-SUFFIX,jiguang.cn"
+    },
+    {
       "protection": "DOMAIN,api.jpush.cn",
       "rule": "DOMAIN-SUFFIX,jpush.cn"
+    },
+    {
+      "protection": "DOMAIN-SUFFIX,jpush.io",
+      "rule": "DOMAIN-SUFFIX,jpush.io"
     },
     {
       "protection": "DOMAIN,juejin.cn",
@@ -9053,6 +9783,10 @@
     {
       "protection": "DOMAIN-SUFFIX,tiktokv.com",
       "rule": "DOMAIN-SUFFIX,log-va.tiktokv.com"
+    },
+    {
+      "protection": "DOMAIN-SUFFIX,geetest.com",
+      "rule": "DOMAIN-SUFFIX,log.geetest.com"
     },
     {
       "protection": "DOMAIN-SUFFIX,jd.com",
@@ -9427,6 +10161,10 @@
       "rule": "DOMAIN-SUFFIX,push.mcp.weibo.cn"
     },
     {
+      "protection": "DOMAIN,pushservice.10010.com",
+      "rule": "DOMAIN-SUFFIX,pushservice.10010.com"
+    },
+    {
       "protection": "DOMAIN-SUFFIX,xiaomi.com",
       "rule": "DOMAIN-SUFFIX,qiye.xiaomi.com"
     },
@@ -9437,6 +10175,10 @@
     {
       "protection": "DOMAIN-SUFFIX,meituan.com",
       "rule": "DOMAIN-SUFFIX,report.meituan.com"
+    },
+    {
+      "protection": "DOMAIN-SUFFIX,resolver.gslb.mi-idc.com",
+      "rule": "DOMAIN-SUFFIX,resolver.gslb.mi-idc.com"
     },
     {
       "protection": "DOMAIN-SUFFIX,youdao.com",
@@ -9537,6 +10279,10 @@
     {
       "protection": "DOMAIN,snowflake.qq.com",
       "rule": "DOMAIN-SUFFIX,snowflake.qq.com"
+    },
+    {
+      "protection": "DOMAIN,sofire.bdstatic.com",
+      "rule": "DOMAIN-SUFFIX,sofire.bdstatic.com"
     },
     {
       "protection": "DOMAIN-SUFFIX,xiaohongshu.com",
@@ -9801,9 +10547,154 @@
     {
       "protection": "DOMAIN-SUFFIX,fbcdn.net",
       "rule": "DOMAIN-SUFFIX,xz.fbcdn.net"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns-api.aliyuncs.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns-browser.platform.dbankcloud.cn"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns-euex-push.heytapmobile.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns-ocloud.heytapmobile.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns-push.heytapmobile.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns-sc.aliyuncs.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns-sdk.n.netease.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.baidubce.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.bcelive.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.c.cdnhwc2.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.calorietech.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.cctv.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.danuoyi.tbcache.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.kg.qq.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.kwd.inkuai.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.ocloud.heytapmobi.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.ocloud.oppomobile.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.platform.dbankcloud.cn"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.platform.dbankcloud.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.push.heytapmobi.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.push.oppomobile.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.volcengineapi.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns.yunxindns.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN,httpdns1.cc.cdnhwc5.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN-SUFFIX,httpdns.aliyuncs.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN-SUFFIX,httpdns.c.163.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN-SUFFIX,httpdns.n.netease.com"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN-SUFFIX,httpdns.pro"
+    },
+    {
+      "guard_keyword": "httpdns",
+      "reason": "App 内置 HTTPDNS 解析入口；被 REJECT 后 App 只能等超时再回落系统 DNS，表现为首屏/图片/视频卡顿。",
+      "rule": "DOMAIN-SUFFIX,httpdns.qcloud.com"
     }
   ],
-  "sources": 124,
+  "sources": 126,
   "storm_reject": {
     "excluded": [],
     "policy": "REJECT-DROP",

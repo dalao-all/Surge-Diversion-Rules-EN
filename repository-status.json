@@ -4,20 +4,20 @@
   "ipv6": false,
   "proxy_empty": true,
   "app_count": 164,
-  "source_count": 124,
+  "source_count": 126,
   "dependency_count": 28,
   "counts": {
-    "ads": 140926,
-    "ai": 101,
+    "ads": 140970,
+    "ai": 102,
     "binance": 14,
-    "cn": 7188,
+    "cn": 7916,
     "global": 739,
     "google": 724,
     "okx": 20,
     "paypal": 246,
     "protect-ai": 80,
     "protect-binance": 13,
-    "protect-cn": 1004,
+    "protect-cn": 1028,
     "protect-global": 94,
     "protect-google": 39,
     "protect-okx": 19,
@@ -31,7 +31,7 @@
     "uk": 5,
     "wise": 2
   },
-  "probe_count": 237,
+  "probe_count": 261,
   "coverage_counts": {
     "independent-candidate": 62,
     "official-document-only": 8,
@@ -73,7 +73,7 @@
     {
       "id": "ai",
       "policy": "🤖 AI住宅",
-      "rule_count": 101,
+      "rule_count": 102,
       "protected_rule_count": 80
     },
     {
@@ -109,8 +109,8 @@
     {
       "id": "cn",
       "policy": "DIRECT",
-      "rule_count": 7188,
-      "protected_rule_count": 1004
+      "rule_count": 7916,
+      "protected_rule_count": 1028
     }
   ],
   "apps": [
@@ -1427,5 +1427,5 @@
       "enabled": true
     }
   ],
-  "semantic_sha256": "96924c50dd24b465e5aa311f30ce3d376f132377995f4b38314df2a311ee752d"
+  "semantic_sha256": "58b91f74537f9d23c70147b3e835d74ec9ea574519d301a2d11e8b97f23b70a7"
 }
