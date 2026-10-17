@@ -3787,16 +3787,16 @@
       },
       "output_rule_overrides": {
         "DOMAIN-SUFFIX,trae.ai": {
-          "category": "ai",
-          "reason": "TRAE international feature of listed CN055, not TikTok; domestic trae.cn unchanged."
+          "category": "cn",
+          "reason": "TRAE is domestic ByteDance AI IDE, classified as CN DIRECT."
         },
         "DOMAIN-SUFFIX,marscode.com": {
-          "category": "ai",
-          "reason": "TRAE international feature of listed CN055, not TikTok; domestic trae.cn unchanged."
+          "category": "cn",
+          "reason": "MarsCode / TRAE is domestic ByteDance AI IDE, classified as CN DIRECT."
         },
         "DOMAIN,trae-api-sg.mchost.guru": {
-          "category": "ai",
-          "reason": "TRAE international feature of listed CN055, not TikTok; domestic trae.cn unchanged."
+          "category": "cn",
+          "reason": "TRAE gateway endpoint, classified as CN DIRECT."
         }
       }
     },

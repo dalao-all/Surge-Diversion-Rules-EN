@@ -225,8 +225,8 @@
       "rules": 961,
       "semantic_sha256": "d9d3edfe933f14e7f8eda32ef7bf46e71875c7de8266decb4f52355b8b3e81df",
       "sha256": "3aa8cec471f436156921bd33516bc14ea7535e796bba421aee8e37cac40a8387",
-      "upstream_commit": "99b020c21853cbed56b90456399dad6bde842309",
-      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/99b020c21853cbed56b90456399dad6bde842309/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list"
+      "upstream_commit": "89273bd1d98a923872018ac901d5367299b29c65",
+      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/89273bd1d98a923872018ac901d5367299b29c65/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list"
     },
     "bm:rule/Surge/12306/12306.list": {
       "license": {
@@ -1221,11 +1221,11 @@
         "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/LICENSE",
         "verified_url": "https://raw.githubusercontent.com/SukkaW/Surge/8a4972eb334f3fd9d0c813577d47d04c4c442bf9/LICENSE"
       },
-      "rules": 140768,
-      "semantic_sha256": "e86fabd5201da533055159e0ef271aad84dbb65c1bf2e52a8c9a6db3489d1ee4",
-      "sha256": "958a44d46b8f496a4b8b6fbf98f4e8ee446c1425e35f6a1016574ce54937cebc",
-      "upstream_commit": "2c2f1aa86c809cfaf440c89288139c6ef9cd72cf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2c2f1aa86c809cfaf440c89288139c6ef9cd72cf/List/domainset/reject.conf"
+      "rules": 140818,
+      "semantic_sha256": "7c322772a2ce2f0013d7d2181e04e17fedbf6c53e52262435b0115a3b9e2b20c",
+      "sha256": "9f9c74585f8903c4842dc79a917a74435c519dd3dcbcfc9a7f94309b898d3e3e",
+      "upstream_commit": "85076a0449e90119da824b79f9f1b611921726af",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/85076a0449e90119da824b79f9f1b611921726af/List/domainset/reject.conf"
     },
     "user-telemetry-reject": {
       "rules": 6,

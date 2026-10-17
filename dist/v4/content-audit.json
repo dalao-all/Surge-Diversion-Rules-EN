@@ -1609,27 +1609,27 @@
     },
     {
       "actual": {
-        "legacy-ad-first": "ai",
-        "v330-business-first": "ai"
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
       },
       "domain": "trae.ai",
-      "expected": "ai"
+      "expected": "cn"
     },
     {
       "actual": {
-        "legacy-ad-first": "ai",
-        "v330-business-first": "ai"
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
       },
       "domain": "marscode.com",
-      "expected": "ai"
+      "expected": "cn"
     },
     {
       "actual": {
-        "legacy-ad-first": "ai",
-        "v330-business-first": "ai"
+        "legacy-ad-first": "cn",
+        "v330-business-first": "cn"
       },
       "domain": "trae-api-sg.mchost.guru",
-      "expected": "ai"
+      "expected": "cn"
     },
     {
       "actual": {

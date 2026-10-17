@@ -1,2 +1,6 @@
 # Surge Rulekit v4 | protect-uk | policy supplied by main profile
+DOMAIN,community.giffgaff.com
+DOMAIN,id.giffgaff.com
 DOMAIN,www.giffgaff.com
+DOMAIN-SUFFIX,giffgaff.com
+DOMAIN-SUFFIX,giffgaff.design

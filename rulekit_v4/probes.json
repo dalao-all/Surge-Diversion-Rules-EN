@@ -2972,14 +2972,14 @@
     {
       "id": "content-20261016-211",
       "domain": "trae.ai",
-      "expected_category": "ai",
+      "expected_category": "cn",
       "app_ids": [
         "CN055"
       ],
       "purpose": "Reviewed positive service-routing regression",
       "evidence": [
-        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/bytedance-ai-!cn",
-        "https://www.trae.ai/"
+        "https://www.trae.ai/",
+        "https://www.trae.com.cn/"
       ],
       "evidence_kind": "official-and-community-review",
       "device_verified": false
@@ -2987,13 +2987,13 @@
     {
       "id": "content-20261016-212",
       "domain": "marscode.com",
-      "expected_category": "ai",
+      "expected_category": "cn",
       "app_ids": [
         "CN055"
       ],
       "purpose": "Reviewed positive service-routing regression",
       "evidence": [
-        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/bytedance-ai-!cn",
+        "https://www.marscode.cn/",
         "https://www.trae.ai/"
       ],
       "evidence_kind": "official-and-community-review",
@@ -3002,13 +3002,12 @@
     {
       "id": "content-20261016-213",
       "domain": "trae-api-sg.mchost.guru",
-      "expected_category": "ai",
+      "expected_category": "cn",
       "app_ids": [
         "CN055"
       ],
       "purpose": "Reviewed positive service-routing regression",
       "evidence": [
-        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/bytedance-ai-!cn",
         "https://www.trae.ai/"
       ],
       "evidence_kind": "official-and-community-review",

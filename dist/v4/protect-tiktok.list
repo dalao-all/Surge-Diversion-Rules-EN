@@ -1,5 +1,25 @@
 # Surge Rulekit v4 | protect-tiktok | policy supplied by main profile
+DOMAIN,api-core.tiktok.com
+DOMAIN,api-sg.tiktokv.com
+DOMAIN,api-va.tiktokv.com
+DOMAIN,api.tiktok.com
+DOMAIN,lf16-effectcdn.byteeffecttos-g.com
+DOMAIN,lf16-pkgcdn.pitaya-clientai.com
+DOMAIN,m.tiktok.com
+DOMAIN,p16-tiktokcdn-com.akamaized.net
 DOMAIN,roovza.cdn-settings.appsflyersdk.com
 DOMAIN,roovza.launches.appsflyersdk.com
 DOMAIN,www.tiktok.com
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,ibytedtos.com
+DOMAIN-SUFFIX,ibyteimg.com
+DOMAIN-SUFFIX,ipstatp.com
+DOMAIN-SUFFIX,musical.ly
+DOMAIN-SUFFIX,musically.com
+DOMAIN-SUFFIX,sgpstatp.com
+DOMAIN-SUFFIX,sgsnssdk.com
+DOMAIN-SUFFIX,tiktokcdn-us.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tiktokv.com
+DOMAIN-SUFFIX,tiktokv.us
 DOMAIN-SUFFIX,ttwebview.com

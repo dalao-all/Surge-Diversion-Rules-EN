@@ -1,11 +1,20 @@
 # Surge Rulekit v4 | stream | policy supplied by main profile
 DOMAIN,e13252.dscg.akamaiedge.net
 DOMAIN,h-netflix.online-metrix.net
+DOMAIN,kids.youtube.com
+DOMAIN,m.youtube.com
+DOMAIN,music.youtube.com
 DOMAIN,netflix.com.edgesuite.net
 DOMAIN,p-bstarstatic.akamaized.net
 DOMAIN,p.bstarstatic.com
+DOMAIN,studio.youtube.com
+DOMAIN,tv.youtube.com
 DOMAIN,upos-bstar-mirrorakam.akamaized.net
 DOMAIN,upos-bstar1-mirrorakam.akamaized.net
+DOMAIN,viki.com
+DOMAIN,www.netflix.com
+DOMAIN,www.youtube.com
+DOMAIN,youtubei.googleapis.com
 DOMAIN-SUFFIX,bilibili.tv
 DOMAIN-SUFFIX,biliintl.co
 DOMAIN-SUFFIX,biliintl.com

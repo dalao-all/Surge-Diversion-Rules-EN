@@ -343,7 +343,7 @@ def compile_rules(offline=False, output=None):
         if p.get('app_ids') and not set(p['app_ids'])&active: continue
         if p['type'] not in ('DOMAIN','DOMAIN-SUFFIX','IP-CIDR','IP-CIDR6'): raise BuildError('Unsupported protection type; wildcard/keyword protection cannot prove ad disjointness')
         rule=normal_rule(p['type'],p['value'],p.get('options',[])); cat=p['category']
-        tables['protect-'+cat].add(rule); protected.append(rule)
+        tables['protect-'+cat].add(rule); tables[cat].add(rule); protected.append(rule)
         provenance['protect-'+cat+'|'+rule]=[p]
     # Physical removal guarantees an old protection download + new ads download is safe.
     # Carry historical protected scope monotonically; removing an app cannot re-enable its ads.

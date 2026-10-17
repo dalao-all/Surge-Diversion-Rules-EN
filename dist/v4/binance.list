@@ -1,6 +1,8 @@
 # Surge Rulekit v4 | binance | policy supplied by main profile
 DOMAIN-SUFFIX,appsflayer.com
+DOMAIN-SUFFIX,binance.charity
 DOMAIN-SUFFIX,binance.cloud
+DOMAIN-SUFFIX,binance.co
 DOMAIN-SUFFIX,binance.com
 DOMAIN-SUFFIX,binance.me
 DOMAIN-SUFFIX,binancecnt.com

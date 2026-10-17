@@ -90,13 +90,13 @@
         "trae-api-sg.mchost.guru"
       ],
       "from": "tiktok",
-      "to": "ai",
+      "to": "cn",
       "app_ids": [
         "CN055"
       ],
       "evidence": [
-        "https://github.com/v2fly/domain-list-community/blob/dd4e3c080cee602512768e8109f89fafaa94b8ca/data/bytedance-ai-!cn",
-        "https://www.trae.ai/"
+        "https://www.trae.ai/",
+        "https://www.trae.com.cn/"
       ]
     },
     {

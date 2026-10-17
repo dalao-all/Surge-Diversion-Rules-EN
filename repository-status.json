@@ -7,28 +7,28 @@
   "source_count": 124,
   "dependency_count": 28,
   "counts": {
-    "ads": 141417,
-    "ai": 79,
-    "binance": 12,
-    "cn": 6648,
-    "global": 693,
-    "google": 698,
-    "okx": 3,
+    "ads": 140926,
+    "ai": 101,
+    "binance": 14,
+    "cn": 7188,
+    "global": 739,
+    "google": 724,
+    "okx": 20,
     "paypal": 246,
-    "protect-ai": 36,
-    "protect-binance": 2,
-    "protect-cn": 157,
-    "protect-global": 32,
-    "protect-google": 8,
-    "protect-okx": 2,
-    "protect-paypal": 3,
-    "protect-stream": 10,
-    "protect-tiktok": 4,
-    "protect-uk": 1,
+    "protect-ai": 80,
+    "protect-binance": 13,
+    "protect-cn": 1004,
+    "protect-global": 94,
+    "protect-google": 39,
+    "protect-okx": 19,
+    "protect-paypal": 5,
+    "protect-stream": 38,
+    "protect-tiktok": 24,
+    "protect-uk": 5,
     "protect-wise": 2,
-    "stream": 1349,
-    "tiktok": 28,
-    "uk": 2,
+    "stream": 1358,
+    "tiktok": 38,
+    "uk": 5,
     "wise": 2
   },
   "probe_count": 237,
@@ -50,7 +50,7 @@
       "id": "paypal",
       "policy": "💳 PayPal 美国",
       "rule_count": 246,
-      "protected_rule_count": 3
+      "protected_rule_count": 5
     },
     {
       "id": "wise",
@@ -61,56 +61,56 @@
     {
       "id": "binance",
       "policy": "🪙 Binance 台湾",
-      "rule_count": 12,
-      "protected_rule_count": 2
+      "rule_count": 14,
+      "protected_rule_count": 13
     },
     {
       "id": "okx",
       "policy": "🪙 OKX 台湾",
-      "rule_count": 3,
-      "protected_rule_count": 2
+      "rule_count": 20,
+      "protected_rule_count": 19
     },
     {
       "id": "ai",
       "policy": "🤖 AI住宅",
-      "rule_count": 79,
-      "protected_rule_count": 36
+      "rule_count": 101,
+      "protected_rule_count": 80
     },
     {
       "id": "tiktok",
       "policy": "🎵 TikTok住宅",
-      "rule_count": 28,
-      "protected_rule_count": 4
+      "rule_count": 38,
+      "protected_rule_count": 24
     },
     {
       "id": "stream",
       "policy": "🎬 流媒体",
-      "rule_count": 1349,
-      "protected_rule_count": 10
+      "rule_count": 1358,
+      "protected_rule_count": 38
     },
     {
       "id": "google",
       "policy": "🔐 Google账户",
-      "rule_count": 698,
-      "protected_rule_count": 8
+      "rule_count": 724,
+      "protected_rule_count": 39
     },
     {
       "id": "uk",
       "policy": "🇬🇧 英国专属",
-      "rule_count": 2,
-      "protected_rule_count": 1
+      "rule_count": 5,
+      "protected_rule_count": 5
     },
     {
       "id": "global",
       "policy": "🌍 国际网络",
-      "rule_count": 693,
-      "protected_rule_count": 32
+      "rule_count": 739,
+      "protected_rule_count": 94
     },
     {
       "id": "cn",
       "policy": "DIRECT",
-      "rule_count": 6648,
-      "protected_rule_count": 157
+      "rule_count": 7188,
+      "protected_rule_count": 1004
     }
   ],
   "apps": [
@@ -1427,5 +1427,5 @@
       "enabled": true
     }
   ],
-  "semantic_sha256": "96d32bc8574b97dc92983a3a11ad3278a3adb603711e2d09c98b69dcb0cc8aba"
+  "semantic_sha256": "96924c50dd24b465e5aa311f30ce3d376f132377995f4b38314df2a311ee752d"
 }

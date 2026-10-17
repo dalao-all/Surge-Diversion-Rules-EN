@@ -1,3 +1,14 @@
 # Surge Rulekit v4 | protect-binance | policy supplied by main profile
+DOMAIN-SUFFIX,binance.charity
+DOMAIN-SUFFIX,binance.cloud
+DOMAIN-SUFFIX,binance.co
 DOMAIN-SUFFIX,binance.com
+DOMAIN-SUFFIX,binance.me
+DOMAIN-SUFFIX,binancecnt.com
+DOMAIN-SUFFIX,binancefuture.com
+DOMAIN-SUFFIX,bnappzh.co
 DOMAIN-SUFFIX,bnbstatic.com
+DOMAIN-SUFFIX,bnbzh.ac
+DOMAIN-SUFFIX,bntrace.com
+DOMAIN-SUFFIX,saasexch.cc
+DOMAIN-SUFFIX,saasexch.com
