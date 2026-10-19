@@ -1,7 +1,7 @@
 {
   "compiler_version": "4.3.0",
   "includes": {
-    "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/qixin": {
+    "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/qixin": {
       "path": "data/qixin",
       "sha256": "3880cbd6152aadbe433250fd9af5b8959f75de0b268143bf918e2e0f18068441"
     }
@@ -1221,11 +1221,11 @@
         "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/LICENSE",
         "verified_url": "https://raw.githubusercontent.com/SukkaW/Surge/8a4972eb334f3fd9d0c813577d47d04c4c442bf9/LICENSE"
       },
-      "rules": 140914,
-      "semantic_sha256": "2a5a9e82b68c82cbb9aea46f1fdb225a3d0589d6cd28bbaf53523570e13daca7",
-      "sha256": "e1930c0c3e822ded62861028566c334d1fc9092442602d928ca2192b5da452d5",
-      "upstream_commit": "2a42925bfca88cbc00e06cc1807910df5c919d5c",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/domainset/reject.conf"
+      "rules": 140968,
+      "semantic_sha256": "ca90f2705f2ac7f56dde2ec9111cadc9720aceb48ed465667d75dd12d3159661",
+      "sha256": "1f2b74270400f800be518c20ad9aba4190f9dc855b50ff00d44db8d8a6658dac",
+      "upstream_commit": "bd8abcae6242668214cf2fb40756ee66083cc6e7",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/bd8abcae6242668214cf2fb40756ee66083cc6e7/List/domainset/reject.conf"
     },
     "skk:List/non_ip/direct.conf": {
       "license": {
@@ -1241,8 +1241,8 @@
       "rules": 183,
       "semantic_sha256": "879a4e6db9513c415e5aefa6d741fa53dd3126f41f1a0092f07be8b25ae31f65",
       "sha256": "46c65d1a59289d07f52f7652f9d1695d2996f65c125a14593b3eb7322086f8ec",
-      "upstream_commit": "2a42925bfca88cbc00e06cc1807910df5c919d5c",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/direct.conf"
+      "upstream_commit": "bd8abcae6242668214cf2fb40756ee66083cc6e7",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/bd8abcae6242668214cf2fb40756ee66083cc6e7/List/non_ip/direct.conf"
     },
     "skk:List/non_ip/domestic.conf": {
       "license": {
@@ -1258,8 +1258,8 @@
       "rules": 869,
       "semantic_sha256": "e46549ef29e2d6ae0fc4271062d3238cfdb94aae9bf6d0456f9a47850a4e6484",
       "sha256": "b939098609fd21d1e7e1efed05947fc7f55856d12e016944635bc64d2d8470c2",
-      "upstream_commit": "2a42925bfca88cbc00e06cc1807910df5c919d5c",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/2a42925bfca88cbc00e06cc1807910df5c919d5c/List/non_ip/domestic.conf"
+      "upstream_commit": "bd8abcae6242668214cf2fb40756ee66083cc6e7",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/bd8abcae6242668214cf2fb40756ee66083cc6e7/List/non_ip/domestic.conf"
     },
     "user-telemetry-reject": {
       "rules": 6,
@@ -1280,8 +1280,8 @@
       "rules": 5,
       "semantic_sha256": "717a8ac0d9b27db474b18885ce3b5e31ebb12bbfc95412796563719372c66920",
       "sha256": "bf48dc1b342bbfd06f2a93ee8ce180fc424d9c041dafd2d182ffb3f4186698b4",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/anthropic"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/anthropic"
     },
     "v2:data/apple-podcasts": {
       "license": {
@@ -1296,8 +1296,8 @@
       "rules": 4,
       "semantic_sha256": "2c47894e1d69271469650df64763b3e294782a1ca74f58831942b06aa835ed35",
       "sha256": "6e9590a7734b136019646a8513dd053da5d9c891cf0900906832191f36196af2",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/apple-podcasts"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/apple-podcasts"
     },
     "v2:data/citic": {
       "license": {
@@ -1312,8 +1312,8 @@
       "rules": 17,
       "semantic_sha256": "bc20ef0a536f94775c94ee34d77797f7e138a691b6bd2487cacb249f80733b4a",
       "sha256": "36a5741671a403904e1ff3b330aac090dee07c43ad2fe14344500713dba43733",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/citic"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/citic"
     },
     "v2:data/colorfulclouds": {
       "license": {
@@ -1328,8 +1328,8 @@
       "rules": 6,
       "semantic_sha256": "157a367143f2a9544e6a0ca9ba33fca6d48842e56f813298f23cb5684b35a73f",
       "sha256": "12945a28c29eae3a607bbf208edb7122787afa236da6f638c6a5391ff23d5f63",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/colorfulclouds"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/colorfulclouds"
     },
     "v2:data/cursor": {
       "license": {
@@ -1344,8 +1344,8 @@
       "rules": 5,
       "semantic_sha256": "163435ec43226a0b8a9322048cd132fc65ae20dc4de7a0bcb3b43d87f32e393c",
       "sha256": "eb7315056ebfb599a7dccedddcb5aa7f7723665aa800e2783fff798c1fa3724e",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/cursor"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/cursor"
     },
     "v2:data/deepseek": {
       "license": {
@@ -1360,8 +1360,8 @@
       "rules": 2,
       "semantic_sha256": "50fbb9d56b4c6e9be8795818514a2b1a6d5162f343cf55107128c35d12ad4649",
       "sha256": "52822c92e87fadcfdc6711133f1270ee77ef030459603a46cf6fa80f75856530",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/deepseek"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/deepseek"
     },
     "v2:data/dewu": {
       "license": {
@@ -1376,8 +1376,8 @@
       "rules": 45,
       "semantic_sha256": "d1beaedadfd4a74fb1361fdba3491d8dfd8bd52fdaa98399345c5c623feb1f60",
       "sha256": "3bc576d8050c3a25405ec6ef301a04f79173c4c8fce134319a9119caa6f64a47",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/dewu"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/dewu"
     },
     "v2:data/dongchedi": {
       "license": {
@@ -1392,8 +1392,8 @@
       "rules": 8,
       "semantic_sha256": "a6bd84dcec4df5473fdc65cffb961ec6f88c5ebe6e38e170f8343537592f836f",
       "sha256": "9987640dcaa91d282ee03fa386fbe210a9bf462a2c08a711794060de99fa8c48",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/dongchedi"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/dongchedi"
     },
     "v2:data/doubao": {
       "license": {
@@ -1408,8 +1408,8 @@
       "rules": 32,
       "semantic_sha256": "a5d16d9743d5d6553d61d908e0e7183e2ff6f36671b87eab622bcb02a3e5c3dc",
       "sha256": "b501f28fcaeca55a569c6193d12415ef6d62addbe6f8373799fc5c3005ad5db6",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/doubao"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/doubao"
     },
     "v2:data/giffgaff": {
       "license": {
@@ -1424,8 +1424,8 @@
       "rules": 2,
       "semantic_sha256": "17ad2073dece5f90ec8581ea05178eb82acc1ca7b603b492904a47de5ba5d02f",
       "sha256": "895dee8c139cbc6aca8ff3e2a9ecddac66d8b1b583e1235a7cdde7991f4d0efb",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/giffgaff"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/giffgaff"
     },
     "v2:data/intsig": {
       "license": {
@@ -1440,8 +1440,8 @@
       "rules": 5,
       "semantic_sha256": "1162b86fdf45388c1ef52c465fc332eaa555f83cc12335fc55fad1db7b9a99f6",
       "sha256": "95dc626136dac0ab07eff147e689637a4d70aa3832eead58988fe75df4f62941",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/intsig"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/intsig"
     },
     "v2:data/lianjia": {
       "license": {
@@ -1456,8 +1456,8 @@
       "rules": 5,
       "semantic_sha256": "3070c4d3196c04afccd9d9eea970bf209ece1341da7844ac8b4839f1e30ab565",
       "sha256": "486c61e780376a2a4ec6d41425c7e33933b4f0beaad82f7421c737a25af059d6",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/lianjia"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/lianjia"
     },
     "v2:data/liepin": {
       "license": {
@@ -1472,8 +1472,8 @@
       "rules": 3,
       "semantic_sha256": "9a29e86aeed3e286b1bc43f19e055bb0e244d19f74c3d4b4eb30607836c4a004",
       "sha256": "6fe73230b40545551ba2967af394ce2a4487e5430d42a1f00c0ee986c5463b7d",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/liepin"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/liepin"
     },
     "v2:data/openai": {
       "license": {
@@ -1488,8 +1488,8 @@
       "rules": 9,
       "semantic_sha256": "630d11d2ac201a42b15737857faa4bbb158be6553c4e0d302b52683539a47c25",
       "sha256": "5276ab68c1a2d44db2cd745a9146d1645ef3dd3c388fdd1079b6b49267d60ddc",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/openai"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/openai"
     },
     "v2:data/qcc": {
       "license": {
@@ -1504,8 +1504,8 @@
       "rules": 2,
       "semantic_sha256": "190674a3040a339c86b500689181f7373354481085d2fb44113044ff88988172",
       "sha256": "f7d8b69ad11b9be16c1db2b1125eadbc6f61fe74c8b10076b24b8f9e7d62cea6",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/qcc"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/qcc"
     },
     "v2:data/trae": {
       "license": {
@@ -1520,8 +1520,8 @@
       "rules": 12,
       "semantic_sha256": "4b0aa5fe994d89d891574913085e6e5eea6905965ac1ad29139e55388b88e343",
       "sha256": "fa41d9d1525899239d2fbf1496afa2b12f2f053cd43ef1a2462e98ac376b136f",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/trae"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/trae"
     },
     "v2:data/walmart": {
       "license": {
@@ -1536,8 +1536,8 @@
       "rules": 10,
       "semantic_sha256": "76838f842e5cd249960eaf4e1ff85b92d3e83758846992301d14660ae244be97",
       "sha256": "e01ecfc0733f87a3b0a179f6a14e25e679b5d826226cd07da2702f06e451b228",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/walmart"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/walmart"
     },
     "v2:data/wise": {
       "license": {
@@ -1552,8 +1552,8 @@
       "rules": 2,
       "semantic_sha256": "036b7e97d695d07669cd07a5f288976ca8c71fae7db13767d4c60a6b3b54fb96",
       "sha256": "54282167db7a892eac8447d905a62d7c3ba557e2bcbc5fc6823c7242f85e78f0",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/wise"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/wise"
     },
     "v2:data/xai": {
       "license": {
@@ -1568,8 +1568,8 @@
       "rules": 4,
       "semantic_sha256": "36cbe0e1ce159ccb692b4d01cd246591c45a8b480a9aa6e4dd9e1be8dcfd5efe",
       "sha256": "1e15c6018174f58f6a2f3710c84566909eee45a8092247280d244cf8ea7cd928",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/xai"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/xai"
     },
     "v2:data/xiaomi-iot": {
       "license": {
@@ -1584,8 +1584,8 @@
       "rules": 4,
       "semantic_sha256": "2fdc0e438109fe46bf711b1de3a135b335f8dda9a47ac2a7695edd9f7f540a2c",
       "sha256": "7a8f37cd756155596763bdca5674c1656512002ccc9e51227ed7d1b5318855a8",
-      "upstream_commit": "4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/4b6e9f1e16c0905e8c1f1b22f7669ceb9507da8b/data/xiaomi-iot"
+      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/xiaomi-iot"
     }
   }
 }
