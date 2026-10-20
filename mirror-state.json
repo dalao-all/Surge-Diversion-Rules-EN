@@ -1,11 +1,11 @@
 {
-  "canonical_commit": "4a27eedd712821a0092baea92768678147327273",
+  "canonical_commit": "40c38f03f7770ae3cee6f86840ea50a8de60537b",
   "canonical_repository": "dalao-all/Surge-Diversion-Rules",
   "files": {
-    "dist/v4/SHA256SUMS": "f00c0c69e7a64ca826a344b6d6788f4c815cedc2c07234ecdb42e00f7c9b263a",
+    "dist/v4/SHA256SUMS": "3e6b831198899821330bc57e2d68efe580f806901d06ecbb8a79a3985175c3e2",
     "dist/v4/ads-storm.list": "3f12dc0d1595d2154288cf02a0095f495a7e0f5ed3447a757b2376d121bacec7",
-    "dist/v4/ads.domainset": "3e74385fcb6f7be6a5bdcfaaecb3df9acc370ec386a7e93e44b87facc97fc408",
-    "dist/v4/ads.list": "2886dcff5a3b4739860e8bb3f404967bbb9bfab1069916d518eb154c60956fbb",
+    "dist/v4/ads.domainset": "dab2a238a8d6991645e9cbe7298668486a7635c818b1d5cfac1bc198e38d3b87",
+    "dist/v4/ads.list": "01986305726dd81d843e4c7e379173dae134582dc5edb27d2cc7cee0ad728e67",
     "dist/v4/ai.list": "6d0652a996a552e5a776642f50fd1851f149f10ec3249ac8149a993a119c12c2",
     "dist/v4/binance.list": "a8ab2ac9cad481b1a72c2e7f682d3bc9ed53cfea24319aef78a704e21f9e5c20",
     "dist/v4/cn.list": "be7600a713d0b9310c7b837a6ca99bb593f3244422abc6205e1bcb306aefa549",
@@ -26,10 +26,10 @@
     "dist/v4/protect-uk.list": "47cf2d48ca9c3ee57f490da20bc0e9f32d15578ea9d8b98601f18932353dc7e6",
     "dist/v4/protect-wise.list": "9bd45dfb43cb62bbe6958c8c482f10c6cf52f6ae646b82b5f820ce0f96ccef36",
     "dist/v4/protected-history.json": "93a4231f66cb5e38f410628f1f83b7ce1f0dcdc053fabf15c7aa511fa4719f2b",
-    "dist/v4/provenance.ndjson.gz": "bd1bc874efefa9f7d07c8f9b4c94f5a2414a7000545d007086dfd0b82cabc589",
-    "dist/v4/report.json": "43e958d148340442173b3f276e182623219a55f52dda3d7778af99003797c16f",
-    "dist/v4/source-rules.json": "9a148a8cfc236b887483cad29b1a0b597e361f8c7dc5270d1f65d062405ab150",
-    "dist/v4/sources.lock.json": "0dc310ee870bc1447a1fde2ab2abed9cbff4454c5e34c487e65e2034fc0f446b",
+    "dist/v4/provenance.ndjson.gz": "90a70f4831191fee64a060968b17ef6d08da87f22fb89e98737bc5b61d4a4917",
+    "dist/v4/report.json": "62d8ae5fac22e6a152ea5918ad03e4eaf677b07ba868c0e86b944f3e4f1208f0",
+    "dist/v4/source-rules.json": "34a6780d34f31eadfff04c527cfec8e7b86670ab4f1a0c712d76cc9415ae10b0",
+    "dist/v4/sources.lock.json": "81558655284f843f9a07988d4e4543b75443202801237f1df5430ecf1192c2a2",
     "dist/v4/stream.list": "d0fee1e2e989cee88fe4023832a4d8b16c1e118a88276a337f1a82076fe65229",
     "dist/v4/tiktok.list": "2170c8722569474eca1c6c346fd9c1f5428731c1c01cb586ee4b8775e2a0d864",
     "dist/v4/uk.list": "da139c1f694847294603e919bd890012e810b34c9491b5e850748f541b828e7a",
@@ -113,7 +113,7 @@
     "scripts/sync_from_canonical.py": "885dfb186de5a2e765ee87b5665d67d0b59324cf0fa3e01d55f17bee15aebc89",
     "scripts/test_sync.py": "e2c1c410ce6ff174992f555ca36da2d44bf3ee2b8e148c490c783aa14771e2ca"
   },
-  "validated_input_commit": "ffbd5a3a0530b462d2a3a82af181bad056bdb841",
-  "validation_run_id": 39177033573,
-  "validation_run_url": "https://github.com/dalao-all/Surge-Diversion-Rules/actions/runs/39177033573"
+  "validated_input_commit": "58874931c1a76a57de6fa5f6ba44e4b3148a0cae",
+  "validation_run_id": 39348334765,
+  "validation_run_url": "https://github.com/dalao-all/Surge-Diversion-Rules/actions/runs/39348334765"
 }

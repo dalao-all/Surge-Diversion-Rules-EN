@@ -1,7 +1,7 @@
 {
   "compiler_version": "4.3.0",
   "includes": {
-    "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/qixin": {
+    "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/qixin": {
       "path": "data/qixin",
       "sha256": "3880cbd6152aadbe433250fd9af5b8959f75de0b268143bf918e2e0f18068441"
     }
@@ -241,8 +241,8 @@
       "rules": 15,
       "semantic_sha256": "3e13d82a095684e5cf20c6b210aabd33fd4d391a429dd48c2d2c3134f92cde86",
       "sha256": "ea721ee413f28c6b338c0777d52a9e0b66f5da0cbb9abb5a54a2cf82f5c21007",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/12306/12306.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/12306/12306.list"
     },
     "bm:rule/Surge/AliPay/AliPay.list": {
       "license": {
@@ -257,8 +257,8 @@
       "rules": 21,
       "semantic_sha256": "49c51a035f4131df992e6603591cd5c78ad4fd99fbc57b69a1fdacebc68724f7",
       "sha256": "23d7ca5404f4795d485b4ea700f45e1d94f2dbf0f2871eeca5298cfce81ff5be",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/AliPay/AliPay.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/AliPay/AliPay.list"
     },
     "bm:rule/Surge/Alibaba/Alibaba_Domain.list": {
       "license": {
@@ -273,8 +273,8 @@
       "rules": 1263,
       "semantic_sha256": "260de573da1f21c28f48ac977bb10f08888e536d586cbb7ba3bd018a6fc20de2",
       "sha256": "f91b18d532534171872e7e23876e031879d05fa7b9c8551b9dc07e87573614af",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Alibaba/Alibaba_Domain.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Alibaba/Alibaba_Domain.list"
     },
     "bm:rule/Surge/AppleMedia/AppleMedia.list": {
       "license": {
@@ -289,8 +289,8 @@
       "rules": 52,
       "semantic_sha256": "5c22a6130895746a65d32715539e9e03e77504147d2e05dde9112eaf02e9ab3b",
       "sha256": "0757b8eab284f2309bd099e195b8a44f748328e6bb834d8119ba88fe6f88a5ed",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/AppleMedia/AppleMedia.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/AppleMedia/AppleMedia.list"
     },
     "bm:rule/Surge/AppleMusic/AppleMusic.list": {
       "license": {
@@ -305,8 +305,8 @@
       "rules": 9,
       "semantic_sha256": "f8f40b2a80973719c181af5d6ee6328ecd1cf56e6cfb2f4d71c8860ec86e207d",
       "sha256": "fc190481ce56195d4daf94806ad6c09094d0777e0b411b4f359107e373398d28",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/AppleMusic/AppleMusic.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/AppleMusic/AppleMusic.list"
     },
     "bm:rule/Surge/AppleTV/AppleTV.list": {
       "license": {
@@ -321,8 +321,8 @@
       "rules": 7,
       "semantic_sha256": "9836bee5b6970006415eba361ae7ca52d8e45bcb42e55b4d5ec1d2e478fa894c",
       "sha256": "1078a83e65a4d65cf754e267c369f667fe4b30937747232f809aa03223148bbd",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/AppleTV/AppleTV.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/AppleTV/AppleTV.list"
     },
     "bm:rule/Surge/BiliBili/BiliBili.list": {
       "license": {
@@ -337,8 +337,8 @@
       "rules": 123,
       "semantic_sha256": "3fa6a054067d34e47d9fcca28a9f6c29b62a331887d86647cebdd4d67c789b71",
       "sha256": "8537129301d5e4040d9f2b2255217458a16c96eef850ec22367352c512bc3988",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/BiliBili/BiliBili.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/BiliBili/BiliBili.list"
     },
     "bm:rule/Surge/Binance/Binance.list": {
       "license": {
@@ -353,8 +353,8 @@
       "rules": 12,
       "semantic_sha256": "07a9430d8c0112cbf0c83f2bc357b9c833ef41eb9c92c82e8ca65fd22bca57be",
       "sha256": "034b1730ac0adb39a8a88685d6f6864a7070a14d722acbf8f3859806b28b92a4",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Binance/Binance.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Binance/Binance.list"
     },
     "bm:rule/Surge/ByteDance/ByteDance.list": {
       "license": {
@@ -369,8 +369,8 @@
       "rules": 371,
       "semantic_sha256": "cf711a78e70a185ea2a716a2aacd9fede8c5396dd55ebe79cb0ea396f7b6f5fa",
       "sha256": "0130f2b40e5101921a28e522db785ace1102dcab7b02808fd047b0c909ba0904",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/ByteDance/ByteDance.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/ByteDance/ByteDance.list"
     },
     "bm:rule/Surge/CCB/CCB.list": {
       "license": {
@@ -385,8 +385,8 @@
       "rules": 18,
       "semantic_sha256": "553b734b3cde3e4fec5063c41c9a8e57d090f5dea462c08b2a1c50b6aad79e4d",
       "sha256": "359b1c5f978e63fe77cc69a847d5abaa6e14fd77f27889ef9522d2f266008559",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/CCB/CCB.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/CCB/CCB.list"
     },
     "bm:rule/Surge/CMB/CMB.list": {
       "license": {
@@ -401,8 +401,8 @@
       "rules": 38,
       "semantic_sha256": "7ab5ce3513801dc452aca16097eb2a59ae45cd267c1ee1ab8ca4f2f3ed3c3e7c",
       "sha256": "f74e32d571eb603904e33e5cd965c820063c60ab9b1bc9439df588aeac39fea6",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/CMB/CMB.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/CMB/CMB.list"
     },
     "bm:rule/Surge/ChinaMobile/ChinaMobile.list": {
       "license": {
@@ -417,8 +417,8 @@
       "rules": 38,
       "semantic_sha256": "6986d3078ab6aff43a5e0afab523d416a6f3c5c95b466ece99ad154308c3b947",
       "sha256": "8aa8078a08299feee81b6927c4f0ac82b91df9c1ed96012dc5c1e78fa324c8fb",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/ChinaMobile/ChinaMobile.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/ChinaMobile/ChinaMobile.list"
     },
     "bm:rule/Surge/Claude/Claude.list": {
       "license": {
@@ -433,8 +433,8 @@
       "rules": 3,
       "semantic_sha256": "c196c22a53e1ce7b7444eb87b67141c27174269dc0ea66ba8a2f8dc4fde34605",
       "sha256": "870e7e25d798e7f00338507f773b0eea4dfd15e25e9df0a27d5ae421ae1ab378",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Claude/Claude.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Claude/Claude.list"
     },
     "bm:rule/Surge/Coolapk/Coolapk.list": {
       "license": {
@@ -449,8 +449,8 @@
       "rules": 3,
       "semantic_sha256": "cb6a8c7793faaa4511973fc297f5ca5d1c248825fa9b2388dca1cff0eec5bcc2",
       "sha256": "6b6b507dd9130f53d5ea74d4ba5f992432de7db8a3a0c81282f94dd75a93e6f7",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Coolapk/Coolapk.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Coolapk/Coolapk.list"
     },
     "bm:rule/Surge/DingTalk/DingTalk.list": {
       "license": {
@@ -465,8 +465,8 @@
       "rules": 11,
       "semantic_sha256": "9f359de70aece80c30be0f3ded328dbb9ef7668f80cd2222b613166861f4bebd",
       "sha256": "7945176ffad14aeaa1d5f2ebfa787e25af9e72dd3950435870ad2bdf8d9f5c2f",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/DingTalk/DingTalk.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/DingTalk/DingTalk.list"
     },
     "bm:rule/Surge/Discord/Discord.list": {
       "license": {
@@ -481,8 +481,8 @@
       "rules": 29,
       "semantic_sha256": "95f2046a7e62f2909a1c8a59f8bd6242929ba2f5af8a865f69884d1a53706add",
       "sha256": "3d18c8fe716de06891ba3d6c34dba254cb65138a10f79e1a1a0628b5237ecb2c",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Discord/Discord.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Discord/Discord.list"
     },
     "bm:rule/Surge/DouYin/DouYin.list": {
       "license": {
@@ -497,8 +497,8 @@
       "rules": 13,
       "semantic_sha256": "f8c053279d330f61a57787164488cbf7ffa07e0eaa9895b9ce0bd16fa9eb099b",
       "sha256": "020e742fe4a7084268af6aa52c4153bf5bfd54c4d7a17466f42cd3461609e32a",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/DouYin/DouYin.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/DouYin/DouYin.list"
     },
     "bm:rule/Surge/Eleme/Eleme.list": {
       "license": {
@@ -513,8 +513,8 @@
       "rules": 13,
       "semantic_sha256": "4c6b294a76eb26219f672187faaf2a406cb2578ff4f988c5c8dfe3cbbea75f71",
       "sha256": "209df8cd0f30bca31a3a56eece0830d628b864df862d1918a539cb901c386d12",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Eleme/Eleme.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Eleme/Eleme.list"
     },
     "bm:rule/Surge/Facebook/Facebook.list": {
       "license": {
@@ -529,8 +529,8 @@
       "rules": 570,
       "semantic_sha256": "2fe67c02712358d67df2bb0f1d0b4353ecfcc7cc522d0ba44275a6816baf8a4e",
       "sha256": "747563c96825bbd5f868be955543b0ca1979064e7b094f8aab08aafbce577c36",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Facebook/Facebook.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Facebook/Facebook.list"
     },
     "bm:rule/Surge/FindMy/FindMy.list": {
       "license": {
@@ -545,8 +545,8 @@
       "rules": 3,
       "semantic_sha256": "db6652ef5cfc34fb4c76a05844613c144013bf55050192d5c0934f034aa4a154",
       "sha256": "c4944fd32c127c4fd855401e515054a66e93b57f9552206fb880b986a5201398",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/FindMy/FindMy.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/FindMy/FindMy.list"
     },
     "bm:rule/Surge/FitnessPlus/FitnessPlus.list": {
       "license": {
@@ -561,8 +561,8 @@
       "rules": 2,
       "semantic_sha256": "d78da9bfebaa7e925fd03f9238b0a3c1686f3649373d2f3490494d334e15f6b0",
       "sha256": "83e3677e451b80a1db48fd6ce770efd0ff5b1ccce6ac7f4c09b849bc8e1d935c",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/FitnessPlus/FitnessPlus.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/FitnessPlus/FitnessPlus.list"
     },
     "bm:rule/Surge/GaoDe/GaoDe.list": {
       "license": {
@@ -577,8 +577,8 @@
       "rules": 9,
       "semantic_sha256": "92ae452e92f97d5531cc23f7fb8051b89d61f3336e7d42ef228cca6308f00c74",
       "sha256": "f313209d1ffeb36ceaa1713ff4c0b67d219542b157128f9dfa261a979b32e152",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/GaoDe/GaoDe.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/GaoDe/GaoDe.list"
     },
     "bm:rule/Surge/Geely/Geely.list": {
       "license": {
@@ -593,8 +593,8 @@
       "rules": 50,
       "semantic_sha256": "55760a122f519d5ab2c6332475525eb755a0db3f63e1f3bc265032933df01145",
       "sha256": "9858d5da581336a0f44b8e0dea87852847e880cee915a76341d60f393a76907a",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Geely/Geely.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Geely/Geely.list"
     },
     "bm:rule/Surge/Gemini/Gemini.list": {
       "license": {
@@ -609,8 +609,8 @@
       "rules": 10,
       "semantic_sha256": "089e38f3902d830f9dd74383fd876129d914045cfe068322b82fc9d86f8dceae",
       "sha256": "db8f69154426dca76792ab80b3ad6b0e2d078ebe0e52e76faec1724245a4ec49",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Gemini/Gemini.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Gemini/Gemini.list"
     },
     "bm:rule/Surge/Google/Google.list": {
       "license": {
@@ -625,8 +625,8 @@
       "rules": 694,
       "semantic_sha256": "671d0b87a5d5809e1ac62ae67f48f09f29877813974bf9b6863a0da3ed1b5dc1",
       "sha256": "4b08fd3ef47e2668d2a4bb79777773e2408394fdda60ac36014e1a4d3456ba6f",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Google/Google.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Google/Google.list"
     },
     "bm:rule/Surge/GoogleDrive/GoogleDrive.list": {
       "license": {
@@ -641,8 +641,8 @@
       "rules": 5,
       "semantic_sha256": "d9b57dfe021854e72f2b1578b1ecdeb99e9290ac8e1f4f2317709df9289cc5b1",
       "sha256": "254d0484fd5d02b0b6eef1811dbff6fe4ebbf778218beb2b87eb14d08435ca0d",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/GoogleDrive/GoogleDrive.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/GoogleDrive/GoogleDrive.list"
     },
     "bm:rule/Surge/HeMa/HeMa.list": {
       "license": {
@@ -657,8 +657,8 @@
       "rules": 12,
       "semantic_sha256": "49bc7d9fce25a97ab2914022a75f2ce8b4f20a6ed5113062e294ee3b78a05604",
       "sha256": "9925a0acdc1c961f2e7b8d275e1f2cee002c529f246c230ff03da236f5760eab",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/HeMa/HeMa.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/HeMa/HeMa.list"
     },
     "bm:rule/Surge/Huawei/Huawei.list": {
       "license": {
@@ -673,8 +673,8 @@
       "rules": 160,
       "semantic_sha256": "e227bc02b44cbf61351ebd6a4fdad813510e0b0057811782f12f172c70d8a71d",
       "sha256": "c16c48de7a7aa73e03ce8cf027b104f532581883fbe5fbb83e330bad9c7f755e",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Huawei/Huawei.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Huawei/Huawei.list"
     },
     "bm:rule/Surge/ICBC/ICBC.list": {
       "license": {
@@ -689,8 +689,8 @@
       "rules": 58,
       "semantic_sha256": "cc46883472a9047d96fe653a176440af5581d1635feead438c36322a4b85ff0a",
       "sha256": "24021bd1f25cf7457211197ba9ee8d60e4607d2a72d7fda6686c6616d89234c8",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/ICBC/ICBC.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/ICBC/ICBC.list"
     },
     "bm:rule/Surge/Instagram/Instagram.list": {
       "license": {
@@ -705,8 +705,8 @@
       "rules": 4,
       "semantic_sha256": "95622378178b6de2567b8b6ac24181aa5a81aa68375a390e15c23b0e08958c38",
       "sha256": "65f28f9253b0dbb2a81485c788537896a0817766685e7bd91b2f90ec7aa19548",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Instagram/Instagram.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Instagram/Instagram.list"
     },
     "bm:rule/Surge/JingDong/JingDong.list": {
       "license": {
@@ -721,8 +721,8 @@
       "rules": 249,
       "semantic_sha256": "091ec27abc482b763539b5aa793389292bf4ef797bb60b2359492403f671760d",
       "sha256": "0b7a01784c5dfdb1a18d9051f4872c4078c6d5deb6a24f71bfe2bc06d96bb02a",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/JingDong/JingDong.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/JingDong/JingDong.list"
     },
     "bm:rule/Surge/KuaiShou/KuaiShou.list": {
       "license": {
@@ -737,8 +737,8 @@
       "rules": 678,
       "semantic_sha256": "301563c58f050bb99d215b55dce56d118e52e29a083a863e2ed2547966b835d5",
       "sha256": "ba3eeeb698c90b6fb8164cf1f49d8735ab9a1803503d2628b45342d40fb2e7a4",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/KuaiShou/KuaiShou.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/KuaiShou/KuaiShou.list"
     },
     "bm:rule/Surge/MeiTuan/MeiTuan.list": {
       "license": {
@@ -753,8 +753,8 @@
       "rules": 7,
       "semantic_sha256": "c1e1c658de805be229e8577aaf2bc3f5e245187febcbf94b6c2518f6b790d863",
       "sha256": "5c621dd07aa573761eb712c220631047a3c284297dc8d1830dfa62dab7b2d7ca",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/MeiTuan/MeiTuan.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/MeiTuan/MeiTuan.list"
     },
     "bm:rule/Surge/NetEase/NetEase.list": {
       "license": {
@@ -769,8 +769,8 @@
       "rules": 146,
       "semantic_sha256": "15bf6f4358294ad13fc23b2a8def49a2a82380b2531f2491ec399d2946eb4683",
       "sha256": "4e4829591f7cb055bfe21c3c4ee2898c0849dc23f154eca7f5292da906611a9a",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/NetEase/NetEase.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/NetEase/NetEase.list"
     },
     "bm:rule/Surge/NetEaseMusic/NetEaseMusic.list": {
       "license": {
@@ -785,8 +785,8 @@
       "rules": 28,
       "semantic_sha256": "54957065293e9229b010906d98d5340f264d7a93f6fc48c855f31bd55e30e064",
       "sha256": "0e3034b7fd6598cf8165f143510bcfe6683b3ceffb03e46fe24cc434cd0df3c0",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/NetEaseMusic/NetEaseMusic.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/NetEaseMusic/NetEaseMusic.list"
     },
     "bm:rule/Surge/Netflix/Netflix.list": {
       "license": {
@@ -801,8 +801,8 @@
       "rules": 1153,
       "semantic_sha256": "9d7f27b319e9965bdaac610abc3eaf12c109bd8dc1904a3ae3b0578ad8425601",
       "sha256": "aa03f015949e8f6f981d90a7d8b1acf7e88472ee48601632bd964b0bb740f8aa",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Netflix/Netflix.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Netflix/Netflix.list"
     },
     "bm:rule/Surge/OKX/OKX.list": {
       "license": {
@@ -817,8 +817,8 @@
       "rules": 3,
       "semantic_sha256": "0ba3b98448f5a8268f1ba6bfacf942dbf7dbb2ab97beb102e91a9d89de8c15dc",
       "sha256": "eee1945a601da063462eb0cb2784601513a180bf5ab78377904e4689573bfc65",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/OKX/OKX.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/OKX/OKX.list"
     },
     "bm:rule/Surge/OpenAI/OpenAI.list": {
       "license": {
@@ -833,8 +833,8 @@
       "rules": 33,
       "semantic_sha256": "f05d28de8b7a64f27cc39cd859a290fff4f9d2dd191cc462ffd0c58fe667a771",
       "sha256": "6f4047cdbf6953cf5d9b38c4ccd6da7bc6f1acb91b7a87134f25d5b8f5d2408b",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/OpenAI/OpenAI.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/OpenAI/OpenAI.list"
     },
     "bm:rule/Surge/PayPal/PayPal.list": {
       "license": {
@@ -849,8 +849,8 @@
       "rules": 246,
       "semantic_sha256": "9aaf8cd845066c2871a15e01c2886b000a2d00eee25ffce05c9a1fe037490af0",
       "sha256": "4ffb6f94d2f1eff835c24b533c3d1d6e0c5a4cfbc32740fa9c32315ae218fd18",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/PayPal/PayPal.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/PayPal/PayPal.list"
     },
     "bm:rule/Surge/Pinduoduo/Pinduoduo.list": {
       "license": {
@@ -865,8 +865,8 @@
       "rules": 3,
       "semantic_sha256": "3c87195f32d7f57edc2e105eb8b239ca86d96295e2f016ab3a8c4d9f973f179d",
       "sha256": "fcddc414628d2a336b6ef3394eae6d17d6588ad0043ce60486b2c31be57291d0",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Pinduoduo/Pinduoduo.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Pinduoduo/Pinduoduo.list"
     },
     "bm:rule/Surge/Sina/Sina.list": {
       "license": {
@@ -881,8 +881,8 @@
       "rules": 108,
       "semantic_sha256": "471b28f0708e40790b3da6abc2d2e9e95ec6e8061e00efce3a7baf0997f35521",
       "sha256": "223182b8b06af7838174f94839e1e799b39a9e283b66b0e1a71108539d7c2829",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Sina/Sina.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Sina/Sina.list"
     },
     "bm:rule/Surge/Speedtest/Speedtest.list": {
       "license": {
@@ -897,8 +897,8 @@
       "rules": 6,
       "semantic_sha256": "3130afc275ea36955403b0a1ef46e3c41b76c5a1c6fab14b2978e9f733e35a37",
       "sha256": "d0f9a3b0befdfd209bf752b86e561094f7bb7e81d96e1df86c2ba585535ba755",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Speedtest/Speedtest.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Speedtest/Speedtest.list"
     },
     "bm:rule/Surge/Telegram/Telegram.list": {
       "license": {
@@ -913,8 +913,8 @@
       "rules": 40,
       "semantic_sha256": "830680e70cbbc4b2fdc3a1a8d922ee8634563c01ec860b58f60760e875572700",
       "sha256": "3b375bee8b2ff16d6c955804a5a3638e6e8fdfcc58d209506a928bdd4cc9891a",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Telegram/Telegram.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Telegram/Telegram.list"
     },
     "bm:rule/Surge/Tencent/Tencent_Domain.list": {
       "license": {
@@ -929,8 +929,8 @@
       "rules": 2498,
       "semantic_sha256": "6445c756ff3cdef5fe85039652e8274767dcb50e892dbc686084d8a41578a9b9",
       "sha256": "aba29865528349ac940b4c9d3b832837cf20fad963c87e2b9bbee6b7817c2a0d",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Tencent/Tencent_Domain.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Tencent/Tencent_Domain.list"
     },
     "bm:rule/Surge/TencentVideo/TencentVideo.list": {
       "license": {
@@ -945,8 +945,8 @@
       "rules": 48,
       "semantic_sha256": "0bdaf60bae4a88059515bf3ba0217e4d17d3458d73b76181d9c2bd22025fc614",
       "sha256": "2f74f99c2f48a2133044b7f725faaa21a5621fd503c640599e1ac8b5eb48890b",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/TencentVideo/TencentVideo.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/TencentVideo/TencentVideo.list"
     },
     "bm:rule/Surge/TikTok/TikTok.list": {
       "license": {
@@ -961,8 +961,8 @@
       "rules": 31,
       "semantic_sha256": "889cb778db6ee4aee51e930e3e7f497fc8ac39ad8c5658c781e17adfa5584ce9",
       "sha256": "e61af08425f87c1bc81216364c0f8fffbfc0a9924aab89f133151f1ea56de6c2",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/TikTok/TikTok.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/TikTok/TikTok.list"
     },
     "bm:rule/Surge/Twitter/Twitter.list": {
       "license": {
@@ -977,8 +977,8 @@
       "rules": 33,
       "semantic_sha256": "d259996a58a9c20c2ff993a8284a365e86d6ff99e65b08e7890346a5759c89a7",
       "sha256": "64c836f2431ca0d4728cc545bb74280ee50c886e346040012e6cdd2f3eee3f97",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Twitter/Twitter.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Twitter/Twitter.list"
     },
     "bm:rule/Surge/UnionPay/UnionPay.list": {
       "license": {
@@ -993,8 +993,8 @@
       "rules": 16,
       "semantic_sha256": "4264097d0a4e13c84686f6d989cdb729d8e2b13eb19fd5f87b37d4bc5e1fc7fd",
       "sha256": "cf603ac5ee90f5869a4a119cec8b90eab865c6388858be4d97d196bff9a38187",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/UnionPay/UnionPay.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/UnionPay/UnionPay.list"
     },
     "bm:rule/Surge/Viki/Viki.list": {
       "license": {
@@ -1009,8 +1009,8 @@
       "rules": 7,
       "semantic_sha256": "04e712a94a65c35016677565167a5be0718355d76d2b411468c6fbb3ffd1ceb3",
       "sha256": "9522270d1be05efe8338d594e0dcb01da9161ec25be655a557fc7e22bb5b6048",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Viki/Viki.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Viki/Viki.list"
     },
     "bm:rule/Surge/WeChat/WeChat.list": {
       "license": {
@@ -1025,8 +1025,8 @@
       "rules": 330,
       "semantic_sha256": "2a2c465562b380a574c49ecb24d8aa211e7836b540848c696a8fd86f1c1d032b",
       "sha256": "01e55617280a7b03db13397fcd2fe4bb3be559f728145fb1fbb054036d75d0bc",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/WeChat/WeChat.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/WeChat/WeChat.list"
     },
     "bm:rule/Surge/Weibo/Weibo.list": {
       "license": {
@@ -1041,8 +1041,8 @@
       "rules": 4,
       "semantic_sha256": "b0c108cd67f26814595838358a7ad791a7db75626a636bf0cb36c4d5cdb9a88a",
       "sha256": "54f8a08d7f89498f4f5ec29737c0c82feff1c69faadbd0d4722e1cbd72156f75",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Weibo/Weibo.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Weibo/Weibo.list"
     },
     "bm:rule/Surge/Whatsapp/Whatsapp.list": {
       "license": {
@@ -1057,8 +1057,8 @@
       "rules": 17,
       "semantic_sha256": "fce4d8beecb5bc213b48ba418c5cc45a74de2a58ceeafe1e05826e4f93ce920e",
       "sha256": "644fd145b484079ff65f681deb17a6dbf1aff620afea56b1a3c24d29d9f9db4f",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/Whatsapp/Whatsapp.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/Whatsapp/Whatsapp.list"
     },
     "bm:rule/Surge/XianYu/XianYu.list": {
       "license": {
@@ -1073,8 +1073,8 @@
       "rules": 16,
       "semantic_sha256": "cd438fa09c4cc451fe213c348f0bb1b38e7e06067d257e15146922eb778260ea",
       "sha256": "a2b83429d47b68eee901ece76441f0d3cb8ae6ce671f9d7dc9f474777bd2b205",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/XianYu/XianYu.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/XianYu/XianYu.list"
     },
     "bm:rule/Surge/XiaoHongShu/XiaoHongShu.list": {
       "license": {
@@ -1089,8 +1089,8 @@
       "rules": 4,
       "semantic_sha256": "c323924446b96d642a9b131bb4a5d493bfd653bab25d6151de31beb114b80663",
       "sha256": "9fb20e80dc0962cfdf410ffbd72d6bf2a6a0ac0d930951880f98164ff229e8ff",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/XiaoHongShu/XiaoHongShu.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/XiaoHongShu/XiaoHongShu.list"
     },
     "bm:rule/Surge/XieCheng/XieCheng.list": {
       "license": {
@@ -1105,8 +1105,8 @@
       "rules": 29,
       "semantic_sha256": "5fd48ac5b07e9b78de11979ad98ba468bbb5d84ea55a092777ab36289218cff1",
       "sha256": "a1bb4db8f750704786a525279eb7f87f38db436047fc65a121239765ffe4d186",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/XieCheng/XieCheng.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/XieCheng/XieCheng.list"
     },
     "bm:rule/Surge/YouTube/YouTube.list": {
       "license": {
@@ -1121,8 +1121,8 @@
       "rules": 183,
       "semantic_sha256": "d5ac5e96b5b81bb801ad8c0ba6f7ae13abff234bc6f06301e9ddfd160856ec5d",
       "sha256": "42274e143447066e26e1ebbf21ae03ce6efb40827f41e2775a84fb16d390713d",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/YouTube/YouTube.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/YouTube/YouTube.list"
     },
     "bm:rule/Surge/ZhuanZhuan/ZhuanZhuan.list": {
       "license": {
@@ -1137,8 +1137,8 @@
       "rules": 4,
       "semantic_sha256": "c0742f537e31bc9a1da31dd256a44b0974c4c47a04c7faeac97caf662a35d9f6",
       "sha256": "aac1a6cad939bdf2747e86c9543b4016657bea963c56c67b05b214f94798073f",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/ZhuanZhuan/ZhuanZhuan.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/ZhuanZhuan/ZhuanZhuan.list"
     },
     "bm:rule/Surge/iQIYI/iQIYI.list": {
       "license": {
@@ -1153,8 +1153,8 @@
       "rules": 56,
       "semantic_sha256": "c9e91e8877a46da4f3537f5a49d3f2141028566e0dd3fa0232c6ff0d55f4d619",
       "sha256": "153f19cd26fe02085ba506c2882756ebdc0a05ee31d40563f8165ad099e50010",
-      "upstream_commit": "7dd06b44f5093dd5404e1e5f3bca5452d97146ef",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/7dd06b44f5093dd5404e1e5f3bca5452d97146ef/rule/Surge/iQIYI/iQIYI.list"
+      "upstream_commit": "f9e403a75bbc4bee939c6d8dd766cf78f1b512f3",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/f9e403a75bbc4bee939c6d8dd766cf78f1b512f3/rule/Surge/iQIYI/iQIYI.list"
     },
     "enterprise-existing": {
       "rules": 2,
@@ -1221,11 +1221,11 @@
         "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/LICENSE",
         "verified_url": "https://raw.githubusercontent.com/SukkaW/Surge/8a4972eb334f3fd9d0c813577d47d04c4c442bf9/LICENSE"
       },
-      "rules": 140968,
-      "semantic_sha256": "ca90f2705f2ac7f56dde2ec9111cadc9720aceb48ed465667d75dd12d3159661",
-      "sha256": "1f2b74270400f800be518c20ad9aba4190f9dc855b50ff00d44db8d8a6658dac",
-      "upstream_commit": "bd8abcae6242668214cf2fb40756ee66083cc6e7",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/bd8abcae6242668214cf2fb40756ee66083cc6e7/List/domainset/reject.conf"
+      "rules": 143012,
+      "semantic_sha256": "0cf543dcb49473974b0d7200373e5f8fa642a0ffc87b66fd5c922e6282068b85",
+      "sha256": "0cc17e9955cf53cc418b69296133ad8b6aaacdaf00c721e9ae0d8621de7fcba0",
+      "upstream_commit": "8e98b6618bc5a4e7f9ff0c3bf04f2a1e09504a26",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/8e98b6618bc5a4e7f9ff0c3bf04f2a1e09504a26/List/domainset/reject.conf"
     },
     "skk:List/non_ip/direct.conf": {
       "license": {
@@ -1241,8 +1241,8 @@
       "rules": 183,
       "semantic_sha256": "879a4e6db9513c415e5aefa6d741fa53dd3126f41f1a0092f07be8b25ae31f65",
       "sha256": "46c65d1a59289d07f52f7652f9d1695d2996f65c125a14593b3eb7322086f8ec",
-      "upstream_commit": "bd8abcae6242668214cf2fb40756ee66083cc6e7",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/bd8abcae6242668214cf2fb40756ee66083cc6e7/List/non_ip/direct.conf"
+      "upstream_commit": "8e98b6618bc5a4e7f9ff0c3bf04f2a1e09504a26",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/8e98b6618bc5a4e7f9ff0c3bf04f2a1e09504a26/List/non_ip/direct.conf"
     },
     "skk:List/non_ip/domestic.conf": {
       "license": {
@@ -1258,8 +1258,8 @@
       "rules": 869,
       "semantic_sha256": "e46549ef29e2d6ae0fc4271062d3238cfdb94aae9bf6d0456f9a47850a4e6484",
       "sha256": "b939098609fd21d1e7e1efed05947fc7f55856d12e016944635bc64d2d8470c2",
-      "upstream_commit": "bd8abcae6242668214cf2fb40756ee66083cc6e7",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/bd8abcae6242668214cf2fb40756ee66083cc6e7/List/non_ip/domestic.conf"
+      "upstream_commit": "8e98b6618bc5a4e7f9ff0c3bf04f2a1e09504a26",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/8e98b6618bc5a4e7f9ff0c3bf04f2a1e09504a26/List/non_ip/domestic.conf"
     },
     "user-telemetry-reject": {
       "rules": 6,
@@ -1280,8 +1280,8 @@
       "rules": 5,
       "semantic_sha256": "717a8ac0d9b27db474b18885ce3b5e31ebb12bbfc95412796563719372c66920",
       "sha256": "bf48dc1b342bbfd06f2a93ee8ce180fc424d9c041dafd2d182ffb3f4186698b4",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/anthropic"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/anthropic"
     },
     "v2:data/apple-podcasts": {
       "license": {
@@ -1296,8 +1296,8 @@
       "rules": 4,
       "semantic_sha256": "2c47894e1d69271469650df64763b3e294782a1ca74f58831942b06aa835ed35",
       "sha256": "6e9590a7734b136019646a8513dd053da5d9c891cf0900906832191f36196af2",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/apple-podcasts"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/apple-podcasts"
     },
     "v2:data/citic": {
       "license": {
@@ -1312,8 +1312,8 @@
       "rules": 17,
       "semantic_sha256": "bc20ef0a536f94775c94ee34d77797f7e138a691b6bd2487cacb249f80733b4a",
       "sha256": "36a5741671a403904e1ff3b330aac090dee07c43ad2fe14344500713dba43733",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/citic"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/citic"
     },
     "v2:data/colorfulclouds": {
       "license": {
@@ -1328,8 +1328,8 @@
       "rules": 6,
       "semantic_sha256": "157a367143f2a9544e6a0ca9ba33fca6d48842e56f813298f23cb5684b35a73f",
       "sha256": "12945a28c29eae3a607bbf208edb7122787afa236da6f638c6a5391ff23d5f63",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/colorfulclouds"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/colorfulclouds"
     },
     "v2:data/cursor": {
       "license": {
@@ -1344,8 +1344,8 @@
       "rules": 5,
       "semantic_sha256": "163435ec43226a0b8a9322048cd132fc65ae20dc4de7a0bcb3b43d87f32e393c",
       "sha256": "eb7315056ebfb599a7dccedddcb5aa7f7723665aa800e2783fff798c1fa3724e",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/cursor"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/cursor"
     },
     "v2:data/deepseek": {
       "license": {
@@ -1360,8 +1360,8 @@
       "rules": 2,
       "semantic_sha256": "50fbb9d56b4c6e9be8795818514a2b1a6d5162f343cf55107128c35d12ad4649",
       "sha256": "52822c92e87fadcfdc6711133f1270ee77ef030459603a46cf6fa80f75856530",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/deepseek"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/deepseek"
     },
     "v2:data/dewu": {
       "license": {
@@ -1376,8 +1376,8 @@
       "rules": 45,
       "semantic_sha256": "d1beaedadfd4a74fb1361fdba3491d8dfd8bd52fdaa98399345c5c623feb1f60",
       "sha256": "3bc576d8050c3a25405ec6ef301a04f79173c4c8fce134319a9119caa6f64a47",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/dewu"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/dewu"
     },
     "v2:data/dongchedi": {
       "license": {
@@ -1392,8 +1392,8 @@
       "rules": 8,
       "semantic_sha256": "a6bd84dcec4df5473fdc65cffb961ec6f88c5ebe6e38e170f8343537592f836f",
       "sha256": "9987640dcaa91d282ee03fa386fbe210a9bf462a2c08a711794060de99fa8c48",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/dongchedi"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/dongchedi"
     },
     "v2:data/doubao": {
       "license": {
@@ -1408,8 +1408,8 @@
       "rules": 32,
       "semantic_sha256": "a5d16d9743d5d6553d61d908e0e7183e2ff6f36671b87eab622bcb02a3e5c3dc",
       "sha256": "b501f28fcaeca55a569c6193d12415ef6d62addbe6f8373799fc5c3005ad5db6",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/doubao"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/doubao"
     },
     "v2:data/giffgaff": {
       "license": {
@@ -1424,8 +1424,8 @@
       "rules": 2,
       "semantic_sha256": "17ad2073dece5f90ec8581ea05178eb82acc1ca7b603b492904a47de5ba5d02f",
       "sha256": "895dee8c139cbc6aca8ff3e2a9ecddac66d8b1b583e1235a7cdde7991f4d0efb",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/giffgaff"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/giffgaff"
     },
     "v2:data/intsig": {
       "license": {
@@ -1440,8 +1440,8 @@
       "rules": 5,
       "semantic_sha256": "1162b86fdf45388c1ef52c465fc332eaa555f83cc12335fc55fad1db7b9a99f6",
       "sha256": "95dc626136dac0ab07eff147e689637a4d70aa3832eead58988fe75df4f62941",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/intsig"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/intsig"
     },
     "v2:data/lianjia": {
       "license": {
@@ -1456,8 +1456,8 @@
       "rules": 5,
       "semantic_sha256": "3070c4d3196c04afccd9d9eea970bf209ece1341da7844ac8b4839f1e30ab565",
       "sha256": "486c61e780376a2a4ec6d41425c7e33933b4f0beaad82f7421c737a25af059d6",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/lianjia"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/lianjia"
     },
     "v2:data/liepin": {
       "license": {
@@ -1472,8 +1472,8 @@
       "rules": 3,
       "semantic_sha256": "9a29e86aeed3e286b1bc43f19e055bb0e244d19f74c3d4b4eb30607836c4a004",
       "sha256": "6fe73230b40545551ba2967af394ce2a4487e5430d42a1f00c0ee986c5463b7d",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/liepin"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/liepin"
     },
     "v2:data/openai": {
       "license": {
@@ -1488,8 +1488,8 @@
       "rules": 9,
       "semantic_sha256": "630d11d2ac201a42b15737857faa4bbb158be6553c4e0d302b52683539a47c25",
       "sha256": "5276ab68c1a2d44db2cd745a9146d1645ef3dd3c388fdd1079b6b49267d60ddc",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/openai"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/openai"
     },
     "v2:data/qcc": {
       "license": {
@@ -1504,8 +1504,8 @@
       "rules": 2,
       "semantic_sha256": "190674a3040a339c86b500689181f7373354481085d2fb44113044ff88988172",
       "sha256": "f7d8b69ad11b9be16c1db2b1125eadbc6f61fe74c8b10076b24b8f9e7d62cea6",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/qcc"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/qcc"
     },
     "v2:data/trae": {
       "license": {
@@ -1520,8 +1520,8 @@
       "rules": 12,
       "semantic_sha256": "4b0aa5fe994d89d891574913085e6e5eea6905965ac1ad29139e55388b88e343",
       "sha256": "fa41d9d1525899239d2fbf1496afa2b12f2f053cd43ef1a2462e98ac376b136f",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/trae"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/trae"
     },
     "v2:data/walmart": {
       "license": {
@@ -1536,8 +1536,8 @@
       "rules": 10,
       "semantic_sha256": "76838f842e5cd249960eaf4e1ff85b92d3e83758846992301d14660ae244be97",
       "sha256": "e01ecfc0733f87a3b0a179f6a14e25e679b5d826226cd07da2702f06e451b228",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/walmart"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/walmart"
     },
     "v2:data/wise": {
       "license": {
@@ -1552,8 +1552,8 @@
       "rules": 2,
       "semantic_sha256": "036b7e97d695d07669cd07a5f288976ca8c71fae7db13767d4c60a6b3b54fb96",
       "sha256": "54282167db7a892eac8447d905a62d7c3ba557e2bcbc5fc6823c7242f85e78f0",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/wise"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/wise"
     },
     "v2:data/xai": {
       "license": {
@@ -1568,8 +1568,8 @@
       "rules": 4,
       "semantic_sha256": "36cbe0e1ce159ccb692b4d01cd246591c45a8b480a9aa6e4dd9e1be8dcfd5efe",
       "sha256": "1e15c6018174f58f6a2f3710c84566909eee45a8092247280d244cf8ea7cd928",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/xai"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/xai"
     },
     "v2:data/xiaomi-iot": {
       "license": {
@@ -1584,8 +1584,8 @@
       "rules": 4,
       "semantic_sha256": "2fdc0e438109fe46bf711b1de3a135b335f8dda9a47ac2a7695edd9f7f540a2c",
       "sha256": "7a8f37cd756155596763bdca5674c1656512002ccc9e51227ed7d1b5318855a8",
-      "upstream_commit": "6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6b0f8edc935ee0ad2cb386ac3efd451ee2380ac5/data/xiaomi-iot"
+      "upstream_commit": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/data/xiaomi-iot"
     }
   }
 }
