@@ -1,7 +1,7 @@
 {
   "compiler_version": "4.3.0",
   "counts": {
-    "ads": 143644,
+    "ads": 144235,
     "ai": 102,
     "binance": 14,
     "cn": 7916,
@@ -2296,7 +2296,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,data",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2308,7 +2308,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,16-b.it",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2320,7 +2320,7 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,32-b.it",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2332,67 +2332,55 @@
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,64-b.it",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 169,
+      "line": 170,
       "purpose": "ads",
       "raw": ".mypi.co",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,mypi.co",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 208,
+      "line": 209,
       "purpose": "ads",
       "raw": ".tcp4.me",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,tcp4.me",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 256,
+      "line": 258,
       "purpose": "ads",
       "raw": ".you2.pl",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,you2.pl",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 894,
+      "line": 900,
       "purpose": "ads",
       "raw": ".cfolks.pl",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,cfolks.pl",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
-    },
-    {
-      "app_ids": [],
-      "confidence": "upstream classification; not packet-capture verified",
-      "dependency_ids": [],
-      "line": 942,
-      "purpose": "ads",
-      "raw": ".dkonto.pl",
-      "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
-      "rule": "DOMAIN-SUFFIX,dkonto.pl",
-      "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2400,371 +2388,383 @@
       "dependency_ids": [],
       "line": 948,
       "purpose": "ads",
-      "raw": ".dnsup.net",
+      "raw": ".dkonto.pl",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
-      "rule": "DOMAIN-SUFFIX,dnsup.net",
+      "rule": "DOMAIN-SUFFIX,dkonto.pl",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 1081,
+      "line": 954,
+      "purpose": "ads",
+      "raw": ".dnsup.net",
+      "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
+      "rule": "DOMAIN-SUFFIX,dnsup.net",
+      "source": "skk:List/domainset/reject.conf",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
+    },
+    {
+      "app_ids": [],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 1088,
       "purpose": "ads",
       "raw": ".hicam.net",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,hicam.net",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 1301,
+      "line": 1309,
       "purpose": "ads",
       "raw": ".ntdll.top",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ntdll.top",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 1356,
+      "line": 1364,
       "purpose": "ads",
       "raw": ".ownip.net",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ownip.net",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 2300,
+      "line": 2315,
       "purpose": "ads",
       "raw": ".dnsking.ch",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,dnsking.ch",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 2988,
+      "line": 3008,
       "purpose": "ads",
       "raw": ".plesk.page",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,plesk.page",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 3526,
+      "line": 3549,
       "purpose": "ads",
       "raw": ".vpndns.net",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,vpndns.net",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 3565,
+      "line": 3588,
       "purpose": "ads",
       "raw": ".webhop.net",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,webhop.net",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 4300,
+      "line": 4323,
       "purpose": "ads",
       "raw": ".cprapid.com",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,cprapid.com",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 4448,
+      "line": 4472,
       "purpose": "ads",
       "raw": ".dynserv.org",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,dynserv.org",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 4551,
+      "line": 4576,
       "purpose": "ads",
       "raw": ".forumz.info",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,forumz.info",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 4559,
+      "line": 4584,
       "purpose": "ads",
       "raw": ".freeddns.us",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,freeddns.us",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 5152,
+      "line": 5182,
       "purpose": "ads",
       "raw": ".now-dns.net",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,now-dns.net",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 5153,
+      "line": 5183,
       "purpose": "ads",
       "raw": ".now-dns.org",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,now-dns.org",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 5624,
+      "line": 5656,
       "purpose": "ads",
       "raw": ".square.site",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,square.site",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 8211,
+      "line": 8253,
       "purpose": "ads",
       "raw": ".myiphost.com",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,myiphost.com",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 8895,
+      "line": 8939,
       "purpose": "ads",
       "raw": ".servebbs.net",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,servebbs.net",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 9008,
+      "line": 9052,
       "purpose": "ads",
       "raw": ".soundcast.me",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,soundcast.me",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 9996,
+      "line": 10047,
       "purpose": "ads",
       "raw": ".yolasite.com",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,yolasite.com",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 16533,
+      "line": 16608,
       "purpose": "ads",
       "raw": ".3utilities.com",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,3utilities.com",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 31376,
+      "line": 31487,
       "purpose": "ads",
       "raw": ".webadorsite.com",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,webadorsite.com",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 39710,
+      "line": 39850,
       "purpose": "ads",
       "raw": ".try-snowplow.com",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,try-snowplow.com",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 93169,
+      "line": 93528,
       "purpose": "ads",
       "raw": ".ingress-alpha.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-alpha.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 93170,
+      "line": 93529,
       "purpose": "ads",
       "raw": ".ingress-bonde.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-bonde.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 93171,
+      "line": 93530,
       "purpose": "ads",
       "raw": ".ingress-earth.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-earth.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 93172,
+      "line": 93531,
       "purpose": "ads",
       "raw": ".ingress-haven.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-haven.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 100716,
+      "line": 101118,
       "purpose": "ads",
       "raw": ".ingress-baronn.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-baronn.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 100717,
+      "line": 101119,
       "purpose": "ads",
       "raw": ".ingress-erytho.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-erytho.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 107591,
+      "line": 108034,
       "purpose": "ads",
       "raw": ".ingress-daribow.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-daribow.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 107592,
+      "line": 108035,
       "purpose": "ads",
       "raw": ".ingress-florina.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-florina.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 127502,
+      "line": 128046,
       "purpose": "ads",
       "raw": ".ingress-comporellon.ewp.live",
       "reason": "版本化PSL识别当前40个公共/私有多租户后缀。禁止广告层整域封锁独立站点；只排除本次明确列出的规则并保留来源/原行/理由。以后新增公共或多租户后缀仍由编译器阻断，不能按标签自动免检。",
       "rule": "DOMAIN-SUFFIX,ingress-comporellon.ewp.live",
       "source": "skk:List/domainset/reject.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/domainset/reject.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/domainset/reject.conf"
     },
     {
       "app_ids": [],
@@ -2840,7 +2840,7 @@
       "raw": "regexp:^chatgpt-async-webps-prod-\\S+-\\d+\\.webpubsub\\.azure\\.com$",
       "reason": "v2 regexp has no equivalent supported Surge domain rule; explicit coverage gap",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/openai"
     },
     {
       "app_ids": [
@@ -2854,7 +2854,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN-SUFFIX,chatgpt.site",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/openai"
     },
     {
       "app_ids": [
@@ -2868,7 +2868,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN-SUFFIX,crixet.com",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/openai"
     },
     {
       "app_ids": [
@@ -2882,7 +2882,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN-SUFFIX,openai.org",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/openai"
     },
     {
       "app_ids": [
@@ -2896,7 +2896,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN-SUFFIX,sora.com",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/openai"
     },
     {
       "app_ids": [
@@ -2910,7 +2910,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/openai"
     },
     {
       "app_ids": [
@@ -2924,7 +2924,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN,openaiapi-site.azureedge.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/openai"
     },
     {
       "app_ids": [
@@ -2938,7 +2938,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN,openaiassets.blob.core.windows.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/openai"
     },
     {
       "app_ids": [
@@ -2952,7 +2952,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/openai"
     },
     {
       "app_ids": [
@@ -2966,7 +2966,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN,openaicom.imgix.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/openai"
     },
     {
       "app_ids": [
@@ -2980,7 +2980,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN,openaicomproductionae4b.blob.core.windows.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/openai"
     },
     {
       "app_ids": [
@@ -2994,7 +2994,7 @@
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN,production-openaicom-storage.azureedge.net",
       "source": "v2:data/openai",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/openai"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/openai"
     },
     {
       "app_ids": [
@@ -3002,13 +3002,41 @@
       ],
       "confidence": "upstream classification; not packet-capture verified",
       "dependency_ids": [],
-      "line": 2,
+      "line": 1,
       "purpose": "app",
-      "raw": "clau.de",
+      "raw": "ant.dev",
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
-      "rule": "DOMAIN-SUFFIX,clau.de",
+      "rule": "DOMAIN-SUFFIX,ant.dev",
       "source": "v2:data/anthropic",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/anthropic"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
+    },
+    {
+      "app_ids": [
+        "INT002"
+      ],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 3,
+      "purpose": "app",
+      "raw": "anthropic.team",
+      "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
+      "rule": "DOMAIN-SUFFIX,anthropic.team",
+      "source": "v2:data/anthropic",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
+    },
+    {
+      "app_ids": [
+        "INT002"
+      ],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 4,
+      "purpose": "app",
+      "raw": "antspace.dev # https://github.com/AprilNEA/reverse-engineering-claude-code-antspace",
+      "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
+      "rule": "DOMAIN-SUFFIX,antspace.dev",
+      "source": "v2:data/anthropic",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
     },
     {
       "app_ids": [
@@ -3018,11 +3046,11 @@
       "dependency_ids": [],
       "line": 5,
       "purpose": "app",
-      "raw": "claude.dev",
+      "raw": "chatbotclaude.com",
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
-      "rule": "DOMAIN-SUFFIX,claude.dev",
+      "rule": "DOMAIN-SUFFIX,chatbotclaude.com",
       "source": "v2:data/anthropic",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/anthropic"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
     },
     {
       "app_ids": [
@@ -3032,11 +3060,39 @@
       "dependency_ids": [],
       "line": 6,
       "purpose": "app",
-      "raw": "claudemcpclient.com",
+      "raw": "clau.de",
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
-      "rule": "DOMAIN-SUFFIX,claudemcpclient.com",
+      "rule": "DOMAIN-SUFFIX,clau.de",
       "source": "v2:data/anthropic",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/anthropic"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
+    },
+    {
+      "app_ids": [
+        "INT002"
+      ],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 8,
+      "purpose": "app",
+      "raw": "claude.app",
+      "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
+      "rule": "DOMAIN-SUFFIX,claude.app",
+      "source": "v2:data/anthropic",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
+    },
+    {
+      "app_ids": [
+        "INT002"
+      ],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 10,
+      "purpose": "app",
+      "raw": "claude.dev",
+      "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
+      "rule": "DOMAIN-SUFFIX,claude.dev",
+      "source": "v2:data/anthropic",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
     },
     {
       "app_ids": [
@@ -3046,291 +3102,375 @@
       "dependency_ids": [],
       "line": 11,
       "purpose": "app",
+      "raw": "claude.new",
+      "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
+      "rule": "DOMAIN-SUFFIX,claude.new",
+      "source": "v2:data/anthropic",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
+    },
+    {
+      "app_ids": [
+        "INT002"
+      ],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 12,
+      "purpose": "app",
+      "raw": "claude.site",
+      "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
+      "rule": "DOMAIN-SUFFIX,claude.site",
+      "source": "v2:data/anthropic",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
+    },
+    {
+      "app_ids": [
+        "INT002"
+      ],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 13,
+      "purpose": "app",
+      "raw": "claudeacademy.com",
+      "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
+      "rule": "DOMAIN-SUFFIX,claudeacademy.com",
+      "source": "v2:data/anthropic",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
+    },
+    {
+      "app_ids": [
+        "INT002"
+      ],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 14,
+      "purpose": "app",
+      "raw": "claudemcpclient.com",
+      "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
+      "rule": "DOMAIN-SUFFIX,claudemcpclient.com",
+      "source": "v2:data/anthropic",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
+    },
+    {
+      "app_ids": [
+        "INT002"
+      ],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 16,
+      "purpose": "app",
+      "raw": "claudepages.dev",
+      "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
+      "rule": "DOMAIN-SUFFIX,claudepages.dev",
+      "source": "v2:data/anthropic",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
+    },
+    {
+      "app_ids": [
+        "INT002"
+      ],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 17,
+      "purpose": "app",
+      "raw": "claudestudio.com",
+      "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
+      "rule": "DOMAIN-SUFFIX,claudestudio.com",
+      "source": "v2:data/anthropic",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
+    },
+    {
+      "app_ids": [
+        "INT002"
+      ],
+      "confidence": "upstream classification; not packet-capture verified",
+      "dependency_ids": [],
+      "line": 21,
+      "purpose": "app",
       "raw": "full:servd-anthropic-website.b-cdn.net",
       "reason": "Supplement outside independently reviewed scope; retained as candidate, not auto-published",
       "rule": "DOMAIN,servd-anthropic-website.b-cdn.net",
       "source": "v2:data/anthropic",
-      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/497bef95124ac98a70ed865bb8aaaa8e9a4ff66e/data/anthropic"
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/e8f6d1e5c4a01cda943c0784ffa834340eeab5ae/data/anthropic"
     },
     {
       "line": 883,
       "raw": "USER-AGENT,%E4%BC%98%E9%85%B7*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/domestic.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/domestic.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/domestic.conf"
     },
     {
       "line": 884,
       "raw": "USER-AGENT,%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/domestic.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/domestic.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/domestic.conf"
     },
     {
       "line": 885,
       "raw": "USER-AGENT,TeslaMap",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/domestic.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/domestic.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/domestic.conf"
     },
     {
       "line": 196,
       "raw": "USER-AGENT,%E8%BF%85%E9%9B%B7",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 197,
       "raw": "PROCESS-NAME,v2ray",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 198,
       "raw": "PROCESS-NAME,xray",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 199,
       "raw": "PROCESS-NAME,ss-local",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 200,
       "raw": "PROCESS-NAME,clash",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 201,
       "raw": "PROCESS-NAME,ClashX",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 202,
       "raw": "PROCESS-NAME,trojan",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 203,
       "raw": "PROCESS-NAME,trojan-go",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 204,
       "raw": "PROCESS-NAME,privoxy",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 205,
       "raw": "PROCESS-NAME,cloudflared",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 206,
       "raw": "PROCESS-NAME,aria2c",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 207,
       "raw": "PROCESS-NAME,fdm",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 208,
       "raw": "PROCESS-NAME,Folx",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 209,
       "raw": "PROCESS-NAME,NetTransport",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 210,
       "raw": "PROCESS-NAME,Thunder",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 211,
       "raw": "PROCESS-NAME,ThunderVIP",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 212,
       "raw": "PROCESS-NAME,Transmission",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 213,
       "raw": "PROCESS-NAME,transmission-daemon",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 214,
       "raw": "PROCESS-NAME,transmission-qt",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 215,
       "raw": "PROCESS-NAME,BitComet",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 216,
       "raw": "PROCESS-NAME,uTorrent",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 217,
       "raw": "PROCESS-NAME,qbittorrent*",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 218,
       "raw": "PROCESS-NAME,DownloadService",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 219,
       "raw": "PROCESS-NAME,qBittorrent",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 220,
       "raw": "PROCESS-NAME,qbittorrent-nox",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 221,
       "raw": "PROCESS-NAME,WebTorrent",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 222,
       "raw": "PROCESS-NAME,WebTorrent Helper",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 223,
       "raw": "PROCESS-NAME,amuled",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 224,
       "raw": "PROCESS-NAME,LocalSend",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 225,
       "raw": "PROCESS-NAME,UUBooster",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 226,
       "raw": "PROCESS-NAME,tailscaled",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 227,
       "raw": "PROCESS-NAME,parsecd",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 228,
       "raw": "PROCESS-NAME,SunloginClient_Desktop",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 229,
       "raw": "PROCESS-NAME,SunloginClient_Helper",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 230,
       "raw": "PROCESS-NAME,BaiduNetdisk_mac",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 231,
       "raw": "PROCESS-NAME,Logi Options",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     },
     {
       "line": 232,
       "raw": "PROCESS-NAME,Logi Options Daemon",
       "reason": "non-domain app/process identity not portable to iOS domain routing",
       "source": "skk:List/non_ip/direct.conf",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/4eadeca24cd5d5fe2a333ae77206f39f64c4a6db/List/non_ip/direct.conf"
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/da7773377570e08fda5c125e8926442217b7893d/List/non_ip/direct.conf"
     }
   ],
   "probes": [
