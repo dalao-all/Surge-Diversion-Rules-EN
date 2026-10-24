@@ -4783,6 +4783,34 @@
       }
     },
     {
+      "id": "ai-claude-identity",
+      "url": null,
+      "format": "surge",
+      "repo": null,
+      "ref": null,
+      "path": "custom/ai-claude-identity.list",
+      "role": "app",
+      "category": "ai",
+      "required": true,
+      "enabled": true,
+      "app_ids": [
+        "INT002"
+      ],
+      "dependency_ids": [],
+      "exclude_tags": [],
+      "license": {
+        "spdx": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "redistribution_note": "本项目人工规则声明为CC0；公开官方域名事实的引用链接留在文件注释。",
+        "redistribution_allowed": true,
+        "local_file": "licenses/CC0-1.0.LICENSE"
+      },
+      "evidence": [
+        "https://github.com/wquguru/one-exit/commit/b9d9f8ab6687401f7588dfa7d7023cd58ffb4032"
+      ],
+      "coverage_claim": "Claude 身份出口一致性补全：遥测/支付/人机验证/风控域名；one-exit b9d9f8a 实战验证"
+    },
+    {
       "id": "app-CN036-official",
       "url": null,
       "repo": null,

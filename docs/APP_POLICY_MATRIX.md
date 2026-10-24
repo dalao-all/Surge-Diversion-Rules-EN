@@ -145,7 +145,7 @@ Coverage states distinguish independent/shared candidates, official-document evi
 | CN131 | Speedtest | cn | independent-candidate | 1 | 0 | 1 |
 | CN132 | 彩云天气PRO | cn | independent-candidate | 1 | 0 | 1 |
 | INT001 | ChatGPT | ai | independent-candidate | 4 | 2 | 6 |
-| INT002 | Claude | ai | independent-candidate | 2 | 1 | 3 |
+| INT002 | Claude | ai | independent-candidate | 3 | 1 | 4 |
 | INT003 | Gemini | ai | independent-candidate | 2 | 1 | 3 |
 | INT004 | Cursor | ai | independent-candidate | 1 | 1 | 2 |
 | INT005 | Grok | ai | independent-candidate | 1 | 1 | 2 |

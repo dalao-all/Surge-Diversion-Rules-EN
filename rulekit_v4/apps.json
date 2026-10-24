@@ -6361,7 +6361,8 @@
       "policy": "ai",
       "source_ids": [
         "bm:rule/Surge/Claude/Claude.list",
-        "v2:data/anthropic"
+        "v2:data/anthropic",
+        "ai-claude-identity"
       ],
       "dependency_ids": [
         "ai-auth"

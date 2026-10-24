@@ -1,0 +1,18 @@
+# Reviewed 2026-10-23. Not a device capture.
+# Evidence: https://github.com/wquguru/one-exit/commit/b9d9f8ab6687401f7588dfa7d7023cd58ffb4032
+# Claude 身份出口一致性：遥测/支付/人机验证/风控域名随 Claude 主域同走 AI 策略。
+# one-exit 的 IP-CIDR6 REJECT（住宅代理连 2607:6bc0 会 502，强制走 IPv4）属于私用配置层，未入公开表。
+DOMAIN-SUFFIX,modelcontextprotocol.io
+DOMAIN-KEYWORD,anthropic
+DOMAIN-KEYWORD,claude
+DOMAIN-KEYWORD,browser-intake
+DOMAIN-SUFFIX,datadoghq.com
+DOMAIN-SUFFIX,growthbook.io
+DOMAIN-SUFFIX,usefathom.com
+DOMAIN-SUFFIX,hcaptcha.com
+DOMAIN-SUFFIX,stripe.network
+DOMAIN-SUFFIX,stripecdn.com
+DOMAIN-SUFFIX,siftscience.com
+DOMAIN-SUFFIX,withpersona.com
+IP-CIDR,160.79.104.0/21,no-resolve
+IP-ASN,399358,no-resolve
