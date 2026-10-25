@@ -1,18 +1,23 @@
 # Reviewed 2026-10-23. Not a device capture.
 # Evidence: https://github.com/wquguru/one-exit/commit/b9d9f8ab6687401f7588dfa7d7023cd58ffb4032
-# Claude 身份出口一致性：遥测/支付/人机验证/风控域名随 Claude 主域同走 AI 策略。
+# Claude 身份出口一致性：遥测/支付/人机验证/风控/身份核验域名随 Claude 主域同走 AI 策略。
 # one-exit 的 IP-CIDR6 REJECT（住宅代理连 2607:6bc0 会 502，强制走 IPv4）属于私用配置层，未入公开表。
 DOMAIN-SUFFIX,modelcontextprotocol.io
 DOMAIN-KEYWORD,anthropic
 DOMAIN-KEYWORD,claude
-DOMAIN-KEYWORD,browser-intake
-DOMAIN-SUFFIX,datadoghq.com
+# Datadog/Fathom 只收 Claude 实际使用的主机（2026-10-24 收窄：原 datadoghq.com/usefathom.com 后缀与 KEYWORD browser-intake 会把所有 App
+# 的遥测拉进 AI 出口；主配置对其余 Datadog/Fathom 主机整体 REJECT，不出网即无出口泄露）。证据：patches/manifest.json ai-dd-*、xiaolai anthropic.list
+# GrowthBook 按 one-exit 保留整域（特性开关，Claude 可能使用 cdn 以外的主机，误伤面小）
+DOMAIN,browser-intake-us5-datadoghq.com
+DOMAIN,http-intake.logs.us5.datadoghq.com
+DOMAIN,browser-intake-datadoghq.com
 DOMAIN-SUFFIX,growthbook.io
-DOMAIN-SUFFIX,usefathom.com
+DOMAIN,cdn.usefathom.com
 DOMAIN-SUFFIX,hcaptcha.com
 DOMAIN-SUFFIX,stripe.network
 DOMAIN-SUFFIX,stripecdn.com
 DOMAIN-SUFFIX,siftscience.com
+# Persona：Claude 身份核验（one-exit README 明确 Claude 与 Persona 同出口）。代价：其他 App 的 Persona 核验也会走 AI 出口
 DOMAIN-SUFFIX,withpersona.com
 IP-CIDR,160.79.104.0/21,no-resolve
 IP-ASN,399358,no-resolve
