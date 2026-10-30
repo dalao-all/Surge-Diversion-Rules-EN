@@ -1227,11 +1227,11 @@
         "url": "https://raw.githubusercontent.com/SukkaW/Surge/master/LICENSE",
         "verified_url": "https://raw.githubusercontent.com/SukkaW/Surge/8a4972eb334f3fd9d0c813577d47d04c4c442bf9/LICENSE"
       },
-      "rules": 145497,
-      "semantic_sha256": "87818748c530c01cd3ecda48df345195e35e522525b2dce9db32fa78899d8f52",
-      "sha256": "888264e16ec4e26b87b502925b22d6cb1da3568a49df875b2981d18d1bf82863",
-      "upstream_commit": "d773d2ccaac4eeeba714d5416cafe93ec50223d8",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/d773d2ccaac4eeeba714d5416cafe93ec50223d8/List/domainset/reject.conf"
+      "rules": 145694,
+      "semantic_sha256": "2a7d6fa949ee6ef8c1a308e434390398f06e3a1d3c52099d9e78cede01c8d1b4",
+      "sha256": "4470b0f09b568d3e8a8b2b079f8cb39bbf617c47fab41d33394c6cbf9f36a4fc",
+      "upstream_commit": "e7b24f897ae0d1fea9567e05399c3332c90ba608",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/e7b24f897ae0d1fea9567e05399c3332c90ba608/List/domainset/reject.conf"
     },
     "skk:List/non_ip/direct.conf": {
       "license": {
@@ -1247,8 +1247,8 @@
       "rules": 183,
       "semantic_sha256": "879a4e6db9513c415e5aefa6d741fa53dd3126f41f1a0092f07be8b25ae31f65",
       "sha256": "46c65d1a59289d07f52f7652f9d1695d2996f65c125a14593b3eb7322086f8ec",
-      "upstream_commit": "d773d2ccaac4eeeba714d5416cafe93ec50223d8",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/d773d2ccaac4eeeba714d5416cafe93ec50223d8/List/non_ip/direct.conf"
+      "upstream_commit": "e7b24f897ae0d1fea9567e05399c3332c90ba608",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/e7b24f897ae0d1fea9567e05399c3332c90ba608/List/non_ip/direct.conf"
     },
     "skk:List/non_ip/domestic.conf": {
       "license": {
@@ -1264,8 +1264,8 @@
       "rules": 870,
       "semantic_sha256": "c5fffad9f4c87ff99cf70f62fe02a0cb2194f6eade0deb196cae57a07fd49ae0",
       "sha256": "33346c9173e9af4230d654eec45c37154c17e8d0240977eb853f535abce3858e",
-      "upstream_commit": "d773d2ccaac4eeeba714d5416cafe93ec50223d8",
-      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/d773d2ccaac4eeeba714d5416cafe93ec50223d8/List/non_ip/domestic.conf"
+      "upstream_commit": "e7b24f897ae0d1fea9567e05399c3332c90ba608",
+      "url": "https://raw.githubusercontent.com/SukkaLab/ruleset.skk.moe/e7b24f897ae0d1fea9567e05399c3332c90ba608/List/non_ip/domestic.conf"
     },
     "user-telemetry-reject": {
       "rules": 6,
