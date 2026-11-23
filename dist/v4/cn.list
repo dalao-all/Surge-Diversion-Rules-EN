@@ -95,6 +95,7 @@ DOMAIN,apidns-js.kwd.inkuai.com
 DOMAIN,apidns.kwd.inkuai.com
 DOMAIN,apiinit.amap.com
 DOMAIN,app.bilibili.com
+DOMAIN,app.jianguoyun.com
 DOMAIN,app.viayoo.com
 DOMAIN,appldnld.apple.com
 DOMAIN,apple-pay-gateway.apple.com
@@ -140,6 +141,7 @@ DOMAIN,cm.bilibili.com
 DOMAIN,cmbchina.com
 DOMAIN,cn-ha.mqtt.io.mi.com
 DOMAIN,cn.download.nvidia.com
+DOMAIN,comet.jianguoyun.com
 DOMAIN,companion.apple.com
 DOMAIN,config.ubnt.com
 DOMAIN,configuration.apple.com
@@ -2039,6 +2041,7 @@ DOMAIN-SUFFIX,discuz.com
 DOMAIN-SUFFIX,discuz.net
 DOMAIN-SUFFIX,discuz.org
 DOMAIN-SUFFIX,ditianshanhe.com
+DOMAIN-SUFFIX,dittocdn.com
 DOMAIN-SUFFIX,diyiyt.com
 DOMAIN-SUFFIX,dizzylab.net
 DOMAIN-SUFFIX,djdyqn.com

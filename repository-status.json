@@ -7,10 +7,10 @@
   "source_count": 127,
   "dependency_count": 28,
   "counts": {
-    "ads": 148088,
-    "ai": 115,
+    "ads": 149863,
+    "ai": 116,
     "binance": 14,
-    "cn": 7917,
+    "cn": 7920,
     "global": 739,
     "google": 724,
     "okx": 20,
@@ -73,7 +73,7 @@
     {
       "id": "ai",
       "policy": "🤖 AI住宅",
-      "rule_count": 115,
+      "rule_count": 116,
       "protected_rule_count": 80
     },
     {
@@ -109,7 +109,7 @@
     {
       "id": "cn",
       "policy": "DIRECT",
-      "rule_count": 7917,
+      "rule_count": 7920,
       "protected_rule_count": 1028
     }
   ],
@@ -1427,5 +1427,5 @@
       "enabled": true
     }
   ],
-  "semantic_sha256": "13fabeefe4fa214c242e1757de9a17dd642f38c618c37292cdee55fe07ba4fd0"
+  "semantic_sha256": "3ee860c7465a17c195e9b659b71bcad6bb464400bc8ab927a46cd576bfec1fd1"
 }

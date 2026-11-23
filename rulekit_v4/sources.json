@@ -4712,9 +4712,22 @@
         "DOMAIN-KEYWORD,-ad.sm.cn",
         "DOMAIN-KEYWORD,-ad.video.yximgs.com",
         "DOMAIN-KEYWORD,-ad.wtzw.com",
-        "DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com"
+        "DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com",
+        "IP-CIDR,111.20.26.186/32,no-resolve",
+        "IP-CIDR,112.84.130.73/32,no-resolve",
+        "IP-CIDR,116.142.251.100/32,no-resolve",
+        "IP-CIDR,116.177.251.215/32,no-resolve",
+        "IP-CIDR,120.77.173.114/32,no-resolve",
+        "IP-CIDR,123.56.23.22/32,no-resolve",
+        "IP-CIDR,14.29.101.160/32,no-resolve",
+        "IP-CIDR,14.29.101.168/32,no-resolve",
+        "IP-CIDR,14.29.101.169/32,no-resolve",
+        "IP-CIDR,182.254.116.116/32,no-resolve",
+        "IP-CIDR,203.205.137.89/32,no-resolve",
+        "IP-CIDR,218.77.192.51/32,no-resolve",
+        "IP-CIDR,38.190.225.166/32,no-resolve"
       ],
-      "exclude_reason": "关键词匹配不受DNS域名边界限制，无法证明其与当前/历史业务保护集合不相交；明确拒收这4个上游关键词项并记录源行/理由。保留上游全部exact/suffix广告项，不静默丢弃。"
+      "exclude_reason": "关键词匹配不受DNS域名边界限制，无法证明其与当前/历史业务保护集合不相交；IP-CIDR 项无法进入域名-only 的 ads.list/ads.domainset 双导出（DOMAIN-SET 不能承载 IP）。明确拒收 4 个上游关键词项与 13 个 IP-CIDR 项（AWAvenue v1.7.9，2026-11-23 新增），并记录源行/理由。保留上游全部 exact/suffix 广告项，不静默丢弃。"
     },
     {
       "id": "enterprise-existing",
