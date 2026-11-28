@@ -7,7 +7,7 @@
   "source_count": 127,
   "dependency_count": 28,
   "counts": {
-    "ads": 152290,
+    "ads": 146192,
     "ai": 116,
     "binance": 14,
     "cn": 7920,
@@ -1427,5 +1427,5 @@
       "enabled": true
     }
   ],
-  "semantic_sha256": "a58c076f7228bf4b4c60577462969820393fbb5225bca96ed608b4fb41971020"
+  "semantic_sha256": "f4b76084ce151d24ac1a2d061511d871c3f420b50a6d8cc972f5b2d24a34c20f"
 }
